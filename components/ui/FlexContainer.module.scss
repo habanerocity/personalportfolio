@@ -1,0 +1,11 @@
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
+.flex_container {
+    @include flex-container-row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: $margin-sm;
+    min-height: 70vh;
+    
+}

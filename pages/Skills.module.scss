@@ -1,0 +1,33 @@
+@import '../styles/sass/variables';
+@import '../styles/sass/mixins';
+
+.flex_container {
+    @include flex-container-row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: $margin-md;
+    background-color: #ccc;
+    padding: 5rem;
+    border-radius: 5px;
+    // overflow: scroll;
+}
+
+.container {
+    width: 80%;
+}
+
+.skills {
+    background-color: $color-gray;
+    height: 100vh;
+    width: calc(100% - 25%);
+    transform: translateX(33.3%);
+    @include flex-container-row;
+    justify-content: center;
+}
+
+.tech {
+    font-weight: bolder;
+    font-size: 4rem;
+    font-family: $font-header;
+    margin-top: 1rem;
+}

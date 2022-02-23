@@ -1,0 +1,88 @@
+@import '../styles//sass/mixins';
+@import '../styles//sass/variables';
+
+.flex__container__col{
+    @include flex-container-col;
+    transform: translateY(10rem);
+}
+
+.buttons{
+    @include flex-container-row;
+    background-color: salmon;
+    justify-content: space-between;
+    height: 2rem;
+    padding: 2rem;
+    
+}
+
+.pill {
+    font-size: 1rem;
+}
+
+.code {
+    margin-right: 4rem;
+}
+.flex__container {
+    @include flex-container-row;
+    width: 85%;
+}
+
+.link {
+    text-decoration-color: black;
+}
+
+
+.card {
+    background-color: #fff;
+    height: 50rem;
+    // width: 36rem;
+    margin-bottom: 9rem;
+    padding: 2rem;
+    border-radius: 5px;
+    font-family: $font-body, sans-serif;
+    box-shadow: $box-shadow;
+
+&__heading {
+    font-family: $font-header;
+    font-weight: bolder;
+    text-align: center;
+}
+
+&__description {
+    font-size: 1.5rem;
+    font-family: $font-body, sans-serif;
+}
+
+    &__holder {
+        @include flex-container-row;
+        justify-content: space-between;
+        align-items: center;
+        width: 85%;
+        // background-color: #ccc;
+        
+        margin-top: 1rem;
+        height: auto;
+        flex-wrap: wrap;
+
+    }
+}
+
+
+
+.thumbnail {
+    background-color: green;
+    height: 60%;
+    border-radius: 10rem 10rem 0 0;
+}
+
+.description {
+    background-color: red;
+    height: auto;
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+}
+
+.preview {
+    margin-bottom: 1rem;
+  
+}

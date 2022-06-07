@@ -8,7 +8,7 @@ const Headings = (props) => {
 			<div>
 				<h1 className={classes.subheading}>{props.children}</h1>
 			</div>
-			<h1 className={classes.heading}>{props.heading}</h1>
+			<h2 className={classes.heading}>{props.heading}</h2>
 		</Fragment>
 	);
 };

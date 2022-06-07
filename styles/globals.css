@@ -4,15 +4,43 @@
 html,
 body {
   padding: 0;
+  height:100%;
   margin: 0;
+  overflow-x: hidden;
   font-family: 'Ubuntu' BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-size: 62.5%;
+  font-size: 62.5%;
+  background-color: var(--color-background);
+  color: var(--color-primary);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+:root {
+  --color-primary-accent: #2EE59D;
+  --color-primary: #000;
+  --color-button: #2EE59D;
+  --color-paragraph: #c3c3c3;
+  --color-button-text: rgb(255,255,255);
+  --color-background: #e3e3e3;
+  --color-anchor: #2EE59D;
+}
+
+[data-theme='dark'] {
+  --color-primary-accent: #2EE59D;
+  --color-primary: #fff;
+  --color-button: #2EE59D;
+  --color-paragraph: #c3c3c3;
+  --color-button-text: rgb(0,0,0);
+  --color-background: #22212b;
+  --color-anchor: #2EE59D;
+}
+
+#__next {
+  height: 100%;
 }
 
 * {

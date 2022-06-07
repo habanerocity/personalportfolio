@@ -4,10 +4,23 @@
 .section{
     background-color: $color-gray;
     min-height: 100vh;
-    width: calc(100% - 25%);
+    // width: calc(100% - 25%);
     transform: translateX(33.3%);
-    @include flex-container-row;
-    padding: 2rem;
+    // @include flex-container-row;
+    // padding: 2rem;
     justify-content: center;
     overflow: scroll;
+}
+
+@media screen and (max-width: 1399px){
+    .section {
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 595px){
+    .section{
+        // padding: 8rem;
+    }
 }

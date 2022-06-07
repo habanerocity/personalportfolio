@@ -1,28 +1,36 @@
 @import '../styles/sass/mixins';
 @import '../styles/sass/variables';
 
+.budz {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+
+.container {
+    padding: 10rem 0;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .flex__container {
-    @include flex-container-col;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
     justify-content: center; 
     align-items: center;
     position: relative;
-   width: 100%;
+    width: 100%;
 }
 
-.heading__holder {
-    @include flex-container-col;
+.headings__container{
+    @include flex-container-col; 
     align-items: flex-start;
-    justify-content: flex-start;
     text-align: left;
-   margin-bottom: 1rem;
-}
-
-.mother {
-    @include flex-container-col;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
-   
+    justify-content: flex-start;
 }
 
 .main__flex {
@@ -31,53 +39,49 @@
     align-items: center;
 }
 
-.hire__btn{
-    position: relative;
-    margin-top: 2rem;
-}
-
-.description {
-    color: black;
-    font-family: $font-body;
-    text-align: left;
-    font-weight: 100;
-    font-size: 1.4rem;
-    width: auto;
-    margin-top: 1rem;
-}
-
-
-.input__box {
+.pic__holder {
     @include flex-container-col;
-     & > input {
-         width: 100%;
-         height: 3rem;
-         margin-bottom: 2rem;
-         border: none;
-         border-bottom: solid;
-     }
-}
-
-.msg {
-    width: 100%;
-    display: block;
-    border: none;
-    border-bottom: solid;
-    resize: none;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+   width: 46rem;
 }
 
 .two {
     background-color: #fff;
-   height: auto;
+    height: auto;
     border-radius: 5px;
-    padding: 4rem;
+    margin-top: 1rem;
     box-shadow: $box-shadow;
 }
 
-.hire {
-    font-weight: bold;
-    color: black;
-    font-family: $font-header;
-    text-align: center;
-    font-size: 3.5rem;
+.shapes {
+    border-radius: 5px 0 0 5px;
+}
+
+//MEDIA QUERIES
+@media screen and (max-width: 1399px) {
+    .container {
+        padding: 8rem 0;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .pic__holder {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 7rem 0;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 5rem 0;
+    }
 }

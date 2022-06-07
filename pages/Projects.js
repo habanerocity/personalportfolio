@@ -1,166 +1,99 @@
-import { Fragment } from 'react';
 import SideBar from '../components/ui/SideBar';
 import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
+
+import { cardInfo } from '../components/data/projectsCardInfoData';
 
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
-import Button from 'react-bootstrap/Button';
+
 import Image from 'next/image';
+import Head from 'next/head';
+
+import { motion } from 'framer-motion';
 
 import classes from './Projects.module.scss';
 
 const Projects = () => {
+	const renderCard = (card, index) => {
+		return (
+			<Card className={`${classes.card} col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
+				<div className={classes.preview} style={{ width: '100%', height: '100%', position: 'relative' }}>
+					<Image src={card.image} layout="fill" objectFit="contain" alt={card.title} />
+				</div>
+				<Card.Body>
+					<ListGroup className="list-group-flush text-center ">
+						<span>
+							<Card.Title>Links</Card.Title>
+							<Card.Link className={classes.link} target="_blank" href={card.liveDemo}>
+								Live Demo
+							</Card.Link>
+							<Card.Link className={classes.link} target="_blank" href={card.github}>
+								Github Repo
+							</Card.Link>
+						</span>
+						<ListGroupItem>
+							<Card.Title>Made with </Card.Title>
+							<Badge pill bg="secondary" text="light" className="px-2">
+								<span className={classes.pill}>{card.tools[0]}</span>
+							</Badge>
+							<Badge pill bg="secondary" text="light" className="mx-2">
+								<span className={classes.pill}>{card.tools[1]}</span>
+							</Badge>
+							<Badge pill bg="secondary" text="light" className="px-2">
+								<span className={classes.pill}>{card.tools[2]}</span>
+							</Badge>
+						</ListGroupItem>
+					</ListGroup>
+					<h3 className={`${classes.card__heading} pt-md-3 `}>{card.title}</h3>
+					<span className={`${classes.card__description} fs-5`}>{card.description}</span>
+				</Card.Body>
+			</Card>
+		);
+	};
+
 	return (
-		<Fragment>
+		<main>
+			<Head>
+				<title>Projects - Lindy Ramirez, Front End Developer based in Los Angeles</title>
+				<meta
+					name="description"
+					content="Projects page for Lindy Ramirez, front end react developer based in Los Angeles, California. View my projects here."
+				/>
+			</Head>
 			<SideBar />
-			<SectionContainer>
-				<Container className={classes.flex__container__col}>
-					<div className={classes.flex__container}>
-						<div>
-							<Headings heading="Works Done">Projects</Headings>
+			<motion.div
+				initial="hidden"
+				animate="visible"
+				variants={{
+					hidden: {
+						scale: 0.8,
+						opacity: 0
+					},
+					visible: {
+						scale: 1,
+						opacity: 1,
+						transition: {
+							delay: 0.4
+						}
+					}
+				}}
+			>
+				<SectionContainer>
+					<Container className={classes.flex__container__col}>
+						<div className={classes.flex__container}>
+							<div className={classes.headings__container}>
+								<Headings heading="Works Done">Projects</Headings>
+							</div>
 						</div>
-					</div>
-
-					<div className={`${classes.card__holder}`}>
-						<Card className={`${classes.card} col-5`}>
-							<div
-								className={classes.preview}
-								style={{ width: '100%', height: '100%', position: 'relative' }}
-							>
-								<Image src={`/static/Images/portfoliomac.png`} layout="fill" objectFit="contain" />
-							</div>
-							<Card.Body>
-								<ListGroup className="list-group-flush text-center ">
-									<Card.Text>
-										<Card.Title>Links</Card.Title>
-										<Card.Link
-											className={classes.link}
-											target="_blank"
-											href="https://mobile-mechanic-bc92f.web.app/"
-										>
-											Live Demo
-										</Card.Link>
-										<Card.Link className={classes.link} href="#">
-											Github Repo
-										</Card.Link>
-									</Card.Text>
-									<ListGroupItem>
-										<Card.Title>Made with </Card.Title>
-										<Badge pill bg="secondary" text="light" className="px-2">
-											<Card.Text className={classes.pill}>Next JS</Card.Text>
-										</Badge>
-										<Badge pill bg="secondary" text="light" className="mx-2">
-											<Card.Text className={classes.pill}>Bootstrap</Card.Text>
-										</Badge>
-										<Badge pill bg="secondary" text="light" className="px-2">
-											<Card.Text className={classes.pill}>SCSS</Card.Text>
-										</Badge>
-									</ListGroupItem>
-								</ListGroup>
-								<h3 className={`${classes.card__heading} pt-md-3 `}>Personal Portfolio</h3>
-								<Card.Text className={classes.card__description}>
-									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore aliquam
-									beatae aut sed amet rem laborum veniam, quidem velit vero, dignissimos porro, a
-									dicta deserunt consequatur alias aliquid modi.
-								</Card.Text>
-							</Card.Body>
-						</Card>
-
-						<Card className={`${classes.card} col-5`}>
-							<div
-								className={classes.preview}
-								style={{ width: '100%', height: '100%', position: 'relative' }}
-							>
-								<Image src={`/static/Images/macmechanic.png`} layout="fill" objectFit="contain" />
-							</div>
-							<Card.Body>
-								<ListGroup className="list-group-flush text-center">
-									<Card.Text>
-										<Card.Title>Links</Card.Title>
-										<Card.Link
-											className={classes.link}
-											target="_blank"
-											href="https://mobile-mechanic-bc92f.web.app/"
-										>
-											Live Demo
-										</Card.Link>
-										<Card.Link className={classes.link} href="#">
-											Github Repo
-										</Card.Link>
-									</Card.Text>
-									<ListGroupItem>
-										<Card.Title>Made with </Card.Title>
-										<Badge pill bg="secondary" text="light" className="px-2">
-											<Card.Text className={classes.pill}>React JS</Card.Text>
-										</Badge>
-										<Badge pill bg="secondary" text="light" className="mx-2">
-											<Card.Text className={classes.pill}>Bootstrap</Card.Text>
-										</Badge>
-										<Badge pill bg="secondary" text="light" className="px-2">
-											<Card.Text className={classes.pill}>SCSS</Card.Text>
-										</Badge>
-									</ListGroupItem>
-								</ListGroup>
-								<h3 className={`${classes.card__heading} pt-md-3 `}>Ramirez Mobile Mechanic</h3>
-								<Card.Text className={classes.card__description}>
-									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore aliquam
-									beatae aut sed amet rem laborum veniam, quidem velit vero, dignissimos porro, a
-									dicta deserunt consequatur alias aliquid modi.
-								</Card.Text>
-							</Card.Body>
-						</Card>
-
-						<Card className={`${classes.card} col-5`}>
-							<div
-								className={classes.preview}
-								style={{ width: '100%', height: '100%', position: 'relative' }}
-							>
-								<Image src={`/static/Images/todomac.png`} layout="fill" objectFit="contain" />
-							</div>
-							<Card.Body>
-								<ListGroup className="list-group-flush text-center ">
-									<Card.Text>
-										<Card.Title>Links</Card.Title>
-										<Card.Link
-											className={classes.link}
-											target="_blank"
-											href="https://daily-agenda-289d3.web.app/"
-										>
-											Live Demo
-										</Card.Link>
-										<Card.Link className={classes.link} href="#">
-											Github Repo
-										</Card.Link>
-									</Card.Text>
-									<ListGroupItem>
-										<Card.Title>Made with </Card.Title>
-										<Badge pill bg="secondary" text="light" className="px-2">
-											<Card.Text className={classes.pill}>React JS</Card.Text>
-										</Badge>
-										<Badge pill bg="secondary" text="light" className="mx-2">
-											<Card.Text className={classes.pill}>Bootstrap</Card.Text>
-										</Badge>
-										<Badge pill bg="secondary" text="light" className="px-2">
-											<Card.Text className={classes.pill}>Firebase</Card.Text>
-										</Badge>
-									</ListGroupItem>
-								</ListGroup>
-								<h3 className={`${classes.card__heading} pt-md-3 `}>Todo List</h3>
-								<Card.Text className={classes.card__description}>
-									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore aliquam
-									beatae aut sed amet rem laborum veniam, quidem velit vero, dignissimos porro, a
-									dicta deserunt consequatur alias aliquid modi.
-								</Card.Text>
-							</Card.Body>
-						</Card>
-					</div>
-				</Container>
-			</SectionContainer>
-		</Fragment>
+						<div className={`${classes.card__holder}`}>{cardInfo.map(renderCard)}</div>
+					</Container>
+				</SectionContainer>
+			</motion.div>
+		</main>
 	);
 };
 

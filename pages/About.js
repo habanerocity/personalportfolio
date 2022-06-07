@@ -1,15 +1,14 @@
-import { Fragment } from 'react';
-
-import me from '../public/static/Images/tooncropped.png';
-import palms from '../public/static/Images/palmtrees.jpg';
-// import abstract from '../public/static/Images/abstract.png';
-import greenCircle from '../public/static/Images/greencircle.png';
-
-import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import classes from './About.module.scss';
 
+import Image from 'next/image';
+import Link from 'next/link';
+import Head from 'next/head';
+
 import Container from 'react-bootstrap/Container';
+
+import { logoInfo } from '../components/data/aboutLogoInfoData';
 
 import Button from '../components/ui/Button';
 import FlexContainer from '../components/ui/FlexContainer';
@@ -18,83 +17,89 @@ import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
 
 const About = () => {
+	const renderLogos = (logo, index) => {
+		return (
+			<div className={classes.img} key={index}>
+				<a href={logo.link} target="_blank">
+					<Image className={classes.social_media} src={logo.image} alt={logo.alt} height={30} width={30} />
+				</a>
+			</div>
+		);
+	};
 	return (
-		<Fragment>
+		<main>
+			<Head>
+				<title>About Me - Lindy Ramirez, Front End Developer based in Los Angeles</title>
+				<meta
+					name="description"
+					content="About Me page for Lindy Ramirez, front end react developer based in Los Angeles, California. Learn more about me here."
+				/>
+			</Head>
 			<SideBar />
-			<SectionContainer>
-                
-				<Container>
-                    <div className={classes.flex__container}>
-                        
-                        {/* <div className={classes.circle}> <Image src={greenCircle} height={100} width={100}/></div> */}
-                        <div className={classes.img__holder}><Image src={me} height={130} width={140} className={classes.me}/></div>
-                    </div>
-                    <FlexContainer>
-                    {/* <div className={classes.headings__holder}><Headings heading="Who I am">About Me</Headings></div> */}
-                        {/* <div className={classes.first}>
-                            <Image src={me} height={500} width={350} priority/>
-                            <div className={classes.bio}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iste, magni velit vitae doloribus ullam quas suscipit ab veritatis molestiae, maiores nam aut dolorem enim necessitatibus veniam, quod saepe dolores.
-                            </div>
-                        </div>
-                        <div className={classes.second}>
-                            <Image src={palms} height={500} width={340} priority/>
-                            <div className={classes.bios}>
-                            <div className={classes.first_bio}>
-                                Name: Lindy Ramirez <br />
-                                Interests: Tech, food, sports <br />
-                                Languages: Spanish, Portuguese <br />
-                            </div>
-                            <div className={classes.second_bio}>
-                                Location: El Monte, CA <br />
-                                Focus: Front End <br />
-                                 Development
-                            </div>
-                            </div>
-                        </div>
-                        <div className={classes.third}>
-                            
-                        <div className={classes.abstract}>
-                                <Image  src={`/../public/static/Images/abstract.png`} height={400} width={200}/>  
-                            </div>
-                            <h1>Education</h1>
-                            <p className={classes.school}>University of California, Santa Barbara <br />
-                            <span className={classes.details}>Goleta, CA</span>
-                            </p>
-                            <p className={classes.details}>
-                                Bachelor's Degree in Anthropology <br />
-                                GPA: 3.25
-                            </p>
-                        </div> */}
-                        
-                        
-                        <div className={classes.about__card}>
-                        <h1>Lindy Ramirez</h1>
-                                <h3>Front End Developer</h3>
-                           <div>
-                               
-                                </div>
-                           <div className={classes.details}>
-                           
-                               
-                               
-                                
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magni perferendis error quos voluptate ea, minus totam. Dolore quaerat animi consectetur recusandae eius dolor enim. Repudiandae labore odit unde dolor. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate ducimus officiis pariatur minima ipsam quibusdam iure, cum qui? Architecto eaque adipisci asperiores sequi? Fugit ratione quibusdam nam accusamus aut expedita.</p>
-                                <div className={classes.btn__container}>
-                                    <Button name="Hire Me"/>
-                                    <div className={classes.icons}>
-                                        <div className={classes.img}><Image src={`/static/icons/github-logo.png`} height={30} width={30} /></div>
-                                        <div className={classes.img}><Image src={`/static/icons/twitter-brands.svg`} height={30} width={30} /></div>
-                                        <div className={classes.img}><Image src={`/static/icons/linkedin-in-brands.svg`} height={30} width={30} /></div> 
-                                    </div>
-                                </div>
-                           </div>
-                        </div>
-                        
-                    </FlexContainer>
-				</Container>
-			</SectionContainer>
-		</Fragment>
+			<motion.div
+				initial="hidden"
+				animate="visible"
+				variants={{
+					hidden: {
+						scale: 0.8,
+						opacity: 0
+					},
+					visible: {
+						scale: 1,
+						opacity: 1,
+						transition: {
+							delay: 0.2
+						}
+					}
+				}}
+			>
+				<SectionContainer>
+					<Container className={classes.flex__container__col}>
+						<div className={classes.flex__container}>
+							<div className={classes.headings__container}>
+								<Headings heading="Who I Am">About Me</Headings>
+							</div>
+						</div>
+						<FlexContainer>
+							<div className={`${classes.about__card} col-4`}>
+								<div className={classes.flex__containerHeading}>
+									<Image
+										src={'/static/Images/tri2.png'}
+										alt="me"
+										height={130}
+										width={140}
+										className={classes.me}
+									/>
+									<div className={classes.flex__containerCol}>
+										<h1 className={classes.lr}>Lindy Ramirez</h1>
+										<h3 className={classes.dev}>Front End Developer</h3>
+									</div>
+								</div>
+								<div className={classes.details}>
+									<span className="fs-4">
+										Hi my name is Lindy and I am a Front End Developer with a background in the
+										e-commerce industry. I have a keen interest in clean and modern user
+										experiences, with an emphasis in responsive design and the javascript ecosystem.
+										Computers and technology are a childhood passion of mine and I've been solving
+										tech-related problems ever since. I'm a fan of sports, automobiles, traveling,
+										and spicy food. Feel free to contact me if you would like to work or collaborate
+										with me.
+									</span>
+									<div className={classes.btn__container}>
+										<Link href="/Contact">
+											<div>
+												<Button name="Hire Me" />
+											</div>
+										</Link>
+										<div className={classes.icons}>{logoInfo.map(renderLogos)}</div>
+									</div>
+								</div>
+							</div>
+						</FlexContainer>
+					</Container>
+				</SectionContainer>
+			</motion.div>
+		</main>
 	);
 };
 

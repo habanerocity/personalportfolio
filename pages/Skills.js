@@ -2,43 +2,76 @@ import SideBar from '../components/ui/SideBar';
 import Container from 'react-bootstrap/Container';
 import classes from './Skills.module.scss';
 
-import reactIcon from '../public/static/icons/react.png';
-import bsIcon from '../public/static/icons/bs.png';
-import reduxIcon from '../public/static/icons/redux.png';
-import nextJSIcon from '../public/static/icons/nextjs.svg';
-import gitIcon from '../public/static/icons/git.svg';
-import webpackIcon from '../public/static/icons/webpack.png';
+import { motion } from 'framer-motion';
+
+import { skillsInfo } from '../components/data/skillsInfoData';
 
 import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
 
+import Head from 'next/head';
 import Image from 'next/image';
-import { Fragment } from 'react';
 
 const Skills = () => {
+	const renderSkills = (skills, index) => {
+		return (
+			<motion.div
+				className={classes.skill}
+				whileHover={{
+					scale: [ 1, 1.4, 1.2 ],
+					rotate: [ 0, 10, -10, 0 ],
+					filter: [
+						'hue-rotate(0) contrast(100%)',
+						'hue-rotate(360deg) contrast(200%)',
+						'hue-rotate(45deg) contrast(300%)',
+						'hue-rotate(0) contrast(100%)'
+					],
+					transition: {
+						duration: 0.2
+					}
+				}}
+				key={index}
+			>
+				<Image src={skills.image} height={skills.height} width={skills.width} alt={skills.alt} />
+			</motion.div>
+		);
+	};
+
 	return (
-		<Fragment>
+		<main>
+			<Head>
+				<title>Skills - Lindy Ramirez, Front End Developer based in Los Angeles</title>
+				<meta
+					name="description"
+					content="Skills page for Lindy Ramirez, front end react developer based in Los Angeles, California. View my tech skills here."
+				/>
+			</Head>
 			<SideBar />
-			<SectionContainer>
-				<Container className={classes.container}>
-					<Headings heading="Technologies Used">Skills</Headings>
-					<div className={classes.flex_container}>
-						<Image src={`/static/icons/html.png`} height={150} width={150} priority />
-						<Image src={`/static/icons/css.png`} height={150} width={150} priority />
-						<Image src={`/static/icons/js.png`} height={150} width={160} priority />
-						<Image src={webpackIcon} height={150} width={150} priority />
-						<Image src={bsIcon} height={100} width={125} priority />
-						<Image src={reactIcon} height={120} width={150} priority />
-						<Image src={reduxIcon} height={100} width={125} priority />
-						<Image src={nextJSIcon} height={150} width={200} priority />
-						<Image src={`/static/icons/sass.png`} height={100} width={125} priority />
-						<Image src={gitIcon} height={150} width={150} priority />
-						<Image src={`/static/icons/vscode.svg`} height={100} width={100} priority />
-						<Image src={`/static/icons/ps.png`} height={125} width={125} priority />
-					</div>
-				</Container>
-			</SectionContainer>
-		</Fragment>
+			<motion.div
+				initial="hidden"
+				animate="visible"
+				variants={{
+					hidden: {
+						scale: 0.8,
+						opacity: 0
+					},
+					visible: {
+						scale: 1,
+						opacity: 1,
+						transition: {
+							delay: 0.4
+						}
+					}
+				}}
+			>
+				<SectionContainer>
+					<Container className={classes.container}>
+						<Headings heading="Technologies Used">Skills</Headings>
+						<div className={classes.grid}>{skillsInfo.map(renderSkills)}</div>
+					</Container>
+				</SectionContainer>
+			</motion.div>
+		</main>
 	);
 };
 

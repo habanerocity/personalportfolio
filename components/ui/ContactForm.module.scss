@@ -1,0 +1,230 @@
+@import '../../styles/sass/mixins';
+@import '../../styles/sass/variables';
+
+.flex__container {
+    // display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    width: 100%;
+    // padding: 1rem 0;
+}
+
+.contact__form {
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    width: 46rem;
+    padding: 1rem 0;
+}
+
+.budz {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+
+.headings__container{
+    @include flex-container-col; 
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+
+.container {
+    padding: 10rem 0;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic__holder {
+    @include flex-container-col;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+   width: 100%;
+   
+}
+
+.heading__holder {
+    @include flex-container-col;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+   margin-bottom: 1rem;
+}
+
+.mother {
+    @include flex-container-col;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+   
+}
+
+.main__flex {
+    @include flex-container-col;
+    justify-content: center;
+    align-items: center;
+}
+
+.hire__btn{
+    position: relative;
+    margin-top: 2rem;
+}
+
+.description {
+    color: black;
+    font-family: $font-body;
+    text-align: left;
+    font-weight: 100;
+    font-size: 1.4rem;
+    width: auto;
+    margin-top: 1rem;
+}
+
+.inp {
+    font-size:1.5rem;
+ 
+    &ut__error{
+        // line-height: 2rem;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #ff160c;
+        
+        color:#ff160c;
+        font-size:1.5rem;
+    }
+    
+    &ut__success {
+        // line-height: 2rem;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #32cd32;
+        font-size:1.5rem;
+    }
+}
+
+.input__box {
+    @include flex-container-col;
+     & > input {
+         width: 90%;
+         height: 2rem;
+         margin-bottom: 2rem;
+         border: none;
+         outline: none;
+         border-bottom: solid;
+         border-radius: 0;
+     }
+}
+
+.info[type="text"]
+{
+    font-size:1.5rem;
+    
+}
+
+.msg {
+    width: 90%;
+    display: block;
+    border: none;
+    outline: none;
+    border-bottom: solid;
+    resize: none;
+    border-radius: 0;
+}
+
+.two {
+    background-color: #fff;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: $box-shadow;
+}
+
+.hire {
+    font-weight: bold;
+    color: black;
+    font-family: $font-header;
+    text-align: center;
+}
+
+@media screen and (max-width: 1176px) {
+    .hire{
+       padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .input__box {
+
+        & > input {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .hire {
+        font-size: 2.75rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .pic__holder {
+        display: none; 
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .hire {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 543px) {
+
+    .contact__form {
+        width: 33rem;
+    }
+}
+
+@media screen and (max-width: 394px) {
+
+    .contact__form {
+        width: 27rem;
+    }
+
+    .hire {
+        font-size: 1.6rem;
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 315px) {
+
+    .contact__form {
+        width: 23rem;
+    }
+
+    .hire {
+        padding: 0 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 268px) {
+
+    .contact__form {
+        width: 20rem;
+    }
+}

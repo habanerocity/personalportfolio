@@ -1,20 +1,16 @@
-import { Html, Head, Main, NextScript } from 'next/document';
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
-	return (
-		<Html lang="en">
-			<Head>
-				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-			</Head>
-			<body>
-				<Main />
-				<NextScript />
-				{/* <style jsx global>{`
-					#__next {
-						height: 100%;
-					}
-				`}</style> */}
-			</body>
-		</Html>
-	);
+  return (
+    <Html lang="en">
+      <Head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      </Head>
+      <body>
+        <div id="success-root" />
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }

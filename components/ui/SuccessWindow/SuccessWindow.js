@@ -1,44 +1,37 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import styles from './_SuccessWindow.module.scss';
-import close from '../../../public/static/icons/times-solid.svg';
+import React, { useState } from "react";
+import classes from "./_SuccessWindow.module.scss";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-const SuccessWindow = (props) => {
-	const [ closeWindow, setCloseWindow ] = useState(false);
+const SuccessWindow = props => {
+  const [clicked, setClicked] = useState(false);
 
-	const closeWindowHandler = () => {
-		setCloseWindow(true);
-	};
+  const clickHandler = () => {
+    setClicked(true);
+    props.onConfirm(clicked);
+  };
 
-	return (
-		<div className={styles.backdrop} onConfirm={props.onConfirm}>
-			<div className={styles.success}>
-				<div onClick={props.onConfirm} className={styles.closeBtn__container}>
-					<Image src={close} width={5} height={5} className={styles.close} alt="close button" />
-				</div>
-				<div className={styles.flex__container}>
-					<p>Thanks, I will get back to you promptly!</p>
-					<button className={styles.btn} onClick={props.onConfirm}>
-						Got It!
-						<span />
-					</button>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className={classes.backdrop} onConfirm={clickHandler}>
+      <div className={classes.success}>
+        <div onClick={clickHandler} className={classes.closeBtn__container}>
+          <Image
+            src={"/static/icons/times-solid1.svg"}
+            className={classes.close}
+            alt="close"
+            layout="fill"
+          />
+        </div>
+        <div className={classes.flex__container}>
+          <p className={classes.msg}>{props.message}</p>
+          <button className={classes.btn} onClick={clickHandler}>
+            Got It!
+            <span />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-const DisplaySuccess = (props) => {
-	return (
-		<React.Fragment>
-			{ReactDOM.createPortal(
-				<SuccessWindow onConfirm={props.onConfirm} />,
-				document.getElementById('success-root')
-			)}
-		</React.Fragment>
-	);
-};
-
-export default DisplaySuccess;
+export default SuccessWindow;

@@ -1,6 +1,6 @@
 export const cardInfo = [
   {
-    image: "/static/Images/portfoliomac7.png",
+    image: "/static/portfoliomac.png",
     title: "Lindy Ramirez - Developer Portfolio",
     description: `Responsive portfolio website currently being built with Next JS, Bootstrap 5 and
     SCSS. Implements Next Router to create a Single-Page application that behaves
@@ -11,7 +11,7 @@ export const cardInfo = [
     tools: ["Next JS", "Bootstrap", "SCSS"]
   },
   {
-    image: "/static/Images/macmechanic.png",
+    image: "/static/macmechanic.png",
     title: "San Fernando Valley Mobile Mechanic",
     description: `Small business website built for a family member, with React, Bootstrap 5 and
     SCSS. It features responsive design, functional components, a contact modal
@@ -22,7 +22,7 @@ export const cardInfo = [
     tools: ["React JS", "Bootstrap", "SCSS"]
   },
   {
-    image: "/static/Images/todomac.png",
+    image: "/static/todolist.png",
     title: "Daily Agenda To Do App",
     description: `Daily Agenda App featuring a todo list coupled with a weather app, built with
     React. Full CRUD app implementing react hooks, local storage, and responsive

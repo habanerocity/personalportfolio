@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 
-import FlexContainer from "./FlexContainer";
-
 import classes from "./Hero.module.scss";
 
 const Hero = () => {
@@ -23,7 +21,7 @@ const Hero = () => {
           <Image
             alt="Lindy"
             className={classes.lindy}
-            src={"/static/Images/lindy6.png"}
+            src={"/static/lindy.png"}
             height={200}
             width={200}
             objectFit="cover"

@@ -44,7 +44,7 @@ const SideBar = () => {
                 <Image
                   height={50}
                   width={75}
-                  src={"/static/Images/habaneroicon6.png"}
+                  src={"/static/habaneroicon.png"}
                   alt="Logo"
                   className={classes.hab}
                 />

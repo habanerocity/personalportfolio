@@ -1,27 +1,27 @@
 export const linkInfo = [
   {
     routerPath: "/",
-    image: "/static/icons/house-solid6.svg",
+    image: "/static/house-solid.svg",
     linkName: "Home"
   },
   {
     routerPath: "/About",
-    image: "/static/icons/circle-user-solid1.svg",
+    image: "/static/circle-user-solid.svg",
     linkName: "About"
   },
   {
     routerPath: "/Skills",
-    image: "/static/icons/laptop-code-solid7.svg",
+    image: "/static/laptop-code-solid.svg",
     linkName: "Skills"
   },
   {
     routerPath: "/Projects",
-    image: "/static/icons/briefcase-solid6.svg",
+    image: "/static/briefcase-solid.svg",
     linkName: "Projects"
   },
   {
     routerPath: "/Contact",
-    image: "/static/icons/envelope-solid4.svg",
+    image: "/static/envelope-solid.svg",
     linkName: "Contact"
   }
 ];

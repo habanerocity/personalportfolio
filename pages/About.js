@@ -73,7 +73,7 @@ const About = () => {
               <div className={`${classes.about__card} col-4`}>
                 <div className={classes.flex__containerHeading}>
                   <Image
-                    src={"/static/Images/tri4.png"}
+                    src={"/static/tri.png"}
                     alt="me"
                     height={130}
                     width={140}

@@ -6,7 +6,7 @@ export const cardInfo = [
     SCSS. Implements Next Router to create a Single-Page application that behaves
     like a Multi-Page Application, and also Framer Motion to implement animations
     and page transitions.`,
-    liveDemo: "",
+    liveDemo: "https://www.lindyramirez.com",
     github: "https://github.com/habanerocity/personalportfolio",
     tools: ["Next JS", "Bootstrap", "SCSS"]
   },

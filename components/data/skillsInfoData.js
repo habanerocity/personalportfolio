@@ -7,9 +7,9 @@ export const skillsInfo = [
   },
   { image: "/static/icons/css7.png", height: 150, width: 150, alt: "Css 3" },
   {
-    image: "/static/icons/jslogo2.png",
-    height: 150,
-    width: 160,
+    image: "/static/icons/js6.png",
+    height: 135,
+    width: 135,
     alt: "Javascript"
   },
   {
@@ -27,7 +27,7 @@ export const skillsInfo = [
   { image: "/static/icons/redux5.png", height: 100, width: 125, alt: "Redux" },
   { image: "/static/icons/nxt3.png", height: 120, width: 120, alt: "Next js" },
   { image: "/static/icons/sass4.png", height: 100, width: 125, alt: "Sass" },
-  { image: "/static/icons/git2.svg", height: 150, width: 150, alt: "Git" },
+  { image: "/static/icons/git6.png", height: 120, width: 120, alt: "Git" },
   {
     image: "/static/icons/vscode3.svg",
     height: 100,
@@ -41,9 +41,9 @@ export const skillsInfo = [
     alt: "Adobe Photoshop"
   },
   {
-    image: "/static/icons/msoffice4.png",
-    height: 120,
-    width: 120,
+    image: "/static/icons/msoffice6.png",
+    height: 115,
+    width: 115,
     alt: "Microsoft Office"
   }
 ];

@@ -20,7 +20,7 @@ const About = () => {
   const renderLogos = (logo, index) => {
     return (
       <div className={classes.img} key={index}>
-        <a href={logo.link} target="_blank">
+        <a href={logo.link} target="_blank" rel="noreferrer">
           <Image
             className={classes.social_media}
             src={logo.image}
@@ -32,6 +32,7 @@ const About = () => {
       </div>
     );
   };
+
   return (
     <main>
       <Head>
@@ -72,7 +73,7 @@ const About = () => {
               <div className={`${classes.about__card} col-4`}>
                 <div className={classes.flex__containerHeading}>
                   <Image
-                    src={"/static/Images/tri2.png"}
+                    src={"/static/Images/tri4.png"}
                     alt="me"
                     height={130}
                     width={140}
@@ -90,13 +91,13 @@ const About = () => {
                     interest in clean and modern user experiences, with an
                     emphasis in responsive design and the javascript ecosystem.
                     Computers and technology are a childhood passion of mine and
-                    I've been solving tech-related problems ever since. I'm a
+                    I have been solving tech-related problems ever since. I am a
                     fan of sports, automobiles, traveling, and spicy food. Feel
                     free to contact me if you would like to work or collaborate
                     with me.
                   </span>
                   <div className={classes.btn__container}>
-                    <Link href="/Contact">
+                    <Link passHref href="/Contact">
                       <div>
                         <Button name="Hire Me" />
                       </div>

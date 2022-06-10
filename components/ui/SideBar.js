@@ -21,7 +21,7 @@ const SideBar = () => {
             }
           >
             <Image
-              height={25}
+              height={28}
               width={25}
               src={link.image}
               alt={link.linkName}
@@ -44,7 +44,7 @@ const SideBar = () => {
                 <Image
                   height={50}
                   width={75}
-                  src={"/static/Images/habaneroicon5.png"}
+                  src={"/static/Images/habaneroicon6.png"}
                   alt="Logo"
                   className={classes.hab}
                 />

@@ -86,15 +86,15 @@ const About = () => {
                 </div>
                 <div className={classes.details}>
                   <span className="fs-4">
-                    Hi my name is Lindy and I am a Front End Developer with a
-                    background in the e-commerce industry. I have a keen
-                    interest in clean and modern user experiences, with an
-                    emphasis in responsive design and the javascript ecosystem.
-                    Computers and technology are a childhood passion of mine and
-                    I have been solving tech-related problems ever since. I am a
-                    fan of sports, automobiles, traveling, and spicy food. Feel
-                    free to contact me if you would like to work or collaborate
-                    with me.
+                    Hi my name is Lindy and I am a self-taught Front End
+                    Developer with a background in the e-commerce industry. I
+                    have a keen interest in clean and modern user experiences,
+                    with an emphasis in responsive design and the JavaScript
+                    ecosystem. Computers and technology are a childhood passion
+                    of mine and I have been solving tech-related problems ever
+                    since. I am a fan of sports, automobiles, traveling, and
+                    spicy food. Feel free to contact me if you would like to
+                    work or collaborate with me.
                   </span>
                   <div className={classes.btn__container}>
                     <Link passHref href="/Contact">

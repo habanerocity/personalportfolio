@@ -55,7 +55,7 @@ const Contact = () => {
                     <Container className={classes.budz}>
                       <div className={classes.pic__holder}>
                         <Image
-                          src={"/static/shapes.jpg"}
+                          src={"/static/shapes.webp"}
                           className={classes.shapes}
                           layout="fill"
                           alt="Abstract Shapes"

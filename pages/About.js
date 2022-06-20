@@ -41,7 +41,7 @@ const About = () => {
         </title>
         <meta
           name="description"
-          content="About Me page for Lindy Ramirez, front end react developer based in Los Angeles, California. Learn more about me here."
+          content="About Me page for Lindy Ramirez, Front End React Developer based in Los Angeles, California. Learn more about me here."
         />
       </Head>
       <SideBar />

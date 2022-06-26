@@ -123,7 +123,7 @@ const ContactForm = () => {
     >
       {formSent && <DisplaySuccess onConfirm={setFormSent} />}
       <h2 className={classes.hire}>
-        Let&apos;s Take Your Business To The Next Level
+        Let&apos;s Take Your Business To The Next Level&nbsp;&nbsp;🚀
       </h2>
       <div className={classes.input__box}>
         <input

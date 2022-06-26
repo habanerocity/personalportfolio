@@ -24,11 +24,11 @@ export const cardInfo = [
   {
     image: "/static/todolist.png",
     title: "Daily Agenda To Do App",
-    description: `Daily Agenda App featuring a todo list coupled with a weather app, built with
-    React. Full CRUD app implementing react hooks, local storage, and responsive
-    design. Uses Firebase and JSON Webtokens for user authentication.`,
+    description: `Daily Agenda App featuring a todo list built with
+    React JS. Full CRUD app implementing react hooks, local storage, and responsive
+    design.`,
     liveDemo: "https://daily-agenda-289d3.web.app/",
     github: "https://github.com/habanerocity/dailyagenda",
-    tools: ["React JS", "Bootstrap", "Firebase"]
+    tools: ["React JS", "CSS", "Local Storage"]
   }
 ];

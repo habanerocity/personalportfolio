@@ -10,7 +10,6 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 
-import Image from 'next/image';
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
@@ -21,10 +20,8 @@ const Projects = () => {
 	const renderCard = (card, index) => {
 		return (
 			<Card className={`${classes.card} col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
-				<div className={classes.preview} style={{ width: '100%', height: '100%', position: 'relative' }}>
-					<Image src={card.image} layout="fill" objectFit="contain" alt={card.title} />
-				</div>
-				<Card.Body>
+				<Card.Img variant="top" src={card.image} />
+				<Card.Body className="p-4">
 					<ListGroup className="list-group-flush text-center ">
 						<span>
 							<Card.Title>Links</Card.Title>
@@ -48,8 +45,11 @@ const Projects = () => {
 							</Badge>
 						</ListGroupItem>
 					</ListGroup>
-					<h3 className={`${classes.card__heading} pt-md-3 `}>{card.title}</h3>
-					<span className={`${classes.card__description} fs-5`}>{card.description}</span>
+					<div className={classes.flex__card__body} >
+						<h3 className={` ${classes.card__heading} pt-md-3 `}>{card.title}</h3>
+						<span className={` ${classes.card__description} fs-5`}>{card.description}</span>
+					</div>
+
 				</Card.Body>
 			</Card>
 		);
@@ -58,7 +58,7 @@ const Projects = () => {
 	return (
 		<main>
 			<Head>
-				<title>Projects - Lindy Ramirez, Front End Developer based in Los Angeles</title>
+				<title>Projects - Lindy Ramirez | Front End Developer based in Los Angeles</title>
 				<meta
 					name="description"
 					content="Projects page for Lindy Ramirez, front end react developer based in Los Angeles, California. View my projects here."

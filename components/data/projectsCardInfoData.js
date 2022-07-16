@@ -8,7 +8,8 @@ export const cardInfo = [
     and page transitions.`,
     liveDemo: "https://www.lindyramirez.com",
     github: "https://github.com/habanerocity/personalportfolio",
-    tools: ["Next JS", "Bootstrap", "SCSS"]
+    tools: ["Next JS", "Bootstrap", "SCSS"],
+
   },
   {
     image: "/static/macmechanic.webp",

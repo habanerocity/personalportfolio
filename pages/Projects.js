@@ -20,7 +20,7 @@ const Projects = () => {
 	const renderCard = (card, index) => {
 		return (
 			<Card className={`${classes.card} col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
-				<Card.Img variant="top" src={card.image} />
+				<Card.Img variant="top" src={card.image} alt={card.title} />
 				<Card.Body className="p-4">
 					<ListGroup className="list-group-flush text-center ">
 						<span>

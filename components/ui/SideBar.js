@@ -35,7 +35,7 @@ const SideBar = () => {
   };
 
   return (
-    <main>
+    <main >
       <nav className={`${classes.nav_menu} `}>
         <ul className={classes.nav_menu_items}>
           <span className={classes.logo}>

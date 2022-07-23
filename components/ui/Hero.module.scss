@@ -16,7 +16,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateX(33.5%);
+  left: 37rem;
+  // transform: translateX(33.5%);
 
   &_text {
     text-align: center;
@@ -116,7 +117,8 @@
 @media screen and (max-width: 1399px) {
   .hero {
     width: 100%;
-    transform: translateX(0);
+    // transform: translateX(0);
+    left: 0;
   }
 
   .hero_text {

@@ -7,9 +7,9 @@ import classes from "./Hero.module.scss";
 
 const Hero = () => {
   return (
-    <div className={classes.hero}>
+    <div className={` ${classes.hero}`}>
       <Head>
-        <title>Lindy Ramirez, Front End Developer based in Los Angeles</title>
+        <title>Lindy Ramirez | Front End Developer Based in Los Angeles</title>
       </Head>
       <div className={classes.hero_text}>
         <h1 className={classes.intro}>

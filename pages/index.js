@@ -14,14 +14,15 @@ const HomePage = () => {
 			<Head>
 				<meta
 					name="description"
-					content="Home page for Lindy Ramirez, front end react developer based in Los Angeles, California. View my developer portfolio here."
+					content="Home page for Lindy Ramirez | Front End React Developer Based in Los Angeles, California. View my developer portfolio here."
 				/>
 			</Head>
+
 			<SideBar xw />
 			<motion.div
 				initial="hidden"
 				animate="visible"
-				className={classes.motion}
+				className={` ${classes.motion}`}
 				variants={{
 					hidden: {
 						scale: 0.8,
@@ -38,6 +39,8 @@ const HomePage = () => {
 			>
 				<Hero />
 			</motion.div>
+
+
 		</main>
 	);
 };

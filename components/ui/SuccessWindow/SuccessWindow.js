@@ -16,7 +16,7 @@ const SuccessWindow = props => {
       <div className={classes.success}>
         <div onClick={clickHandler} className={classes.closeBtn__container}>
           <Image
-            src={"/static/icons/times-solid1.svg"}
+            src={"/static/times-solid1.svg"}
             className={classes.close}
             alt="close"
             layout="fill"

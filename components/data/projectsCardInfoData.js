@@ -24,11 +24,11 @@ export const cardInfo = [
   {
     image: "/static/mactodo3.webp",
     title: "Daily Agenda To Do App",
-    description: `Daily Agenda App featuring a todo list built with
-    React JS. Full CRUD app implementing react hooks, local storage, and responsive
-    design.  Currently working on integrating a weather forecast widget and user authentication using Firebase.`,
+    description: `Daily Agenda App featuring a todo list and a weather widget built with
+    React JS. Full CRUD app implementing react hooks, local storage, integration of an API and responsive
+    design.  Currently working on integrating user authentication using Firebase.`,
     liveDemo: "https://daily-agenda-289d3.web.app/",
     github: "https://github.com/habanerocity/dailyagenda",
-    tools: ["React JS", "CSS", "Local Storage"]
+    tools: ["React JS", "CSS", "API", "Local Storage"]
   }
 ];

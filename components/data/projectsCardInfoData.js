@@ -22,7 +22,7 @@ export const cardInfo = [
     tools: ["React JS", "Bootstrap", "SCSS"]
   },
   {
-    image: "/static/todolist.webp",
+    image: "/static/mactodo3.webp",
     title: "Daily Agenda To Do App",
     description: `Daily Agenda App featuring a todo list built with
     React JS. Full CRUD app implementing react hooks, local storage, and responsive

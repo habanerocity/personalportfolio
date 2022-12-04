@@ -21,7 +21,7 @@ const Hero = () => {
           <Image
             alt="Lindy"
             className={classes.lindy}
-            src={"/static/lindy.png"}
+            src={"/static/lindy-2.png"}
             height={200}
             width={200}
             objectFit="cover"

@@ -81,7 +81,7 @@ const About = () => {
                   />
                   <div className={classes.flex__containerCol}>
                     <h1 className={classes.lr}>Lindy Ramirez</h1>
-                    <h3 className={classes.dev}>Front End Developer</h3>
+                    <h3 className={classes.dev}>Web Developer</h3>
                   </div>
                 </div>
                 <div className={classes.details}>

@@ -73,7 +73,7 @@ const About = () => {
               <div className={`${classes.about__card} col-4`}>
                 <div className={classes.flex__containerHeading}>
                   <Image
-                    src={"/static/tri.png"}
+                    src={"/static/ai-me-1.jpg"}
                     alt="me"
                     height={130}
                     width={140}
@@ -86,8 +86,8 @@ const About = () => {
                 </div>
                 <div className={classes.details}>
                   <span className="fs-4">
-                    Hi my name is Lindy and I am a self-taught Web
-                    Developer with a background in the e-commerce industry. I
+                    Hi my name is Lindy and I am a self-taught web
+                    developer with a background in the e-commerce industry. I
                     have a keen interest in clean and modern user experiences,
                     with an emphasis in responsive design and the JavaScript
                     ecosystem. Computers and technology are a childhood passion

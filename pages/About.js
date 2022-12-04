@@ -41,7 +41,7 @@ const About = () => {
         </title>
         <meta
           name="description"
-          content="About Me page for Lindy Ramirez, Front End React Developer based in Los Angeles, California. Learn more about me here."
+          content="About me page for Lindy Ramirez, Web Developer based in Los Angeles, California. Learn more about me here."
         />
       </Head>
       <SideBar />
@@ -86,7 +86,7 @@ const About = () => {
                 </div>
                 <div className={classes.details}>
                   <span className="fs-4">
-                    Hi my name is Lindy and I am a self-taught Front End
+                    Hi my name is Lindy and I am a self-taught Web
                     Developer with a background in the e-commerce industry. I
                     have a keen interest in clean and modern user experiences,
                     with an emphasis in responsive design and the JavaScript

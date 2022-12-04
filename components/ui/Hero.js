@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className={` ${classes.hero}`}>
       <Head>
-        <title>Lindy Ramirez | Front End Developer Based in Los Angeles</title>
+        <title>Lindy Ramirez | Web Developer Based in Los Angeles</title>
       </Head>
       <div className={classes.hero_text}>
         <h1 className={classes.intro}>
@@ -37,7 +37,7 @@ const Hero = () => {
                 .pauseFor(3300)
                 .typeString("I'm a ")
                 .pauseFor(2000)
-                .typeString("Frontend Developer")
+                .typeString("Web Developer")
                 .pauseFor(2000)
                 .deleteChars(19)
                 .pauseFor(2000)

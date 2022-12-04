@@ -22,7 +22,7 @@ const Hero = () => {
             alt="Lindy"
             className={classes.lindy}
             src={"/static/lindy-2.jpg"}
-            height={200}
+            height={201}
             width={200}
             objectFit="cover"
             layout="intrinsic"

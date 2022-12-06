@@ -88,7 +88,7 @@ const About = () => {
                   <span className="fs-4">
                     Hi my name is Lindy and I am a self-taught web
                     developer with a background in the e-commerce industry. I
-                    have a keen interest in clean and modern user experiences,
+                    have a keen interest in building clean and modern user interfaces,
                     with an emphasis in responsive design and the JavaScript
                     ecosystem. Computers and technology are a childhood passion
                     of mine and I have been solving tech-related problems ever

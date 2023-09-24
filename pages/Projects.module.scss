@@ -4,11 +4,16 @@
 
 .card {
     background-color: #fff;
-    min-height: 45rem;
+    min-height: 59rem;
     margin-bottom: 10rem;
     border-radius: 5px;
     font-family: $font-body, sans-serif;
     box-shadow: $box-shadow;
+
+    &__top__br{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
 
     &__description {
         font-family: $font-body, sans-serif;

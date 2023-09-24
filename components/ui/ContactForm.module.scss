@@ -94,7 +94,7 @@
   &ut__error {
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid #ff160c;
+    border-bottom: .5px solid #ff160c;
     color: #ff160c;
     font-size: 1.5rem;
   }
@@ -102,7 +102,7 @@
   &ut__success {
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid #32cd32;
+    border-bottom: .5px solid #32cd32;
     font-size: 1.5rem;
   }
 }
@@ -115,7 +115,7 @@
     margin-bottom: 2rem;
     border: none;
     outline: none;
-    border-bottom: solid;
+    border-bottom: .5px solid;
     border-radius: 0;
   }
 }
@@ -129,7 +129,7 @@
   display: block;
   border: none;
   outline: none;
-  border-bottom: solid;
+  border-bottom: .5px solid;
   resize: none;
   border-radius: 0;
 }

@@ -70,8 +70,8 @@
   }
 
   &:hover {
-    background-color: $primary-color;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    background-color: $secondary-color;
+    box-shadow: 0px 10px 25px #ff6600;
     color: #fff;
     transform: translateY(-7px);
   }

@@ -9,6 +9,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
+import Button from 'react-bootstrap/Button';
 
 import Head from 'next/head';
 
@@ -20,10 +21,10 @@ const Projects = () => {
 	const renderCard = (card, index) => {
 		return (
 			<Card className={`${classes.card} col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
-				<Card.Img variant="top" src={card.image} alt={card.title} />
-				<Card.Body className="p-4">
+				<Card.Img className={classes.card__top__br} variant="top" src={card.image} alt={card.title} />
+				<Card.Body className="p-4 d-flex flex-column justify-content-between align-items-center">
 					<ListGroup className="list-group-flush text-center ">
-						<span>
+						{/* <span>
 							<Card.Title>Links</Card.Title>
 							<Card.Link className={classes.link} target="_blank" href={card.liveDemo}>
 								Live Demo
@@ -31,7 +32,7 @@ const Projects = () => {
 							<Card.Link className={classes.link} target="_blank" href={card.github}>
 								Github Repo
 							</Card.Link>
-						</span>
+						</span> */}
 						<ListGroupItem>
 							<Card.Title>Made with </Card.Title>
 							<Badge pill bg="secondary" text="light" className="px-2">
@@ -48,6 +49,10 @@ const Projects = () => {
 					<div className={classes.flex__card__body} >
 						<h3 className={` ${classes.card__heading} pt-md-3 `}>{card.title}</h3>
 						<span className={` ${classes.card__description} fs-5`}>{card.description}</span>
+					</div>
+					<div className="w-50 mt-4 d-flex justify-content-evenly align-items-center">
+						<Button href={card.liveDemo} target="_blank" variant="secondary" size="lg">Live Demo</Button>
+						<Button href={card.github} target="_blank" variant="outline-secondary" size="lg">View Code</Button>
 					</div>
 
 				</Card.Body>

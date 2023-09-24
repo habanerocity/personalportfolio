@@ -15,7 +15,7 @@ export const cardInfo = [
     description: `Small business landing page developed with React, Bootstrap 5 and SCSS. It features responsive design, functional components, a contact modal window, Email JS API integration, custom hooks, implementation of an animation library, and a slider.`,
     liveDemo: "https://mobile-mechanic-bc92f.web.app/",
     github: "https://github.com/habanerocity/mobilemechanic",
-    tools: ["React JS", "Bootstrap", "SCSS"]
+    tools: ["React JS", "Bootstrap", "SCSS", "API"]
   },
   {
     image: "/static/mactodo3.webp",

@@ -44,13 +44,16 @@ const Projects = () => {
 							<Badge pill bg="secondary" text="light" className="px-2">
 								<span className={classes.pill}>{card.tools[2]}</span>
 							</Badge>
+							<Badge pill bg="secondary" text="light" className="mx-2">
+								<span className={classes.pill}>{card.tools[3]}</span>
+							</Badge>
 						</ListGroupItem>
 					</ListGroup>
 					<div className={classes.flex__card__body} >
 						<h3 className={` ${classes.card__heading} pt-md-3 `}>{card.title}</h3>
 						<span className={` ${classes.card__description} fs-5`}>{card.description}</span>
 					</div>
-					<div className="w-50 mt-4 d-flex justify-content-evenly align-items-center">
+					<div className="w-75 mt-4 d-flex justify-content-evenly align-items-center">
 						<Button href={card.liveDemo} target="_blank" variant="secondary" size="lg">Live Demo</Button>
 						<Button href={card.github} target="_blank" variant="outline-secondary" size="lg">View Code</Button>
 					</div>

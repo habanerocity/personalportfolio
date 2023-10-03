@@ -37,11 +37,11 @@ const About = () => {
     <main>
       <Head>
         <title>
-          About Me - Lindy Ramirez, Front End Developer based in Los Angeles
+          About Me - Lindy Ramirez, Shopify Theme Developer
         </title>
         <meta
           name="description"
-          content="About me page for Lindy Ramirez, Web Developer based in Los Angeles, California. Learn more about me here."
+          content="About me page for Lindy Ramirez, Shopify Theme Developer. Learn more about me here."
         />
       </Head>
       <SideBar />
@@ -81,25 +81,24 @@ const About = () => {
                   />
                   <div className={classes.flex__containerCol}>
                     <h1 className={classes.lr}>Lindy Ramirez</h1>
-                    <h3 className={classes.dev}>Web Developer</h3>
+                    <h3 className={classes.dev}>Shopify Theme Developer</h3>
                   </div>
                 </div>
                 <div className={classes.details}>
                   <span className="fs-4">
-                    Hi my name is Lindy and I am a self-taught web
-                    developer with a background in the e-commerce industry. I
-                    have a keen interest in building clean and modern user interfaces,
-                    with an emphasis in responsive design and the JavaScript
-                    ecosystem. Computers and technology are a childhood passion
+                    Hi my name is Lindy and I am a self-taught Shopify Theme
+                    Developer with a background in the e-commerce industry. I
+                    have a keen interest in building clean and modern e-commerce themes,
+                    with an emphasis in responsive design and increasing conversion rates for businesses. Computers and technology are a childhood passion
                     of mine and I have been solving tech-related problems ever
-                    since. I am a fan of sports, automobiles, traveling, and
+                    since. I am a fan of sports, traveling, and
                     spicy food. Feel free to contact me if you would like to
                     work or collaborate with me.
                   </span>
                   <div className={classes.btn__container}>
                     <Link passHref href="/Contact">
                       <div>
-                        <Button name="Hire Me" />
+                        <Button name="Contact" />
                       </div>
                     </Link>
                     <div className={classes.icons}>

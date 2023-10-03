@@ -176,7 +176,7 @@ const ContactForm = () => {
         <div className={classes.hire__btn}>
           <Button
             disabled={!formIsValid}
-            name="Hire Me"
+            name="Contact"
             type="submit"
             value="Send"
           />

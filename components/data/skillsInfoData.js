@@ -3,14 +3,14 @@ export const skillsInfo = [
     image: "/static/htmlfive.png",
     height: 150,
     width: 150,
-    alt: "Html 5"
+    alt: "HTML 5"
   },
-  { image: "/static/css.png", height: 150, width: 150, alt: "Css 3" },
+  { image: "/static/css.png", height: 150, width: 150, alt: "CSS 3" },
   {
     image: "/static/js.png",
     height: 135,
     width: 135,
-    alt: "Javascript"
+    alt: "JavaScript"
   },
   {
     image: "/static/bs.png",
@@ -23,9 +23,9 @@ export const skillsInfo = [
     image: "/static/reacticon.png",
     height: 120,
     width: 150,
-    alt: "React js"
+    alt: "React JS"
   },
-  { image: "/static/nxt.png", height: 120, width: 120, alt: "Next js" },
+  { image: "/static/nxt.png", height: 120, width: 120, alt: "Next JS" },
   {
     image: "/static/bigcommerce-1.svg",
     height: 125,

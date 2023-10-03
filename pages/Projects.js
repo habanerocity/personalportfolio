@@ -22,7 +22,7 @@ const Projects = () => {
 		return (
 			<Card className={`${classes.card} col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
 				<Card.Img className={classes.card__top__br} variant="top" src={card.image} alt={card.title} />
-				<Card.Body className="p-4 d-flex flex-column justify-content-between align-items-center">
+				<Card.Body className="p-4 d-flex flex-column align-items-center">
 					<ListGroup className="list-group-flush text-center ">
 						{/* <span>
 							<Card.Title>Links</Card.Title>
@@ -35,27 +35,27 @@ const Projects = () => {
 						</span> */}
 						<ListGroupItem>
 							<Card.Title>Made with </Card.Title>
-							<Badge pill bg="secondary" text="light" className="px-2">
+							<Badge pill bg="secondary" text="light" className="p-2">
 								<span className={classes.pill}>{card.tools[0]}</span>
 							</Badge>
-							<Badge pill bg="secondary" text="light" className="mx-2">
+							<Badge pill bg="secondary" text="light" className="mx-2 p-2">
 								<span className={classes.pill}>{card.tools[1]}</span>
 							</Badge>
-							<Badge pill bg="secondary" text="light" className="px-2">
+							<Badge pill bg="secondary" text="light" className="p-2 mt-1">
 								<span className={classes.pill}>{card.tools[2]}</span>
 							</Badge>
-							<Badge pill bg="secondary" text="light" className="mx-2">
+							<Badge pill bg="secondary" text="light" className="mx-2 p-2 mt-1">
 								<span className={classes.pill}>{card.tools[3]}</span>
 							</Badge>
 						</ListGroupItem>
 					</ListGroup>
 					<div className={classes.flex__card__body} >
-						<h3 className={` ${classes.card__heading} pt-md-3 `}>{card.title}</h3>
+						<h3 className={` ${classes.card__heading}`}>{card.title}</h3>
 						<span className={` ${classes.card__description} fs-5`}>{card.description}</span>
 					</div>
 					<div className="w-75 mt-4 d-flex justify-content-evenly align-items-center">
-						<Button href={card.liveDemo} target="_blank" variant="secondary" size="lg">Live Demo</Button>
-						<Button href={card.github} target="_blank" variant="outline-secondary" size="lg">View Code</Button>
+						<Button href={card.liveDemo} target="_blank" className={classes.card__btn} variant="secondary" size="lg">Live Demo</Button>
+						<Button href={card.github} target="_blank" className={classes.card__btn} variant="outline-secondary" size="lg">View Code</Button>
 					</div>
 
 				</Card.Body>
@@ -66,10 +66,10 @@ const Projects = () => {
 	return (
 		<main>
 			<Head>
-				<title>Projects - Lindy Ramirez | Front End Developer based in Los Angeles</title>
+				<title>Projects - Lindy Ramirez | Shopify Theme Developer based in Los Angeles</title>
 				<meta
 					name="description"
-					content="Projects page for Lindy Ramirez, front end react developer based in Los Angeles, California. View my projects here."
+					content="Projects page for Lindy Ramirez, Shopify Theme developer based in Los Angeles, California. View my projects here."
 				/>
 			</Head>
 			<SideBar />

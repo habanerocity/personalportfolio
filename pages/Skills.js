@@ -18,8 +18,8 @@ const Skills = () => {
 			<motion.div
 				className={classes.skill}
 				whileHover={{
-					scale: [ 1, 1.4, 1.2 ],
-					rotate: [ 0, 10, -10, 0 ],
+					scale: [1, 1.4, 1.2],
+					rotate: [0, 10, -10, 0],
 					filter: [
 						'hue-rotate(0) contrast(100%)',
 						'hue-rotate(360deg) contrast(200%)',
@@ -33,6 +33,7 @@ const Skills = () => {
 				key={index}
 			>
 				<Image src={skills.image} height={skills.height} width={skills.width} alt={skills.alt} />
+				<h3 className="text-center mt-1">{skills.alt}</h3>
 			</motion.div>
 		);
 	};

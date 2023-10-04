@@ -69,7 +69,7 @@ const Projects = () => {
 				<title>Projects - Lindy Ramirez | Shopify Theme Developer based in Los Angeles</title>
 				<meta
 					name="description"
-					content="Projects page for Lindy Ramirez, Shopify Theme developer based in Los Angeles, California. View my projects here."
+					content="Projects page for Lindy Ramirez, Shopify Theme Developer based in Los Angeles, California. View my projects here."
 				/>
 			</Head>
 			<SideBar />

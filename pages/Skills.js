@@ -33,7 +33,7 @@ const Skills = () => {
 				key={index}
 			>
 				<Image src={skills.image} height={skills.height} width={skills.width} alt={skills.alt} />
-				<h3 className="text-center mt-1">{skills.alt}</h3>
+
 			</motion.div>
 		);
 	};

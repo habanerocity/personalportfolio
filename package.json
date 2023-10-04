@@ -16,7 +16,7 @@
     "react-bootstrap": "^2.1.2",
     "react-dom": "17.0.2",
     "sass": "^1.49.7",
-    "sharp": "^0.30.6",
+    "sharp": "^0.30.7",
     "typewriter-effect": "^2.18.2"
   },
   "devDependencies": {

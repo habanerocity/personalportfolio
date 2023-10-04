@@ -44,7 +44,7 @@ const Skills = () => {
 				<title>Skills - Lindy Ramirez, Front End Developer based in Los Angeles</title>
 				<meta
 					name="description"
-					content="Skills page for Lindy Ramirez, front end react developer based in Los Angeles, California. View my tech skills here."
+					content="Skills page for Lindy Ramirez, Shopify Theme Developer. View my tech skills here."
 				/>
 			</Head>
 			<SideBar />

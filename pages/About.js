@@ -20,7 +20,7 @@ const About = () => {
   const renderLogos = (logo, index) => {
     return (
       <div className={classes.img} key={index}>
-        <a href={logo.link} target="_blank" rel="noreferrer">
+        <Link href={logo.link} target="_blank" rel="noreferrer">
           <Image
             className={classes.social_media}
             src={logo.image}
@@ -28,7 +28,7 @@ const About = () => {
             height={30}
             width={30}
           />
-        </a>
+        </Link>
       </div>
     );
   };

@@ -12,23 +12,21 @@ const SideBar = () => {
   const renderLinks = (link, index) => {
     return (
       <li className={classes.nav_text} key={index}>
-        <Link href={link.routerPath}>
-          <a
-            className={
-              router.pathname == `${link.routerPath}`
-                ? `${classes.active} ${classes.nav_text}`
-                : classes.nav_text
-            }
-          >
-            <Image
-              height={28}
-              width={25}
-              src={link.image}
-              alt={link.linkName}
-              priority={true}
-            />
-            <span className={classes.link_content}>{link.linkName}</span>
-          </a>
+        <Link href={link.routerPath} className={
+          router.pathname == `${link.routerPath}`
+            ? `${classes.active} ${classes.nav_text}`
+            : classes.nav_text
+        }>
+
+          <Image
+            height={28}
+            width={25}
+            src={link.image}
+            alt={link.linkName}
+            priority={true}
+          />
+          <span className={classes.link_content}>{link.linkName}</span>
+
         </Link>
       </li>
     );
@@ -40,15 +38,15 @@ const SideBar = () => {
         <ul className={classes.nav_menu_items}>
           <span className={classes.logo}>
             <Link href="/">
-              <a>
-                <Image
-                  height={50}
-                  width={75}
-                  src={"/static/habaneroicon.png"}
-                  alt="Logo"
-                  className={classes.hab}
-                />
-              </a>
+
+              <Image
+                height={50}
+                width={75}
+                src={"/static/habaneroicon.png"}
+                alt="Logo"
+                className={classes.hab}
+              />
+
             </Link>
           </span>
           {linkInfo.map(renderLinks)}

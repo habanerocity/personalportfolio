@@ -33,7 +33,6 @@ const Skills = () => {
 				key={index}
 			>
 				<Image src={skills.image} height={skills.height} width={skills.width} alt={skills.alt} />
-
 			</motion.div>
 		);
 	};

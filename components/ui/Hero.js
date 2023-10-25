@@ -37,15 +37,15 @@ const Hero = () => {
                 .pauseFor(3300)
                 .typeString("I'm a ")
                 .pauseFor(1000)
+                .typeString("Web Developer")
+                .pauseFor(1000)
+                .deleteChars(13)
+                .pauseFor(1000)
                 .typeString("Shopify Theme Developer")
                 .pauseFor(1000)
                 .deleteChars(23)
                 .pauseFor(1000)
-                .typeString("Front End Developer")
-                .pauseFor(1000)
-                .deleteChars(20)
-                .pauseFor(1000)
-                .typeString(" Digital Marketer")
+                .typeString(" Wordpress Theme Developer")
                 .pauseFor(4000)
                 .start();
             }}
@@ -57,7 +57,7 @@ const Hero = () => {
         </div>
         <div>
           <Link className={classes.link} passHref href="/Projects">
-            <button className={`${classes.see_projects} `}>See Projects</button>
+            <button className={`${classes.see_projects} fs-3`}>See Projects</button>
           </Link>
         </div>
       </div>

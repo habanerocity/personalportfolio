@@ -9,11 +9,11 @@ export const linkInfo = [
     image: "/static/circle-user-solid.svg",
     linkName: "About"
   },
-  {
-    routerPath: "/Skills",
-    image: "/static/laptop-code-solid.svg",
-    linkName: "Skills"
-  },
+  // {
+  //   routerPath: "/Skills",
+  //   image: "/static/laptop-code-solid.svg",
+  //   linkName: "Skills"
+  // },
   {
     routerPath: "/Projects",
     image: "/static/briefcase-solid.svg",

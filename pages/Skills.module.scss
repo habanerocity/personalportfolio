@@ -14,8 +14,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-column-gap: 3rem;
+  grid-row-gap: 5rem;
   background-color: #ccc;
   padding: 4rem;
   place-items: center;
@@ -24,6 +24,8 @@
 
 .skill {
   cursor: pointer;
+  height: 75px;
+  width: 75px;
 }
 
 .skills {

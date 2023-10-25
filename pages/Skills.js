@@ -32,7 +32,7 @@ const Skills = () => {
 				}}
 				key={index}
 			>
-				<Image src={skills.image} height={skills.height} width={skills.width} alt={skills.alt} />
+				<Image src={skills.image} fill={true} alt={skills.alt} />
 			</motion.div>
 		);
 	};

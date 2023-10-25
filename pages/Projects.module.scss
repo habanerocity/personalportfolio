@@ -4,10 +4,10 @@
 
 .card {
     background-color: #fff;
-    min-height: 59rem;
+    // min-height: 59rem;
     margin-bottom: 10rem;
     border-radius: 5px;
-    font-family: $font-body, sans-serif;
+    // font-family: $font-body, sans-serif;
     box-shadow: $box-shadow;
 
     &__top__br{
@@ -15,12 +15,12 @@
         border-top-right-radius: 5px;
     }
 
-    &__description {
-        font-family: $font-body, sans-serif;
-    }
+    // &__description {
+    //     font-family: $font-body, sans-serif;
+    // }
 
     &__heading {
-        font-family: $font-header, sans-serif;
+        // font-family: $font-header, sans-serif;
         font-weight: bolder;
         text-align: center;
     }
@@ -33,7 +33,6 @@
     height: auto;
     flex-wrap: wrap;
     }
-
     
 }
 
@@ -81,7 +80,7 @@
 }
 
 .pill {
-    font-size: 1rem;
+    padding: 4px;
 }
 
 .preview {
@@ -93,9 +92,9 @@
         padding: 8rem 0;
     }
 
-    .card{
-        min-height: 53rem;
-    }
+    // .card{
+    //     min-height: 53rem;
+    // }
 }
 
 @media screen and (max-width: 767px) {

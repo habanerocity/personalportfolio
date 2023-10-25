@@ -1,6 +1,8 @@
 @import '../../styles/sass/mixins';
 @import '../../styles/sass/variables';
 
+
+
 .hab {
     cursor: pointer;
 }
@@ -10,20 +12,34 @@
     height: 3.4rem;
     padding:0 !important;
     list-style: none;
+    position:absolute;
     font-weight: 800;
     margin-left: 1.5rem;
+    transform: translate(-35rem, 1px);
 }
 
-.nav_menu {
+// .nav_menu {
+//     background-color: #fff;
+//     width: 25%;
+//     height: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: fixed;
+//     top: 0;
+// }
+
+.nav_menu{
     background-color: #fff;
-    width: 25%;
-    height: 100%;
+    width: 100%;
+    z-index: 10;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: relative;
     top: 0;
-}
+    }
 
 .link_content {
     display: flex;
@@ -61,8 +77,8 @@
     & > span:hover  {
         font-weight: bolder;
         color: black;
-        transition: all 400ms ease-out;
-        letter-spacing: 1px;
+        // transition: all 400ms ease-out;
+        // letter-spacing: 1px;
     }
 }
 
@@ -74,7 +90,7 @@
 }
 
 .nav_menu_items {
-    width: 80%;
+    display: contents;
 }
 
 @media screen and (max-width: 1399px){
@@ -83,17 +99,17 @@
         cursor: default;
     }
 
-    .nav_menu{
-            background-color: #fff;
-    width: 100%;
-    z-index: 10;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 0;
-    }
+    // .nav_menu{
+    // background-color: #fff;
+    // width: 100%;
+    // z-index: 10;
+    // height: auto;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // position: relative;
+    // top: 0;
+    // }
 
     .nav_text a {
         & > span:hover {
@@ -106,80 +122,80 @@
 }
 
 .logo {
-    width: 5.6rem;
-    height: 4rem;
-    transform: translate(-65rem, 2px);
+    
+    // transform: translateX(-65rem);
     position: absolute;
     margin-left: 0 !important;
 }
 }
 
 //MEDIA QUERIES
-@media screen and (max-width: 1370px){
-    .logo {
-        transform: translate(-60rem, 2px);
-    }
-}
 
-@media screen and (max-width: 1270px){
-    .logo {
-        transform: translate(-57rem, 2px);
-    }
-}
+// @media screen and (max-width: 1370px){
+//     .logo {
+//         transform: translateX(-62rem);
+//     }
+// }
 
-@media screen and (max-width: 1210px){
-    .logo {
-        transform: translate(-55rem, 2px);
-    }
-}
+// @media screen and (max-width: 1270px){
+//     .logo {
+//         transform: translateX(-56rem);
+//     }
+// }
 
-@media screen and (max-width: 1170px){
-    .logo {
-        transform: translate(-52rem, 2px);
-    }
-}
+// @media screen and (max-width: 1210px){
+//     .logo {
+//         transform: translateX(-53rem);;
+//     }
+// }
 
-@media screen and (max-width: 1100px){
-    .logo {
-        transform: translate(-49rem, 2px);
-    }
-}
+// @media screen and (max-width: 1170px){
+//     .logo {
+//         transform: translateX(-49rem);
+//     }
+// }
 
-@media screen and (max-width: 1045px){
-    .logo {
-        transform: translate(-46rem, 2px);
-    }
-}
+// @media screen and (max-width: 1100px){
+//     .logo {
+//         transform: translateX(-45rem);
+//     }
+// }
 
-@media screen and (max-width: 985px){
-    .logo {
-        transform: translate(-43rem, 2px);
-    }
-}
+// @media screen and (max-width: 1045px){
+//     .logo {
+//         transform: translateX(-42rem);
+//     }
+// }
+
+// @media screen and (max-width: 985px){
+//     .logo {
+//         transform: translateX(-39rem);
+//     }
+// }
 
 @media screen and (max-width: 925px){
     .link_content {
         display:none;
     }
 
-    .logo {
-        transform: translate(-40rem, 2px);
-        width: 46px;
-        height: 33px;
-    }
+    // .logo {
+    //     transform: translate(-40rem, 2px);
+    //     width: 46px;
+    //     height: 33px;
+    // }
 }
 
-@media screen and (max-width: 865px){
-    .logo {
-        transform: translate(-37rem, 2px);
-    }
-}
+// @media screen and (max-width: 865px){
+//     .logo {
+//         transform: translate(-37rem, 2px);
+//     }
+// }
 
-@media screen and (max-width: 810px){
-    .logo {
-        transform: translate(-34rem, 2px);
-    }
-}
+// @media screen and (max-width: 810px){
+//     .logo {
+//         transform: translate(-34rem, 2px);
+//     }
+// }
 
 @media screen and (max-width: 745px){
     .logo {

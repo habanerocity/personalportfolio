@@ -34,24 +34,29 @@ const SideBar = () => {
 
   return (
     <main >
-      <nav className={`${classes.nav_menu} `}>
-        <ul className={classes.nav_menu_items}>
-          <span className={classes.logo}>
-            <Link href="/">
+      <div className='container'>
+        <nav className={`${classes.nav_menu} `}>
+          <ul className={classes.nav_menu_items}>
+            <span className={`${classes.logo}`}>
 
-              <Image
-                height={50}
-                width={75}
-                src={"/static/habaneroicon.png"}
-                alt="Logo"
-                className={classes.hab}
-              />
+              <Link href="/">
 
-            </Link>
-          </span>
-          {linkInfo.map(renderLinks)}
-        </ul>
-      </nav>
+                <Image
+                  fill
+
+                  src={"/static/habaneroicon.png"}
+                  alt="Logo"
+                  className={classes.hab}
+                />
+
+              </Link>
+
+            </span>
+            {linkInfo.map(renderLinks)}
+          </ul>
+        </nav>
+
+      </div>
     </main>
   );
 };

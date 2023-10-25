@@ -7,11 +7,19 @@ body {
   height:100%;
   margin: 0;
   overflow-x: hidden;
-  font-family: 'Ubuntu' BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Ubuntu', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 62.5%;
   background-color: var(--color-background);
   color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5, h6, button{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+p, span{
+  font-family: 'Lato', sans-serif;
 }
 
 a {

@@ -9,6 +9,7 @@ import Head from "next/head";
 import Container from "react-bootstrap/Container";
 
 import { logoInfo } from "../components/data/aboutLogoInfoData";
+import { skillsInfo } from "../components/data/skillsInfoData";
 
 import Button from "../components/ui/Button";
 import FlexContainer from "../components/ui/FlexContainer";
@@ -17,16 +18,25 @@ import SectionContainer from "../components/ui/SectionContainer";
 import Headings from "../components/ui/Headings";
 
 const About = () => {
+
+  const renderSkills = (skill, index) => {
+    return (
+      <li className="list-unstyled me-3" key={index}>
+        <Image src={skill.image} alt={skill.alt} height={40} width={40} />
+      </li>
+    );
+  };
+
   const renderLogos = (logo, index) => {
     return (
-      <div className={classes.img} key={index}>
+      <div className={`mt-1 {classes.img}`} key={index}>
         <Link href={logo.link} target="_blank" rel="noreferrer">
           <Image
-            className={classes.social_media}
+            className={`me-3 ${classes.social_media}`}
             src={logo.image}
             alt={logo.alt}
-            height={30}
-            width={30}
+            height={25}
+            width={25}
           />
         </Link>
       </div>
@@ -81,29 +91,36 @@ const About = () => {
                   />
                   <div className={classes.flex__containerCol}>
                     <h1 className={classes.lr}>Lindy Ramirez</h1>
-                    <h3 className={classes.dev}>Shopify Theme Developer</h3>
+                    <h3 className={`text-left ${classes.dev}`}>Web Developer</h3>
+                    <div className={classes.icons}>
+                      {logoInfo.map(renderLogos)}
+                    </div>
                   </div>
                 </div>
                 <div className={classes.details}>
-                  <span className="fs-4">
-                    Hi my name is Lindy and I am a self-taught Shopify Theme
+                  <div className="fs-4 py-4">
+                    Hi my name is Lindy and I am a self-taught Web
                     Developer with a background in the e-commerce industry. I
-                    have a keen interest in building clean and modern e-commerce themes,
-                    with an emphasis in responsive design and increasing conversion rates for businesses. Computers and technology are a childhood passion
+                    have a keen interest in building clean and modern user interfaces,
+                    with an emphasis in sound ux principles and increasing conversion rates for businesses. Computers and technology are a childhood passion
                     of mine and I have been solving tech-related problems ever
                     since. I am a fan of sports, traveling, and
                     spicy food. Feel free to contact me if you would like to
                     work or collaborate with me.
-                  </span>
+                  </div>
+                  <div className="d-flex flex-column">
+                    <h2>Skills</h2>
+                    <ul className={`d-flex p-0 w-100 flex-wrap ${classes.skill__list}`}>
+                      {skillsInfo.map(renderSkills)}
+                    </ul>
+                  </div>
                   <div className={classes.btn__container}>
                     <Link passHref href="/Contact">
                       <div>
                         <Button name="Contact" />
                       </div>
                     </Link>
-                    <div className={classes.icons}>
-                      {logoInfo.map(renderLogos)}
-                    </div>
+
                   </div>
                 </div>
               </div>

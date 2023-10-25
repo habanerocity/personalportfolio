@@ -16,11 +16,11 @@ const Contact = () => {
     <main>
       <Head>
         <title>
-          Contact Me - Lindy Ramirez, Front End Developer based in Los Angeles
+          Contact Me - Lindy Ramirez, Shopify Theme Developer
         </title>
         <meta
           name="description"
-          content="Contact page for Lindy Ramirez, front end react developer based in Los Angeles, California. Contact me here."
+          content="Contact page for Lindy Ramirez, Shopify theme developer. Contact me here."
         />
       </Head>
       <SideBar />
@@ -55,7 +55,7 @@ const Contact = () => {
                     <Container className={classes.budz}>
                       <div className={classes.pic__holder}>
                         <Image
-                          src={"/static/shapes.webp"}
+                          src={"/static/me.webp"}
                           className={classes.shapes}
                           layout="fill"
                           alt="Abstract Shapes"

@@ -22,8 +22,8 @@ const Hero = () => {
             alt="Lindy"
             className={classes.lindy}
             src={"/static/lindy.webp"}
-            height={200}
-            width={200}
+            height={205}
+            width={205}
             objectFit="cover"
             layout="intrinsic"
             priority

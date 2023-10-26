@@ -21,8 +21,8 @@ const Hero = () => {
           <Image
             alt="Lindy"
             className={classes.lindy}
-            src={"/static/avatar.png"}
-            height={201}
+            src={"/static/lindy.webp"}
+            height={200}
             width={200}
             objectFit="cover"
             layout="intrinsic"

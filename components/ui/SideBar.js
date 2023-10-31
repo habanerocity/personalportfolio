@@ -34,26 +34,28 @@ const SideBar = () => {
 
   return (
     <main >
-      <div className='container'>
+      <div className={`container ${classes.nav_menu_wrapper} d-flex justify-content-center align-items-center p-0`}>
         <nav className={`${classes.nav_menu} `}>
-          <ul className={classes.nav_menu_items}>
-            <span className={`${classes.logo}`}>
+          <div className={`${classes.logo}`}>
 
-              <Link href="/">
+            <Link href="/">
 
-                <Image
-                  fill
+              <Image
+                fill
 
-                  src={"/static/habaneroicon.png"}
-                  alt="Logo"
-                  className={classes.hab}
-                />
+                src={"/static/habaneroicon.png"}
+                alt="Logo"
+                className={classes.hab}
+              />
 
-              </Link>
+            </Link>
 
-            </span>
-            {linkInfo.map(renderLinks)}
-          </ul>
+          </div>
+          <div className={classes.nav_menu_items_wrapper}>
+            <ul className={`p-0 m-0 ${classes.nav_menu_items}`}>
+              {linkInfo.map(renderLinks)}
+            </ul>
+          </div>
         </nav>
 
       </div>

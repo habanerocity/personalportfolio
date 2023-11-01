@@ -14,7 +14,7 @@ import { skillsInfo } from "../components/data/skillsInfoData";
 import Button from "../components/ui/Button";
 import FlexContainer from "../components/ui/FlexContainer";
 import LogoBar from '../components/ui/LogoBar';
-import NavBar from "../components/ui/NavBar";
+import NavigationBar from "../components/ui/NavigationBar";
 import SectionContainer from "../components/ui/SectionContainer";
 import Headings from "../components/ui/Headings";
 
@@ -55,7 +55,7 @@ const About = () => {
           content="About me page for Lindy Ramirez, Shopify Theme Developer. Learn more about me here."
         />
       </Head>
-      <NavBar />
+      <NavigationBar />
       <motion.div
         initial="hidden"
         animate="visible"

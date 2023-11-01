@@ -1,4 +1,4 @@
-import NavBar from '../components/ui/NavBar';
+import NavigationBar from '../components/ui/NavigationBar';
 import LogoBar from '../components/ui/LogoBar';
 
 import SectionContainer from '../components/ui/SectionContainer';
@@ -63,7 +63,7 @@ const Projects = () => {
 					content="Projects page for Lindy Ramirez, Shopify Theme Developer. View my projects here."
 				/>
 			</Head>
-			<NavBar />
+			<NavigationBar />
 			<motion.div
 				initial="hidden"
 				animate="visible"

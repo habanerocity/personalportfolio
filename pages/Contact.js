@@ -1,7 +1,7 @@
 import classes from "./Contact.module.scss";
 
 import LogoBar from "../components/ui/LogoBar";
-import Navbar from "../components/ui/NavBar";
+import NavigationBar from "../components/ui/NavigationBar";
 import SectionContainer from "../components/ui/SectionContainer";
 import Headings from "../components/ui/Headings";
 import Container from "react-bootstrap/Container";
@@ -24,7 +24,7 @@ const Contact = () => {
           content="Contact page for Lindy Ramirez, Shopify theme developer. Contact me here."
         />
       </Head>
-      <Navbar />
+      <NavigationBar />
       <motion.div
         initial="hidden"
         animate="visible"

@@ -112,27 +112,11 @@
         cursor: default;
     }
 
-    // .nav_menu{
-    // background-color: #fff;
-    // width: 100%;
-    // z-index: 10;
-    // height: auto;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // position: relative;
-    // top: 0;
-    // }
-
     .nav_text a {
         & > span:hover {
             letter-spacing: 0;
         }
     }
-
-// .nav_menu_items {
-//     display: contents;
-// }
 }
 
 //MEDIA QUERIES

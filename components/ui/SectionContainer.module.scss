@@ -12,15 +12,10 @@
     overflow: scroll;
 }
 
-@media screen and (max-width: 1399px){
+@media screen and (min-width: 1399px){
     .section {
         width: 100%;
         transform: translateX(0);
     }
 }
 
-@media screen and (max-width: 595px){
-    .section{
-        // padding: 8rem;
-    }
-}

@@ -66,6 +66,18 @@
     }
 }
 
+@media screen and (max-width: 991px) {
+    .pic__holder {
+        width: 60rem;
+    }
+}
+
+@media screen and (min-width: 991px){
+    .container{
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 850px) {
     .pic__holder {
         display: none;

@@ -87,7 +87,6 @@ const ContactForm = () => {
       .then(
         result => {
           console.log(result.text);
-          console.log("hi");
           successHandler();
         },
         error => {

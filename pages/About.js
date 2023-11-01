@@ -13,7 +13,8 @@ import { skillsInfo } from "../components/data/skillsInfoData";
 
 import Button from "../components/ui/Button";
 import FlexContainer from "../components/ui/FlexContainer";
-import NavBar from "../components/ui/Navbar";
+import LogoBar from '../components/ui/LogoBar';
+import NavBar from "../components/ui/NavBar";
 import SectionContainer from "../components/ui/SectionContainer";
 import Headings from "../components/ui/Headings";
 
@@ -44,7 +45,7 @@ const About = () => {
   };
 
   return (
-    <main>
+    <div className={classes.pg}>
       <Head>
         <title>
           About Me - Lindy Ramirez, Shopify Theme Developer
@@ -128,7 +129,8 @@ const About = () => {
           </Container>
         </SectionContainer>
       </motion.div>
-    </main>
+      <LogoBar />
+    </div>
   );
 };
 

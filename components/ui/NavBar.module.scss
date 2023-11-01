@@ -183,6 +183,18 @@
     .logo {
         display: none;
     }
+
+    .nav_container{
+        position: fixed;
+        top: 95%;
+        left: 0;
+        width: 100%;
+        z-index: 1000000;
+    }
+
+    .nav_menu_wrapper{
+        width: 100%; 
+    }
 }
 
 @media screen and (max-width: 700px){

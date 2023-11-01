@@ -1,13 +1,10 @@
 @import '../styles//sass/mixins';
 @import '../styles//sass/variables';
 
-
 .card {
     background-color: #fff;
-    // min-height: 59rem;
     margin-bottom: 10rem;
     border-radius: 5px;
-    // font-family: $font-body, sans-serif;
     box-shadow: $box-shadow;
 
     &__top__br{
@@ -15,12 +12,7 @@
         border-top-right-radius: 5px;
     }
 
-    // &__description {
-    //     font-family: $font-body, sans-serif;
-    // }
-
     &__heading {
-        // font-family: $font-header, sans-serif;
         font-weight: bolder;
         text-align: center;
     }
@@ -91,10 +83,6 @@
     .flex__container__col {
         padding: 8rem 0;
     }
-
-    // .card{
-    //     min-height: 53rem;
-    // }
 }
 
 @media screen and (max-width: 767px) {
@@ -106,5 +94,16 @@
 @media screen and (max-width: 500px) {
     .flex__container__col {
         padding: 5rem 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .pg_projects{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .flex__container__col {
+        padding: 10rem 0;
     }
 }

@@ -1,7 +1,8 @@
 import NavBar from '../components/ui/NavBar';
+import LogoBar from '../components/ui/LogoBar';
+
 import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
-
 import { cardInfo } from '../components/data/projectsCardInfoData';
 
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
@@ -54,7 +55,7 @@ const Projects = () => {
 	};
 
 	return (
-		<main>
+		<main className={classes.pg_projects}>
 			<Head>
 				<title>Projects - Lindy Ramirez | Shopify Theme Developer</title>
 				<meta
@@ -91,6 +92,9 @@ const Projects = () => {
 					</Container>
 				</SectionContainer>
 			</motion.div>
+
+			<LogoBar />
+
 		</main>
 	);
 };

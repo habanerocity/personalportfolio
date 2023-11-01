@@ -1,4 +1,4 @@
-import Navbar from '../components/ui/Navbar';
+import Navbar from '../components/ui/NavBar';
 import Container from 'react-bootstrap/Container';
 import classes from './Skills.module.scss';
 

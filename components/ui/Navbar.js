@@ -33,7 +33,7 @@ const NavBar = () => {
   };
 
   return (
-    <main >
+    <main className={classes.nav_container}>
       <div className={`container ${classes.nav_menu_wrapper} d-flex justify-content-center align-items-center p-0`}>
         <nav className={`${classes.nav_menu} `}>
           <div className={`${classes.logo}`}>

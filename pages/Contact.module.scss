@@ -85,3 +85,14 @@
         padding: 5rem 0;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .pg_contact{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .container {
+        padding: 10rem 0;
+    }
+}

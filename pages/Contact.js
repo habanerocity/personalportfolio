@@ -1,6 +1,7 @@
 import classes from "./Contact.module.scss";
 
-import Navbar from "../components/ui/Navbar";
+import LogoBar from "../components/ui/LogoBar";
+import Navbar from "../components/ui/NavBar";
 import SectionContainer from "../components/ui/SectionContainer";
 import Headings from "../components/ui/Headings";
 import Container from "react-bootstrap/Container";
@@ -13,7 +14,7 @@ import Image from "next/image";
 
 const Contact = () => {
   return (
-    <main>
+    <main className={classes.pg_contact}>
       <Head>
         <title>
           Contact Me - Lindy Ramirez, Shopify Theme Developer
@@ -71,6 +72,7 @@ const Contact = () => {
           </Container>
         </SectionContainer>
       </motion.div>
+      <LogoBar />
     </main>
   );
 };

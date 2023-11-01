@@ -253,6 +253,15 @@
 }
 
 @media screen and (max-width: 450px) {
+  .pg{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .flex__container__col {
+    padding: 10rem 0;
+  }
+  
   .about__card {
     width: 83%;
     padding: 1.5rem;

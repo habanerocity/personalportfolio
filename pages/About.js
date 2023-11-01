@@ -13,7 +13,7 @@ import { skillsInfo } from "../components/data/skillsInfoData";
 
 import Button from "../components/ui/Button";
 import FlexContainer from "../components/ui/FlexContainer";
-import SideBar from "../components/ui/SideBar";
+import NavBar from "../components/ui/Navbar";
 import SectionContainer from "../components/ui/SectionContainer";
 import Headings from "../components/ui/Headings";
 
@@ -32,7 +32,7 @@ const About = () => {
       <div className={`mt-1 {classes.img}`} key={index}>
         <Link href={logo.link} target="_blank" rel="noreferrer">
           <Image
-            className={`me-3 ${classes.social_media}`}
+            className={`me-3 my-3 ${classes.social_media}`}
             src={logo.image}
             alt={logo.alt}
             height={25}
@@ -54,7 +54,7 @@ const About = () => {
           content="About me page for Lindy Ramirez, Shopify Theme Developer. Learn more about me here."
         />
       </Head>
-      <SideBar />
+      <NavBar />
       <motion.div
         initial="hidden"
         animate="visible"

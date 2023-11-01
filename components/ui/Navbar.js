@@ -1,12 +1,12 @@
 import { useRouter } from "next/router";
-import classes from "./SideBar.module.scss";
+import classes from "./NavBar.module.scss";
 
-import { linkInfo } from "../data/sideBarLinkInfoData";
+import { linkInfo } from "../data/navBarLinkInfoData";
 
 import Link from "next/link";
 import Image from "next/image";
 
-const SideBar = () => {
+const NavBar = () => {
   const router = useRouter();
 
   const renderLinks = (link, index) => {
@@ -63,4 +63,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default NavBar;

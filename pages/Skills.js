@@ -1,4 +1,4 @@
-import SideBar from '../components/ui/SideBar';
+import Navbar from '../components/ui/Navbar';
 import Container from 'react-bootstrap/Container';
 import classes from './Skills.module.scss';
 
@@ -46,7 +46,7 @@ const Skills = () => {
 					content="Skills page for Lindy Ramirez, Shopify Theme Developer. View my tech skills here."
 				/>
 			</Head>
-			<SideBar />
+			<Navbar />
 			<motion.div
 				initial="hidden"
 				animate="visible"

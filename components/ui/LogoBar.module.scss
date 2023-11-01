@@ -1,0 +1,27 @@
+.hab {
+    cursor: pointer;
+}
+
+.logo {
+    height: 4rem;
+    width: 11rem;
+    padding:0 !important;
+    list-style: none;
+    position: relative;
+
+
+}
+
+.logo_wrapper{
+    display: none!important;
+    height: 4rem;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 450px){
+    .logo_wrapper {
+        display: flex!important;
+        justify-content: center;
+        width:100%!important;
+    }
+}

@@ -2,7 +2,8 @@ import Hero from '../components/ui/Hero';
 
 import { motion } from 'framer-motion';
 
-import SideBar from '../components/ui/SideBar';
+import NavBar from '../components/ui/NavBar';
+import LogoBar from '../components/ui/LogoBar';
 
 import classes from './index.module.scss';
 
@@ -17,8 +18,7 @@ const HomePage = () => {
 					content="Home page for Lindy Ramirez | Front End React Developer Based in Los Angeles, California. View my developer portfolio here."
 				/>
 			</Head>
-
-			<SideBar xw />
+			<NavBar xw />
 			<motion.div
 				initial="hidden"
 				animate="visible"
@@ -39,8 +39,7 @@ const HomePage = () => {
 			>
 				<Hero />
 			</motion.div>
-
-
+			<LogoBar xw />
 		</main>
 	);
 };

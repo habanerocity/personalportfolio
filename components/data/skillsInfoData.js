@@ -27,10 +27,10 @@ export const skillsInfo = [
   },
   { image: "/static/nxt.png", height: 120, width: 120, alt: "Next JS" },
   {
-    image: "/static/php.webp",
+    image: "/static/figma.webp",
     height: 125,
     width: 125,
-    alt: "PHP"
+    alt: "Figma"
   },
   { image: "/static/shopify.png", height: 120, width: 120, alt: "Shopify" },
   {

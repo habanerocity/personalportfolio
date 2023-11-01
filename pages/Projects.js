@@ -1,4 +1,4 @@
-import SideBar from '../components/ui/SideBar';
+import NavBar from '../components/ui/NavBar';
 import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
 
@@ -62,7 +62,7 @@ const Projects = () => {
 					content="Projects page for Lindy Ramirez, Shopify Theme Developer. View my projects here."
 				/>
 			</Head>
-			<SideBar />
+			<NavBar />
 			<motion.div
 				initial="hidden"
 				animate="visible"

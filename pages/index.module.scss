@@ -5,3 +5,14 @@
 .motion {
     height: 100%;
 }
+
+@media screen and (max-width: 450px){
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        // align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+}

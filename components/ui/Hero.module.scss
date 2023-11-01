@@ -135,6 +135,12 @@
   }
 }
 
+@media screen and (max-width: 450px){
+  .details {
+    font-size: 2rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .see_projects {
     margin-top: 1rem;

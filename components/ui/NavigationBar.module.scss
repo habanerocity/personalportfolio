@@ -1,8 +1,6 @@
 @import '../../styles/sass/mixins';
 @import '../../styles/sass/variables';
 
-
-
 .hab {
     cursor: pointer;
 }
@@ -14,22 +12,7 @@
     list-style: none;
     position:relative;
     font-weight: 800;
-    // margin-left: 1.5rem;
-    // transform: translate(-35rem, 1px);
 }
-
-// .nav_menu {
-//     background-color: #fff;
-//     width: 25%;
-//     height: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: fixed;
-//     top: 0;
-// }
-
-
 
 .nav_menu{
     background-color: #fff;
@@ -99,7 +82,7 @@
 }
 
 .nav_menu_items {
-    list-style-type: none;
+  list-style-type: none;
   display: flex;
   justify-content: space-apart;
   align-items: center;
@@ -126,30 +109,11 @@
         display:none;
     }
 
-    // .logo {
-    //     transform: translate(-40rem, 2px);
-    //     width: 46px;
-    //     height: 33px;
-    // }
+    //transforms icons the primary color when they are deemed active
+    img.active{
+        filter: invert(40%) sepia(38%) saturate(2965%) hue-rotate(2deg) brightness(105%) contrast(102%);
+    }
 }
-
-// @media screen and (max-width: 865px){
-//     .logo {
-//         transform: translate(-37rem, 2px);
-//     }
-// }
-
-// @media screen and (max-width: 810px){
-//     .logo {
-//         transform: translate(-34rem, 2px);
-//     }
-// }
-
-// @media screen and (max-width: 745px){
-//     .logo {
-//         transform: translate(-31rem, 2px);
-//     }
-// }
 
 @media screen and (max-width: 700px){
     .nav_text {

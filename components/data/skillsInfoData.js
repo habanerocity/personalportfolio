@@ -1,49 +1,55 @@
 export const skillsInfo = [
   {
     image: "/static/htmlfive.png",
-    height: 150,
-    width: 150,
+    height: 45,
+    width: 40,
     alt: "HTML 5"
   },
-  { image: "/static/css.png", height: 150, width: 150, alt: "CSS 3" },
+  { image: "/static/css.png", height: 45, width: 40, alt: "CSS 3" },
   {
     image: "/static/js.png",
-    height: 135,
-    width: 135,
+    height: 45,
+    width: 40,
     alt: "JavaScript"
   },
   {
     image: "/static/bs.png",
-    height: 100,
-    width: 125,
-    alt: "Bootstrap 5"
+    height: 45,
+    width: 50,
+    alt: "Bootstrap"
   },
-  { image: "/static/sass.png", height: 100, width: 125, alt: "Sass" },
+  { image: "/static/sass.png", height: 45, width: 55, alt: "Sass" },
   {
     image: "/static/reacticon.png",
-    height: 120,
-    width: 150,
+    height: 45,
+    width: 50,
     alt: "React JS"
   },
-  { image: "/static/nxt.png", height: 120, width: 120, alt: "Next JS" },
+  { image: "/static/nxt.png", height: 45, width: 45, alt: "Next JS" },
   {
     image: "/static/figma.webp",
-    height: 125,
-    width: 125,
+    height: 45,
+    width: 35,
     alt: "Figma"
   },
-  { image: "/static/shopify.png", height: 120, width: 120, alt: "Shopify" },
+  {
+    image: "/static/ps.png",
+    height: 45,
+    width: 45,
+    alt: "Photoshop"
+  },
+  { image: "/static/shopify.png", height: 45, width: 45, alt: "Shopify" },
   {
     image: "/static/liquid.png",
-    height: 130,
-    width: 130,
+    height: 45,
+    width: 45,
     alt: "Liquid"
   },
   {
     image: "/static/wordpress.png",
-    height: 115,
-    width: 115,
+    height: 45,
+    width: 45,
     alt: "Wordpress"
   },
-  { image: "/static/git.png", height: 120, width: 120, alt: "Git" }
+  { image: "/static/git.png", height: 45, width: 45, alt: "Git" }
 ];

@@ -22,8 +22,9 @@ const About = () => {
 
   const renderSkills = (skill, index) => {
     return (
-      <li className="list-unstyled me-3" key={index}>
-        <Image src={skill.image} alt={skill.alt} height={40} width={40} />
+      <li className="list-unstyled pe-3 pb-3 d-flex flex-column justify-content-center align-items-center" key={index}>
+        <Image src={skill.image} alt={skill.alt} height={skill.height} width={skill.width} />
+        <div className="text-center fs-6 mt-1">{skill.alt}</div>
       </li>
     );
   };
@@ -33,7 +34,7 @@ const About = () => {
       <div className={`mt-1 {classes.img}`} key={index}>
         <Link href={logo.link} target="_blank" rel="noreferrer">
           <Image
-            className={`me-3 my-3 ${classes.social_media}`}
+            className={`me-2 ${classes.social_media}`}
             src={logo.image}
             alt={logo.alt}
             height={25}
@@ -48,11 +49,11 @@ const About = () => {
     <div className={classes.pg}>
       <Head>
         <title>
-          About Me - Lindy Ramirez, Shopify Theme Developer
+          About Me - Lindy Ramirez, Web Developer
         </title>
         <meta
           name="description"
-          content="About me page for Lindy Ramirez, Shopify Theme Developer. Learn more about me here."
+          content="About me page for Lindy Ramirez, Web Developer. Learn more about me here."
         />
       </Head>
       <NavigationBar />
@@ -84,7 +85,7 @@ const About = () => {
               <div className={`${classes.about__card} col-4`}>
                 <div className={classes.flex__containerHeading}>
                   <Image
-                    src={"/static/ai-me-1.jpg"}
+                    src={"/static/me-kl.png"}
                     alt="me"
                     height={130}
                     width={140}
@@ -99,19 +100,34 @@ const About = () => {
                   </div>
                 </div>
                 <div className={classes.details}>
-                  <div className="fs-4 py-4">
-                    Hi my name is Lindy and I am a self-taught Web
-                    Developer with a background in the e-commerce industry. I
-                    have a keen interest in building clean and modern user interfaces,
-                    with an emphasis in sound ux principles and increasing conversion rates for businesses. Computers and technology are a childhood passion
-                    of mine and I have been solving tech-related problems ever
-                    since. I am a fan of sports, traveling, and
-                    spicy food. Feel free to contact me if you would like to
-                    work or collaborate with me.
+                  <div className="fs-4 pt-4">
+                    Hello, I'm Lindy, a self-taught Web Developer from Southern California with a strong background in digital marketing and e-commerce. I've always been fascinated by technology ever since childhood.
+                    </div>
+                  <br />
+                  <h3>What I Offer:</h3>
+                  <ul className="fs-4">
+                    <li>A passion for creating clean and modern user interfaces.</li>
+                    <li>A focus on sound UX principles to enhance the user experience.</li>
+                    <li>A track record of increasing conversion rates for businesses through web development and digital marketing.</li>
+                  </ul>
+                  <br />
+                  <h3>My Journey:</h3>
+                  <div className="fs-4">
+                    My journey into web development began at an early age. Even as a kid, I was captivated by the world of technology and the web. It was during those formative years that I started building Homestead and Angel Fire websites, which ignited my passion for all things digital. This early experience set the foundation for my self-taught path in web development, and I've been at it ever since.
                   </div>
+                  <br />
+                  <h3>Beyond Code:</h3>
+                  <div className="fs-4">
+                    When I'm not coding, you'll find me enjoying my other interests. I'm a sports enthusiast, a traveler who seeks adventure, and a fan of spicy food.
+                  </div>
+                  <br />
+                  <div className="fs-4">
+                    Let's work together to bring your digital projects to life. I'm just an email away.
+                  </div>
+                  <br />
                   <div className="d-flex flex-column">
                     <h2>Skills</h2>
-                    <ul className={`d-flex p-0 w-100 flex-wrap ${classes.skill__list}`}>
+                    <ul className={`d-flex mb-2 p-0 w-100 flex-wrap ${classes.skill__list}`}>
                       {skillsInfo.map(renderSkills)}
                     </ul>
                   </div>

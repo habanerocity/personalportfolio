@@ -21,6 +21,11 @@ const NavigationBar = () => {
           <Image
             height={28}
             width={25}
+            className={
+              router.pathname == `${link.routerPath}`
+                ? `${classes.active}`
+                : null
+            }
             src={link.image}
             alt={link.linkName}
             priority={true}

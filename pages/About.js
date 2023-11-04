@@ -101,7 +101,7 @@ const About = () => {
                 </div>
                 <div className={classes.details}>
                   <div className="fs-4 pt-4">
-                    Hello, I'm Lindy, a self-taught Web Developer from Southern California with a strong background in digital marketing and e-commerce. I've always been fascinated by technology ever since childhood.
+                    Hello, I&apos;m Lindy, a self-taught Web Developer from Southern California with a strong background in digital marketing and e-commerce. I&apos;ve always been fascinated by technology ever since childhood.
                     </div>
                   <br />
                   <h3>What I Offer:</h3>
@@ -113,16 +113,16 @@ const About = () => {
                   <br />
                   <h3>My Journey:</h3>
                   <div className="fs-4">
-                    My journey into web development began at an early age. Even as a kid, I was captivated by the world of technology and the web. It was during those formative years that I started building Homestead and Angel Fire websites, which ignited my passion for all things digital. This early experience set the foundation for my self-taught path in web development, and I've been at it ever since.
+                    My journey into web development began at an early age. Even as a kid, I was captivated by the world of technology and the web. It was during those formative years that I started building Homestead and Angel Fire websites, which ignited my passion for all things digital. This early experience set the foundation for my self-taught path in web development, and I&apos;ve been at it ever since.
                   </div>
                   <br />
                   <h3>Beyond Code:</h3>
                   <div className="fs-4">
-                    When I'm not coding, you'll find me enjoying my other interests. I'm a sports enthusiast, a traveler who seeks adventure, and a fan of spicy food.
+                    When I&apos;m not coding, you&apos;ll find me enjoying my other interests. I&apos;m a sports enthusiast, a traveler who seeks adventure, and a fan of spicy food.
                   </div>
                   <br />
                   <div className="fs-4">
-                    Let's work together to bring your digital projects to life. I'm just an email away.
+                    Let&apos;s work together to bring your digital projects to life. I&apos;m just an email away.
                   </div>
                   <br />
                   <div className="d-flex flex-column">

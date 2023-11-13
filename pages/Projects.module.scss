@@ -20,7 +20,7 @@
     &__holder {
     @include flex-container-row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 1rem;
     height: auto;
     flex-wrap: wrap;

@@ -6,7 +6,7 @@ export const cardInfo = [
      a blog, a cart system, plus user registration and login.  Uses Bootstrap for mobile responsiveness and GSAP for custom animations.  Store Password: uwhohn.`,
     liveDemo: "https://natural-mystic-foods.myshopify.com/",
     github: "https://github.com/habanerocity/Natural-Mystic-Shopify-Store",
-    tools: ["Liquid", "Javascript", "SCSS"],
+    tools: ["Liquid", "Storefront API", "JavaScript", "SCSS", "Bootstrap", "GSAP",],
 
   },
   {
@@ -15,7 +15,7 @@ export const cardInfo = [
     description: `Small business landing page, designed for improved conversion rates and lead generation for automotive technicians and trade professionals. It features responsive design, functional components, a contact modal window, Email JS API integration, custom hooks, implementation of GSAP animation library, and a customer review slider.`,
     liveDemo: "https://mobile-mechanic-bc92f.web.app/",
     github: "https://github.com/habanerocity/mobilemechanic",
-    tools: ["React JS", "Bootstrap", "SCSS"]
+    tools: ["React JS", "API", "Bootstrap", "SCSS", "GSAP"]
   },
   {
     image: "/static/mactodo3.webp",

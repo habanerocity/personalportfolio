@@ -19,6 +19,7 @@ import { motion } from 'framer-motion';
 import classes from './Projects.module.scss';
 
 const Projects = () => {
+
 	const renderCard = (card, index) => {
 		return (
 			<Card className={`${classes.card} col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
@@ -30,16 +31,11 @@ const Projects = () => {
 						<ListGroup className="list-group-flush text-center ">
 							<ListGroupItem>
 								<h3>Tools used</h3>
-								<Badge pill bg="secondary" text="light" className="p-2 fs-4">
-									<span className={classes.pill}>{card.tools[0]}</span>
-								</Badge>
-								<Badge pill bg="secondary" text="light" className="mx-2 p-2 fs-4">
-									<span className={classes.pill}>{card.tools[1]}</span>
-								</Badge>
-								<Badge pill bg="secondary" text="light" className="p-2 mt-1 fs-4">
-									<span className={classes.pill}>{card.tools[2]}</span>
-								</Badge>
-
+								{card.tools.map((tool, index) => (
+									<Badge key={index} pill bg="secondary" text="light" className="p-2 fs-4 m-2">
+										<span className={classes.pill}>{tool}</span>
+									</Badge>
+								))}
 							</ListGroupItem>
 						</ListGroup>
 						<span className={` ${classes.card__description} fs-4 my-2`}>{card.description}</span>

@@ -140,14 +140,44 @@
         z-index: 1000000;
     }
 
-    .nav_menu_wrapper{
-        width: 100%; 
+    .link_content {
+        font-size: 1.4rem;
+        display: block;
+        padding-left: 0;
+    }
+
+    .nav_text{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_menu{
+        height: 5.5rem;
+        top:-16px;
+
+        &_wrapper{
+            width: 100%; 
+        }
+
+        &_items{
+            justify-content: space-evenly;
+        }
+
+        &_items_wrapper{
+            width: 100%;
+        }
     }
 }
 
-@media screen and (max-width: 700px){
-
-    .nav_text {
-        display: unset;
+@media screen and (max-width: 300px){
+    .link_content{
+        display: none;
     }
 }
+
+// @media screen and (max-width: 700px){
+
+//     .nav_text {
+//         display: unset;
+//     }
+// }

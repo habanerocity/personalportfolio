@@ -101,28 +101,7 @@ const About = () => {
                 </div>
                 <div className={classes.details}>
                   <div className="fs-4 pt-4">
-                    Hello, I&apos;m Lindy, a self-taught Web Developer from Southern California with a strong background in digital marketing and e-commerce. I&apos;ve always been fascinated by technology ever since childhood.
-                    </div>
-                  <br />
-                  <h3>What I Offer:</h3>
-                  <ul className="fs-4">
-                    <li>A passion for creating clean and modern user interfaces.</li>
-                    <li>A focus on sound UX principles to enhance the user experience.</li>
-                    <li>A track record of increasing conversion rates for businesses through web development and digital marketing.</li>
-                  </ul>
-                  <br />
-                  <h3>My Journey:</h3>
-                  <div className="fs-4">
-                    My journey into web development began at an early age. Even as a kid, I was captivated by the world of technology and the web. It was during those formative years that I started building Homestead and Angel Fire websites, which ignited my passion for all things digital. This early experience set the foundation for my self-taught path in web development, and I&apos;ve been at it ever since.
-                  </div>
-                  <br />
-                  <h3>Beyond Code:</h3>
-                  <div className="fs-4">
-                    When I&apos;m not coding, you&apos;ll find me enjoying my other interests. I&apos;m a sports enthusiast, a traveler who seeks adventure, and a fan of spicy food.
-                  </div>
-                  <br />
-                  <div className="fs-4">
-                    Let&apos;s work together to bring your digital projects to life. I&apos;m just an email away.
+                    Hey, I&apos;m Lindy, a self-taught Web Developer deeply rooted in digital marketing and the e-commerce world. Specializing in Shopify and WordPress theme development, I&apos;m passionate about creating clean, modern user interfaces that prioritize sound UX principles and drive increased conversion rates. My journey in tech began with a childhood love for computers, evolving into a problem-solving mission. Beyond coding, I&apos;m a big fan of, an adventure-seeking traveler, and a spicy food aficionado. If you&apos;re looking to collaborate on a project or just chat tech and shared interests, feel free to reach out—I&apos;m always up for new ventures.
                   </div>
                   <br />
                   <div className="d-flex flex-column">

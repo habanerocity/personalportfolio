@@ -5,9 +5,9 @@ export const logoInfo = [
     alt: "Github"
   },
   {
-    image: "/static/twitter-brands.svg",
+    image: "/static/x-twitter.svg",
     link: "https://twitter.com/LindyRamirez",
-    alt: "Twitter"
+    alt: "X"
   },
   {
     image: "/static/linkedin-in-brands.svg",

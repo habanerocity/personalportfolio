@@ -6,8 +6,15 @@ export const cardInfo = [
      a blog, a cart system, plus user registration and login.  Uses Bootstrap for mobile responsiveness and GSAP for custom animations.  Store Password: uwhohn.`,
     liveDemo: "https://natural-mystic-foods.myshopify.com/",
     github: "https://github.com/habanerocity/Natural-Mystic-Shopify-Store",
-    tools: ["Liquid", "Storefront API", "JavaScript", "SCSS", "Bootstrap", "GSAP",],
+    tools: ["Liquid", "Storefront API", "JavaScript", "SCSS", "Bootstrap", "GSAP",]
 
+  },
+  {
+    image: "/static/foodventure.png",
+    title: "Foodventure Wordpress Theme Design",
+    description: `Custom Wordpress theme design made for my food and travel blog.  After getting the hang of Wordpress at my previous employer, I decided to learn how to create my own custom Wordpress themes from scratch using PHP.  I decided to couple this disposition with learning how to use Figma, culminating in this design file which contains wireframes, high fidelity designs, and prototypes.`,
+    designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
+    tools: ["Figma", "Photoshop", "Lightroom"]
   },
   {
     image: "/static/macmechanic.webp",

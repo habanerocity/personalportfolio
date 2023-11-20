@@ -7,6 +7,10 @@
     border-radius: 5px;
     box-shadow: $box-shadow;
 
+    &__body{
+        height: 35rem;
+    }
+
     &__top__br{
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -85,6 +89,18 @@
     }
 }
 
+@media screen and (max-width: 1399px){
+    .card__body{
+        height: 45rem;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .card__body{
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .flex__container__col {
         padding: 7rem 0;
@@ -94,6 +110,12 @@
 @media screen and (max-width: 500px) {
     .flex__container__col {
         padding: 5rem 0;
+    }
+}
+
+@media screen and (max-width: 454px){
+    .card__body{
+        height: auto;
     }
 }
 
@@ -107,3 +129,4 @@
         padding: 10rem 0;
     }
 }
+

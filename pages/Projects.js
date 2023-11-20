@@ -24,7 +24,7 @@ const Projects = () => {
 		return (
 			<Card className={`${classes.card} col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
 				<Card.Img className={classes.card__top__br} variant="top" src={card.image} alt={card.title} />
-				<Card.Body className="p-4 d-flex flex-column align-items-center justify-content-between">
+				<Card.Body className={`${classes.card__body} p-4 d-flex flex-column align-items-center justify-content-between`}>
 
 					<div className={classes.flex__card__body} >
 						<h2 className={` ${classes.card__heading}`}>{card.title}</h2>
@@ -41,8 +41,9 @@ const Projects = () => {
 						<span className={` ${classes.card__description} fs-4 my-2`}>{card.description}</span>
 					</div>
 					<div className="w-100 mt-2 d-flex justify-content-evenly align-items-center">
-						<Button href={card.liveDemo} target="_blank" className={`fs-3`} variant="secondary" size="lg">Live Demo</Button>
-						<Button href={card.github} target="_blank" className={`fs-3`} variant="outline-secondary" size="lg">View Code</Button>
+						{card.liveDemo && <Button href={card.liveDemo} target="_blank" className={`fs-3`} variant="secondary" size="lg">Live Demo</Button>}
+						{card.github && <Button href={card.github} target="_blank" className={`fs-3`} variant="outline-secondary" size="lg">View Code</Button>}
+						{card.designFile && <Button href={card.designFile} target="_blank" className={`fs-3 px-4`} variant="secondary" size="lg">View Design</Button>}
 					</div>
 
 				</Card.Body>

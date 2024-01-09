@@ -47,8 +47,7 @@ const NavigationBar = () => {
 
               <Image
                 fill
-
-                src={"/static/habaneroicon.png"}
+                src={"/static/habaneroicon-50pxw.webp"}
                 alt="Logo"
                 className={classes.hab}
               />

@@ -10,7 +10,7 @@ export const cardInfo = [
 
   },
   {
-    image: "/static/foodventure.png",
+    image: "/static/foodventure.webp",
     title: "Foodventure Wordpress Theme Design",
     description: `Custom Wordpress theme design made for my food and travel blog.  After getting the hang of Wordpress at my previous employer, I decided to learn how to create my own custom Wordpress themes from scratch using PHP.  I decided to couple this disposition with learning how to use Figma, culminating in this design file which contains wireframes, high fidelity designs, and prototypes.`,
     designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
@@ -27,10 +27,9 @@ export const cardInfo = [
   {
     image: "/static/mactodo3.webp",
     title: "Daily Agenda To Do App",
-    description: `Daily Agenda App featuring a todo list and a weather forecast built with
-    React JS. Fully responsive web app that consumes an API and implements custom hooks, and local storage.`,
+    description: `Daily Agenda is a full-stack todo list and weather app. It's designed to enhance productivity by integrating a todo list with real-time weather updates. Key features include user authentication using JSON Web Tokens, intuitive task tracking, weather information for the user's location, time and date display, and a guest login option using the Local Storage API.`,
     liveDemo: "https://daily-agenda-289d3.web.app/",
     github: "https://github.com/habanerocity/dailyagenda",
-    tools: ["React JS", "CSS", "API"]
+    tools: ["React JS", "API", "PHP", "MySQL", "JSON Web Tokens"]
   }
 ];

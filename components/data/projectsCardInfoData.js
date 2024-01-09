@@ -17,6 +17,14 @@ export const cardInfo = [
     tools: ["Figma", "Photoshop", "Lightroom"]
   },
   {
+    image: "/static/mactodo.webp",
+    title: "Daily Agenda To Do App",
+    description: `Daily Agenda is a full-stack todo list and weather app. It's designed to enhance productivity by integrating a todo list with real-time weather updates. Key features include user authentication using JSON Web Tokens, intuitive task tracking, weather information for the user's location, time and date display, and a guest login option using the Local Storage API.`,
+    liveDemo: "https://daily-agenda-289d3.web.app/",
+    github: "https://github.com/habanerocity/dailyagenda",
+    tools: ["React JS", "API", "PHP", "MySQL", "JSON Web Tokens"]
+  },
+  {
     image: "/static/macmechanic.webp",
     title: "Mobile Mechanic Landing Page",
     description: `Small business landing page, designed for improved conversion rates and lead generation for automotive technicians and trade professionals. It features responsive design, functional components, a contact modal window, Email JS API integration, custom hooks, implementation of GSAP animation library, and a customer review slider.`,
@@ -24,12 +32,5 @@ export const cardInfo = [
     github: "https://github.com/habanerocity/mobilemechanic",
     tools: ["React JS", "API", "Bootstrap", "SCSS", "GSAP"]
   },
-  {
-    image: "/static/mactodo3.webp",
-    title: "Daily Agenda To Do App",
-    description: `Daily Agenda is a full-stack todo list and weather app. It's designed to enhance productivity by integrating a todo list with real-time weather updates. Key features include user authentication using JSON Web Tokens, intuitive task tracking, weather information for the user's location, time and date display, and a guest login option using the Local Storage API.`,
-    liveDemo: "https://daily-agenda-289d3.web.app/",
-    github: "https://github.com/habanerocity/dailyagenda",
-    tools: ["React JS", "API", "PHP", "MySQL", "JSON Web Tokens"]
-  }
+
 ];

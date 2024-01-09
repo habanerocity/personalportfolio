@@ -2,8 +2,12 @@
 // 	reactStrictMode: true
 // }
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	output: "export",
 	images: {
-		unoptimized: true,
+		unoptimized: true
 	},
 };
+
+module.exports = nextConfig;

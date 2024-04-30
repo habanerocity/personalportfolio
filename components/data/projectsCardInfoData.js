@@ -1,20 +1,29 @@
 export const cardInfo = [
   {
+    image: "/static/foodventure.webp",
+    title: "Foodventure Custom Wordpress Theme",
+    description: `Custom Wordpress theme developed for my food and travel blog.  After getting the hang of Wordpress at my previous employer, I decided to learn how to create my own custom Wordpress themes from scratch using PHP.  I decided to couple this disposition with learning how to use Figma, culminating in this custom theme and Figma file which contains wireframes, high fidelity designs, and prototypes.`,
+    designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
+    liveDemo: "http://www.tastetripping.net",
+    github: "https://github.com/habanerocity/food-venture",
+    tools: ["Wordpress", "PHP", "JavaScript", "SCSS", "Figma"]
+  },
+  {
+    image: "/static/portfolio-victorie.webp",
+    title: "Victorie Packaging Wordpress Website Refresh",
+    description: `Wordpress website that I redesigned for a b2b packaging supplier.  For this project, I leveraged my hybridized skillset of web development and digital marketing to significantly boost web traffic and lead generation.  I redesigned their Wordpress website and improved the ui/ux, improved website performance, coordinated a Google PPC campaign, and revitalized their social media marketing efforts.`,
+    liveDemo: "https://www.victoriepack.com",
+    tools: ["Wordpress", "WP Bakery", "HTML", "CSS", "Photoshop"]
+  },
+  {
     image: "/static/portfolio-shopify-2.webp",
-    title: "Natural Mystic Shopify Theme",
+    title: "Natural Mystic Custom Shopify Theme",
     description: `Custom Shopify theme developed for food condiment businesses. Implements Liquid and Shopify's Storefront API to build a custom theme that features dynamic pricing options, 
      a blog, a cart system, plus user registration and login.  Uses Bootstrap for mobile responsiveness and GSAP for custom animations.  Store Password: uwhohn.`,
     liveDemo: "https://natural-mystic-foods.myshopify.com/",
     github: "https://github.com/habanerocity/Natural-Mystic-Shopify-Store",
     tools: ["Liquid", "Storefront API", "JavaScript", "SCSS", "Bootstrap", "GSAP",]
 
-  },
-  {
-    image: "/static/foodventure.webp",
-    title: "Foodventure Wordpress Theme Design",
-    description: `Custom Wordpress theme design made for my food and travel blog.  After getting the hang of Wordpress at my previous employer, I decided to learn how to create my own custom Wordpress themes from scratch using PHP.  I decided to couple this disposition with learning how to use Figma, culminating in this design file which contains wireframes, high fidelity designs, and prototypes.`,
-    designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
-    tools: ["Figma", "Photoshop", "Lightroom"]
   },
   {
     image: "/static/mactodo.webp",

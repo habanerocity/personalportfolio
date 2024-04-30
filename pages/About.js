@@ -85,9 +85,9 @@ const About = () => {
               <div className={`${classes.about__card} col-4`}>
                 <div className={classes.flex__containerHeading}>
                   <Image
-                    src={"/static/me-kl.webp"}
+                    src={"/static/lor-portfolio.png"}
                     alt="me"
-                    height={130}
+                    height={150}
                     width={140}
                     className={classes.me}
                   />

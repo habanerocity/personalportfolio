@@ -7,7 +7,7 @@ import classes from "./Hero.module.scss";
 
 const Hero = () => {
 
-  const text = 'DownloadResume-DownloadResume-';
+  const text = ' Download Resume - Download CV-';
   const charArray = text.split('');
 
   return (
@@ -69,7 +69,9 @@ const Hero = () => {
               </div>
             </div>
             <div className={classes.inner_circle}>
-              <Image alt="Download resume" src={"/static/download-solid.svg"} height={30} width={30} objectFit="cover" layout="intrinsic" priority />
+              <Link href="https://www.lindyramirezprojects.com/lor-res.pdf" download="lor-res.pdf">
+                <Image alt="Download resume" src={"/static/download-solid.svg"} height={30} width={30} objectFit="cover" layout="intrinsic" priority />
+              </Link>
             </div>
           </div>
           <Image

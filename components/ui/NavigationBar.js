@@ -38,7 +38,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <main className={classes.nav_container}>
+    <main className={`position-absolute bg-white w-100 ${classes.nav_container}`}>
       <div className={`container ${classes.nav_menu_wrapper} d-flex justify-content-center align-items-center p-0`}>
         <nav className={`${classes.nav_menu} `}>
           <div className={`${classes.logo}`}>

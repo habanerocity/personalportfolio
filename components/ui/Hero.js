@@ -7,7 +7,7 @@ import classes from "./Hero.module.scss";
 
 const Hero = () => {
 
-  const text = ' Download Resume - Download CV-';
+  const text = ' Download Resume • Download CV•';
   const charArray = text.split('');
 
   return (
@@ -31,11 +31,11 @@ const Hero = () => {
                   .pauseFor(1000)
                   .deleteChars(13)
                   .pauseFor(1000)
-                  .typeString("Shopify Theme Developer")
+                  .typeString("Wordpress Developer")
                   .pauseFor(1000)
-                  .deleteChars(23)
+                  .deleteChars(19)
                   .pauseFor(1000)
-                  .typeString(" Wordpress Theme Developer")
+                  .typeString("Shopify Developer")
                   .pauseFor(4000)
                   .start();
               }}

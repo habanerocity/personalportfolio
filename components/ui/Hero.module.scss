@@ -5,6 +5,14 @@
   position: relative;
 }
 
+.btn__container{
+  @media(max-width: 992px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .circle{
   width: 22rem;
   height: 22rem;
@@ -20,6 +28,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 992px){
+    width: 16rem;
+    height: 16rem;
+  }
 }
 
 .inner_circle{
@@ -48,6 +61,11 @@
   // font-size: 3rem;
   // margin-top: 2rem;
   color: #000;
+
+  @media(max-width: 992px){
+    font-size: 3.4rem;
+    justify-content: center;
+  }
 }
 
 .hero {
@@ -80,6 +98,11 @@
     align-items: center;
     height: 100%;
     width: 100%;
+
+    @media(max-width: 992px){
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
   }
 
   &__btn_solid{
@@ -89,6 +112,10 @@
     color: white;
     border-radius: 6px;
     cursor: pointer;
+
+    @media(max-width: 992px){
+      font-size: 1.4rem!important;
+    }
   }
 
   &__btn_transparent{
@@ -100,6 +127,10 @@
     cursor: pointer;
     transition: all .2s ease-in;
 
+    @media(max-width: 992px){
+      font-size: 1.4rem!important;
+    }
+
     &:hover{
       background-color:  #ff6600;
       color: #fff;
@@ -108,14 +139,23 @@
 }
 
 .intro {
-  font-weight: lighter;
+  font-weight: 100;
   text-align: left;
   font-size: 4rem;
   color: #000;
+
+  @media(max-width: 992px){
+    text-align: center;
+    font-size: 3rem;
+  }
 }
 
 .lindy_container{
   position: relative;
+
+  @media(max-width: 992px){
+    width: 30rem;
+  }
 }
 
 .link {
@@ -175,6 +215,10 @@
 
 .tidbits{
   top: 92%;
+
+  @media(max-width: 992px){
+    display: none!important;
+  }
 
   &__detail{
     font-size: 2rem;
@@ -320,6 +364,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media(max-width: 992px){
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .rotating_text_text{
@@ -327,7 +376,6 @@
   height: 100%;
   position: absolute;
   animation: anim 10s linear infinite;
- 
 }
 
 @keyframes anim{
@@ -345,6 +393,11 @@
   font-size: 14px;
   transform-origin: 0 100px;
   text-transform: uppercase;
+
+  @media(max-width: 992px){
+    transform-origin: 0 75px;
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 800px) and (max-height: 500px) {

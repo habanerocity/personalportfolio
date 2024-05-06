@@ -62,7 +62,7 @@
     text-decoration: none;
     color: #757575;
     font-size: 1.8rem;
-    width: 100%;
+    width: 95%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -73,8 +73,6 @@
     & > span:hover  {
         font-weight: 500;
         color: black;
-        // transition: all 400ms ease-out;
-        // letter-spacing: 1px;
     }
 }
 

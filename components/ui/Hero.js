@@ -17,10 +17,10 @@ const Hero = () => {
       </Head>
       <div className={`${classes.hero__wrapper}`}>
         <div className={classes.hero_text}>
-          <h1 className={classes.intro}>
+          <div className={classes.intro}>
             Hello <span className={classes.sup}>👋🏼</span>, <br />
             My Name is Lindy
-          </h1>
+          </div>
           <div className={classes.details}>
             <span>I'm a&nbsp;</span>
             <Typewriter
@@ -46,7 +46,7 @@ const Hero = () => {
             />
           </div>
           <h4 className={classes.subsubheading}>I craft user-friendly websites that boost conversions <br />and get results.  Passionate about tech, sports, travel,<br /> and spicy food.  Let's connect!</h4>
-          <div>
+          <div className={classes.btn__container}>
             <Link className={classes.link} passHref href="/Projects">
               <button className={`${classes.hero__btn_solid} fs-3 mt-4 me-4`}>My Portfolio</button>
             </Link>

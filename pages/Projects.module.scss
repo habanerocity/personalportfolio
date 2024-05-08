@@ -83,15 +83,13 @@
     margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 1399px) {
-    .flex__container__col {
-        padding: 8rem 0;
-    }
-}
-
 @media screen and (max-width: 1399px){
     .card__body{
-        height: 45rem;
+        height: 49rem;
+    }
+
+    .flex__container__col {
+        padding: 8rem 0;
     }
 }
 

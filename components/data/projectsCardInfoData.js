@@ -3,7 +3,7 @@ export const cardInfo = [
     image: "/static/foodventure.webp",
     title: "Foodventure Custom Wordpress Theme",
     description: `Custom Wordpress theme developed for my food and travel blog.  After getting the hang of Wordpress at my previous employer, I decided to learn how to create my own custom Wordpress themes from scratch using PHP.  I decided to couple this disposition with learning how to use Figma, culminating in this custom theme and Figma file which contains wireframes, high fidelity designs, and prototypes.`,
-    designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
+    // designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
     liveDemo: "http://www.tastetripping.net",
     github: "https://github.com/habanerocity/food-venture",
     tools: ["Wordpress", "PHP", "JavaScript", "SCSS", "Figma"]

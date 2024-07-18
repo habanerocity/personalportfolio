@@ -31,14 +31,15 @@ const About = () => {
 
   const renderLogos = (logo, index) => {
     return (
-      <div className={`mt-1 {classes.img}`} key={index}>
+      <div  className={`mt-1 ${classes.img} w-100`} key={index}>
         <Link href={logo.link} target="_blank" rel="noreferrer">
           <Image
-            className={`me-2 ${classes.social_media}`}
+            className={`${classes.social_media}`}
             src={logo.image}
             alt={logo.alt}
             height={25}
             width={25}
+            layout="intrinsic"
           />
         </Link>
       </div>

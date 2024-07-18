@@ -7,7 +7,7 @@ import classes from "./Hero.module.scss";
 
 const Hero = () => {
 
-  const text = ' Download Resume • Download CV•';
+  const text = ' Get in touch • Get in touch • ';
   const charArray = text.split('');
 
   return (
@@ -26,17 +26,17 @@ const Hero = () => {
             <Typewriter
               onInit={typewriter => {
                 typewriter
-                  .pauseFor(1000)
+                  .pauseFor(500)
                   .typeString(" Web Developer")
-                  .pauseFor(1000)
+                  .pauseFor(500)
                   .deleteChars(13)
-                  .pauseFor(1000)
+                  .pauseFor(500)
                   .typeString("Wordpress Developer")
-                  .pauseFor(1000)
+                  .pauseFor(500)
                   .deleteChars(19)
-                  .pauseFor(1000)
+                  .pauseFor(500)
                   .typeString("Shopify Developer")
-                  .pauseFor(4000)
+                  .pauseFor(2000)
                   .start();
               }}
               options={{
@@ -48,10 +48,10 @@ const Hero = () => {
           <h4 className={classes.subsubheading}>I craft user-friendly websites that boost conversions <br />and get results.  Passionate about tech, sports, travel,<br /> and spicy food.  Let's connect!</h4>
           <div className={classes.btn__container}>
             <Link className={classes.link} passHref href="/Projects">
-              <button className={`${classes.hero__btn_solid} fs-3 mt-4 me-4`}>My Portfolio</button>
+              <button className={`${classes.hero__btn_solid} ${classes.hero__btn} fs-3 mt-4 me-4`}>My Portfolio</button>
             </Link>
-            <Link className={classes.link} passHref href="/Contact">
-              <button className={`${classes.hero__btn_transparent} fs-3 mt-4`}>Contact Me</button>
+            <Link className={classes.link} passHref href="/About">
+              <button className={`${classes.hero__btn_transparent} ${classes.hero__btn} fs-3 mt-4`}>About Me</button>
             </Link>
           </div>
         </div>
@@ -69,9 +69,8 @@ const Hero = () => {
               </div>
             </div>
             <div className={classes.inner_circle}>
-              <Link href="https://www.lindyramirezprojects.com/lor-res.pdf" download="lor-res.pdf">
-                <Image alt="Download resume" src={"/static/download-solid.svg"} height={30} width={30} objectFit="cover" layout="intrinsic" priority />
-              </Link>
+
+                <Image alt="Download resume" src={"/static/bubble-chat.png"} height={30} width={30} objectFit="cover" layout="intrinsic" priority />
             </div>
           </div>
           <Image
@@ -88,15 +87,15 @@ const Hero = () => {
         <div className={` ${classes.tidbits} d-flex align-items-center justify-content-center position-absolute`}>
           <div className={`${classes.tidbits__section} me-5`}>
             <div className={classes.tidbits__heading}>Based in</div>
-            <h5 className={classes.tidbits__detail}>Manila, Philippines</h5>
+            <h5 className={classes.tidbits__detail}>🏝️ Siargao, Philippines</h5>
           </div>
           <div className={`${classes.tidbits__section} me-5`}>
             <div className={classes.tidbits__heading}>From</div>
-            <h5 className={classes.tidbits__detail}>Los Angeles, CA</h5>
+            <h5 className={classes.tidbits__detail}>🌆 Los Angeles, CA</h5>
           </div>
           <div className={`${classes.tidbits__section} me-5`}>
             <div className={classes.tidbits__heading}>Experience</div>
-            <h5 className={classes.tidbits__detail}>2+ Years</h5>
+            <h5 className={classes.tidbits__detail}>🧑🏻‍💻 2+ Years</h5>
           </div>
         </div>
       </div>

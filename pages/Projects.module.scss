@@ -1,5 +1,5 @@
-@import '../styles//sass/mixins';
-@import '../styles//sass/variables';
+@import '../styles/sass/mixins';
+@import '../styles/sass/variables';
 
 .card {
     background-color: #fff;
@@ -30,6 +30,10 @@
     flex-wrap: wrap;
     }
     
+}
+
+.secondary_color {
+    background-color: $secondary-color!important;
 }
 
 .code {

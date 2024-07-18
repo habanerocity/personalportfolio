@@ -94,26 +94,17 @@
 }
 
 .hero {
-  // @include flex-container-row;
   height: 100%;
   width: 100%;
   background-color: #e3e3e3;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
+
 
   &_text {
     text-align: left;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    // width: 100%;
-    // align-items: center;
   }
 
   &__wrapper{
@@ -176,6 +167,13 @@
       background-color:  #ff6600;
       color: #fff;
     }
+  }
+}
+
+.hero__btn{
+  width: 16rem;
+  @media(max-width: 400px){
+    width: 12rem;
   }
 }
 

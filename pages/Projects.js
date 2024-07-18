@@ -32,7 +32,7 @@ const Projects = () => {
 							<ListGroupItem>
 								<h3>Tools used</h3>
 								{card.tools.map((tool, index) => (
-									<Badge key={index} pill bg="secondary" text="light" className="p-2 fs-4 m-2">
+									<Badge key={index} pill text="light" className={`p-2 fs-4 m-2 ${classes.secondary_color}`}>
 										<span className={classes.pill}>{tool}</span>
 									</Badge>
 								))}

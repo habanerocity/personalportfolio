@@ -10,7 +10,7 @@ import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
 
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const Skills = () => {
 	const renderSkills = (skills, index) => {

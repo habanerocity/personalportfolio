@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Typewriter from "typewriter-effect";
 
 import classes from "./Hero.module.scss";
@@ -78,7 +78,7 @@ const Hero = () => {
             alt="Lindy"
             className={classes.lindy}
             src={"/static/lindy-blue.png"}
-            height={440}
+            height={640}
             width={440}
             objectFit="cover"
             layout="intrinsic"

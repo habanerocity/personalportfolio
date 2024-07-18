@@ -4,7 +4,7 @@ import classes from "./NavigationBar.module.scss";
 import { linkInfo } from "../data/navigationBarLinkInfoData";
 
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const NavigationBar = () => {
   const router = useRouter();
@@ -21,6 +21,7 @@ const NavigationBar = () => {
           <Image
             height={28}
             width={25}
+            layout="fixed"
             className={
               router.pathname == `${link.routerPath}`
                 ? `${classes.active}`
@@ -29,7 +30,7 @@ const NavigationBar = () => {
             src={link.image}
             alt={link.linkName}
             priority={true}
-          />
+            />
           <span className={classes.link_content}>{link.linkName}</span>
 
         </Link>
@@ -46,10 +47,11 @@ const NavigationBar = () => {
             <Link href="/">
 
               <Image
-                fill
+                layout="fill"
                 src={"/static/habaneroicon-50pxw.webp"}
                 alt="Logo"
                 className={classes.hab}
+                priority
               />
 
             </Link>

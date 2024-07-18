@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./_SuccessWindow.module.scss";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const SuccessWindow = props => {
   const [clicked, setClicked] = useState(false);

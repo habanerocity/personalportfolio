@@ -1,7 +1,7 @@
 import classes from "./LogoBar.module.scss";
 
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const LogoBar = () => {
 
@@ -12,7 +12,7 @@ const LogoBar = () => {
                     <div className={`${classes.logo}`}>
                         <Link href="/">
                             <Image
-                                fill
+                                layout="fill"
                                 src={"/static/lor-long_logo.webp"}
                                 alt="Logo"
                                 className={classes.hab}

@@ -53,6 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10000000;
 
   @media(max-width: 500px){
     width: 45%;

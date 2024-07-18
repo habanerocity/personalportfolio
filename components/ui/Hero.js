@@ -69,8 +69,9 @@ const Hero = () => {
               </div>
             </div>
             <div className={classes.inner_circle}>
-
-                <Image alt="Download resume" src={"/static/bubble-chat.png"} height={30} width={30} objectFit="cover" layout="intrinsic" priority />
+              <Link className={classes.link} passHref href="/Contact">
+                <Image alt="Let's connect" src={"/static/bubble-chat.png"} height={30} width={30} objectFit="cover" layout="intrinsic" priority />
+              </Link>
             </div>
           </div>
           <Image

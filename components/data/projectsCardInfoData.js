@@ -9,12 +9,19 @@ export const cardInfo = [
     tools: ["Wordpress", "PHP", "JavaScript", "SCSS", "Figma"]
   },
   {
-    image: "/static/portfolio-victorie.webp",
-    title: "Victorie Packaging Wordpress Website Refresh",
-    description: `Wordpress website that I redesigned for a b2b packaging supplier.  For this project, I leveraged my hybridized skillset of web development and digital marketing to significantly boost web traffic and lead generation.  I redesigned their Wordpress website and improved the ui/ux, improved website performance, coordinated a Google PPC campaign, and revitalized their social media marketing efforts.`,
-    liveDemo: "https://www.victoriepack.com",
-    tools: ["Wordpress", "WP Bakery", "HTML", "CSS", "Photoshop"]
+    image: "/static/zoeph.png",
+    title: "The Zoe PH Landing Page",
+    description: `Customized a premium JQuery template for a client's landing page.  The client wanted a simple, elegant, and responsive landing page that would showcase their products and services.  I customized the template to fit their brand values, wrote the website copy, did their onpage SEO, indexed them on Google and Bing, and added a PHP script to send them inquiries from the website's contact form.`,
+    liveDemo: "https://thezoeph.com",
+    tools: ["HTML", "SCSS", "JQuery", "PHP"]
   },
+  // {
+  //   image: "/static/portfolio-victorie.webp",
+  //   title: "Victorie Packaging Wordpress Website Refresh",
+  //   description: `WordPress website that I redesigned for a b2b packaging supplier.  For this project, I leveraged my hybridized skillset of web development and digital marketing to significantly boost web traffic and lead generation.  I redesigned their Wordpress website and improved the ui/ux, improved website performance, coordinated a Google PPC campaign, and revitalized their social media marketing efforts.`,
+  //   liveDemo: "https://www.victoriepack.com",
+  //   tools: ["Wordpress", "WP Bakery", "HTML", "CSS", "Photoshop"]
+  // },
   {
     image: "/static/portfolio-shopify-2.webp",
     title: "Natural Mystic Custom Shopify Theme",

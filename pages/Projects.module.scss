@@ -89,11 +89,17 @@
 
 @media screen and (max-width: 1399px){
     .card__body{
-        height: 49rem;
+        height: 39rem;
     }
 
     .flex__container__col {
         padding: 8rem 0;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .card__body{
+        height: 49rem;
     }
 }
 
@@ -109,11 +115,11 @@
     }
 }
 
-@media screen and (max-width: 500px) {
-    .flex__container__col {
-        padding: 5rem 0;
-    }
-}
+// @media screen and (max-width: 500px) {
+//     .flex__container__col {
+//         padding: 5rem 0;
+//     }
+// }
 
 @media screen and (max-width: 454px){
     .card__body{

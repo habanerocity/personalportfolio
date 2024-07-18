@@ -121,65 +121,67 @@ const ContactForm = () => {
       onSubmit={formSubmissionHandler}
     >
       {formSent && <DisplaySuccess onConfirm={setFormSent} />}
-      <h2 className={classes.hire}>
-        Let&apos;s Take Your Business To The Next Level&nbsp;&nbsp;🚀
-      </h2>
-      <div className={classes.input__box}>
-        <input
-          className={nameInputClasses}
-          placeholder={nameHasError ? "Enter a valid name" : "Enter your name"}
-          type="text"
-          id="name"
-          name="from_name"
-          onChange={nameChangeHandler}
-          onBlur={nameBlurHandler}
-          value={enteredName}
-        />
-        <input
-          className={emailInputClasses}
-          placeholder={
-            emailHasError ? "Enter a valid email" : "Enter your email"
-          }
-          type="text"
-          id="email"
-          name="user_email"
-          onChange={emailChangeHandler}
-          onBlur={emailBlurHandler}
-          value={enteredEmail}
-        />
-        <input
-          className={subjectInputClasses}
-          placeholder={
-            subjectHasError ? "Enter a valid subject" : "Enter your subject"
-          }
-          type="text"
-          id="subject"
-          name="subject"
-          onChange={subjectChangeHandler}
-          onBlur={subjectBlurHandler}
-          value={enteredSubject}
-        />
-        <textarea
-          className={`${messageInputClasses} ${classes.msg} ${classes.info}`}
-          rows="7"
-          placeholder={
-            messageHasError ? "Enter a valid message" : "Enter your message"
-          }
-          id="msg"
-          name="message"
-          type="text"
-          value={enteredMessage}
-          onChange={messageChangeHandler}
-          onBlur={messageBlurHandler}
-        />
-        <div className={classes.hire__btn}>
-          <Button
-            disabled={!formIsValid}
-            name="Contact"
-            type="submit"
-            value="Send"
+      <div className={classes.flex__container}>
+        <h2 className={classes.hire}>
+          Let&apos;s Take Your Brand To The Next Level&nbsp;&nbsp;🚀
+        </h2>
+        <div className={classes.input__box}>
+          <input
+            className={nameInputClasses}
+            placeholder={nameHasError ? "Enter a valid name" : "Enter your name"}
+            type="text"
+            id="name"
+            name="from_name"
+            onChange={nameChangeHandler}
+            onBlur={nameBlurHandler}
+            value={enteredName}
           />
-        </div>
+          <input
+            className={emailInputClasses}
+            placeholder={
+              emailHasError ? "Enter a valid email" : "Enter your email"
+            }
+            type="text"
+            id="email"
+            name="user_email"
+            onChange={emailChangeHandler}
+            onBlur={emailBlurHandler}
+            value={enteredEmail}
+          />
+          <input
+            className={subjectInputClasses}
+            placeholder={
+              subjectHasError ? "Enter a valid subject" : "Enter your subject"
+            }
+            type="text"
+            id="subject"
+            name="subject"
+            onChange={subjectChangeHandler}
+            onBlur={subjectBlurHandler}
+            value={enteredSubject}
+          />
+          <textarea
+            className={`${messageInputClasses} ${classes.msg} ${classes.info}`}
+            rows="7"
+            placeholder={
+              messageHasError ? "Enter a valid message" : "Enter your message"
+            }
+            id="msg"
+            name="message"
+            type="text"
+            value={enteredMessage}
+            onChange={messageChangeHandler}
+            onBlur={messageBlurHandler}
+          />
+          <div className={classes.hire__btn}>
+            <Button
+              disabled={!formIsValid}
+              name="Contact"
+              type="submit"
+              value="Send"
+            />
+          </div>
+      </div>
       </div>
     </form>
   );

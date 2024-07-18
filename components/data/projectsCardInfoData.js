@@ -2,14 +2,14 @@ export const cardInfo = [
   {
     image: "/static/foodventure.webp",
     title: "Foodventure Custom Wordpress Theme",
-    description: `Custom Wordpress theme developed for my food and travel blog.  After getting the hang of Wordpress at my previous employer, I decided to learn how to create my own custom Wordpress themes from scratch using PHP.  I decided to couple this disposition with learning how to use Figma, culminating in this custom theme and Figma file which contains wireframes, high fidelity designs, and prototypes.`,
+    description: `Custom Wordpress theme and plugins developed for my food and travel blog. The theme features custom post types and fields, comments, and pagination. Additionally, I developed a custom plugin to add personalized widgets to a tailored sidebar, and another plugin that aggregates travel statistics, looping through each blog post to pin the post link, thumbnail, and excerpt to an interactive map.`,
     // designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
     liveDemo: "http://www.tastetripping.net",
     github: "https://github.com/habanerocity/food-venture",
     tools: ["Wordpress", "PHP", "JavaScript", "SCSS", "Figma"]
   },
   {
-    image: "/static/zoeph.png",
+    image: "/static/zoeph.webp",
     title: "The Zoe PH Landing Page",
     description: `Customized a premium JQuery template for a client's landing page.  The client wanted a simple, elegant, and responsive landing page that would showcase their products and services.  I customized the template to fit their brand values, wrote the website copy, did their onpage SEO, indexed them on Google and Bing, and added a PHP script to send them inquiries from the website's contact form.`,
     liveDemo: "https://thezoeph.com",

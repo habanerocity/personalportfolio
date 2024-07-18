@@ -22,7 +22,7 @@ const Hero = () => {
             My Name is Lindy
           </div>
           <div className={classes.details}>
-            <span>I'm a&nbsp;</span>
+            <span>I&apos;m a&nbsp;</span>
             <Typewriter
               onInit={typewriter => {
                 typewriter
@@ -45,7 +45,7 @@ const Hero = () => {
               }}
             />
           </div>
-          <h4 className={classes.subsubheading}>I craft user-friendly websites that boost conversions <br />and get results.  Passionate about tech, sports, travel,<br /> and spicy food.  Let's connect!</h4>
+          <h4 className={classes.subsubheading}>I craft user-friendly websites that boost conversions <br />and get results.  Passionate about tech, sports, travel,<br /> and spicy food.  Let&apos;s connect!</h4>
           <div className={classes.btn__container}>
             <Link className={classes.link} passHref href="/Projects">
               <button className={`${classes.hero__btn_solid} ${classes.hero__btn} fs-3 mt-4 me-4`}>My Portfolio</button>

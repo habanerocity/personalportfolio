@@ -21,7 +21,7 @@ const Contact = () => {
         </title>
         <meta
           name="description"
-          content="Contact page for Lindy Ramirez, Shopify theme developer. Contact me here."
+          content="Contact page for Lindy Ramirez, Wordpress and Shopify theme developer. Contact me here."
         />
       </Head>
       <NavigationBar />

@@ -26,12 +26,12 @@ const Hero = () => {
             <Typewriter
               onInit={typewriter => {
                 typewriter
-                  .pauseFor(500)
+                  .pauseFor(2000)
                   .typeString(" Web Developer")
                   .pauseFor(500)
                   .deleteChars(13)
                   .pauseFor(500)
-                  .typeString("Wordpress Developer")
+                  .typeString("WordPress Developer")
                   .pauseFor(500)
                   .deleteChars(19)
                   .pauseFor(500)

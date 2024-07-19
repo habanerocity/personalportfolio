@@ -1,7 +1,7 @@
 export const cardInfo = [
   {
     image: "/static/foodventure-figma.webp",
-    title: "Foodventure Custom Wordpress Theme",
+    title: "Foodventure Custom WordPress Theme",
     description: `Custom WordPress theme and plugins developed for my food and travel blog. The theme features custom post types and fields, comments, and pagination. Additionally, I developed a custom plugin to add personalized widgets to a tailored sidebar, and another plugin that aggregates travel statistics, looping through each blog post to pin the post link, thumbnail, and excerpt to an interactive map.`,
     // designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
     liveDemo: "http://www.tastetripping.net",

@@ -28,7 +28,7 @@ const NavigationBar = () => {
                 : null
             }
             src={link.image}
-            alt={link.linkName}
+            alt={link.altText}
             priority={true}
             />
           <span className={classes.link_content}>{link.linkName}</span>

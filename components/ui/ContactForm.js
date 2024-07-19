@@ -125,6 +125,7 @@ const ContactForm = () => {
         <h2 className={classes.hire}>
           Let&apos;s Take Your Brand To The Next Level&nbsp;&nbsp;🚀
         </h2>
+        <p className="fs-4 fw-100">Connect With Me Today to Bring Your Vision to Life</p>
         <div className={classes.input__box}>
           <input
             className={nameInputClasses}

@@ -1,4 +1,4 @@
-export const toolsInfoData = [
+const toolsInfoData = [
   {
     image: "/static/htmlfive.webp",
     height: 45,
@@ -96,3 +96,5 @@ export const toolsInfoData = [
     alt: "Git"
   }
 ];
+
+export default toolsInfoData;

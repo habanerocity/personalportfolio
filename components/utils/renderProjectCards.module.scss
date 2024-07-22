@@ -1,0 +1,58 @@
+@import '../../styles/sass/variables';
+@import '../../styles/sass/mixins';
+
+.card {
+    background-color: #fff;
+    margin-bottom: 10rem;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+
+    &__body{
+        height: 35rem;
+
+        @media screen and (max-width: 1399px){
+            height: 39rem;
+        }
+
+        @media screen and (max-width: 1200px){
+            height: 49rem;
+        }
+
+        @media screen and (max-width: 991px){
+            height: auto;
+        }
+
+        @media screen and (max-width: 454px){
+            .card__body{
+                height: auto;
+            }
+        }
+    }
+
+    &__top__br{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    &__heading {
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    &__holder {
+    @include flex-container-row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1rem;
+    height: auto;
+    flex-wrap: wrap;
+    }
+}
+
+.secondary_color {
+    background-color: $secondary-color!important;
+}
+
+.pill {
+    padding: 4px;
+}

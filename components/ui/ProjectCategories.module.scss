@@ -5,6 +5,17 @@
     @include flex-container-row;
     width: 85%;
     justify-content: space-between;
+
+    @media(max-width: 992px){
+        width: 100%;
+        flex-wrap: wrap
+    }
+
+    @media(max-width: 513px){
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 }
 
 .nav__link {

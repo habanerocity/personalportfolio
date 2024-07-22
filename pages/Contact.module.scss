@@ -1,7 +1,7 @@
 @import '../styles/sass/mixins';
 @import '../styles/sass/variables';
 
-.budz {
+.flex__row {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -39,7 +39,7 @@
     align-items: center;
 }
 
-.pic__holder {
+.pic__wrapper {
     @include flex-container-col;
     justify-content: center; 
     align-items: center;
@@ -48,7 +48,7 @@
     height: 46rem;
 }
 
-.two {
+.contact__wrapper {
     background-color: #fff;
     height: auto;
     border-radius: 5px;
@@ -68,7 +68,7 @@
 }
 
 @media screen and (max-width: 991px) {
-    .pic__holder {
+    .pic__wrapper {
         width: 60rem;
     }
 }
@@ -80,7 +80,7 @@
 }
 
 @media screen and (max-width: 850px) {
-    .pic__holder {
+    .pic__wrapper {
         display: none;
     }
 

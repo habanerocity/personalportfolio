@@ -8,6 +8,8 @@ import Container from "react-bootstrap/Container";
 import ContactForm from "../components/ui/ContactForm";
 import Footer from '../components/ui/Footer';
 
+import pageFadeInAnimation from "../components/animations/pageFadeInAnimation";
+
 import React from "react";
 
 import { motion } from "framer-motion";
@@ -32,19 +34,7 @@ const Contact = () => {
         <motion.div
           initial="hidden"
           animate="visible"
-          variants={{
-            hidden: {
-              scale: 0.8,
-              opacity: 0
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 0.4
-              }
-            }
-          }}
+          variants={pageFadeInAnimation}
         >
           <SectionContainer>
             <Container className={classes.container}>
@@ -53,12 +43,12 @@ const Contact = () => {
                   <Headings heading="Contact Me">Contact</Headings>
                 </div>
               </div>
-              <div className={classes.budz}>
+              <div className={classes.flex__row}>
                 <div className={classes.main__flex}>
                   <div className={classes.flex__container}>
-                    <div className={classes.two}>
-                      <Container className={classes.budz}>
-                        <div className={classes.pic__holder}>
+                    <div className={classes.contact__wrapper}>
+                      <Container className={classes.flex__row}>
+                        <div className={classes.pic__wrapper}>
                           <Image
                             src={"/static/lindy-hanoi.png"}
                             className={classes.shapes}

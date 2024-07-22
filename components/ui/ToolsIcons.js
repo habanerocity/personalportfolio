@@ -1,4 +1,6 @@
-const renderSkills = (skill, index) => {
+import Image from 'next/image';
+
+const ToolsIcons = (skill, index) => {
     return (
       <li className="list-unstyled pe-3 pb-3 d-flex flex-column justify-content-center align-items-center" key={index}>
         <Image src={skill.image} alt={skill.alt} height={skill.height} width={skill.width} />
@@ -7,4 +9,4 @@ const renderSkills = (skill, index) => {
     );
   };
 
-export default renderSkills;
+export default ToolsIcons;

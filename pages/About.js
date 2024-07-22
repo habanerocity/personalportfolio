@@ -12,6 +12,9 @@ import Container from "react-bootstrap/Container";
 import { socialMediaInfoData } from "../components/data/aboutLogoInfoData";
 import { skillsInfoData } from "../components/data/skillsInfoData";
 
+import ToolsIcons from '../components/ui/toolsIcons';
+import SocialMediaIcons from '../components/ui/SocialMediaIcons';
+
 import Button from "../components/ui/Button";
 import FlexContainer from "../components/ui/FlexContainer";
 import LogoBar from '../components/ui/LogoBar';
@@ -21,32 +24,6 @@ import Headings from "../components/ui/Headings";
 import Footer from "../components/ui/Footer";
 
 const About = () => {
-
-  const renderSkills = (skill, index) => {
-    return (
-      <li className="list-unstyled pe-3 pb-3 d-flex flex-column justify-content-center align-items-center" key={index}>
-        <Image src={skill.image} alt={skill.alt} height={skill.height} width={skill.width} />
-        <div className="text-center fs-6 mt-1">{skill.alt}</div>
-      </li>
-    );
-  };
-
-  const renderLogos = (logo, index) => {
-    return (
-      <div  className={`mt-1 ${classes.img} w-100`} key={index}>
-        <Link href={logo.link} target="_blank" rel="noreferrer">
-          <Image
-            className={`${classes.social_media}`}
-            src={logo.image}
-            alt={logo.alt}
-            height={25}
-            width={25}
-            layout="intrinsic"
-          />
-        </Link>
-      </div>
-    );
-  };
 
   return (
   <React.Fragment>
@@ -99,7 +76,7 @@ const About = () => {
                       <h1 className={classes.lr}>Lindy Ramirez</h1>
                       <h3 className={`text-left ${classes.dev}`}>Web Developer</h3>
                       <div className={classes.icons}>
-                        {socialMediaInfoData.map(renderLogos)}
+                        {socialMediaInfoData.map(SocialMediaIcons)}
                       </div>
                     </div>
                   </div>
@@ -111,7 +88,7 @@ const About = () => {
                     <div className="d-flex flex-column">
                       <h2>Tools I Use</h2>
                       <ul className={`d-flex mb-2 p-0 w-100 flex-wrap ${classes.skill__list}`}>
-                        {skillsInfoData.map(renderSkills)}
+                        {skillsInfoData.map(ToolsIcons)}
                       </ul>
                     </div>
                     <div className={classes.btn__container}>

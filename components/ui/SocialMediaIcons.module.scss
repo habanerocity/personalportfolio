@@ -10,3 +10,9 @@
         transform: scale(0.8);
       }
 }
+
+.social_media:hover {
+  filter: invert(0.3) sepia(0.6) saturate(19.6) hue-rotate(170.2deg)
+    brightness(1.57);
+  transition: all 0.22s ease-out;
+}

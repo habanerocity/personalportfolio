@@ -1,0 +1,76 @@
+@import "../../styles/sass/mixins";
+
+.me {
+    position: relative;
+    border-radius: 50%;
+}
+
+.flex__containerCol{
+    @include flex-container-col;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+
+    @media screen and (max-width: 600px){
+        line-height: 1 !important;
+        padding-left: 0;
+        align-items: center;
+    }
+}
+
+.flex__containerHeading{
+    @include flex-container-row;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(2.2rem);
+
+    @media screen and (max-width: 991px){
+        transform: translateX(0);
+    }
+
+    @media screen and (max-width: 600px){
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.lr {
+    font-weight: bolder;
+    font-size: 4rem;
+    text-align: center;
+
+    @media screen and (max-width: 991px){
+        font-size: 3rem;
+    }
+
+    @media screen and (max-width: 585px){
+        font-size: 2rem;
+    }
+  }
+
+  .dev {
+    font-size: 2rem;
+    font-weight: 100;
+
+    @media screen and (max-width: 991px){
+        font-size: 2rem;
+        padding-top: 0 !important;
+    }
+
+    @media screen and (max-width: 585px){
+        padding-top: 0 !important;
+        z-index: 3;
+        font-size: 1.5rem;
+    }
+  }
+
+  .icons {
+    @include flex-container-row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 10rem;
+  }

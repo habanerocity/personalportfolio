@@ -3,23 +3,18 @@ import { motion } from "framer-motion";
 
 import classes from "./About.module.scss";
 
-import Image from "next/legacy/image";
 import Link from "next/link";
 import Head from "next/head";
 
 import Container from "react-bootstrap/Container";
 
-import { socialMediaInfoData } from "../components/data/aboutLogoInfoData";
-import { skillsInfoData } from "../components/data/skillsInfoData";
-
-import ToolsIcons from '../components/ui/toolsIcons';
-import SocialMediaIcons from '../components/ui/SocialMediaIcons';
-
+import ToolList from '../components/ui/ToolList';
 import Button from "../components/ui/Button";
 import FlexContainer from "../components/ui/FlexContainer";
 import LogoBar from '../components/ui/LogoBar';
 import NavigationBar from "../components/ui/NavigationBar";
 import SectionContainer from "../components/ui/SectionContainer";
+import ProfileHeader from '../components/ui/ProfileHeader';
 import Headings from "../components/ui/Headings";
 import Footer from "../components/ui/Footer";
 
@@ -64,38 +59,16 @@ const About = () => {
               </div>
               <FlexContainer>
                 <div className={`${classes.about__card} col-4`}>
-                  <div className={classes.flex__containerHeading}>
-                    <Image
-                      src={"/static/lor-portfolio.png"}
-                      alt="me"
-                      height={150}
-                      width={140}
-                      className={classes.me}
-                    />
-                    <div className={classes.flex__containerCol}>
-                      <h1 className={classes.lr}>Lindy Ramirez</h1>
-                      <h3 className={`text-left ${classes.dev}`}>Web Developer</h3>
-                      <div className={classes.icons}>
-                        {socialMediaInfoData.map(SocialMediaIcons)}
-                      </div>
-                    </div>
-                  </div>
+                  <ProfileHeader />
                   <div className={classes.details}>
                     <div className="fs-4 pt-4">
                       Hey, I&apos;m Lindy, a freelance web developer deeply rooted in digital marketing and the e-commerce world. With a track record of helping brands improve their online presence and conversion rates, my journey in tech began with a childhood love for computers, evolving into a problem-solving mission. Beyond coding, I&apos;m a big fan of basketball and soccer, an adventure-seeking traveler, and a spicy food aficionado. If you&apos;re looking to collaborate on a project or just chat tech and shared interests, feel free to reach out—I&apos;m always up for new ventures.
                     </div>
                     <br />
-                    <div className="d-flex flex-column">
-                      <h2>Tools I Use</h2>
-                      <ul className={`d-flex mb-2 p-0 w-100 flex-wrap ${classes.skill__list}`}>
-                        {skillsInfoData.map(ToolsIcons)}
-                      </ul>
-                    </div>
+                    <ToolList />
                     <div className={classes.btn__container}>
                       <Link passHref href="/Contact">
-                        <div>
-                          <Button name="Contact" />
-                        </div>
+                        <Button name="Contact" />
                       </Link>
                     </div>
                   </div>

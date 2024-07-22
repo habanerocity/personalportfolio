@@ -13,6 +13,11 @@ import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
 
+import ProjectCategories from '../components/ui/ProjectCategories';
+
+import pageFadeInAnimation from '../components/animations/pageFadeInAnimation';
+import cardFadeInAnimation from '../components/animations/cardFadeInAnimation';
+
 import Head from 'next/head';
 
 import React, { useState } from 'react';
@@ -57,19 +62,6 @@ const Projects = () => {
 		);
 	};
 
-	// Animation variants for Framer Motion
-	const containerVariants = {
-		hidden: { opacity: 0 },
-		visible: {
-		  opacity: 1,
-		  transition: {
-			duration: .5,
-			ease: ["easeIn"]
-		  },
-		},
-	  };
-	  
-
 	return (
 		<React.Fragment>
 			<main className={classes.pg_projects}>
@@ -84,19 +76,7 @@ const Projects = () => {
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					variants={{
-						hidden: {
-							scale: 0.8,
-							opacity: 0
-						},
-						visible: {
-							scale: 1,
-							opacity: 1,
-							transition: {
-								delay: 0.4
-							}
-						}
-					}}
+					variants={pageFadeInAnimation}
 				>
 					<SectionContainer>
 						<Container className={classes.flex__container__col}>
@@ -104,20 +84,13 @@ const Projects = () => {
 								<div className={`w-100 ${classes.headings__container}`}>
 									<Headings heading="Works Done">Projects</Headings>
 									<div className={classes.project__filtering}>
-										<ul className={`my-2 list-unstyled ${classes.flex__container}`} >
-											<li onClick={() => handleCategoryClick('All')} className={`${activeCategory === 'All' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >All</li>
-											<li onClick={() => handleCategoryClick('WordPress')} className={`${activeCategory === 'WordPress' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >WordPress</li>
-											<li onClick={() => handleCategoryClick('Shopify')} className={`${activeCategory === 'Shopify' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >Shopify</li>
-											<li onClick={() => handleCategoryClick('React JS')} className={`${activeCategory === 'React JS' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >React JS</li>
-											<li onClick={() => handleCategoryClick('Landing Pages')}  className={`${activeCategory === 'Landing Pages' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >Landing Pages</li>
-											<li onClick={() => handleCategoryClick('Design')} className={`${activeCategory === 'Design' ? classes.nav__link__active : ''} ${classes.nav__link}`}  >Design</li>
-										</ul>
+										<ProjectCategories activeCategoryProps={activeCategory} setActiveCategoryProps={handleCategoryClick} />
 									</div>
 								</div>
 							</div>
 							<motion.div 
 							key={activeCategory} 
-							variants={containerVariants}
+							variants={cardFadeInAnimation}
 							initial="hidden"
 							animate="visible"  
 							className={`${classes.card__holder}`}
@@ -129,9 +102,7 @@ const Projects = () => {
 						</Container>
 					</SectionContainer>
 				</motion.div>
-
 				<LogoBar />
-
 			</main>
 			<Footer />
 		</React.Fragment>

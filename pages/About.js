@@ -18,6 +18,8 @@ import ProfileHeader from '../components/ui/ProfileHeader';
 import Headings from "../components/ui/Headings";
 import Footer from "../components/ui/Footer";
 
+import pageFadeInAnimation from "../components/animations/pageFadeInAnimation";
+
 const About = () => {
 
   return (
@@ -29,26 +31,14 @@ const About = () => {
           </title>
           <meta
             name="description"
-            content="About me page for Lindy Ramirez, Web Developer. Learn more about me here."
+            content="About me page for Lindy Ramirez, Freelance Web Developer. Learn more about me here."
           />
         </Head>
         <NavigationBar />
         <motion.div
           initial="hidden"
           animate="visible"
-          variants={{
-            hidden: {
-              scale: 0.8,
-              opacity: 0
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: 0.2
-              }
-            }
-          }}
+          variants={pageFadeInAnimation}
         >
           <SectionContainer>
             <Container className={classes.flex__container__col}>

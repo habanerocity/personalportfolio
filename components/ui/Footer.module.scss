@@ -1,0 +1,9 @@
+@import '../../styles/sass/mixins';
+@import '../../styles/sass/variables';
+
+.footer__class{
+    @include flex-container-row;
+    width: 100vw;
+    justify-content: center;
+    background-color: $color-gray;
+}

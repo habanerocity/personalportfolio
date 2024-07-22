@@ -1,4 +1,4 @@
-export const skillsInfo = [
+export const skillsInfoData = [
   {
     image: "/static/htmlfive.webp",
     height: 45,

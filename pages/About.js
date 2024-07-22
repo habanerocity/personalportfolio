@@ -9,8 +9,8 @@ import Head from "next/head";
 
 import Container from "react-bootstrap/Container";
 
-import { logoInfo } from "../components/data/aboutLogoInfoData";
-import { skillsInfo } from "../components/data/skillsInfoData";
+import { socialMediaInfoData } from "../components/data/aboutLogoInfoData";
+import { skillsInfoData } from "../components/data/skillsInfoData";
 
 import Button from "../components/ui/Button";
 import FlexContainer from "../components/ui/FlexContainer";
@@ -99,7 +99,7 @@ const About = () => {
                       <h1 className={classes.lr}>Lindy Ramirez</h1>
                       <h3 className={`text-left ${classes.dev}`}>Web Developer</h3>
                       <div className={classes.icons}>
-                        {logoInfo.map(renderLogos)}
+                        {socialMediaInfoData.map(renderLogos)}
                       </div>
                     </div>
                   </div>
@@ -111,7 +111,7 @@ const About = () => {
                     <div className="d-flex flex-column">
                       <h2>Tools I Use</h2>
                       <ul className={`d-flex mb-2 p-0 w-100 flex-wrap ${classes.skill__list}`}>
-                        {skillsInfo.map(renderSkills)}
+                        {skillsInfoData.map(renderSkills)}
                       </ul>
                     </div>
                     <div className={classes.btn__container}>
@@ -120,7 +120,6 @@ const About = () => {
                           <Button name="Contact" />
                         </div>
                       </Link>
-
                     </div>
                   </div>
                 </div>

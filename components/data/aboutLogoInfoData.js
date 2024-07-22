@@ -1,4 +1,4 @@
-export const logoInfo = [
+export const socialMediaInfoData = [
   {
     image: "/static/github-square-brands.svg",
     link: "https://github.com/habanerocity",

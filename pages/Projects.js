@@ -1,5 +1,6 @@
 import NavigationBar from '../components/ui/NavigationBar';
 import LogoBar from '../components/ui/LogoBar';
+import Footer from '../components/ui/Footer';
 
 import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
@@ -70,67 +71,70 @@ const Projects = () => {
 	  
 
 	return (
-		<main className={classes.pg_projects}>
-			<Head>
-				<title>Projects - Lindy Ramirez | Shopify Theme Developer</title>
-				<meta
-					name="description"
-					content="Projects page for Lindy Ramirez, Shopify Theme Developer. View my projects here."
-				/>
-			</Head>
-			<NavigationBar />
-			<motion.div
-				initial="hidden"
-				animate="visible"
-				variants={{
-					hidden: {
-						scale: 0.8,
-						opacity: 0
-					},
-					visible: {
-						scale: 1,
-						opacity: 1,
-						transition: {
-							delay: 0.4
+		<React.Fragment>
+			<main className={classes.pg_projects}>
+				<Head>
+					<title>Projects - Lindy Ramirez | Shopify Theme Developer</title>
+					<meta
+						name="description"
+						content="Projects page for Lindy Ramirez, Shopify Theme Developer. View my projects here."
+					/>
+				</Head>
+				<NavigationBar />
+				<motion.div
+					initial="hidden"
+					animate="visible"
+					variants={{
+						hidden: {
+							scale: 0.8,
+							opacity: 0
+						},
+						visible: {
+							scale: 1,
+							opacity: 1,
+							transition: {
+								delay: 0.4
+							}
 						}
-					}
-				}}
-			>
-				<SectionContainer>
-					<Container className={classes.flex__container__col}>
-						<div className={classes.flex__container}>
-							<div className={`w-100 ${classes.headings__container}`}>
-								<Headings heading="Works Done">Projects</Headings>
-								<div className={classes.project__filtering}>
-									<ul className={`my-2 list-unstyled ${classes.flex__container}`} >
-										<li onClick={() => handleCategoryClick('All')} className={`${activeCategory === 'All' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >All</li>
-										<li onClick={() => handleCategoryClick('WordPress')} className={`${activeCategory === 'WordPress' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >WordPress</li>
-										<li onClick={() => handleCategoryClick('Shopify')} className={`${activeCategory === 'Shopify' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >Shopify</li>
-										<li onClick={() => handleCategoryClick('React JS')} className={`${activeCategory === 'React JS' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >React JS</li>
-										<li onClick={() => handleCategoryClick('Landing Pages')}  className={`${activeCategory === 'Landing Pages' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >Landing Pages</li>
-										<li onClick={() => handleCategoryClick('Design')} className={`${activeCategory === 'Design' ? classes.nav__link__active : ''} ${classes.nav__link}`}  >Design</li>
-									</ul>
+					}}
+				>
+					<SectionContainer>
+						<Container className={classes.flex__container__col}>
+							<div className={classes.flex__container}>
+								<div className={`w-100 ${classes.headings__container}`}>
+									<Headings heading="Works Done">Projects</Headings>
+									<div className={classes.project__filtering}>
+										<ul className={`my-2 list-unstyled ${classes.flex__container}`} >
+											<li onClick={() => handleCategoryClick('All')} className={`${activeCategory === 'All' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >All</li>
+											<li onClick={() => handleCategoryClick('WordPress')} className={`${activeCategory === 'WordPress' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >WordPress</li>
+											<li onClick={() => handleCategoryClick('Shopify')} className={`${activeCategory === 'Shopify' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >Shopify</li>
+											<li onClick={() => handleCategoryClick('React JS')} className={`${activeCategory === 'React JS' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >React JS</li>
+											<li onClick={() => handleCategoryClick('Landing Pages')}  className={`${activeCategory === 'Landing Pages' ? classes.nav__link__active : ''} ${classes.nav__link} me-3`} >Landing Pages</li>
+											<li onClick={() => handleCategoryClick('Design')} className={`${activeCategory === 'Design' ? classes.nav__link__active : ''} ${classes.nav__link}`}  >Design</li>
+										</ul>
+									</div>
 								</div>
 							</div>
-						</div>
-						<motion.div 
-						key={activeCategory} 
-						variants={containerVariants}
-						initial="hidden"
-        				animate="visible"  
-						className={`${classes.card__holder}`}
-						>
-						{projectInfo.filter(project => activeCategory === 'All' || project.categories.includes(activeCategory))
-						.map((project, index) => renderCard(project, index))
-						}
-						</motion.div>
-					</Container>
-				</SectionContainer>
-			</motion.div>
+							<motion.div 
+							key={activeCategory} 
+							variants={containerVariants}
+							initial="hidden"
+							animate="visible"  
+							className={`${classes.card__holder}`}
+							>
+							{projectInfo.filter(project => activeCategory === 'All' || project.categories.includes(activeCategory))
+							.map((project, index) => renderCard(project, index))
+							}
+							</motion.div>
+						</Container>
+					</SectionContainer>
+				</motion.div>
 
-			<LogoBar />
+				<LogoBar />
 
-		</main>
+			</main>
+			<Footer />
+		</React.Fragment>
 	);
 };
 

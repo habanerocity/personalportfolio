@@ -4,7 +4,7 @@ import classes from './Skills.module.scss';
 
 import { motion } from 'framer-motion';
 
-import { skillsInfo } from '../components/data/skillsInfoData';
+import { skillsInfo } from '../components/data/toolsInfoData';
 
 import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';

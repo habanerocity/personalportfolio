@@ -1,5 +1,7 @@
+@import '../styles/sass/variables';
+
 .motion {
-    background-color: #e3e3e3;
+    background-color: $color-gray;
 }
 
 @media screen and (max-width: 450px){

@@ -163,7 +163,7 @@ const ContactForm = () => {
           />
           <textarea
             className={`${messageInputClasses} ${classes.msg} ${classes.info}`}
-            rows="7"
+            rows="5"
             placeholder={
               messageHasError ? "Enter a valid message" : "Enter your message"
             }

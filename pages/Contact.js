@@ -37,18 +37,18 @@ const Contact = () => {
           variants={pageFadeInAnimation}
         >
           <SectionContainer>
-            <Container className={classes.container}>
-              <div className={classes.flex__container}>
-                <div className={classes.headings__container}>
+            <Container className={`${classes.container} d-flex flex-column align-items-center`}>
+              <div className='position-relative align-items-center flex-column justify-content-center w-100'>
+                <div className={`align-items-start text-start justify-content-start ${classes.headings__container}`}>
                   <Headings heading="Contact Me">Contact</Headings>
                 </div>
               </div>
-              <div className={classes.flex__row}>
-                <div className={classes.main__flex}>
-                  <div className={classes.flex__container}>
-                    <div className={classes.contact__wrapper}>
-                      <Container className={classes.flex__row}>
-                        <div className={classes.pic__wrapper}>
+              <div className='d-flex flex-row justify-content-center p-0'>
+                <div className={`justify-content-center align-items-center ${classes.main__flex}`}>
+                  <div className='position-relative align-items-center flex-column justify-content-center w-100'>
+                    <div className={`bg-white ${classes.contact__wrapper}`}>
+                      <Container className='d-flex flex-row justify-content-center p-0'>
+                        <div className={`justify-content-center align-items-center position-relative ${classes.pic__wrapper}`}>
                           <Image
                             src={"/static/lindy-hanoi.png"}
                             className={classes.shapes}

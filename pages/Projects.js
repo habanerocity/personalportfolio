@@ -45,9 +45,9 @@ const Projects = () => {
 					variants={pageFadeInAnimation}
 				>
 					<SectionContainer>
-						<Container className={classes.flex__container__col}>
+						<Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
 							<div className={classes.flex__container}>
-								<div className={`w-100 ${classes.headings__container}`}>
+								<div className={`w-100 align-items-start text-start justify-content-start ${classes.headings__container}`}>
 									<Headings heading="Works Done">Projects</Headings>
 									<div className={classes.project__filtering}>
 										<ProjectCategories activeCategoryProps={activeCategory} setActiveCategoryProps={handleCategoryClick} />

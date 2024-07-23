@@ -23,6 +23,7 @@
     justify-content: flex-start;
     align-items: center;
     transform: translateX(2.2rem);
+    width: 100%;
 
     @media screen and (max-width: 991px){
         transform: translateX(0);

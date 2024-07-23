@@ -2,10 +2,7 @@
 @import "../styles/sass/mixins";
 
 .about__card {
-  background-color: #fff;
   @include flex-container-col;
-  justify-content: center;
-  align-items: flex-start;
   width: calc(100% - 15%);
   margin-top: 1rem;
   min-height: 40rem;
@@ -16,34 +13,18 @@
 
 .btn__container {
   @include flex-container-row;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 1.5rem;
 }
 
 .bio__details {
-  background-color: #fff;
   transform: translateX(2rem);
   width: 93%;
   hyphens: auto;
 }
 
-.dev {
-  font-size: 2rem;
-  font-weight: 100;
-}
-
 .flex__container {
   @include flex-container-row;
-  justify-content: flex-start;
   width: 85%;
-
-  &Col {
-    @include flex-container-col;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    padding-left: 2rem;
-  }
 
   &__col {
     width: 85%;
@@ -53,27 +34,6 @@
 
 .headings__container {
   @include flex-container-col;
-  align-items: flex-start;
-  text-align: left;
-  justify-content: flex-start;
-}
-
-.icons {
-  @include flex-container-row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 10rem;
-}
-
-.lr {
-  font-weight: bolder;
-  font-size: 4rem;
-  text-align: center;
-}
-
-.me {
-  position: relative;
-  border-radius: 50%;
 }
 
 //MEDIA QUERIES
@@ -98,25 +58,6 @@
     flex-direction: unset;
     flex-wrap: wrap;
   }
-
-  .dev {
-    font-size: 2rem;
-    padding-top: 0 !important;
-  }
-
-  .img__holder {
-    transform: translate(28rem, 7rem);
-  }
-
-  .lr {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .img__holder {
-    transform: translate(19rem, 5rem);
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -126,7 +67,8 @@
   }
 
   .bio__details {
-    text-align: center;
+    text-align: left;
+    width: 100%;
 
     & > p {
       transform: translateY(0);
@@ -143,12 +85,6 @@
 
   .flex__container {
     margin-top: 0;
-
-    &Col {
-      line-height: 1 !important;
-      padding-left: 0;
-      align-items: center;
-    }
   }
 }
 
@@ -159,23 +95,12 @@
 }
 
 @media screen and (max-width: 585px) {
-
   .about__card {
     padding: 3rem;
   }
 
-  .dev {
-    padding-top: 0 !important;
-    z-index: 3;
-    font-size: 1.5rem;
-  }
-
   .img__holder {
     transform: translate(19rem, 5rem);
-  }
-
-  .lr {
-    font-size: 2rem;
   }
 }
 

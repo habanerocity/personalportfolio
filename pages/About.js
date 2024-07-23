@@ -42,21 +42,21 @@ const About = () => {
         >
           <SectionContainer>
             <Container className={classes.flex__container__col}>
-              <div className={classes.flex__container}>
-                <div className={classes.headings__container}>
+              <div className={`justify-content-start ${classes.flex__container}`}>
+                <div className={`align-items-start text-start justify-content-start ${classes.headings__container}`}>
                   <Headings heading="Who I Am">About Me</Headings>
                 </div>
               </div>
               <FlexContainer>
-                <div className={`${classes.about__card} col-4`}>
+                <div className={`${classes.about__card} justify-content-center align-items-start bg-white col-4`}>
                   <ProfileHeader />
-                  <div className={classes.bio__details}>
+                  <div className={`bg-white ${classes.bio__details}`}>
                     <div className="fs-4 pt-4">
                       Hey, I&apos;m Lindy, a freelance web developer deeply rooted in digital marketing and the e-commerce world. With a track record of helping brands improve their online presence and conversion rates, my journey in tech began with a childhood love for computers, evolving into a problem-solving mission. Beyond coding, I&apos;m a big fan of basketball and soccer, an adventure-seeking traveler, and a spicy food aficionado. If you&apos;re looking to collaborate on a project or just chat tech and shared interests, feel free to reach out—I&apos;m always up for new ventures.
                     </div>
                     <br />
                     <ToolList />
-                    <div className={classes.btn__container}>
+                    <div className={`justify-content-between align-items-center ${classes.btn__container}`}>
                       <Link passHref href="/Contact">
                         <Button name="Contact" />
                       </Link>

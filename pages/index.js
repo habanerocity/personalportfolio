@@ -17,7 +17,7 @@ import Head from 'next/head';
 const HomePage = () => {
 	return (
 		<React.Fragment>
-			<main className={classes.main}>
+			<main className={`h-100 ${classes.main}`}>
 				<Head>
 					<meta
 						name="description"
@@ -28,7 +28,7 @@ const HomePage = () => {
 				<motion.div
 					initial="hidden"
 					animate="visible"
-					className={`${classes.motion}`}
+					className={`h-100 ${classes.motion}`}
 					variants={pageFadeInAnimation}
 				>
 					<Hero />

@@ -1,5 +1,4 @@
 @import '../styles/sass/mixins';
-@import '../styles/sass/variables';
 
 .border__grey{
     border: 1px solid #212529;
@@ -15,12 +14,10 @@
 
     @media(max-width: 1199px){
         width: 95%;
-    
     }
 
     @media(max-width: 1099px){
         width: 100%;
-    
     }
 
     @media(max-width: 629px){
@@ -32,12 +29,9 @@
     }
 }
   
-.card__holder {
+.card__group__wrapper {
     @include flex-container-row;
-    justify-content: space-between;
-    align-items: flex-start;
     margin-top: 1rem;
-    flex-wrap: wrap;
 }
 
 .flex__container {

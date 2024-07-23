@@ -59,7 +59,7 @@ const Projects = () => {
 							variants={cardFadeInAnimation}
 							initial="hidden"
 							animate="visible"  
-							className={`${classes.card__holder}`}
+							className={`${classes.card__group__wrapper} justify-content-between align-items-start flex-wrap`}
 							>
 							{projectInfoData.filter(project => activeCategory === 'All' || project.categories.includes(activeCategory))
 							.map((project, index) => renderProjectCards(project, index))

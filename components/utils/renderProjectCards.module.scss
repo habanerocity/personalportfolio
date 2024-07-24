@@ -1,8 +1,6 @@
 @import '../../styles/sass/variables';
-@import '../../styles/sass/mixins';
 
 .card {
-    background-color: #fff;
     margin-bottom: 10rem;
     border-radius: 5px;
     box-shadow: $box-shadow;
@@ -32,20 +30,6 @@
     &__top__br{
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-    }
-
-    &__heading {
-        font-weight: bolder;
-        text-align: center;
-    }
-
-    &__holder {
-    @include flex-container-row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 1rem;
-    height: auto;
-    flex-wrap: wrap;
     }
 }
 

@@ -1,13 +1,8 @@
-@import '../../styles/sass/mixins';
 @import '../../styles/sass/variables';
 
 .section{
     background-color: $color-gray;
     min-height: 100vh;
-    // width: calc(100% - 25%);
-    // transform: translateX(33.3%);
-    // @include flex-container-row;
-    // padding: 2rem;
     justify-content: center;
     overflow: scroll;
 }
@@ -18,4 +13,3 @@
         transform: translateX(0);
     }
 }
-

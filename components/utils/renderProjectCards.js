@@ -8,11 +8,11 @@ import classes from './renderProjectCards.module.scss';
 
 const renderProjectCards = (cardProjectData, index) => {
     return (
-        <Card className={`${classes.card} col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
+        <Card className={`${classes.card} bg-white col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
             <Card.Img className={classes.card__top__br} variant="top" src={cardProjectData.image} alt={cardProjectData.title} />
             <Card.Body className={`${classes.card__body} p-4 d-flex flex-column align-items-center justify-content-between`}>
                 <div className={classes.flex__card__body} >
-                    <h2 className={` ${classes.card__heading}`}>{cardProjectData.title}</h2>
+                    <h2 className={`text-center fw-bolder`}>{cardProjectData.title}</h2>
                     <ListGroup className="list-group-flush text-center ">
                         <ListGroupItem>
                             <h3>Tools used</h3>

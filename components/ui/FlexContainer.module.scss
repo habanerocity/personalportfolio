@@ -1,14 +1,5 @@
-@import '../../styles/sass/variables';
-@import '../../styles/sass/mixins';
-
 .flex_container {   
-    position: relative;
-    align-items: flex-start;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
     height: 70vh;
-    display: flex;
 }
 
 @media screen and (max-width:600px){

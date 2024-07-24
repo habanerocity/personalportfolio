@@ -9,7 +9,7 @@ const LogoBar = () => {
         <div className={classes.logo_bar_container}>
             <div className='position-relative'>
                 <div className={`d-flex justify-content-center align-items-center ${classes.logo_wrapper}`} >
-                    <div className={`${classes.logo}`}>
+                    <div className={`${classes.logo} position-relative p-0 `}>
                         <Link href="/">
                             <Image
                                 layout="fill"

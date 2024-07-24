@@ -117,15 +117,15 @@ const ContactForm = () => {
   return (
     <form
       ref={form}
-      className={classes.contact__form}
+      className={`position-relative d-flex justify-content-center align-items-center flex-col ${classes.contact__form}`}
       onSubmit={formSubmissionHandler}
     >
       {formSent && <DisplaySuccess onConfirm={setFormSent} />}
-      <div className={classes.flex__container}>
-        <h2 className={classes.hire}>
+      <div className={`position-relative align-items-center flex-column justify-content-center d-flex w-100`}>
+        <h2 className={`fw-bold text-black text-center ${classes.hire}`}>
           Let&apos;s Take Your Brand To The Next Level&nbsp;&nbsp;🚀
         </h2>
-        <p className="fs-4 text-center">Connect With Me Today to Bring Your Vision to Life</p>
+        <p className={`${classes.subheading} fs-4 text-center`}>Connect With Me Today to Bring Your Vision to Life</p>
         <div className={classes.input__box}>
           <input
             className={nameInputClasses}
@@ -162,7 +162,7 @@ const ContactForm = () => {
             value={enteredSubject}
           />
           <textarea
-            className={`${messageInputClasses} ${classes.msg} ${classes.info}`}
+            className={`${messageInputClasses} ${classes.msg}  ${classes.info}`}
             rows="5"
             placeholder={
               messageHasError ? "Enter a valid message" : "Enter your message"

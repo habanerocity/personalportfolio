@@ -2,7 +2,7 @@ import classes from './ProfileHeader.module.scss';
 
 import Image from 'next/image';
 
-import { socialMediaInfoData } from '../data/aboutLogoInfoData';
+import { socialMediaInfoData } from '../data/socialMediaInfoData';
 
 import SocialMediaIcons from './SocialMediaIcons';
 

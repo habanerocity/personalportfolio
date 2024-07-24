@@ -12,6 +12,6 @@ export const socialMediaInfoData = [
   {
     image: "/static/linkedin-in-brands.svg",
     link: "https://www.linkedin.com/in/lindy-ramirez-8786102b/",
-    alt: "Linked In"
+    alt: "LinkedIn"
   }
 ];

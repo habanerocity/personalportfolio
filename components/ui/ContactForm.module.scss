@@ -1,94 +1,18 @@
 @import "../../styles/sass/mixins";
 @import "../../styles/sass/variables";
 
-.flex__container {
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  display: flex;
-  width: 100%;
-}
-
 .contact__form {
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 46rem;
   padding: 1rem 0;
 }
 
-.budz {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0;
-}
-
-.headings__container {
-  @include flex-container-col;
-  align-items: flex-start;
-  text-align: left;
-  justify-content: flex-start;
-}
-
-.container {
-  padding: 10rem 0;
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.pic__holder {
-  @include flex-container-col;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.heading__holder {
-  @include flex-container-col;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.mother {
-  @include flex-container-col;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-}
-
-.main__flex {
-  @include flex-container-col;
-  justify-content: center;
-  align-items: center;
+.subheading{
+  width: 90%;
 }
 
 .hire__btn {
   position: relative;
   margin-top: 2rem;
-}
-
-.description {
-  color: black;
-  font-family: $font-body;
-  text-align: left;
-  font-weight: 100;
-  font-size: 1.4rem;
-  width: auto;
-  margin-top: 1rem;
 }
 
 .inp {
@@ -104,8 +28,8 @@
 
   &ut__success {
     border: none;
-    background-color: transparent;
-    border-bottom: .5px solid #32cd32;
+    background-color: transparent!important;
+    border-bottom: .5px solid $primary-color-2!important;
     font-size: 1.5rem;
   }
 }
@@ -138,20 +62,9 @@
   border-radius: 0;
 }
 
-.two {
-  background-color: #fff;
-  height: auto;
-  border-radius: 5px;
-  margin-top: 1rem;
-  box-shadow: $box-shadow;
-}
-
 .hire {
-  font-weight: bold;
-  color: black;
   font-family: $font-header;
   font-size: 1.9rem;
-  text-align: center;
 }
 
 @media screen and (max-width: 1176px) {

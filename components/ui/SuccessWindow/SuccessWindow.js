@@ -3,7 +3,7 @@ import classes from "./_SuccessWindow.module.scss";
 
 import Image from "next/legacy/image";
 
-const SuccessWindow = props => {
+const SuccessWindow = (props) => {
   const [clicked, setClicked] = useState(false);
 
   const clickHandler = () => {
@@ -12,9 +12,9 @@ const SuccessWindow = props => {
   };
 
   return (
-    <div className={classes.backdrop} onConfirm={clickHandler}>
-      <div className={classes.success}>
-        <div onClick={clickHandler} className={classes.closeBtn__container}>
+    <div className={`w-100 h-100 position-fixed ${classes.backdrop}`} onConfirm={clickHandler}>
+      <div className={`text-black ${classes.success}`}>
+        <div onClick={clickHandler} className={`justify-content-start text-black ${classes.closeBtn__container}`}>
           <Image
             src={"/static/times-solid1.svg"}
             className={classes.close}
@@ -24,7 +24,7 @@ const SuccessWindow = props => {
         </div>
         <div className={`justify-content-center text-center fw-bold w-100 ${classes.flex__container}`}>
           <p className={classes.msg}>{props.message}</p>
-          <button className={classes.btn} onClick={clickHandler}>
+          <button className={`border-0 d-block position-relative ${classes.btn}`} onClick={clickHandler}>
             Got It!
             <span />
           </button>

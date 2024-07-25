@@ -3,15 +3,15 @@
 
 .flex__container {
   @include flex-container-col;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   font-size: 2rem;
-  font-weight: bolder;
-  width: 100%;
   border-radius: 6px;
   margin-bottom: 2rem;
   transform: translateY(6rem);
+
+  @media screen and (max-width: 445px) {
+    font-size: 1.5rem;
+    transform: translateY(3rem);
+  }
 }
 
 .success {
@@ -22,6 +22,11 @@
   width: 40rem;
   z-index: 30000;
   border-radius: 6px;
+
+  @media screen and (max-width: 445px){
+    height: 20rem;
+    width: 25rem;
+  }
 }
 
 .backdrop {
@@ -45,6 +50,10 @@
   height: 2rem;
   width: 2rem;
   color: black;
+
+  @media screen and (max-width: 445px){
+    transform: translate(22rem, 1rem);
+  }
 }
 
 .msg {
@@ -68,6 +77,10 @@
   font-family: inherit;
   font-weight: 500;
   margin-top: 5rem;
+
+  @media screen and (max-width: 445px){
+    margin-top: 5px;
+  }
 }
 
 .btn span {
@@ -107,33 +120,4 @@
 
 .btn:active span::before {
   background: $secondary-color;
-}
-
-@media screen and (max-width: 445px) {
-  .closeBtn__container {
-    transform: translate(27rem, 1rem);
-  }
-
-  .success {
-    height: 20rem;
-    width: 30rem;
-  }
-
-  .btn {
-    margin-top: 5px;
-  }
-
-  .flex__container {
-    font-size: 1.5rem;
-    transform: translateY(3rem);
-  }
-}
-
-@media screen and (max-width: 445px) {
-  .closeBtn__container {
-    transform: translate(22rem, 1rem);
-  }
-  .success {
-    width: 25rem;
-  }
 }

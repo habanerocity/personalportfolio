@@ -22,7 +22,7 @@ const SuccessWindow = props => {
             layout="fill"
           />
         </div>
-        <div className={classes.flex__container}>
+        <div className={`justify-content-center text-center fw-bold w-100 ${classes.flex__container}`}>
           <p className={classes.msg}>{props.message}</p>
           <button className={classes.btn} onClick={clickHandler}>
             Got It!

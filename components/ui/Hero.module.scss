@@ -18,7 +18,6 @@
 .circle{
   width: 22rem;
   height: 22rem;
-  border-radius: 50%;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.05);
@@ -26,10 +25,6 @@
   transform: translate(-50%, -50%);
   top: 80%;
   left: 50%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 20;
 
   @media(max-width: 992px){
@@ -52,10 +47,6 @@
   width: 45%;
   height: 45%;
   background-color: $secondary-color;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 10000000;
 
   @media(max-width: 500px){
@@ -70,13 +61,7 @@
   }
 }
 
-.resume{
-  position: absolute;
-  top: 10%;
-  font-size: 1.4rem;
-  
-}
-
+//typewriter is using this class
 .details {
   font-weight: bold;
   font-size: 4.4rem;
@@ -99,7 +84,7 @@
   }
 
   @media screen and (max-width: 300px){
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   @media screen and (max-height: 500px){
@@ -109,25 +94,10 @@
 }
 
 .hero {
-  height: 100%;
-  width: 100%;
   background-color: $color-gray;
 
-  &_text {
-    text-align: left;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
   &__wrapper{
-    display: flex;
-    position: static;
     justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
 
     @media(max-width: 992px){
       flex-direction: column-reverse;
@@ -143,7 +113,6 @@
     padding: 1.4rem;
     background-color: $secondary-color;
     border:3px solid $secondary-color;
-    color: white;
     border-radius: 6px;
     cursor: pointer;
 
@@ -197,9 +166,8 @@
 
 .intro {
   font-weight: 100;
-  text-align: left;
   font-size: 4rem;
-  color: #000;
+  text-align: left;
 
   @media(max-width: 1200px){
     font-size: 3.4rem;
@@ -221,8 +189,6 @@
 }
 
 .lindy_container{
-  position: relative;
-
   @media(max-width: 1200px){
     width: 36rem;
   }
@@ -247,57 +213,7 @@
   transition: all 2s ease-in-out;
 }
 
-.see_projects {
-  padding: 1em 3em;
-  font-size: 12px;
-  font-size: 17px;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  color: #000;
-  background-color: #fff;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-  margin-top: 2rem;
-
-  &:active {
-    transform: translateY(-1px);
-  }
-
-  &:hover {
-    background-color: $secondary-color;
-    box-shadow: 0px 10px 25px $secondary-color;
-    color: #fff;
-    transform: translateY(-7px);
-  }
-
-  @media screen and (max-width: 500px){
-    margin-top: 1rem;
-    font-size: 1rem;
-  }
-
-  @media screen and (max-width: 428px) {
-    padding: 1em 1.5em;
-    font-size: 12px;
-  }
-  
-  @media screen and (max-width: 330px) {
-    padding: .75em 1.25em;
-    font-size: 11px;
-  }
-  
-  @media screen and (max-width: 300px) {
-    padding: 1em 1em;
-  }
-  
-}
-
 .subsubheading{
-  color: black;
-  font-weight: lighter;
   font-size: 2rem;
   margin-top: 1.2rem;
 
@@ -311,7 +227,6 @@
   }
 
   @media(max-width: 390px ){
-    text-align: center;
     font-size: 1.4rem;
   }
 }
@@ -378,14 +293,8 @@
 }
 
 .rotating_text_circle{
-  position: relative;
-  margin: auto;
   width: 200px;
   height: 200px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   @media(max-width: 992px){
     width: 150px;
@@ -404,9 +313,6 @@
 }
 
 .rotating_text_text{
-  width: 100%;
-  height: 100%;
-  position: absolute;
   animation: anim 10s linear infinite;
 }
 
@@ -420,11 +326,9 @@
 }
 
 .rotating_text_text span{
-  position: absolute;
   left: 50%;
   font-size: 14px;
   transform-origin: 0 100px;
-  text-transform: uppercase;
 
   @media(max-width: 992px){
     transform-origin: 0 75px;

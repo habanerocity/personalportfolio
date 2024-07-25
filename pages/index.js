@@ -35,7 +35,6 @@ const HomePage = () => {
 				</motion.div>
 				<LogoBar xw />
 			</main>
-			<Footer />
 		</React.Fragment>
 	);
 };

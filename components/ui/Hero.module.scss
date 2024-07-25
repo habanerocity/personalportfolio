@@ -1,6 +1,12 @@
 @import "../../styles/sass/mixins";
 @import "../../styles/sass/variables";
 
+.btn {
+  @media screen and (max-width: 400px) {
+    padding: 1em 2em;
+  }
+}
+
 .btn__container{
   @media(max-width: 992px){
     display: flex;
@@ -16,7 +22,7 @@
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid #ff6600;
+  border: 1px solid $secondary-color;
   transform: translate(-50%, -50%);
   top: 80%;
   left: 50%;
@@ -45,7 +51,7 @@
 .inner_circle{
   width: 45%;
   height: 45%;
-  background-color: #ff6600;
+  background-color: $secondary-color;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -74,11 +80,9 @@
 .details {
   font-weight: bold;
   font-size: 4.4rem;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: $font-body, sans-serif;
   display: flex;
   align-items: center;
-  // font-size: 3rem;
-  // margin-top: 2rem;
   color: #000;
 
   @media(max-width: 1200px){
@@ -89,13 +93,25 @@
     font-size: 3rem;
     justify-content: center;
   }
+
+  @media screen and (max-width: 450px){
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 300px){
+      font-size: 2.5rem;
+  }
+
+  @media screen and (max-height: 500px){
+    font-size: 2rem;
+    margin-top: 5px;
+  }
 }
 
 .hero {
   height: 100%;
   width: 100%;
-  background-color: #e3e3e3;
-
+  background-color: $color-gray;
 
   &_text {
     text-align: left;
@@ -117,12 +133,16 @@
       flex-direction: column-reverse;
       justify-content: center;
     }
+
+    @media screen and (max-height: 500px){
+      height: 175vh;
+    }
   }
 
   &__btn_solid{
     padding: 1.4rem;
-    background-color: #ff6600;
-    border:3px solid #ff6600;
+    background-color: $secondary-color;
+    border:3px solid $secondary-color;
     color: white;
     border-radius: 6px;
     cursor: pointer;
@@ -143,8 +163,8 @@
   &__btn_transparent{
     padding: 1.4rem;
     background-color: transparent;
-    border:3px solid #ff6600;
-    color: #ff6600;
+    border:3px solid $secondary-color;
+    color: $secondary-color;
     border-radius: 6px;
     cursor: pointer;
     transition: all .2s ease-in;
@@ -162,7 +182,7 @@
     }
 
     &:hover{
-      background-color:  #ff6600;
+      background-color:  $secondary-color;
       color: #fff;
     }
   }
@@ -189,6 +209,15 @@
     text-align: center;
     font-size: 2rem;
   }
+
+  @media screen and (max-width: 300px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (max-height: 500px) {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .lindy_container{
@@ -214,14 +243,13 @@
 .nav {
   font-size: 2rem;
   @include flex-container-row;
-  font-family: "Ubuntu", sans-serif;
+  font-family: $font-body, sans-serif;
   transition: all 2s ease-in-out;
 }
 
 .see_projects {
   padding: 1em 3em;
   font-size: 12px;
-  // text-transform: uppercase;
   font-size: 17px;
   letter-spacing: 2.5px;
   font-weight: 500;
@@ -241,10 +269,30 @@
 
   &:hover {
     background-color: $secondary-color;
-    box-shadow: 0px 10px 25px #ff6600;
+    box-shadow: 0px 10px 25px $secondary-color;
     color: #fff;
     transform: translateY(-7px);
   }
+
+  @media screen and (max-width: 500px){
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 428px) {
+    padding: 1em 1.5em;
+    font-size: 12px;
+  }
+  
+  @media screen and (max-width: 330px) {
+    padding: .75em 1.25em;
+    font-size: 11px;
+  }
+  
+  @media screen and (max-width: 300px) {
+    padding: 1em 1em;
+  }
+  
 }
 
 .subsubheading{
@@ -319,105 +367,16 @@
   }
 }
 
-//MEDIA QUERIES
-@media screen and (max-width: 700px) {
-  // .intro {
-  //   font-size: 4rem;
-  // }
-
-  .hero_text {
+.hero_text {
+  @media screen and (max-width: 700px){
     font-size: 3rem;
   }
-}
 
-@media screen and (max-width: 450px){
-  .details {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .see_projects {
-    margin-top: 1rem;
-  }
-
-  // .hero_text {
-  //   transform: translate(-50%, -50%);
-  // }
-
-  // .intro {
-  //   margin-bottom: 1rem;
-  // }
-
-  // .details {
-  //   margin-top: 1rem;
-  // }
-}
-
-@media screen and (max-width: 400px) {
-  // .intro {
-  //   font-size: 3.5rem;
-  // }
-
-  .hero_text {
+  @media screen and (max-width: 400px){
     font-size: 2.5rem;
   }
-
-  .btn {
-    padding: 1em 2em;
-  }
 }
 
-@media screen and (max-width: 428px) {
-  .see_projects {
-    padding: 1em 1.5em;
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 330px) {
-  .see_projects {
-    padding: .75em 1.25em;
-    font-size: 11px;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .see_projects {
-    padding: 1em 1em;
-  }
-
-  .details {
-    font-size: 2.5rem;
-  }
-
-  .intro {
-    font-size: 3rem;
-  }
-}
-
-//MEDIA QUERIES BASED ON HEIGHT
-@media screen and (max-height: 500px) {
-  .hero {
-    height: 175vh;
-  }
-
-  .intro {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .details {
-    font-size: 2rem;
-    margin-top: 5px;
-  }
-
-  .see_projects {
-    font-size: 1rem;
-  }
-}
-
-//Rotating text
 .rotating_text_circle{
   position: relative;
   margin: auto;
@@ -480,11 +439,5 @@
   @media(max-width: 400px){
     transform-origin: 0 50px;
     font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 800px) and (max-height: 500px) {
-  .hero_text {
-    transform: translate(-50%, -55%);
   }
 }

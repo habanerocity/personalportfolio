@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import classes from "./NavigationBar.module.scss";
 
-import { linkInfo } from "../data/navigationBarLinkInfoData";
+import { linkInfo } from "../../data/navigationBarLinkInfoData";
 
 import Link from "next/link";
 import Image from "next/legacy/image";

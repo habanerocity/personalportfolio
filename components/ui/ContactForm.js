@@ -135,6 +135,7 @@ const ContactForm = () => {
             onChange={nameChangeHandler}
             onBlur={nameBlurHandler}
             value={enteredName}
+            autoComplete="true"
           />
           <input
             className={emailInputClasses}
@@ -147,6 +148,7 @@ const ContactForm = () => {
             onChange={emailChangeHandler}
             onBlur={emailBlurHandler}
             value={enteredEmail}
+            autoComplete="true"
           />
           <input
             className={subjectInputClasses}

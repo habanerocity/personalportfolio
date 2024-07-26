@@ -5,7 +5,7 @@ import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
 import ProjectCategories from '../components/ui/ProjectCategories';
 
-import { cardInfo as projectInfoData } from '../components/data/projectsCardInfoData';
+import { cardInfo as projectInfoData } from '../data/projectsCardInfoData';
 import renderProjectCards from '../components/utils/renderProjectCards';
 
 import Container from 'react-bootstrap/Container';

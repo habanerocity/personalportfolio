@@ -1,6 +1,6 @@
 import classes from './ToolList.module.scss';
 
-import toolsInfoData from '../data/toolsInfoData';
+import toolsInfoData from '../../data/toolsInfoData';
 import ToolIcons from './ToolIcons';
 
 const ToolList = () => {

@@ -13,7 +13,7 @@ const SocialMediaIcons = (logo, index) => {
             alt={logo.alt}
             height={25}
             width={25}
-            layout="intrinsic"
+            
           />
         </Link>
       </div>

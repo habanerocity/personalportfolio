@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 import ContactForm from "../components/ui/ContactForm";
 import Footer from '../components/ui/Footer';
 
-import pageFadeInAnimation from "../components/animations/pageFadeInAnimation";
+import pageFadeInAnimation from "../animations/pageFadeInAnimation";
 
 import React from "react";
 

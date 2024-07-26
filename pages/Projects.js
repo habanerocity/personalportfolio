@@ -10,8 +10,8 @@ import renderProjectCards from '../components/utils/renderProjectCards';
 
 import Container from 'react-bootstrap/Container';
 
-import pageFadeInAnimation from '../components/animations/pageFadeInAnimation';
-import cardFadeInAnimation from '../components/animations/cardFadeInAnimation';
+import pageFadeInAnimation from '../animations/pageFadeInAnimation';
+import cardFadeInAnimation from '../animations/cardFadeInAnimation';
 
 import Head from 'next/head';
 

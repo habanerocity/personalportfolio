@@ -18,7 +18,7 @@ import ProfileHeader from '../components/ui/ProfileHeader';
 import Headings from "../components/ui/Headings";
 import Footer from "../components/ui/Footer";
 
-import pageFadeInAnimation from "../components/animations/pageFadeInAnimation";
+import pageFadeInAnimation from "../animations/pageFadeInAnimation";
 
 const About = () => {
 

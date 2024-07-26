@@ -6,6 +6,7 @@
 
 .flex__containerCol{
     @include flex-container-col;
+    align-items: flex-start;
     padding-left: 2rem;
 
     @media screen and (max-width: 600px){

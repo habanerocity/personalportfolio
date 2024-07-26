@@ -73,10 +73,6 @@ const ContactForm = () => {
 
     if (!formIsValid) return;
 
-    console.log(enteredName);
-
-    console.log("sending email");
-
     emailjs
       .sendForm(
         "service_7ygro38",
@@ -86,7 +82,6 @@ const ContactForm = () => {
       )
       .then(
         result => {
-          console.log(result.text);
           successHandler();
         },
         error => {
@@ -115,6 +110,11 @@ const ContactForm = () => {
   );
 
   return (
+    /*
+      <DisplaySuccess /> is the success window that pops up when the form is submitted, 
+      it becomes closed when the user clicks the 'got it' or 'close' button which
+      sends a false boolean to the props.onConfirm function setting the formSent state to false
+    */
     <form
       ref={form}
       className={`position-relative d-flex justify-content-center align-items-center flex-col ${classes.contact__form}`}

@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./_SuccessWindow.module.scss";
-
+import PropTypes from "prop-types";
 import Image from "next/legacy/image";
 
 const SuccessWindow = (props) => {
-  const [clicked, setClicked] = useState(false);
-
+  /*
+  This function is called when the user clicks the 'close' or the 'got it' button. 
+  A false boolean is sent as props.onConfirm(clicked) to DisplaySuccess.js
+  */
   const clickHandler = () => {
-    setClicked(true);
-    props.onConfirm(clicked);
+    props.onConfirm(false);
   };
 
   return (
-    <div className={`w-100 h-100 position-fixed ${classes.backdrop}`} onConfirm={clickHandler}>
+    <div className={`w-100 h-100 position-fixed ${classes.backdrop}`}>
       <div className={`text-black ${classes.success}`}>
-        <div onClick={clickHandler} className={`justify-content-start text-black ${classes.closeBtn__container}`}>
+        <div 
+        onClick={clickHandler} 
+        className={`justify-content-start text-black ${classes.closeBtn__container}`}
+        role="button"
+        aria-label="Close"
+        tabIndex={0}
+        onKeyPress={(e) => { if (e.key === 'Enter') clickHandler(); }}
+        >
           <Image
             src={"/static/times-solid1.svg"}
             className={classes.close}
@@ -32,6 +40,11 @@ const SuccessWindow = (props) => {
       </div>
     </div>
   );
+};
+
+SuccessWindow.propTypes = {
+  message: PropTypes.string.isRequired,
+  onConfirm: PropTypes.func.isRequired,
 };
 
 export default SuccessWindow;

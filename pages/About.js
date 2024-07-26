@@ -8,7 +8,7 @@ import Head from "next/head";
 
 import Container from "react-bootstrap/Container";
 
-import ToolList from '../components/ui/ToolList';
+import RenderToolList from '../components/RenderToolList.js';
 import Button from "../components/ui/Button";
 import FlexContainer from "../components/ui/FlexContainer";
 import LogoBar from '../components/ui/LogoBar';
@@ -55,7 +55,7 @@ const About = () => {
                       Hey, I&apos;m Lindy, a freelance web developer deeply rooted in digital marketing and the e-commerce world. With a track record of helping brands improve their online presence and conversion rates, my journey in tech began with a childhood love for computers, evolving into a problem-solving mission. Beyond coding, I&apos;m a big fan of basketball and soccer, an adventure-seeking traveler, and a spicy food aficionado. If you&apos;re looking to collaborate on a project or just chat tech and shared interests, feel free to reach out—I&apos;m always up for new ventures.
                     </div>
                     <br />
-                    <ToolList />
+                    <RenderToolList/>
                     <div className={`justify-content-between align-items-center ${classes.btn__container}`}>
                       <Link passHref href="/Contact">
                         <Button name="Contact" />

@@ -6,7 +6,7 @@ import Headings from '../components/ui/Headings';
 import ProjectCategories from '../components/ui/ProjectCategories';
 
 import { cardInfo as projectInfoData } from '../data/projectsCardInfoData';
-import renderProjectCards from '../components/utils/renderProjectCards';
+import renderProjectCards from '../components/renderProjectCards';
 
 import Container from 'react-bootstrap/Container';
 

@@ -14,7 +14,6 @@ const ContactForm = () => {
 
   const successHandler = () => {
     setFormSent(true);
-    console.log("Success!");
   };
 
   const isNotEmpty = value => value.trim() !== "";

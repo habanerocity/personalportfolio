@@ -42,10 +42,8 @@ const NavigationBar = () => {
     <main className={`position-absolute bg-white w-100 ${classes.nav_container}`}>
       <div className={`container ${classes.nav_menu_wrapper} d-flex justify-content-center align-items-center p-0`}>
         <nav className={`${classes.nav_menu} w-100 bg-white position-relative d-flex align-items-center`}>
-          <div className={`${classes.logo} list-unstyled position-relative p-0 fw-bold`}>
-
-            <Link href="/">
-
+          <Link href="/">
+            <div className={`${classes.logo} list-unstyled position-relative p-0 fw-bold`}>
               <Image
                 layout="fill"
                 src={"/static/habaneroicon-50pxw.webp"}
@@ -53,10 +51,8 @@ const NavigationBar = () => {
                 className={classes.hab}
                 priority
               />
-
-            </Link>
-
-          </div>
+            </div>
+          </Link>
           <div className={`position-absolute ${classes.nav_menu_items_wrapper}`}>
             <ul className={`p-0 m-0 ${classes.nav_menu_items} list-unstyled d-flex align-items-center position-relative`}>
               {linkInfo.map(renderLinks)}

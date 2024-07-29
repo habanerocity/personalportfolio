@@ -1,17 +1,28 @@
 export const cardInfo = [
   {
     id: 1,
-    image: "/static/foodventure-figma.webp",
+    image: "/static/taste_trippingx540.webp",
     title: "Foodventure Custom WordPress Theme",
-    categories: ['Design', 'WordPress'],
-    description: `Custom WordPress theme and plugins developed for my food and travel blog. The theme features custom post types and fields, comments, and pagination. Additionally, I developed a custom plugin to add personalized widgets to a tailored sidebar, and another plugin that aggregates travel statistics, looping through each blog post to pin the post link, thumbnail, and excerpt to an interactive map.`,
+    categories: ['WordPress'],
+    description: `Custom classic WordPress theme developed from scratch for my food and travel blog. The theme features custom post types and fields, article comments, recipe cards, search functionality, and pagination. Additionally, I developed a custom plugin to add personalized widgets to a custom sidebar, and another plugin that aggregates travel statistics, looping through each blog post to pin the post link, thumbnail, and excerpt to an interactive map.`,
     // designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
     liveDemo: "http://www.tastetripping.net",
     github: "https://github.com/habanerocity/food-venture",
-    tools: ["WordPress", "PHP", "JavaScript", "SCSS", "Figma"]
+    tools: ["WordPress", "PHP", "JavaScript", "SCSS"]
   },
   {
     id: 2,
+    image: "/static/foodventure-figma.webp",
+    title: "Foodventure Custom WordPress Theme Design",
+    categories: ['Design', 'WordPress'],
+    description: `Custom WordPress theme designed with figma for my food and travel blog. The theme features custom post types and fields, comments, and pagination. The design file features desktop, tablet, and mobile wirefames as well as high fidelity designs.  I used Adobe Photoshop to edit the assets and Adobe Lightroom to enhance the images.`,
+    designFile: "https://www.figma.com/file/qZQpEKW1f3adkJYmVcheEe/Foodventure?type=design&node-id=1008%3A441&mode=design&t=Y1C132jnfMBkHVfu-1",
+    // liveDemo: "http://www.tastetripping.net",
+    // github: "https://github.com/habanerocity/food-venture",
+    tools: ["Figma", "Adobe Photoshop", "Adobe Lightroom"]
+  },
+  {
+    id: 3,
     image: "/static/zoeph.webp",
     title: "The Zoe PH Landing Page",
     categories: ['Landing Pages'],
@@ -27,7 +38,7 @@ export const cardInfo = [
   //   tools: ["Wordpress", "WP Bakery", "HTML", "CSS", "Photoshop"]
   // },
   {
-    id: 3,
+    id: 4,
     image: "/static/portfolio-shopify-2.webp",
     title: "Natural Mystic Custom Shopify Theme",
     categories: ['Shopify'],
@@ -39,7 +50,7 @@ export const cardInfo = [
 
   },
   {
-    id: 4,
+    id: 5,
     image: "/static/mactodo.webp",
     title: "Daily Agenda To Do App",
     categories: ['React JS'],
@@ -49,7 +60,7 @@ export const cardInfo = [
     tools: ["React JS", "API", "PHP", "MySQL", "JSON Web Tokens"]
   },
   {
-    id: 5,
+    id: 6,
     image: "/static/macmechanic.webp",
     title: "Mobile Mechanic Landing Page",
     categories: ['React JS', 'Landing Pages'],

@@ -11,11 +11,12 @@ export const linkInfo = [
     linkName: "About",
     altText: "About page icon"
   },
-  // {
-  //   routerPath: "/Skills",
-  //   image: "/static/laptop-code-solid.svg",
-  //   linkName: "Skills"
-  // },
+  {
+    routerPath: "/Services",
+    image: "/static/laptop-code-solid.svg",
+    linkName: "Services",
+    altText: "Services page icon"
+  },
   {
     routerPath: "/Projects",
     image: "/static/briefcase-solid.svg",

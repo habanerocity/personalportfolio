@@ -1,0 +1,41 @@
+@import "../styles/sass/variables";
+@import "../styles/sass/mixins";
+
+.flex__container {
+    @include flex-container-row;
+    width: 85%;
+  
+    &__col {
+      width: 85%;
+      padding: $padding-section-md;
+    }
+  }
+
+  @media screen and (max-width: 1399px) {
+    .flex__container__col {
+      padding: 8rem 0;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .flex__container__col {
+      padding: 7rem 0;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .flex__container {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .pg{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .flex__container__col {
+      padding: 10rem 0;
+    }
+}

@@ -11,7 +11,7 @@ const ProfileHeader = () => {
     return(
         <div className={`w-100 align-items-center ${classes.flex__containerHeading}`}>
             <Image
-                src={"/static/lor-portfolio.png"}
+                src={"/static/lor-portfoliox140.webp"}
                 alt="me"
                 height={150}
                 width={140}

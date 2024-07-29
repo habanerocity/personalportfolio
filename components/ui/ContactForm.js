@@ -110,7 +110,7 @@ const ContactForm = () => {
 
   return (
     /*
-      <DisplaySuccess /> is the success window that pops up when the form is submitted, 
+      <DisplaySuccess /> is the success window that pops up when the form is submitted successfully, 
       it becomes closed when the user clicks the 'got it' or 'close' button which
       sends a false boolean to the props.onConfirm function setting the formSent state to false
     */

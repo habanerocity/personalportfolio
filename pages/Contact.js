@@ -50,7 +50,7 @@ const Contact = () => {
                       <Container className='d-flex flex-row justify-content-center p-0'>
                         <div className={`justify-content-center align-items-center position-relative ${classes.pic__wrapper}`}>
                           <Image
-                            src={"/static/lindy-hanoi.png"}
+                            src={"/static/lindy-hanoix460.webp"}
                             className={classes.shapes}
                             layout="fill"
                             alt="Abstract Shapes"

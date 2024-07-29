@@ -70,14 +70,14 @@ const Hero = () => {
             </div>
             <div className={`rounded-circle d-flex justify-content-center align-items-center ${classes.inner_circle}`}>
               <Link className={classes.link} passHref href="/Contact">
-                <Image alt="Let's connect" src={"/static/bubble-chat.png"} height={30} width={30} objectFit="cover" layout="intrinsic" priority />
+                <Image alt="Let's connect" src={"/static/bubble-chat.webp"} height={30} width={30} objectFit="cover" layout="intrinsic" priority />
               </Link>
             </div>
           </div>
           <Image
             alt="Lindy"
             className={classes.lindy}
-            src={"/static/lindy-blue.png"}
+            src={"/static/lindy-bluex640.webp"}
             height={640}
             width={440}
             objectFit="cover"

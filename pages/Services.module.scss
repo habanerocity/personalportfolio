@@ -3,11 +3,11 @@
 
 .flex__container {
     @include flex-container-row;
-    width: 85%;
+    width: 100%;
   
     &__col {
       width: 85%;
-      padding: $padding-section-md;
+      padding: 10rem 0 6rem 0;
     }
   }
 
@@ -38,4 +38,68 @@
     .flex__container__col {
       padding: 10rem 0;
     }
+}
+
+.service__card{
+  height: auto;
+  width: 25rem;
+  background-color: white;
+  border-radius: $card-border-radius;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  box-shadow: $box-shadow;
+}
+
+.service__card_icon{
+  width: 4rem;
+  height: 4rem;
+}
+
+.service__card_link{
+  color: $secondary-color;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover{
+    color: $secondary-color;
+  }
+}
+
+.arrow__icon{
+  transform: rotate(45deg) translateY(-2px);
+}
+
+.service__card_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brands_section{
+  background-color: white;
+  height: 10vh;
+}
+
+.min-h-auto {
+  min-height: auto!important;;
+}
+
+.services__section_container{
+  width: 85%;
+  padding: 6rem 0;
+}
+
+.w85{
+  width: 85%;
+}
+
+.section__heading{
+  font-size: 2.8rem;
 }

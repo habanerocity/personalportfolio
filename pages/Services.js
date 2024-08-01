@@ -73,7 +73,7 @@ const Services = () => {
                     <div className={`h-auto ${classes.brands_section}`}>
                         <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
                             <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
-                                <h2 className={classes.section__heading}>
+                                <h2 className={classes.section__heading_header}>
                                     Some Brands I've Worked With
                                 </h2>
                                 <div className="d-flex flex-row justify-content-between align-items-start w-100 mt-5">
@@ -105,6 +105,162 @@ const Services = () => {
                             </div>
                         </Container>
                     </div>
+                    <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
+                        <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
+                            <div className='d-flex flex-column justify-content-start align-items-start'>
+                                <h2 className={classes.section__heading_header}>
+                                    Pricing
+                                </h2>
+                                <p className="fs-3">Packages That I Offer</p>
+                            </div>
+                            <ul className="d-flex flex-row justify-content-center align-items-center w-100 mt-5 list-unstyled">
+                                <li className="fs-1 fw-bold me-5">Monthly Subscription</li> 
+                                <li className="fs-1 fw-bold" >Per Project</li>
+                            </ul>
+                            <div className='d-flex flex-row justify-content-between align-items-center w-100 mt-5' >
+                                <div className={`p-5 fs-4 ${classes.services__section_pricing_card}`} >
+                                    <div className='d-flex flex-row' >
+                                        <div className='text-wrap d-flex flex-column justify-content-start align-items-start' >
+                                            <h3 className="fs-2 fw-medium" >Basic</h3>
+                                            <p>Web maintenance and content management</p>
+                                        </div>
+                                        <div className={classes.services__section_pricing_card_icon} >
+                                            <Image
+                                            src="/static/gem-solid.svg"
+                                            height={30}
+                                            width={30}
+                                            alt="Basic Package Icon"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className='d-flex flex-row justify-content-start align-items-end mt-3' >
+                                        <span className='display-4 fw-bold me-1' >$199</span><span>per month</span>
+                                    </div>
+                                    <Link className={classes.link} passHref href="/Contact">
+                                        <button className={`${classes.services__section_pricing_card_btn} fs-3 mt-5`}>Get Started</button>
+                                    </Link>
+                                </div>
+                                <div className={`p-5 fs-4 ${classes.services__section_pricing_card}`} >
+                                    <div className='d-flex flex-row' >
+                                        <div className='text-wrap d-flex flex-column justify-content-start align-items-start' >
+                                            <h3 className="fs-2 fw-medium" >Standard</h3>
+                                            <p>Basic package plus web development services</p>
+                                        </div>
+                                        <div className={classes.services__section_pricing_card_icon} >
+                                            <Image
+                                            src="/static/star-solid.svg"
+                                            height={30}
+                                            width={30}
+                                            alt="Basic Package Icon"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className='d-flex flex-row justify-content-start align-items-end mt-3' >
+                                        <span className='display-4 fw-bold me-1' >$399</span><span>per month</span>
+                                    </div>
+                                    <Link className={classes.link} passHref href="/Contact">
+                                        <button className={`${classes.services__section_pricing_card_btn} fs-3 mt-5`}>Get Started</button>
+                                    </Link>
+                                </div>
+                                <div className={`p-5 fs-4 ${classes.services__section_pricing_card}`} >
+                                    <div className='d-flex flex-row' >
+                                        <div className='text-wrap d-flex flex-column justify-content-start align-items-start' >
+                                            <h3 className="fs-2 fw-medium" >Premium</h3>
+                                            <p>Standard package plus digital marketing services</p>
+                                        </div>
+                                        <div className={classes.services__section_pricing_card_icon} >
+                                            <Image
+                                            src="/static/crown-solid.svg"
+                                            height={30}
+                                            width={30}
+                                            alt="Basic Package Icon"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className='d-flex flex-row justify-content-start align-items-end mt-3' >
+                                        <span className='display-4 fw-bold me-1' >$649</span><span>per month</span>
+                                    </div>
+                                    <Link className={classes.link} passHref href="/Contact">
+                                        <button className={`${classes.services__section_pricing_card_btn} fs-3 mt-5`}>Get Started</button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="container mt-4">
+                            <table className="table table-bordered fs-3 table-custom-padding">
+                                <thead >
+                                    <tr className='fs-2'>
+                                        <th scope="col">Features</th>
+                                        <th scope="col">Basic</th>
+                                        <th scope="col">Standard</th>
+                                        <th scope="col">Premium</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Web Maintenance</td>
+                                        <td>Row 1, Cell 2</td>
+                                        <td>Row 1, Cell 3</td>
+                                        <td>Row 1, Cell 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Content Management</td>
+                                        <td>Row 2, Cell 2</td>
+                                        <td>Row 2, Cell 3</td>
+                                        <td>Row 2, Cell 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Website Optimization</td>
+                                        <td>Row 3, Cell 2</td>
+                                        <td>Row 3, Cell 3</td>
+                                        <td>Row 3, Cell 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Web Design</td>
+                                        <td>Row 4, Cell 2</td>
+                                        <td>Row 4, Cell 3</td>
+                                        <td>Row 4, Cell 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Custom Web/Theme Development</td>
+                                        <td>Row 5, Cell 2</td>
+                                        <td>Row 5, Cell 3</td>
+                                        <td>Row 5, Cell 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>WordPress Plugin Development</td>
+                                        <td>Row 6, Cell 2</td>
+                                        <td>Row 6, Cell 3</td>
+                                        <td>Row 6, Cell 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Custom SQL Queries & CSV Reports</td>
+                                        <td>Row 7, Cell 2</td>
+                                        <td>Row 7, Cell 3</td>
+                                        <td>Row 7, Cell 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Onpage SEO</td>
+                                        <td>Row 8, Cell 2</td>
+                                        <td>Row 8, Cell 3</td>
+                                        <td>Row 8, Cell 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Google/Bing Indexing</td>
+                                        <td>Row 9, Cell 2</td>
+                                        <td>Row 9, Cell 3</td>
+                                        <td>Row 9, Cell 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Social Media Marketing</td>
+                                        <td>Row 10, Cell 2</td>
+                                        <td>Row 10, Cell 3</td>
+                                        <td>Row 10, Cell 4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </Container>
                 </SectionContainer>
                     
                 </motion.div>

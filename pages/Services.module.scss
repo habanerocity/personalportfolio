@@ -100,6 +100,34 @@
   width: 85%;
 }
 
-.section__heading{
+.section__heading_header{
   font-size: 2.8rem;
 }
+
+.services__section_pricing_card{
+  width: 30%;
+  background-color: white;
+  border-radius: $card-border-radius;
+  box-shadow: $box-shadow;
+}
+
+.link {
+  text-decoration: none !important;
+}
+
+.services__section_pricing_card_btn{
+  width: 100%;
+  background-color: $secondary-color;
+  padding: 8px 0;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.table-custom-padding tbody td, 
+    .table-custom-padding tbody th, 
+    .table-custom-padding thead th {
+      padding-top: 1rem !important;  /* Adjust the value as needed */
+      padding-bottom: 1rem !important;  /* Adjust the value as needed */
+    }

@@ -1,0 +1,72 @@
+.container {
+  padding: 10rem 0;
+  width: 85%;
+}
+
+.headings__container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main__flex {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pic__wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  width: 46rem;
+  height: 46rem;
+}
+
+.contact__wrapper {
+  border-radius: 5px;
+  margin-top: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.shapes {
+  border-radius: 5px 0 0 5px;
+}
+
+@media screen and (max-width: 1399px) {
+  .container {
+    padding: 8rem 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .pic__wrapper {
+    width: 60rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .pic__wrapper {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 7rem 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .pg_contact {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .container {
+    padding: 10rem 0;
+  }
+}/*# sourceMappingURL=Contact.module.css.map */

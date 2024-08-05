@@ -1,0 +1,125 @@
+.about__card {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  margin-top: 1rem;
+  min-height: 40rem;
+  padding: 3.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.btn__container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 1.5rem;
+}
+
+.bio__details {
+  transform: translateX(2rem);
+  width: 93%;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+.flex__container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  width: 85%;
+}
+.flex__container__col {
+  width: 85%;
+  padding: 10rem 0;
+}
+
+.headings__container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 991px) {
+  .about__card {
+    padding: 6rem;
+    width: 100%;
+    transform: translateX(0);
+  }
+  .bio__details {
+    transform: translateX(0);
+  }
+  .bio__details > p {
+    font-size: 1.3rem !important;
+  }
+  .flex__container {
+    display: flex;
+    position: relative;
+    flex-direction: unset;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btn__container {
+    padding-top: 0;
+    flex-direction: column-reverse;
+  }
+  .bio__details {
+    text-align: left;
+    width: 100%;
+  }
+  .bio__details > p {
+    transform: translateY(0);
+    margin-bottom: 0 !important;
+  }
+  .about__card {
+    padding: 2rem;
+    transform: translateX(0);
+    align-items: center;
+    width: 75%;
+  }
+  .flex__container {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .skill__list {
+    justify-content: center !important;
+  }
+}
+@media screen and (max-width: 585px) {
+  .about__card {
+    padding: 3rem;
+  }
+  .img__holder {
+    transform: translate(19rem, 5rem);
+  }
+}
+@media screen and (max-width: 1399px) {
+  .flex__container__col {
+    padding: 8rem 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .flex__container__col {
+    padding: 7rem 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .pg {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .flex__container__col {
+    padding: 10rem 0;
+  }
+  .about__card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}/*# sourceMappingURL=About.module.css.map */

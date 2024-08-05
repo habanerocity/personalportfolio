@@ -137,7 +137,7 @@ const Services = () => {
                                         <span className='display-4 fw-bold me-1' >$199</span><span>per month</span>
                                     </div>
                                     <Link className={classes.link} passHref href="/Contact">
-                                        <button className={`${classes.services__section_pricing_card_btn} fs-3 mt-5`}>Get Started</button>
+                                        <button className={`${classes.services__section_pricing_card_btn} w-100 fs-3 mt-5`}>Get Started</button>
                                     </Link>
                                 </div>
                                 <div className={`p-5 fs-4 ${classes.services__section_pricing_card}`} >
@@ -159,7 +159,7 @@ const Services = () => {
                                         <span className='display-4 fw-bold me-1' >$399</span><span>per month</span>
                                     </div>
                                     <Link className={classes.link} passHref href="/Contact">
-                                        <button className={`${classes.services__section_pricing_card_btn} fs-3 mt-5`}>Get Started</button>
+                                        <button className={`${classes.services__section_pricing_card_btn} w-100 fs-3 mt-5`}>Get Started</button>
                                     </Link>
                                 </div>
                                 <div className={`p-5 fs-4 ${classes.services__section_pricing_card}`} >
@@ -181,13 +181,13 @@ const Services = () => {
                                         <span className='display-4 fw-bold me-1' >$649</span><span>per month</span>
                                     </div>
                                     <Link className={classes.link} passHref href="/Contact">
-                                        <button className={`${classes.services__section_pricing_card_btn} fs-3 mt-5`}>Get Started</button>
+                                        <button className={`${classes.services__section_pricing_card_btn} w-100 fs-3 mt-5`}>Get Started</button>
                                     </Link>
                                 </div>
                             </div>
                         </div>
                         <div className="container mt-4">
-                            <table className="table table-bordered fs-3 table-custom-padding">
+                            <table className="table fs-3">
                                 <thead >
                                     <tr className='fs-2'>
                                         <th scope="col">Features</th>
@@ -199,63 +199,221 @@ const Services = () => {
                                 <tbody>
                                     <tr>
                                         <td>Web Maintenance</td>
-                                        <td>Row 1, Cell 2</td>
-                                        <td>Row 1, Cell 3</td>
-                                        <td>Row 1, Cell 4</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Content Management</td>
-                                        <td>Row 2, Cell 2</td>
-                                        <td>Row 2, Cell 3</td>
-                                        <td>Row 2, Cell 4</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Website Optimization</td>
-                                        <td>Row 3, Cell 2</td>
-                                        <td>Row 3, Cell 3</td>
-                                        <td>Row 3, Cell 4</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Web Design</td>
-                                        <td>Row 4, Cell 2</td>
-                                        <td>Row 4, Cell 3</td>
-                                        <td>Row 4, Cell 4</td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Custom Web/Theme Development</td>
-                                        <td>Row 5, Cell 2</td>
-                                        <td>Row 5, Cell 3</td>
-                                        <td>Row 5, Cell 4</td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>WordPress Plugin Development</td>
-                                        <td>Row 6, Cell 2</td>
-                                        <td>Row 6, Cell 3</td>
-                                        <td>Row 6, Cell 4</td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>&ndash;</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Custom SQL Queries & CSV Reports</td>
-                                        <td>Row 7, Cell 2</td>
-                                        <td>Row 7, Cell 3</td>
-                                        <td>Row 7, Cell 4</td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>&ndash;</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Onpage SEO</td>
-                                        <td>Row 8, Cell 2</td>
-                                        <td>Row 8, Cell 3</td>
-                                        <td>Row 8, Cell 4</td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Google/Bing Indexing</td>
-                                        <td>Row 9, Cell 2</td>
-                                        <td>Row 9, Cell 3</td>
-                                        <td>Row 9, Cell 4</td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Social Media Marketing</td>
-                                        <td>Row 10, Cell 2</td>
-                                        <td>Row 10, Cell 3</td>
-                                        <td>Row 10, Cell 4</td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>&ndash;</td>
+                                        <td>
+                                            <Image
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <Link className={classes.link} passHref href="/Contact">
+                                                <button className={`${classes.services__section_pricing_card_btn} w-75 fs-4 mt-5`}>Get Started</button>
+                                            </Link>
+                                        </td>
+                                        <td>
+                                            <Link className={classes.link} passHref href="/Contact">
+                                                <button className={`${classes.services__section_pricing_card_btn} w-75 fs-4 mt-5`}>Get Started</button>
+                                            </Link>
+                                        </td>
+                                        <td>
+                                            <Link className={classes.link} passHref href="/Contact">
+                                                <button className={`${classes.services__section_pricing_card_btn} w-75 fs-4 mt-5`}>Get Started</button>
+                                            </Link>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

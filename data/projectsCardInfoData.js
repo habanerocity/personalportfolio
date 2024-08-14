@@ -30,13 +30,14 @@ export const cardInfo = [
     liveDemo: "https://thezoeph.com",
     tools: ["HTML", "SCSS", "JQuery", "PHP"]
   },
-  // {
-  //   image: "/static/portfolio-victorie.webp",
-  //   title: "Victorie Packaging Wordpress Website Refresh",
-  //   description: `WordPress website that I redesigned for a b2b packaging supplier.  For this project, I leveraged my hybridized skillset of web development and digital marketing to significantly boost web traffic and lead generation.  I redesigned their Wordpress website and improved the ui/ux, improved website performance, coordinated a Google PPC campaign, and revitalized their social media marketing efforts.`,
-  //   liveDemo: "https://www.victoriepack.com",
-  //   tools: ["Wordpress", "WP Bakery", "HTML", "CSS", "Photoshop"]
-  // },
+  {
+    image: "/static/portfolio-victorie.webp",
+    title: "Victorie Packaging Wordpress Website Refresh",
+    categories: ['Design', 'WordPress'],
+    description: `WordPress website that I redesigned for a b2b packaging supplier.  For this project, I leveraged my hybridized skillset of web development and digital marketing to significantly boost web traffic and lead generation.  I redesigned their Wordpress website and improved the ui/ux, improved website performance, coordinated a Google PPC campaign, and revitalized their social media marketing efforts.`,
+    liveDemo: "https://www.victoriepack.com",
+    tools: ["Wordpress", "WP Bakery", "HTML", "CSS", "Photoshop"]
+  },
   {
     id: 4,
     image: "/static/portfolio-shopify-2.webp",

@@ -14,7 +14,7 @@ import Headings from '../components/ui/Headings';
 import Link from "next/link";
 import Image from "next/image";
 
-import { pageFadeInAnimation } from "../animations/pageFadeInAnimation";
+import pageFadeInAnimation from "../animations/pageFadeInAnimation";
 
 import serviceCardInfoData from "../data/serviceCardInfoData";
 
@@ -48,23 +48,27 @@ const Services = () => {
                                 <div className={`mt-5 ${classes.service__card_wrapper}`}>
                                         {serviceCardInfoData.map((serviceCard) => (
                                             <div key={serviceCard.id} className={`p-5 fs-4 ${classes.service__card}`}>
-                                                <img className={classes.service__card_icon} src={serviceCard.icon} alt={serviceCard.altText} />
-                                                <h2 className="mt-3">{serviceCard.title}</h2>
-                                                <p className="mt-3">{serviceCard.description}</p>
-                                                <Link className={`text-decoration-none fw-bold fs-3 ${classes.service__card_link}`} href="/Contact">
-                                                    <span className='me-2'>
-                                                        Get Started
-                                                    </span>
-                                                    <span>
-                                                        <Image 
-                                                        src={"/static/circle-arrow-up-diagonal.svg"}
-                                                        alt="me"
-                                                        height={20}
-                                                        width={20}
-                                                        className={classes.arrow__icon}
-                                                        />
-                                                    </span>
-                                                </Link>
+                                                <div className={classes.service__card_content_wrapper}>
+                                                    <div className={classes.service__card_content}>
+                                                        <img className={classes.service__card_icon} src={serviceCard.icon} alt={serviceCard.altText} />
+                                                        <h2 className="mt-3">{serviceCard.title}</h2>
+                                                        <p className="mt-3">{serviceCard.description}</p>
+                                                    </div>
+                                                    <Link className={`text-decoration-none fw-bold fs-3 ${classes.service__card_link}`} href="/Contact">
+                                                        <span className='me-2'>
+                                                            Get Started
+                                                        </span>
+                                                        <span>
+                                                            <Image 
+                                                            src={"/static/circle-arrow-up-diagonal.svg"}
+                                                            alt="me"
+                                                            height={20}
+                                                            width={20}
+                                                            className={classes.arrow__icon}
+                                                            />
+                                                        </span>
+                                                    </Link>
+                                                </div>
                                             </div>
                                         ))}
                                 </div>
@@ -122,7 +126,7 @@ const Services = () => {
                                     <div className='d-flex flex-row' >
                                         <div className='text-wrap d-flex flex-column justify-content-start align-items-start' >
                                             <h3 className="fs-2 fw-medium" >Basic</h3>
-                                            <p>Web maintenance and content management</p>
+                                            <p>Web maintenance and content management services</p>
                                         </div>
                                         <div className={classes.services__section_pricing_card_icon} >
                                             <Image
@@ -144,7 +148,7 @@ const Services = () => {
                                     <div className='d-flex flex-row' >
                                         <div className='text-wrap d-flex flex-column justify-content-start align-items-start' >
                                             <h3 className="fs-2 fw-medium" >Standard</h3>
-                                            <p>Basic package plus web development services</p>
+                                            <p>Basic package plus custom web development services</p>
                                         </div>
                                         <div className={classes.services__section_pricing_card_icon} >
                                             <Image

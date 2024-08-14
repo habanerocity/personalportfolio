@@ -41,14 +41,14 @@
 }
 
 .service__card{
-  height: auto;
-  width: 25rem;
+  min-height: 48rem;
+  width: 28rem;
   background-color: white;
   border-radius: $card-border-radius;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
   box-shadow: $box-shadow;
 }
@@ -58,11 +58,19 @@
   height: 4rem;
 }
 
+.service__card_content_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 42rem;
+}
+
 .service__card_link{
   color: $secondary-color;
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 
   &:hover{
     color: $secondary-color;
@@ -109,6 +117,12 @@
   background-color: white;
   border-radius: $card-border-radius;
   box-shadow: $box-shadow;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  &:hover{
+    transform: translateY(-5px);
+  }
 }
 
 .link {

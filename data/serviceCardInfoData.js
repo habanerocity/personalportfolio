@@ -2,14 +2,14 @@ const serviceCardInfoData = [
     {
         id: 1,
         title: "Landing Page Development",
-        description: "I create landing pages that wow your audience and turn them into loyal customers. With a focus on user experience and conversion rates, my landing pages are as eye-catching as they are effective, helping you achieve your business goals.",
+        description: "I create landing pages that wow your leads and turn them into loyal customers. With a focus on user experience and conversion rates, my landing pages are as eye-catching as they are effective, helping you achieve your business goals.",
         icon: "/static/code-solid.svg",
         altText: "Landing Page Development Icon"
     },
     {
         id: 2,
         title: "WordPress Development",
-        description: "Need a WordPress site that truly shines? From refining existing themes to crafting entirely new ones, I’ll build a website that perfectly aligns with your vision. Want advanced features or seamless integrations? My custom plugin development ensures your site performs effortlessly.",
+        description: "Need a WordPress site that truly shines? From refining existing themes to crafting entirely new ones, I’ll build a website that perfectly aligns with your brand's vision. Want advanced features or seamless integrations? My custom plugin development adds the functionality your website needs to stand out.",
         icon: "/static/wordpress-solid.svg",
         altText: "WordPress Development Icon"
     },

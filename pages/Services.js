@@ -11,6 +11,7 @@ import Footer from '../components/ui/Footer';
 import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
 
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -80,27 +81,31 @@ const Services = () => {
                                 <h2 className={classes.section__heading_header}>
                                     Some Brands I've Worked With
                                 </h2>
-                                <div className="d-flex flex-row justify-content-between align-items-start w-100 mt-5">
+                                <div className="d-flex flex-row justify-content-between align-items-center w-100 mt-5">
                                     <Image
                                     src="/static/tt.svg"
+                                    className={classes.brands__section_logo_tt}
                                     height={150}
                                     width={150}
                                     alt="Taste Tripping"
                                     />
                                     <Image
                                     src="/static/VICTORIE-tm-5.png"
+                                    className={classes.brands__section_logo}
                                     height={150}
                                     width={180}
                                     alt="Victorie Packaging"
                                     />
                                     <Image
                                     src="/static/The-Zoe-PH-edited.png"
+                                    className={classes.brands__section_logo}
                                     height={150}
                                     width={180}
                                     alt="The Zoe PH Logo"
                                     />
                                     <Image
                                     src="/static/bang-logo.webp"
+                                    className={classes.brands__section_logo}
                                     height={150}
                                     width={180}
                                     alt="Bang Logo"
@@ -138,7 +143,7 @@ const Services = () => {
                                         </div>
                                     </div>
                                     <div className='d-flex flex-row justify-content-start align-items-end mt-3' >
-                                        <span className='display-4 fw-bold me-1' >$199</span><span>per month</span>
+                                        <span className='display-4 fw-bold me-1' >$199</span><span>USD per month</span>
                                     </div>
                                     <Link className={classes.link} passHref href="/Contact">
                                         <button className={`${classes.services__section_pricing_card_btn} w-100 fs-3 mt-5`}>Get Started</button>
@@ -160,7 +165,7 @@ const Services = () => {
                                         </div>
                                     </div>
                                     <div className='d-flex flex-row justify-content-start align-items-end mt-3' >
-                                        <span className='display-4 fw-bold me-1' >$399</span><span>per month</span>
+                                        <span className='display-4 fw-bold me-1' >$399</span><span>USD per month</span>
                                     </div>
                                     <Link className={classes.link} passHref href="/Contact">
                                         <button className={`${classes.services__section_pricing_card_btn} w-100 fs-3 mt-5`}>Get Started</button>
@@ -182,7 +187,7 @@ const Services = () => {
                                         </div>
                                     </div>
                                     <div className='d-flex flex-row justify-content-start align-items-end mt-3' >
-                                        <span className='display-4 fw-bold me-1' >$649</span><span>per month</span>
+                                        <span className='display-4 fw-bold me-1' >$649</span><span>USD per month</span>
                                     </div>
                                     <Link className={classes.link} passHref href="/Contact">
                                         <button className={`${classes.services__section_pricing_card_btn} w-100 fs-3 mt-5`}>Get Started</button>
@@ -402,6 +407,12 @@ const Services = () => {
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td>Hours Per Month</td>
+                                        <td>15</td>
+                                        <td>25</td>
+                                        <td>45</td>
+                                    </tr>
+                                    <tr>
                                         <td></td>
                                         <td>
                                             <Link className={classes.link} passHref href="/Contact">
@@ -426,6 +437,7 @@ const Services = () => {
                 </SectionContainer>
                     
                 </motion.div>
+                <LogoBar />
             </div>
         </React.Fragment>
     )

@@ -187,6 +187,15 @@
   &:hover{
     transform: translateY(-5px);
   }
+
+  @media(max-width: 1069px){
+    width: 31%;
+  }
+
+  @media(max-width: 808px){
+    width: 30rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .link {
@@ -194,9 +203,9 @@
 }
 
 .services__section_pricing_card_btn{
-  width: 100%;
+  // width: 100%;
   background-color: $secondary-color;
-  padding: 8px 0;
+  padding: 8px;
   border: none;
   color: white;
   border-radius: 6px;
@@ -231,5 +240,22 @@
       width: 10rem;
       height: 10rem;
     }
+  }
+}
+
+.logo__holder{
+  @media(max-width: 575px){
+    flex-direction: column!important;
+
+    & img{
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.pricing_card_wrapper{
+  @media(max-width: 808px){
+    flex-direction: column!important;
+    align-items: center;
   }
 }

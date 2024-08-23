@@ -81,7 +81,7 @@ const Services = () => {
                                 <h2 className={classes.section__heading_header}>
                                     Some Brands I've Worked With
                                 </h2>
-                                <div className="d-flex flex-row justify-content-between align-items-center w-100 mt-5">
+                                <div className={`d-flex flex-row flex-wrap justify-content-between align-items-center w-100 mt-5 ${classes.logo__holder}`}>
                                     <Image
                                     src="/static/tt.svg"
                                     className={classes.brands__section_logo_tt}
@@ -126,12 +126,12 @@ const Services = () => {
                                 <li className="fs-1 fw-bold me-5">Monthly Subscription</li> 
                                 <li className="fs-1 fw-bold" >Per Project</li>
                             </ul>
-                            <div className='d-flex flex-row justify-content-between align-items-center w-100 mt-5' >
+                            <div className={`d-flex flex-row justify-content-between align-items-center w-100 mt-5 ${classes.pricing_card_wrapper}`} >
                                 <div className={`p-5 fs-4 ${classes.services__section_pricing_card}`} >
                                     <div className='d-flex flex-row' >
                                         <div className='text-wrap d-flex flex-column justify-content-start align-items-start' >
                                             <h3 className="fs-2 fw-medium" >Basic</h3>
-                                            <p>Web maintenance and content management services</p>
+                                            <p className="fs-5" >Web maintenance and content management services</p>
                                         </div>
                                         <div className={classes.services__section_pricing_card_icon} >
                                             <Image
@@ -153,7 +153,7 @@ const Services = () => {
                                     <div className='d-flex flex-row' >
                                         <div className='text-wrap d-flex flex-column justify-content-start align-items-start' >
                                             <h3 className="fs-2 fw-medium" >Standard</h3>
-                                            <p>Basic package plus custom web development services</p>
+                                            <p className='fs-5' >Basic package plus custom web development services</p>
                                         </div>
                                         <div className={classes.services__section_pricing_card_icon} >
                                             <Image
@@ -175,7 +175,7 @@ const Services = () => {
                                     <div className='d-flex flex-row' >
                                         <div className='text-wrap d-flex flex-column justify-content-start align-items-start' >
                                             <h3 className="fs-2 fw-medium" >Premium</h3>
-                                            <p>Standard package plus digital marketing services</p>
+                                            <p className='fs-5' >Standard package plus digital marketing services</p>
                                         </div>
                                         <div className={classes.services__section_pricing_card_icon} >
                                             <Image
@@ -416,17 +416,17 @@ const Services = () => {
                                         <td></td>
                                         <td>
                                             <Link className={classes.link} passHref href="/Contact">
-                                                <button className={`${classes.services__section_pricing_card_btn} w-75 fs-4 mt-5`}>Get Started</button>
+                                                <button className={`${classes.services__section_pricing_card_btn} fs-4 mt-5`}>Get Started</button>
                                             </Link>
                                         </td>
                                         <td>
                                             <Link className={classes.link} passHref href="/Contact">
-                                                <button className={`${classes.services__section_pricing_card_btn} w-75 fs-4 mt-5`}>Get Started</button>
+                                                <button className={`${classes.services__section_pricing_card_btn} fs-4 mt-5`}>Get Started</button>
                                             </Link>
                                         </td>
                                         <td>
                                             <Link className={classes.link} passHref href="/Contact">
-                                                <button className={`${classes.services__section_pricing_card_btn} w-75 fs-4 mt-5`}>Get Started</button>
+                                                <button className={`${classes.services__section_pricing_card_btn} fs-4 mt-5`}>Get Started</button>
                                             </Link>
                                         </td>
                                     </tr>
@@ -439,6 +439,7 @@ const Services = () => {
                 </motion.div>
                 <LogoBar />
             </div>
+        <Footer />
         </React.Fragment>
     )
 };

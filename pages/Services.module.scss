@@ -210,6 +210,10 @@
   color: white;
   border-radius: 6px;
   cursor: pointer;
+
+  @media(max-width: 425px){
+    font-size: 10px!important;
+  }
 }
 
 .table-custom-padding tbody td, 
@@ -257,5 +261,45 @@
   @media(max-width: 808px){
     flex-direction: column!important;
     align-items: center;
+  }
+}
+
+.services__section_pricing_card_wrapper{
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media(max-width: 1200px){
+    height: 30rem;
+  }
+
+  @media(max-width: 808px){
+    height: 24rem;
+  }
+}
+
+// .table>tbody>tr>td {
+//   @media(max-width: 425px){
+//     font-size: 10px!important;
+//   }
+// }
+
+.table_cell{
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+
+  &:hover{
+    color: $tertiary-color-2;
+  }
+    @media(max-width: 425px){
+    font-size: 10px!important;
+  }
+}
+
+.table_cell_check{
+  @media(max-width: 425px){
+    width: 2rem;
   }
 }

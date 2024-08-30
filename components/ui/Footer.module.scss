@@ -6,4 +6,10 @@
     width: 100vw;
     justify-content: center;
     background-color: $color-gray;
+    border-color: $color-gray;
+    height: 12vh;
+
+    @media(max-width: 450px) {
+        height: 18vh;
+      }
 }

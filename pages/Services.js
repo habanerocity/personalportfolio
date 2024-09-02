@@ -54,9 +54,15 @@ const Services = () => {
                         <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
                             <div className={classes.flex__container}>
                                 <div className={`w-100 align-items-start text-start justify-content-start ${classes.headings__container}`}>
-                                    <Headings heading="How I Can Help You">Services</Headings>        
+                                    <Headings heading="How I Can Help You">Services</Headings>      
                                 </div>
+
                             </div>
+                            <Image
+                            src='/static/keyboard.jpg'
+                            layout='fill'
+                            className={`${classes.office_img} mt-5 position-relative`}
+                            />  
                             <div className={classes.flex__container}>
                                 <div className={`mt-5 ${classes.service__card_wrapper}`}>
                                         {serviceCardInfoData.map((serviceCard) => (

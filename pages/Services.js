@@ -21,8 +21,6 @@ import pageFadeInAnimation from "../animations/pageFadeInAnimation";
 
 import serviceCardInfoData from "../data/serviceCardInfoData";
 
-import circle_question from '../public/static/circle-question.svg';
-
 const Services = () => {
 
     const renderTooltip = (message) => (
@@ -69,9 +67,9 @@ const Services = () => {
                                                         <h2 className="mt-3">{serviceCard.title}</h2>
                                                         <p className="mt-3">{serviceCard.description}</p>
                                                     </div>
-                                                    <Link className={`text-decoration-none fw-bold fs-3 ${classes.service__card_link}`} href="/Contact">
-                                                        <span className='me-2'>
-                                                            Get Started
+                                                    <Link className={`${classes.secondary_hover} text-decoration-none fw-bold fs-3 ${classes.service__card_link}`} href="/Contact">
+                                                        <span className={`me-2 `}>
+                                                            Get Started 
                                                         </span>
                                                         <span>
                                                             <Image 
@@ -216,13 +214,13 @@ const Services = () => {
                             </div>
                         </div>
                         <div className="container mt-4">
-                            <table className="table fs-3">
+                            <table className={`table fs-3 ${classes.table}`}>
                                 <thead >
                                     <tr className='fs-2'>
-                                        <th className={classes.table_cell} scope="col">Features</th>
-                                        <th className={classes.table_cell} scope="col">Basic</th>
-                                        <th className={classes.table_cell} scope="col">Standard</th>
-                                        <th className={classes.table_cell} scope="col">Premium</th>
+                                        <th scope="col">Features</th>
+                                        <th scope="col">Basic</th>
+                                        <th scope="col">Standard</th>
+                                        <th scope="col">Premium</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -230,7 +228,7 @@ const Services = () => {
                                         <OverlayTrigger
                                         placement="left"
                                         delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip('Keep your website running smoothly with regular updates, security checks, and performance monitoring to ensure optimal functionality.')}
+                                        overlay={renderTooltip('Keep your website running smoothly with regular plugin updates, security checks, and performance monitoring to ensure optimal functionality.')}
                                         >
                                             <td className={`d-flex ${classes.table_cell}`}>
                                                 <span className='me-2'>
@@ -278,7 +276,7 @@ const Services = () => {
                                         <OverlayTrigger
                                         placement="left"
                                         delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("Efficiently manage and update your website's content to keep it fresh, relevant, and engaging for your audience.")}
+                                        overlay={renderTooltip("I'll efficiently manage and update your website's content to keep it fresh, relevant, and engaging for your audience.")}
                                         >
                                             <td className={`d-flex ${classes.table_cell}`} >
                                                 <span className='me-2'>

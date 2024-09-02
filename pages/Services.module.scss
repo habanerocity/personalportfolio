@@ -211,6 +211,10 @@
   border-radius: 6px;
   cursor: pointer;
 
+  &:hover{
+    background-color: $secondary-color-2;
+  }
+
   @media(max-width: 425px){
     font-size: 10px!important;
   }
@@ -279,11 +283,9 @@
   }
 }
 
-// .table>tbody>tr>td {
-//   @media(max-width: 425px){
-//     font-size: 10px!important;
-//   }
-// }
+.table{
+  margin-bottom: 7rem!important;
+}
 
 .table_cell{
   cursor: pointer;
@@ -301,5 +303,12 @@
 .table_cell_check{
   @media(max-width: 425px){
     width: 2rem;
+  }
+}
+
+.secondary_hover{
+  transition: transform 0.3s ease; 
+  &:hover{
+    color: $secondary-color-2;
   }
 }

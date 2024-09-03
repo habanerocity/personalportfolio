@@ -231,15 +231,15 @@ const Services = () => {
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip('Keep your website running smoothly with regular plugin updates, security checks, and performance monitoring to ensure optimal functionality.')}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`}>
-                                                <span className='me-2'>
-                                                Web Maintenance & Support
-                                                </span>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Web Maintenance & Support
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip('Keep your website running smoothly with regular plugin updates, security checks, and performance monitoring to ensure optimal functionality.')}
+                                            >
                                                 <span className='d-flex flex-row align-items-center justify-content-center'>
                                                     <Image
                                                     src="/static/circle-question.svg"
@@ -248,8 +248,8 @@ const Services = () => {
                                                     alt="Web Maintenance & Support Breakdown"
                                                     />
                                                 </span>
-                                            </td>
-                                        </OverlayTrigger>
+                                            </OverlayTrigger>
+                                        </td>
                                         <td>
                                             <Image
                                             className={classes.table_cell_check}
@@ -279,15 +279,15 @@ const Services = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("I'll efficiently manage and update your website's content to keep it fresh, relevant, and engaging for your audience.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                Content Management
-                                                </span>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Content Management
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("I'll efficiently manage and update your website's content to keep it fresh, relevant, and engaging for your audience.")}
+                                            >
                                                 <span className='d-flex flex-row align-items-center justify-content-center'>
                                                     <Image
                                                     src="/static/circle-question.svg"
@@ -296,8 +296,8 @@ const Services = () => {
                                                     alt="Web Maintenance & Support Breakdown"
                                                     />
                                                 </span>
-                                            </td>
-                                        </OverlayTrigger>
+                                            </OverlayTrigger>
+                                        </td>
                                         <td>
                                             <Image
                                             className={classes.table_cell_check}
@@ -327,15 +327,15 @@ const Services = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("Enhance your site's speed, responsiveness, and user experience with tailored optimizations that drive better performance.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                Website Optimization
-                                                </span>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Website Optimization
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("Enhance your site's speed, responsiveness, and user experience with tailored optimizations that drive better performance.")}
+                                            >
                                                 <span className='d-flex flex-row align-items-center justify-content-center'>
                                                     <Image
                                                     src="/static/circle-question.svg"
@@ -344,8 +344,8 @@ const Services = () => {
                                                     alt="Web Maintenance & Support Breakdown"
                                                     />
                                                 </span>
-                                            </td>
-                                        </OverlayTrigger>
+                                            </OverlayTrigger>
+                                        </td>
                                         <td>
                                             <Image
                                             className={classes.table_cell_check}
@@ -375,15 +375,15 @@ const Services = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("I'll create visually stunning and user-friendly web designs that align with your brand and captivate your audience.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                Web Design
-                                                </span>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Web Design
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("I'll create visually stunning and user-friendly web designs that align with your brand and captivate your audience.")}
+                                            >
                                                 <span className='d-flex flex-row align-items-center justify-content-center'>
                                                     <Image
                                                     src="/static/circle-question.svg"
@@ -392,8 +392,8 @@ const Services = () => {
                                                     alt="Web Maintenance & Support Breakdown"
                                                     />
                                                 </span>
-                                            </td>
-                                        </OverlayTrigger>
+                                            </OverlayTrigger>
+                                        </td>
                                         <td className="fw-bold" >&ndash;</td>
                                         <td>
                                             <Image
@@ -415,15 +415,15 @@ const Services = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("I'll develop unique, custom-made WordPress, Shopify, and landing page themes that bring your vision to life and offer seamless functionality.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                Website Web/Theme Development
-                                                </span>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Website Web/Theme Development
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("I'll develop unique, custom-made WordPress, Shopify, and landing page themes that bring your vision to life and offer seamless functionality.")}
+                                            >
                                                 <span className='d-flex flex-row align-items-center justify-content-center'>
                                                     <Image
                                                     src="/static/circle-question.svg"
@@ -432,8 +432,8 @@ const Services = () => {
                                                     alt="Web Maintenance & Support Breakdown"
                                                     />
                                                 </span>
-                                            </td>
-                                        </OverlayTrigger>
+                                            </OverlayTrigger>
+                                        </td>
                                         <td className="fw-bold" >&ndash;</td>
                                         <td>
                                             <Image
@@ -455,15 +455,15 @@ const Services = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("Add advanced features and custom functionalities to your WordPress site with expertly crafted plugins.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                WordPress Plugin Development
-                                                </span>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            WordPress Plugin Development
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("Add advanced features and custom functionalities to your WordPress site with expertly crafted plugins.")}
+                                            >
                                                 <span className='d-flex flex-row align-items-center justify-content-center'>
                                                     <Image
                                                     src="/static/circle-question.svg"
@@ -472,40 +472,8 @@ const Services = () => {
                                                     alt="Web Maintenance & Support Breakdown"
                                                     />
                                                 </span>
-                                            </td>
-                                        </OverlayTrigger>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>&ndash;</td>
-                                        <td>
-                                            <Image
-                                            className={classes.table_cell_check}
-                                            src="/static/check.svg"
-                                            height={25}
-                                            width={25}
-                                            alt="Check"
-                                            />
+                                            </OverlayTrigger>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("Gain valuable database insights with custom SQL queries and detailed CSV reports that organize and present your data effectively.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                Custom SQL Queries & CSV Reports
-                                                </span>
-                                                <span className='d-flex flex-row align-items-center justify-content-center'>
-                                                    <Image
-                                                    src="/static/circle-question.svg"
-                                                    height={15}
-                                                    width={15}
-                                                    alt="Web Maintenance & Support Breakdown"
-                                                    />
-                                                </span>
-                                            </td>
-                                        </OverlayTrigger>
                                         <td className="fw-bold" >&ndash;</td>
                                         <td>&ndash;</td>
                                         <td>
@@ -519,15 +487,15 @@ const Services = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("Boost your site's search engine visibility with on-page SEO strategies that optimize content, structure, and meta-data.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                Onpage SEO
-                                                </span>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Custom SQL Queries & CSV Reports
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("Gain valuable database insights with custom SQL queries and detailed CSV reports that organize and present your data effectively.")}
+                                            >
                                                 <span className='d-flex flex-row align-items-center justify-content-center'>
                                                     <Image
                                                     src="/static/circle-question.svg"
@@ -536,88 +504,8 @@ const Services = () => {
                                                     alt="Web Maintenance & Support Breakdown"
                                                     />
                                                 </span>
-                                            </td>
-                                        </OverlayTrigger>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>
-                                            <Image
-                                            className={classes.table_cell_check}
-                                            src="/static/check.svg"
-                                            height={25}
-                                            width={25}
-                                            alt="Check"
-                                            />
+                                            </OverlayTrigger>
                                         </td>
-                                        <td>
-                                            <Image
-                                            className={classes.table_cell_check}
-                                            src="/static/check.svg"
-                                            height={25}
-                                            width={25}
-                                            alt="Check"
-                                            />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("Ensure your website is indexed correctly on Google and Bing, making it easier for potential customers to find you online.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                Google/Bing Indexing
-                                                </span>
-                                                <span className='d-flex flex-row align-items-center justify-content-center'>
-                                                    <Image
-                                                    src="/static/circle-question.svg"
-                                                    height={15}
-                                                    width={15}
-                                                    alt="Web Maintenance & Support Breakdown"
-                                                    />
-                                                </span>
-                                            </td>
-                                        </OverlayTrigger>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>
-                                            <Image
-                                            className={classes.table_cell_check}
-                                            src="/static/check.svg"
-                                            height={25}
-                                            width={25}
-                                            alt="Check"
-                                            />
-                                        </td>
-                                        <td>
-                                            <Image
-                                            className={classes.table_cell_check}
-                                            src="/static/check.svg"
-                                            height={25}
-                                            width={25}
-                                            alt="Check"
-                                            />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("Engage your audience and grow your brand with targeted social media campaigns that drive traffic and conversions.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                Social Media Marketing
-                                                </span>
-                                                <span className='d-flex flex-row align-items-center justify-content-center'>
-                                                    <Image
-                                                    src="/static/circle-question.svg"
-                                                    height={15}
-                                                    width={15}
-                                                    alt="Web Maintenance & Support Breakdown"
-                                                    />
-                                                </span>
-                                            </td>
-                                        </OverlayTrigger>
                                         <td className="fw-bold" >&ndash;</td>
                                         <td>&ndash;</td>
                                         <td>
@@ -631,15 +519,15 @@ const Services = () => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <OverlayTrigger
-                                        placement="left"
-                                        delay={{ show: 250, hide: 400 }}
-                                        overlay={renderTooltip("The allocated time each month dedicated to delivering the services included in your chosen package.")}
-                                        >
-                                            <td className={`d-flex ${classes.table_cell}`} >
-                                                <span className='me-2'>
-                                                Hours Per Month
-                                                </span>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Onpage SEO
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("Boost your site's search engine visibility with on-page SEO strategies that optimize content, structure, and meta-data.")}
+                                            >
                                                 <span className='d-flex flex-row align-items-center justify-content-center'>
                                                     <Image
                                                     src="/static/circle-question.svg"
@@ -648,8 +536,120 @@ const Services = () => {
                                                     alt="Web Maintenance & Support Breakdown"
                                                     />
                                                 </span>
-                                            </td>
-                                        </OverlayTrigger>
+                                            </OverlayTrigger>
+                                        </td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>
+                                            <Image
+                                            className={classes.table_cell_check}
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            className={classes.table_cell_check}
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Google/Bing Indexing
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("Ensure your website is indexed correctly on Google and Bing, making it easier for potential customers to find you online.")}
+                                            >
+                                                <span className='d-flex flex-row align-items-center justify-content-center'>
+                                                    <Image
+                                                    src="/static/circle-question.svg"
+                                                    height={15}
+                                                    width={15}
+                                                    alt="Web Maintenance & Support Breakdown"
+                                                    />
+                                                </span>
+                                            </OverlayTrigger>
+                                        </td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>
+                                            <Image
+                                            className={classes.table_cell_check}
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                        <td>
+                                            <Image
+                                            className={classes.table_cell_check}
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Social Media Marketing
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("Engage your audience and grow your brand with targeted social media campaigns that drive traffic and conversions.")}
+                                            >
+                                                <span className='d-flex flex-row align-items-center justify-content-center'>
+                                                    <Image
+                                                    src="/static/circle-question.svg"
+                                                    height={15}
+                                                    width={15}
+                                                    alt="Web Maintenance & Support Breakdown"
+                                                    />
+                                                </span>
+                                            </OverlayTrigger>
+                                        </td>
+                                        <td className="fw-bold" >&ndash;</td>
+                                        <td>&ndash;</td>
+                                        <td>
+                                            <Image
+                                            className={classes.table_cell_check}
+                                            src="/static/check.svg"
+                                            height={25}
+                                            width={25}
+                                            alt="Check"
+                                            />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className={`d-flex ${classes.table_cell}`}>
+                                            <span className='me-2'>
+                                            Hours Per Month
+                                            </span>
+                                            <OverlayTrigger
+                                            placement="bottom"
+                                            delay={{ show: 250, hide: 400 }}
+                                            overlay={renderTooltip("The allocated time each month dedicated to delivering the services included in your chosen package.")}
+                                            >
+                                                <span className='d-flex flex-row align-items-center justify-content-center'>
+                                                    <Image
+                                                    src="/static/circle-question.svg"
+                                                    height={15}
+                                                    width={15}
+                                                    alt="Web Maintenance & Support Breakdown"
+                                                    />
+                                                </span>
+                                            </OverlayTrigger>
+                                        </td>
                                         <td className={classes.table_cell} >20</td>
                                         <td className={classes.table_cell} >45</td>
                                         <td className={classes.table_cell} >75</td>

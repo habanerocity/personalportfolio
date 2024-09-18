@@ -15,7 +15,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.1.2",
     "react-dom": "^18.2.0",
-    "sass": "^1.49.7",
+    "sass": "^1.79.0",
     "sharp": "^0.30.6",
     "typewriter-effect": "^2.21.0"
   },

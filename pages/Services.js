@@ -56,12 +56,12 @@ const Services = () => {
                                 <div className={`w-100 align-items-start text-start justify-content-start ${classes.headings__container}`}>
                                     <Headings heading="How I Can Help You">Services</Headings>      
                                 </div>
-
                             </div>
                             <Image
                             src='/static/keyboard.jpg'
                             layout='fill'
                             className={`${classes.office_img} mt-5 position-relative`}
+                            alt='Office Desk'
                             />  
                             <div className={classes.flex__container}>
                                 <div className={`mt-5 ${classes.service__card_wrapper}`}>
@@ -220,8 +220,8 @@ const Services = () => {
                             </div>
                         </div>
                         <div className="container mt-4">
-                            <table className={`table fs-3 ${classes.table}`}>
-                                <thead >
+                            <table className={`table table-striped fs-3 ${classes.table}`}>
+                                <thead>
                                     <tr className='fs-2'>
                                         <th scope="col">Features</th>
                                         <th scope="col">Basic</th>
@@ -250,7 +250,7 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -259,7 +259,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -268,7 +268,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -298,7 +298,7 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -307,7 +307,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -316,7 +316,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -346,7 +346,7 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -355,7 +355,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -364,7 +364,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -394,8 +394,8 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>
+                                        <td className="fw-bold align-middle" >&ndash;</td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -404,7 +404,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -417,7 +417,7 @@ const Services = () => {
                                     <tr>
                                         <td className={`d-flex ${classes.table_cell}`}>
                                             <span className='me-2'>
-                                            Website Web/Theme Development
+                                            Website/Theme Development
                                             </span>
                                             <OverlayTrigger
                                             placement="bottom"
@@ -434,8 +434,8 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>
+                                        <td className="fw-bold align-middle" >&ndash;</td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -444,7 +444,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -474,9 +474,9 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>&ndash;</td>
-                                        <td>
+                                        <td className="fw-bold align-middle" >&ndash;</td>
+                                        <td className='align-middle'>&ndash;</td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -489,7 +489,7 @@ const Services = () => {
                                     <tr>
                                         <td className={`d-flex ${classes.table_cell}`}>
                                             <span className='me-2'>
-                                            Custom SQL Queries & CSV Reports
+                                            Custom SQL Queries & Reports
                                             </span>
                                             <OverlayTrigger
                                             placement="bottom"
@@ -506,9 +506,9 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>&ndash;</td>
-                                        <td>
+                                        <td className="fw-bold align-middle" >&ndash;</td>
+                                        <td className='align-middle'>&ndash;</td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -538,8 +538,8 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>
+                                        <td className="fw-bold align-middle" >&ndash;</td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -548,7 +548,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -578,8 +578,8 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>
+                                        <td className="fw-bold align-middle" >&ndash;</td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -588,7 +588,7 @@ const Services = () => {
                                             alt="Check"
                                             />
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -618,9 +618,9 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td className="fw-bold" >&ndash;</td>
-                                        <td>&ndash;</td>
-                                        <td>
+                                        <td className="fw-bold align-middle" >&ndash;</td>
+                                        <td className='align-middle'>&ndash;</td>
+                                        <td className='align-middle'>
                                             <Image
                                             className={classes.table_cell_check}
                                             src="/static/check.svg"
@@ -650,23 +650,23 @@ const Services = () => {
                                                 </span>
                                             </OverlayTrigger>
                                         </td>
-                                        <td className={classes.table_cell} >20</td>
-                                        <td className={classes.table_cell} >45</td>
-                                        <td className={classes.table_cell} >75</td>
+                                        <td className={`align-middle ${classes.table_cell}`} >20</td>
+                                        <td className={`align-middle ${classes.table_cell}`} >45</td>
+                                        <td className={`align-middle ${classes.table_cell}`} >75</td>
                                     </tr>
                                     <tr>
-                                        <td></td>
-                                        <td>
+                                        <td className='align-middle'></td>
+                                        <td className='align-middle'>
                                             <Link className={classes.link} passHref href="/Contact">
                                                 <button className={`${classes.services__section_pricing_card_btn} fs-4 mt-5`}>Get Started</button>
                                             </Link>
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Link className={classes.link} passHref href="/Contact">
                                                 <button className={`${classes.services__section_pricing_card_btn} fs-4 mt-5`}>Get Started</button>
                                             </Link>
                                         </td>
-                                        <td>
+                                        <td className='align-middle'>
                                             <Link className={classes.link} passHref href="/Contact">
                                                 <button className={`${classes.services__section_pricing_card_btn} fs-4 mt-5`}>Get Started</button>
                                             </Link>
@@ -674,22 +674,27 @@ const Services = () => {
                                     </tr>
                                 </tbody>
                             </table>
-                            <div className="text-center d-flex flex-column justify-content-center align-items-center my-5">
-                                <h1 className="my-4">
-                                    Custom Packages and Per Project Pricing Available Upon Request!
-                                </h1>
-                                <Link className={classes.link} passHref href="/Contact">
-                                    <button className={`${classes.services__section_pricing_card_btn} fs-3`}>Inquire Now</button>
-                                </Link>
-                            </div>
+                        
                         </div>
                     </Container>
                 </SectionContainer>
-                    
+                <div className={`h-auto ${classes.brands_section}`}>
+                    <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
+                        <div className="d-flex flex-column justify-content-center align-items-center my-5">
+                            <h1 className="text-center my-4">
+                                Custom Packages and Per Project Pricing Available Upon Request!
+                            </h1>
+                            <Link className={classes.link} passHref href="/Contact">
+                                <button className={`${classes.services__section_pricing_card_btn} fs-3`}>Inquire Now</button>
+                            </Link>
+                        </div>
+                    </Container>
+                    <Footer />
+                </div>
                 </motion.div>
                 <LogoBar />
             </div>
-        <Footer />
+        
         </React.Fragment>
     )
 };

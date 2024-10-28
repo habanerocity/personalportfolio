@@ -292,9 +292,9 @@
   transition: all 0.3s ease-in;
 
 
-  &:hover{
-    color: $tertiary-color-2;
-  }
+  // &:hover{
+  //   color: $tertiary-color-2;
+  // }
     @media(max-width: 425px){
     font-size: 10px!important;
   }

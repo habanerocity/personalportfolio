@@ -423,10 +423,10 @@ const WordPressDevelopmentServices = () => {
                             text={sectionHeadings.sectionFour}
                             className={`fw-bold ${classes.section__heading_header}`}
                             />
-                            <div className={`d-flex justify-content-between mt-5 align-items-stretch ${classes.service_container_wrapper}`} >
+                            <div className={`d-flex w-100 justify-content-between mt-5 align-items-stretch ${classes.service_container_wrapper}`} >
                             <div className={`d-flex flex-column justify-content-between ${classes.services_container}`} >
                                 <Row lg={3} className={`p-5 d-flex justify-content-between align-items-center ${classes.services_container_inner}`} >
-                                    <Col className='p-2'>
+                                    <Col className='p-4'>
                                         <div className={`${classes.service_icon_container}`}>
                                             <Image
                                             src='/static/laptop-code-white.svg'
@@ -436,13 +436,13 @@ const WordPressDevelopmentServices = () => {
                                             />
                                         </div>
                                         <p className='text-white mt-2 fs-2 fw-bold' >Theme Development</p>
-                                        <p className='text-white fs-3' >
+                                        <p className='text-white fs-4 mb-0' >
                                         I can hand-code unique themes from custom code. Custom WordPress themes make your 
                                         website more unique, secure, and avoid the bloat that comes 
                                         with pre-made templates.  
                                         </p>
                                     </Col>
-                                    <Col className='p-2 d-flex flex-column align-items-start' >
+                                    <Col className='p-4 d-flex flex-column align-items-start' >
                                         <div className={`${classes.service_icon_container}`}>
                                             <Image
                                             src='/static/sliders.svg'
@@ -452,13 +452,13 @@ const WordPressDevelopmentServices = () => {
                                             />
                                         </div>
                                         <p className='text-white mt-2 fs-2 fw-bold' >Theme Customization</p>
-                                        <p className='text-white fs-3' >
+                                        <p className='text-white fs-4 mb-0' >
                                         I can work with your existing WordPress website or theme and make updates 
                                         using a page builder plugin, such as Elementor or Divi, or custom code to ensure everything 
                                         fits your vision.
                                         </p>
                                     </Col>
-                                    <Col className='p-2'>
+                                    <Col className='p-4'>
                                         <div className={`${classes.service_icon_container}`}>
                                             <Image
                                             src='/static/pen-to-square.svg'
@@ -468,14 +468,14 @@ const WordPressDevelopmentServices = () => {
                                             />
                                         </div>
                                         <p className='text-white mt-2 fs-2 fw-bold' >Theme Design</p>
-                                        <p className='text-white fs-3' >
+                                        <p className='text-white fs-4 mb-0' >
                                         Utilizing UI/UX best practices and design tools, such as 
                                         Figma and Adobe Photoshop, I design personalized, 
                                         mobile-responsive WordPress themes that reflect your business's 
                                         unique identity.
                                         </p>
                                     </Col>
-                                    <Col className='p-2'>
+                                    <Col className='p-4'>
                                         <div className={`${classes.service_icon_container}`}>
                                             <Image
                                             src='/static/plug-circle-bolt.svg'
@@ -485,13 +485,13 @@ const WordPressDevelopmentServices = () => {
                                             />  
                                         </div>
                                         <p className='text-white mt-2 fs-2 fw-bold' >Plugin Development</p>
-                                        <p className='text-white fs-3' >
+                                        <p className='text-white fs-4 mb-0' >
                                         Stuck with a plugin issue you can’t fix? I build WordPress plugins 
                                         from scratch to give your website the features you need—whether 
                                         it’s a custom post type, shortcode, widget, or admin menu.
                                         </p>
                                     </Col>
-                                    <Col className='p-2'>
+                                    <Col className='p-4'>
                                         <div className={`${classes.service_icon_container}`}>
                                             <Image
                                             src='/static/bolt-solid.svg'
@@ -501,13 +501,13 @@ const WordPressDevelopmentServices = () => {
                                             />  
                                         </div>
                                         <p className='text-white mt-2 fs-2 fw-bold' >Website Optimization</p>
-                                        <p className='text-white fs-3' >
+                                        <p className='text-white fs-4 mb-0' >
                                         I can help optimize your website for faster page loading speeds,
                                          stronger SEO, and improved accessibility. These optimizations 
                                          enhance UX, brand perception, and increase engagement.
                                         </p>
                                     </Col>
-                                    <Col className='p-2'>
+                                    <Col className='p-4'>
                                         <div className={`${classes.service_icon_container}`}>
                                             <Image
                                             src='/static/wrench.svg'
@@ -517,7 +517,7 @@ const WordPressDevelopmentServices = () => {
                                             />  
                                         </div>
                                         <p className='text-white mt-2 fs-2 fw-bold' >Maintenance & Support</p>
-                                        <p className='text-white fs-3' >
+                                        <p className='text-white fs-4 mb-0' >
                                         I’ll keep your website running smoothly and address any 
                                         issues that arise. I’ll also assist you with hosting, domain 
                                         management and setup to ensure everything is properly configured 
@@ -526,15 +526,17 @@ const WordPressDevelopmentServices = () => {
                                     </Col>
                                 </Row>
                             </div>
-                            {/* <div className={`h-100 ${classes.imageContainer}`} >
+                            <div className={`d-flex justify-content-end align-items-center ${classes.imageContainer}`} >
                                 <Image 
-                                src='/static/lindy-gl.png'
-                                layout='fill'
+                                src='/static/lindy-beach.jpg'
+                                layout='cover'
+                                height='700'
+                                width='700'
                                 alt='Lindy Ramirez, Web Developer'
-                                className={`position-relative w-100 h-100 ${classes.services_img}`}
+                                className={`position-relative h-100 ${classes.services_img}`}
                                 
                                 />
-                            </div> */}
+                            </div>
                             </div>
                         </div>
                     </Container>

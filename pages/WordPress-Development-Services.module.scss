@@ -16,7 +16,7 @@
     // object-fit: cover;
     border-radius: 20px;
     height: 100%;
-    width: 60%;
+    width: 86%;
 }
 
 .service_icon_container{
@@ -28,14 +28,15 @@
 
 .service_container_wrapper {
     display: flex;
-    align-items: stretch; // Ensure children stretch to the same height
+    align-items: stretch;
+    width: 65%;
   }
 
 .services_container{
     background-color: $secondary-color-2;
     border-radius: 16px;
     width: 60%;
-    flex: 1;
+    // flex: 1;
 }
 
 .img_collage{

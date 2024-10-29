@@ -19,6 +19,9 @@ import { motion } from 'framer-motion';
 
 import AnimatedHeading from '../components/animations/AnimatedHeading';
 
+import Slider from '../components/ui/ReviewSlider/Slider';
+import FAQAccordion from "../components/ui/FAQAccordion";
+
 
 const WordPressDevelopmentServices = () => {
 
@@ -27,7 +30,8 @@ const WordPressDevelopmentServices = () => {
         sectionTwo: "Why Should You Hire A Professional WordPress Developer?",
         sectionThree: "Why Me?",
         sectionFour: "WordPress Services That I Provide",
-        sectionFive: "What Clients Are Saying About Me"
+        sectionFive: "What Clients Are Saying About Me",
+        sectionSix: "Frequently Asked Questions",
     }
 
     return (
@@ -538,6 +542,30 @@ const WordPressDevelopmentServices = () => {
                                 />
                             </div>
                             </div>
+                        </div>
+                    </Container>
+                </div>
+                <div className={`h-auto ${classes.brands_section}`}>
+                    <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
+                        <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
+                            <AnimatedHeading
+                            text={sectionHeadings.sectionFive}
+                            className={`fw-bold ${classes.section__heading_header}`}
+                            />
+                            <div className='d-flex justify-content-center align-items-center' >
+                                <Slider />
+                            </div>
+                        </div>
+                    </Container>
+                </div>
+                <div className={`h-auto ${classes.bg_gray}`}>
+                    <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
+                        <div className={`${classes.services__section_container} flex-column w-100 d-flex justify-content-between align-items-start ${classes.flex__container}`}>
+                            <AnimatedHeading
+                            text={sectionHeadings.sectionSix}
+                            className={`fw-bold ${classes.section__heading_header}`}
+                            />
+                            <FAQAccordion />
                         </div>
                     </Container>
                 </div>

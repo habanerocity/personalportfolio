@@ -15,13 +15,21 @@ function FAQAccordion() {
       <Accordion.Item eventKey="1">
         <Accordion.Header >What is the step by step process for building a custom WordPress theme from scratch?</Accordion.Header>
         <Accordion.Body className='fs-3' >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        Building a custom WordPress theme from scratch involves a detailed, collaborative process: <br />
+        <br />
+        Initial Consultation: We discuss your goals, target audience, design preferences, and any specific features you need.<br />
+        <br />
+        Planning & Strategy: I create a project roadmap covering the theme’s structure, layout, and functionality, ensuring it aligns with your brand’s goals.<br />
+        <br />
+        Design Phase: I’ll provide design mockups or wireframes for your approval, typically in tools like Figma or Adobe Photoshop, to capture the look and feel.<br />
+        <br />
+        Development: I start building on top of my starter theme using custom HTML, CSS, JavaScript, and PHP, building out a custom template and unique functionality while ensuring responsiveness.<br />
+        <br />
+        Testing & Quality Assurance: The theme is rigorously tested for compatibility, performance, and cross-device functionality to ensure a seamless experience.<br />
+        <br />
+        Launch & Handover: Once approved, I’ll deploy the theme to your WordPress site, provide any needed training, and offer post-launch support to address any questions or tweaks.<br />
+        <br />
+        Throughout each step, I’ll keep you updated so you’re fully informed and engaged in the process.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2">
@@ -60,38 +68,34 @@ function FAQAccordion() {
       </Accordion.Item>
       <Accordion.Item eventKey="6">
         <Accordion.Header >What is the average turnaround time to build a WordPress website?</Accordion.Header>
-        <Accordion.Body className='fs-3' >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        <Accordion.Body className='fs-3' > 
+        The turnaround time depends on the scope of the project and how the 
+        site will be built. For custom themes, it typically takes around 
+        4–5 weeks, while theme customizations generally range from 1–4 weeks, 
+        depending on the complexity and deliverables provided. If we're working with 
+        a page builder, the timeline is often quicker, around 1–3 weeks. 
+        I’d be happy to provide a more precise estimate based on your 
+        specific needs and project details.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="7">
         <Accordion.Header >Can you configure and set up plugins?</Accordion.Header>
         <Accordion.Body className='fs-3' >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        Yes, I can handle all aspects of plugin setup and configuration, 
+        from integrating new plugins, to updating existing ones, customizing them,
+        and resolving any conflicts that may arise. I’ll ensure each plugin works 
+        the right way with your website to maintain optimal performance and 
+        functionality.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="8">
         <Accordion.Header >What do I need a custom plugin for?</Accordion.Header>
         <Accordion.Body className='fs-3' >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        A custom plugin is ideal if you need specific features or functionalities 
+        that aren’t available with standard plugins. It can be a unique booking 
+        system, advanced data integrations, or custom user experiences, I can build 
+        a plugin personalized to your exact needs, ensuring it enhances your website’s 
+        functionality and aligns perfectly with your goals.
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>

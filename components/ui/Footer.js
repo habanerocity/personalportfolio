@@ -1,7 +1,7 @@
 import classes from './Footer.module.scss';
-function Footer() {
+function Footer({ className }) {
     return (
-      <footer className={classes.footer__class}>
+      <footer className={`${className} ${classes.footer__class}`}>
         <p>© 2024 Lindy Ramirez, All Rights Reserved</p>
       </footer>
     );

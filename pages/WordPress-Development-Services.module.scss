@@ -19,6 +19,24 @@
     width: 86%;
 }
 
+.services__section_pricing_card_btn{
+  // width: 100%;
+  background-color: $secondary-color;
+  padding: 8px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $secondary-color-2;
+  }
+
+  @media(max-width: 425px){
+    font-size: 10px!important;
+  }
+}
+
 .service_icon_container{
     background-color: #EEA06C;
     display: inline-block;

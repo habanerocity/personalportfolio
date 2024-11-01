@@ -571,6 +571,19 @@ const WordPressDevelopmentServices = () => {
                         </div>
                     </Container>
                 </div>
+                <div className={`h-auto ${classes.brands_section}`}>
+                    <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
+                        <div className="d-flex flex-column justify-content-center align-items-center my-5">
+                            <h1 className="text-center my-4">
+                                Custom Packages and Per Project Pricing Available Upon Request!
+                            </h1>
+                            <Link className={classes.link} passHref href="/Contact">
+                                <button className={`${classes.services__section_pricing_card_btn} display-6 p-4`}>Inquire Now</button>
+                            </Link>
+                        </div>
+                    </Container>
+                    <Footer className='bg-white' />
+                </div>
             </motion.div>
         </div>
     </React.Fragment>

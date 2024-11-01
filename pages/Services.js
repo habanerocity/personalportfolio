@@ -689,7 +689,7 @@ const Services = () => {
                             </Link>
                         </div>
                     </Container>
-                    <Footer />
+                    <Footer className='bg-white' />
                 </div>
                 </motion.div>
                 <LogoBar />

@@ -565,7 +565,9 @@ const WordPressDevelopmentServices = () => {
                             text={sectionHeadings.sectionSix}
                             className={`fw-bold ${classes.section__heading_header}`}
                             />
-                            <FAQAccordion />
+                            <Row className='d-flex justify-content-center align-items-center w-100 mt-5' >
+                                <FAQAccordion />
+                            </Row>
                         </div>
                     </Container>
                 </div>

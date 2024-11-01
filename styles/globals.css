@@ -62,3 +62,7 @@ a {
 span.Typewriter__wrapper{
   color: #ff6600;
 }
+
+.accordion-button{
+  font-size: 1.8rem!important;
+}

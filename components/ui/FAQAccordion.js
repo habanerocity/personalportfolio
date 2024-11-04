@@ -2,7 +2,7 @@ import Accordion from 'react-bootstrap/Accordion';
 
 function FAQAccordion() {
   return (
-    <Accordion className='w-75 fs-3' flush >
+    <Accordion className='w-100 fs-3' flush >
       <Accordion.Item className='fs-3' eventKey="0">
         <Accordion.Header className='fs-3' >Can you customize and configure a WordPress theme that I bought from a third party?</Accordion.Header>
         <Accordion.Body className='fs-3' >    

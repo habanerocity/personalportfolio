@@ -4,12 +4,21 @@
 .arrow {
     position: relative;
     height: 3rem;
+    width: 10%;
     color: $primary-color-2;
     z-index: 2;
     cursor: pointer;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+
+    @media(max-width: 768px){
+        width: 15%;
+    }
+
+    @media(max-width: 450px){
+        width: 25%;
+    }
 }
 
 .btn__container {
@@ -19,10 +28,6 @@
 .header {
     font-family: $font-header;
 }
-
-// .holder {
-//     display: inline-block;
-// }
 
 .slide {
     opacity: 0;
@@ -37,7 +42,6 @@
 
 .slider {
     position: relative;
-    // height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,11 +51,9 @@
 .person {
     text-align: center;
     font-weight: bold;
-    // font-size: 1.2rem;
 }
 
 .quote {
-    margin-bottom: $margin-sm;
 
     &>img {
         color: $primary-color-2;
@@ -69,161 +71,46 @@
 .review__slides {
     @include flex-container-row;
     flex-direction: row;
-    height:40rem;
 }
 
 .testimonial {
     margin: 2rem 0;
-    // font-size: $font-size-body;
 }
 
 .wrapper {
     background-color: #fff;
-    // margin: 1rem 0;
-}
-
-//////MEDIA QUERIES BASED ON WIDTH //////////////////////////////////
-
-@media only screen and (min-width: 2560px) {
-    .arrow__left{
-       height: 7rem;
-    }
-
-    .arrow__right{
-        height: 7rem;
-    }
-
-    // .header {
-    //     font-size: 4rem;
-    // }
-    
-    // .testemonial {
-    //     font-size: 3rem;
-    // }
-}
-
-@media only screen and (min-width: 1900px) {
-    .arrow {
-        &__left{
-            left: -11rem;
-        }
-
-        &__right{
-            right: -11rem;
-        }
-    }
-}
-
-// @media only screen and (min-width: 1450px) {
-// .testemonial {
-//     font-size: 2.5rem;
-// }
-// }
-
-@media only screen and (max-width: 1440px) {
-    .arrow__left{
-        left: 0;
-    }
-
-    .arrow__right{
-        right: 0;
-    }
-
-    // .slider {
-    //     height: auto;
-    // }
-
-    // .testemonial {
-    //     font-size: 1.5rem;
-    // }
 }
 
 @media only screen and (max-width: 1000px){
     .testemonial {
-        // font-size: 1.4rem;
         margin: 1rem 0;
-    }
-
-    .quote {
-        &>img {
-            height: 8rem;
-            width: 5rem;
-        }
     }
 
     .slider {
         height: auto;
-    }
-
-    .wrapper {
-        padding: 9rem 0;
-        // margin: 1rem 0;
     }
 }
 
 @media only screen and (max-width: 767px){
-    .arrow__left{
-        left: 0;
-    }
-
-    .arrow__right{
-        right: 0;
-    }
-
-    .arrow {
-        height: 2rem;
-    }
-
     .slider {
         height: auto;
     }
-
-    // .testemonial {
-    //     font-size: $font-size-body-sm;
-    // }
 }
 @media only screen and (max-width: 600px) {
     .header {
         max-width: 80%;
-    }
-
-    .quote {
-        &>img {
-            height: 8rem;
-            width: 4rem;
-        }
-    }
-}
-
-@media only screen and (max-width: 575px) {
-    // .testemonial {
-    //     font-size: $font-size-body-sm;
-    // }
-
-    .arrow__left{
-        height: 2rem;
-    }
-
-    .arrow__right{
-        height: 2rem;
     }
 }
 
 @media only screen and (max-width: 400px){
 
     .arrow__left{
-        left: 1rem;
         height: 2rem;
     }
 
     .arrow__right{
-        right: 1rem;
         height: 2rem;
     }
-
-    // .testemonial {
-    //     font-size: 1.4rem;
-    // }
 
     .slider {
         height: auto;
@@ -233,41 +120,3 @@
         height: auto;
     }
 }
-
-@media only screen and (max-width: 350px){
-    .review__content {
-        height: auto;
-        padding-top:2rem;
-    }
-
-    // .testemonial {
-    //     font-size: 1.3rem;
-    // }
-}
-
-@media only screen and (max-width: 300px) {
-    .testemonial {
-        // font-size: 1.2rem;
-        width: 80%;
-    }
-}
-
-//////MEDIA QUERIES BASED ON HEIGHT //////////////////////////////////
-
-@media only screen and (max-height: 300px) {
-    .wrapper {
-        padding: 8rem 0;;
-    }
-}
-
-// @media only screen and (max-width: 1300px) and (max-height: 810px) {
-//     .slider {
-//         height: 80vh;
-//     }
-// }
-
-// @media only screen and (max-width: 1030px) and (max-height: 610px) {
-//     .slider {
-//         height: 100vh;
-//     }
-// }

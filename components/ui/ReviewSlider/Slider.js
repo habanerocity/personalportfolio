@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
 import Image from 'next/image';
 import styles from './Slider.module.scss';
 import ReviewData from './SliderData';
@@ -28,17 +25,24 @@ const Slider = () => {
 
 	return (
 		<div className={styles.wrapper}>
-			<div className={`container ${styles.slider}`}>
-				<Row className='mt-5' >
-					<Col lg={1} className='d-flex justify-content-center align-items-center'>
-						<Image
-							src={arrowLeft}
-							alt="left arrow"
-							className={`${styles.arrow__left} ${styles.arrow}`}
-							onClick={prevSlide}
-						/>
-					</Col>
-					<Col lg={10} >
+			<div className={`container d-flex justify-content-center align-items-center ${styles.slider}`}>
+					<div className='w-100 d-flex justify-content-end mt-5' >
+						<div className='w-25 d-flex justify-content-end align-items-center' >
+							<Image
+								src={arrowLeft}
+								alt="left arrow"
+								className={`${styles.arrow__left} ${styles.arrow}`}
+								onClick={prevSlide}
+							/>
+							<Image
+								src={arrowRight}
+								alt="right arrow"
+								className={`${styles.arrow__right} ${styles.arrow}`}
+								onClick={nextSlide}
+							/>
+						</div>
+					</div>
+					<div >
 						{ReviewData.map((review, index) => {
 							return (
 								<div className={index === currentSlide ? styles.slide__active : styles.slide} key={review.id}>
@@ -60,7 +64,7 @@ const Slider = () => {
 												height={65}
 												width={65}
 												/>
-												<p className={`fs-1 ${styles.person}`}>{review.name}</p>
+												<p className={`fs-2 ${styles.person}`}>{review.name}</p>
 												<p className={`fs-3 ${styles.person}`}>{`${review.company} | ${review.city}, ${review.state}`}</p>
 											</div>
 										</div>
@@ -68,16 +72,7 @@ const Slider = () => {
 								</div>
 							);
 						})}
-					</Col>
-					<Col lg={1} className='d-flex justify-content-center align-items-center'>
-						<Image
-							src={arrowRight}
-							alt="right arrow"
-							className={`${styles.arrow__right} ${styles.arrow}`}
-							onClick={nextSlide}
-						/>
-					</Col>
-				</Row>
+					</div>
 			</div>
 		</div>
 	);

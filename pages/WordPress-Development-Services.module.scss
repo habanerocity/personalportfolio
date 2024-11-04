@@ -258,8 +258,14 @@ text-decoration: none !important;
 .section__image{
   border-radius: 20px;
 
-  @media(max-width: 776px){
+  @media(max-width: 1200px){
+    width: 75%;
+    height: auto;
+  }
+
+  @media(max-width: 992px){
     width: 100%;
+    height: auto;
   }
 }
 

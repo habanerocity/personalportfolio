@@ -125,7 +125,7 @@ const WordPressDevelopmentServices = () => {
                                     />
                                 </Col>
                             </Row>
-                            <Row className='flex-sm-column-reverse flex-lg-row' >
+                            <Row className='flex-column-reverse flex-sm-column-reverse flex-lg-row' >
                                 <Col className={`d-flex flex-column flex-wrap justify-content-between align-items-start w-100 mt-5`}>
                                     <p className='fs-3 fw-normal' >
                                         WordPress is an open-source, powerful and flexible platform that powers 
@@ -240,7 +240,7 @@ const WordPressDevelopmentServices = () => {
                                 </Col>
                                 <Col className='d-flex justify-content-sm-center w-100 justify-content-end align-items-center'>
                                     <Image 
-                                    className={classes.section__image}
+                                    className={`mt-5 ${classes.section__image}`}
                                     src='/static/wp-laptop.jpg'
                                     width='500'
                                     height='350'
@@ -254,7 +254,7 @@ const WordPressDevelopmentServices = () => {
                 <div className={`h-auto ${classes.bg_gray}`}>
                     <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
                         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
-                        <Row>
+                            <Row>
                                 <Col className="w-100 overflow-hidden">
                                     <AnimatedHeading
                                     text={sectionHeadings.sectionTwo}
@@ -262,10 +262,10 @@ const WordPressDevelopmentServices = () => {
                                     />
                                 </Col>
                             </Row>
-                            <Row>
-                                <Col className={`mt-5 d-flex justify-content-start align-items-center`}>
+                            <Row className='flex-column flex-sm-column flex-lg-row'>
+                                <Col className={`d-flex w-100 justify-content-start align-items-center`}>
                                     <Image 
-                                    className={classes.section__image}
+                                    className={`mt-5 ${classes.section__image}`}
                                     src='/static/foodventure-figma.webp'
                                     width='500'
                                     height='350'

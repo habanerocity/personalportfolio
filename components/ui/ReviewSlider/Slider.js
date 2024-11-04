@@ -52,11 +52,16 @@ const Slider = () => {
 													className={styles.quote__symbol} 
 													/>
 												</div>
-												<p className='display-5'>{review.title}</p>
 												<p className={`fs-3 ${styles.testimonial}`}>{review.feedback}</p>
-												<p
-													className={`fs-4 ${styles.person}`}
-												>{`-${review.name}, ${review.city}, ${review.state}`}</p>
+												<Image 
+												src={review.companyLogo}
+												alt='company logo'
+												className='rounded-circle'
+												height={65}
+												width={65}
+												/>
+												<p className={`fs-1 ${styles.person}`}>{review.name}</p>
+												<p className={`fs-3 ${styles.person}`}>{`${review.company} | ${review.city}, ${review.state}`}</p>
 											</div>
 										</div>
 									)}

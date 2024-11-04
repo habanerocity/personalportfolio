@@ -18,12 +18,12 @@ const AnimatedHeading = ({ text, className }) => {
       opacity: 1,
       transition: {
         delay: 0.1,
-        staggerChildren: 0.018,
+        staggerChildren: 0.06, // Stagger the animation of each word
       },
     },
   };
 
-  const letterVariants = {
+  const wordVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { 
       opacity: 1, 
@@ -43,9 +43,9 @@ const AnimatedHeading = ({ text, className }) => {
       animate={controls}
       variants={containerVariants}
     >
-      {text.split('').map((letter, index) => (
-        <motion.span key={index} variants={letterVariants}>
-          {letter === ' ' ? '\u00A0' : letter}
+      {text.split(' ').map((word, index) => (
+        <motion.span key={index} variants={wordVariants} style={{ display: 'inline-block', marginRight: '0.25rem' }}>
+          {word}{index < text.split(' ').length - 1 && '\u00A0'}
         </motion.span>
       ))}
     </motion.h2>

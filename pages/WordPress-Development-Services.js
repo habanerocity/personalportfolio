@@ -26,8 +26,8 @@ import FAQAccordion from "../components/ui/FAQAccordion";
 const WordPressDevelopmentServices = () => {
 
     const sectionHeadings = {
-        sectionOne: "What is WordPress and Why You Should Use It For Your Website?",
-        sectionTwo: "Why Should You Hire A Professional WordPress Developer?",
+        sectionOne: "What Is WordPress And Why Should You Use It?",
+        sectionTwo: "Why Should You Hire A WordPress Expert?",
         sectionThree: "Why Me?",
         sectionFour: "WordPress Services That I Provide",
         sectionFive: "What Clients Are Saying About Me",
@@ -66,14 +66,14 @@ const WordPressDevelopmentServices = () => {
                             <div className={`d-flex justify-content-between align-items-center ${classes.hero__stats_container}`} >
                                 <div className={`justify-content-center ${classes.hero__stats_1}`}>
                                     <div className='justify-content-center h-100 d-flex flex-column p-4 fs-3 fw-bold align-items-start' >
-                                    Number of Free Plugins Available <br />
-                                    <span className='display-3 fw-bold'>+59,000</span>
+                                    Percentage Of The Web Powered By WordPress <br />
+                                    <span className='display-3 fw-bold'>+43%</span>
                                     </div>
                                 </div>
                                 <div className={`justify-content-center ${classes.hero__stats_2}`}>
                                     <div className='justify-content-center h-100 d-flex flex-column p-4 fs-3 fw-bold align-items-start' >
-                                        Percentage of The Web Powered By WordPress <br />
-                                        <span className='display-3 fw-bold'>+43%</span>
+                                        Number Of Free Plugins Available <br /> 
+                                        <span className='display-3 fw-bold'>+59,000</span>
                                     </div>
                                 </div>
                             </div>
@@ -117,11 +117,15 @@ const WordPressDevelopmentServices = () => {
                 <div className={`h-auto ${classes.brands_section}`}>
                     <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
                         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
-                            <AnimatedHeading
-                            text={sectionHeadings.sectionOne}
-                            className={`fw-bold ${classes.section__heading_header}`}
-                            />
-                            <Row >
+                            <Row>
+                                <Col className="w-100 overflow-hidden">
+                                    <AnimatedHeading
+                                    text={sectionHeadings.sectionOne}
+                                    className={`d-flex flex-wrap fw-bold ${classes.section__heading_header}`}
+                                    />
+                                </Col>
+                            </Row>
+                            <Row className='flex-sm-column-reverse flex-lg-row' >
                                 <Col className={`d-flex flex-column flex-wrap justify-content-between align-items-start w-100 mt-5`}>
                                     <p className='fs-3 fw-normal' >
                                         WordPress is an open-source, powerful and flexible platform that powers 
@@ -234,7 +238,7 @@ const WordPressDevelopmentServices = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col className='d-flex justify-content-end align-items-center'>
+                                <Col className='d-flex justify-content-sm-center w-100 justify-content-end align-items-center'>
                                     <Image 
                                     className={classes.section__image}
                                     src='/static/wp-laptop.jpg'
@@ -250,10 +254,14 @@ const WordPressDevelopmentServices = () => {
                 <div className={`h-auto ${classes.bg_gray}`}>
                     <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
                         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
-                            <AnimatedHeading
-                            text={sectionHeadings.sectionTwo}
-                            className={`fw-bold ${classes.section__heading_header}`}
-                            />
+                        <Row>
+                                <Col className="w-100 overflow-hidden">
+                                    <AnimatedHeading
+                                    text={sectionHeadings.sectionTwo}
+                                    className={`d-flex flex-wrap fw-bold ${classes.section__heading_header}`}
+                                    />
+                                </Col>
+                            </Row>
                             <Row>
                                 <Col className={`mt-5 d-flex justify-content-start align-items-center`}>
                                     <Image 
@@ -306,10 +314,14 @@ const WordPressDevelopmentServices = () => {
                 <div className={`h-auto ${classes.brands_section}`}>
                     <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
                         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
-                            <AnimatedHeading
-                            text={sectionHeadings.sectionThree}
-                            className={`fw-bold ${classes.section__heading_header}`}
-                            />
+                            <Row>
+                                <Col className="w-100 overflow-hidden">
+                                    <AnimatedHeading
+                                    text={sectionHeadings.sectionThree}
+                                    className={`d-flex flex-wrap fw-bold ${classes.section__heading_header}`}
+                                    />
+                                </Col>
+                            </Row>
                             <Row >
                                 <Col className='mt-5'>
                                     <p className='fs-3 fw-normal' >
@@ -423,10 +435,14 @@ const WordPressDevelopmentServices = () => {
                 <div className={`h-auto ${classes.bg_gray}`}>
                     <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
                         <div className={`${classes.services__section_container} flex-column w-100 d-flex justify-content-between align-items-start ${classes.flex__container}`}>
-                            <AnimatedHeading
-                            text={sectionHeadings.sectionFour}
-                            className={`fw-bold ${classes.section__heading_header}`}
-                            />
+                            <Row>
+                                <Col className="w-100 overflow-hidden">
+                                    <AnimatedHeading
+                                    text={sectionHeadings.sectionFour}
+                                    className={`d-flex flex-wrap fw-bold ${classes.section__heading_header}`}
+                                    />
+                                </Col>
+                            </Row>
                             <div className={`d-flex w-100 justify-content-between mt-5 align-items-stretch ${classes.service_container_wrapper}`} >
                             <div className={`d-flex flex-column justify-content-between ${classes.services_container}`} >
                                 <Row lg={3} className={`p-5 d-flex justify-content-between align-items-center ${classes.services_container_inner}`} >
@@ -538,7 +554,6 @@ const WordPressDevelopmentServices = () => {
                                 width='700'
                                 alt='Lindy Ramirez, Web Developer'
                                 className={`position-relative h-100 ${classes.services_img}`}
-                                
                                 />
                             </div>
                             </div>
@@ -548,10 +563,14 @@ const WordPressDevelopmentServices = () => {
                 <div className={`h-auto ${classes.brands_section}`}>
                     <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
                         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
-                            <AnimatedHeading
-                            text={sectionHeadings.sectionFive}
-                            className={`fw-bold ${classes.section__heading_header}`}
-                            />
+                            <Row>
+                                <Col className="w-100 overflow-hidden">
+                                    <AnimatedHeading
+                                    text={sectionHeadings.sectionFive}
+                                    className={`d-flex flex-wrap fw-bold ${classes.section__heading_header}`}
+                                    />
+                                </Col>
+                            </Row>
                             <div className='d-flex justify-content-center align-items-center' >
                                 <Slider />
                             </div>
@@ -561,10 +580,14 @@ const WordPressDevelopmentServices = () => {
                 <div className={`h-auto ${classes.bg_gray}`}>
                     <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
                         <div className={`${classes.services__section_container} flex-column w-100 d-flex justify-content-between align-items-start ${classes.flex__container}`}>
-                            <AnimatedHeading
-                            text={sectionHeadings.sectionSix}
-                            className={`fw-bold ${classes.section__heading_header}`}
-                            />
+                            <Row>
+                                <Col className="w-100 overflow-hidden">
+                                    <AnimatedHeading
+                                    text={sectionHeadings.sectionSix}
+                                    className={`d-flex flex-wrap fw-bold ${classes.section__heading_header}`}
+                                    />
+                                </Col>
+                            </Row>
                             <Row className='d-flex justify-content-center align-items-center w-100 mt-5' >
                                 <FAQAccordion />
                             </Row>
@@ -574,9 +597,11 @@ const WordPressDevelopmentServices = () => {
                 <div className={`h-auto ${classes.brands_section}`}>
                     <Container className={`d-flex flex-column position-relative ${classes.w85}`}>
                         <div className="d-flex flex-column justify-content-center align-items-center my-5">
-                            <h1 className="text-center my-4">
-                                Custom Packages and Per Project Pricing Available Upon Request!
-                            </h1>
+                            <p className="text-center my-5 display-5">
+                            Let’s create a WordPress experience that is truly tailored to your brand and gets you results. Contact me today for a free consultation and personalized quote. <br />
+                            <br />
+                            Your online presence's next big leap starts here!
+                            </p>
                             <Link className={classes.link} passHref href="/Contact">
                                 <button className={`${classes.services__section_pricing_card_btn} display-6 p-4`}>Inquire Now</button>
                             </Link>

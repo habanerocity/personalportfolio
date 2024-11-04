@@ -255,9 +255,13 @@ text-decoration: none !important;
     display: inline-block;
   }
 
-  .section__image{
-    border-radius: 20px;
+.section__image{
+  border-radius: 20px;
+
+  @media(max-width: 776px){
+    width: 100%;
   }
+}
 
 .services__section_container{
     width: 85%;

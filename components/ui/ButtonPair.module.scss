@@ -1,0 +1,109 @@
+@import "../../styles/sass/variables";
+
+.btn__container{
+    display: flex;
+    flex-direction: row;
+    @media(max-width: 991px){
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+
+    @media(max-width: 600px){
+      flex-direction: column!important;
+      width: 100%;
+    }
+}
+
+/* Add this new class for the about page specific behavior */
+.about_page_btn_container {
+  @media(max-width: 600px) {
+      flex-direction: column !important;
+      align-items: flex-start !important; 
+
+      /* Make both buttons take full width */
+      button {
+        width: 100% !important; /* Make buttons full width */
+        margin-right: 0 !important; /* Remove right margin */
+    }
+
+    /* Remove any link width restrictions */
+    a, .link {
+      width: 100% !important;
+      display: block !important;
+  }
+      
+      /* Adjust button margins for stacked layout */
+      button:first-child {
+          margin-right: 0 !important;
+      }
+  }
+}
+
+.link {
+    text-decoration: none !important;
+
+    @media(max-width: 600px) {
+      width: 100% !important;
+    }
+}
+
+.hero__btn{
+    height: 4rem;
+    padding: 1.4rem 3rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border:3px solid $secondary-color;
+    cursor: pointer;
+
+    &_solid{
+        // padding: 1.4rem;
+        background-color: $secondary-color;
+        @media(max-width: 1200px){
+          font-size: 1.6rem!important;
+        }
+    
+        @media(max-width: 991px){
+          font-size: 1.4rem!important;
+        }
+
+        @media(max-width: 600px) {
+          width: 100% !important;
+        }
+    
+        @media(max-width: 500px){
+          padding: 1rem;
+        }
+      }
+    
+      &_transparent{
+        background-color: transparent;
+        color: $secondary-color;
+        transition: all .2s ease-in;
+    
+        @media(max-width: 1200px){
+          font-size: 1.6rem!important;
+        }
+    
+        @media(max-width: 991px){
+          font-size: 1.4rem!important;
+        }
+
+        @media(max-width: 600px) {
+          width: 100% !important;
+        }
+    
+        @media(max-width: 500px){
+          padding: 1rem;
+        }
+    
+        &:hover{
+          background-color:  $secondary-color;
+          color: #fff;
+        }
+      }
+}

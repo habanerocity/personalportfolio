@@ -1,5 +1,6 @@
 .flex_container {   
-    height: 70vh;
+    min-height: 70vh;
+    height: auto;
 }
 
 @media screen and (max-width:600px){

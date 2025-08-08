@@ -6,12 +6,27 @@ body {
   padding: 0;
   height:100%;
   margin: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   font-family: 'Lato', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 62.5%;
   background-color: var(--color-background);
   color: var(--color-primary);
+}
+
+/* #__next{
+    overflow-x: hidden;
+} */
+
+/* Reset scroll behavior */
+html, body {
+  scroll-behavior: auto;
+  overflow-anchor: none;
+}
+
+/* Ensure body takes full height for proper scroll reset */
+body {
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6, button{

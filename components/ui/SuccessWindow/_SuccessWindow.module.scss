@@ -4,7 +4,7 @@
 .flex__container {
   @include flex-container-col;
   font-size: 2rem;
-  border-radius: 6px;
+  border-radius: $border-radius-md;
   margin-bottom: 2rem;
   transform: translateY(6rem);
 
@@ -20,7 +20,7 @@
   height: 30rem;
   width: 40rem;
   z-index: 30000;
-  border-radius: 6px;
+  border-radius: $border-radius-md;
 
   @media screen and (max-width: 445px){
     height: 20rem;

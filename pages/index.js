@@ -8,6 +8,7 @@ import NavigationBar from '../components/ui/NavigationBar';
 import LogoBar from '../components/ui/LogoBar';
 import Footer from '../components/ui/Footer';
 
+
 import pageFadeInAnimation from '../animations/pageFadeInAnimation';
 
 import classes from './index.module.scss';

@@ -1,7 +1,10 @@
+import React from 'react';
 import classes from './SectionContainer.module.scss';
 
 const SectionContainer = (props) => {
-	return <section className={`${classes.section}`}>{props.children}</section>;
+	const { className, children } = props;
+
+	return <section className={`${className} ${classes.section}`}>{children}</section>;
 };
 
 export default SectionContainer;

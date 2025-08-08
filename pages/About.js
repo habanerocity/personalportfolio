@@ -20,6 +20,8 @@ import Footer from "../components/ui/Footer";
 
 import pageFadeInAnimation from "../animations/pageFadeInAnimation";
 
+import ButtonPair from '../components/ui/ButtonPair.js';
+
 const About = () => {
 
   return (
@@ -52,14 +54,25 @@ const About = () => {
                   <ProfileHeader />
                   <div className={`bg-white ${classes.bio__details}`}>
                     <div className="fs-4 pt-4">
-                      Hey, I&apos;m Lindy, a freelance web developer deeply rooted in digital marketing and the e-commerce world. With a track record of helping brands improve their online presence and conversion rates, my journey in tech began with a childhood love for computers, evolving into a problem-solving mission. Beyond coding, I&apos;m a big fan of basketball and soccer, an adventure-seeking traveler, and a spicy food aficionado. If you&apos;re looking to collaborate on a project or just chat tech and shared interests, feel free to reach out—I&apos;m always up for new ventures.
+                    Hey I’m Lindy, a freelance web developer specializing in custom WordPress and Shopify solutions that blend technical precision with marketing savvy. I help brands and businesses elevate their online presence through high-performance websites, tailored e-commerce experiences, and conversion-driven design. <br />
+                    <br />
+                    With a background in digital marketing and e-commerce, I build websites and plugins that drive growth. Whether it’s a performant custom WordPress theme, a scalable Shopify store with bespoke functionality, or a seamless WooCommerce integration, I bridge the gap between code and strategy to deliver results. <br />
+                    <br />
+                    My tech journey started with a childhood love for computers, which grew into a passion for solving real-world problems through clean, efficient code. When I’m not optimizing websites or building WordPress plugins, you’ll find me shooting hoops, hunting down the spiciest dishes, or planning my next adventure. <br />
+                    <br />
+                    Let’s connect to turn your vision into a powerful digital reality, or just chat about tech, travel, or tacos. Reach out anytime, I’m always up for exciting projects and great conversations.
                     </div>
                     <br />
                     <RenderToolList/>
                     <div className={`justify-content-between align-items-center ${classes.btn__container}`}>
-                      <Link passHref href="/Contact">
-                        <Button name="Contact" />
-                      </Link>
+                      <ButtonPair 
+                      primaryCtaButtonText = "Contact Me" 
+                      secondaryCtaButtonText = "View Services" 
+                      secondaryCtaButtonLink = "/services"
+                      buttonPadding = {classes.about__btn_padding}
+                      centeredOnMobile={false}
+                      aboutPage = {true}
+                      />
                     </div>
                   </div>
                 </div>

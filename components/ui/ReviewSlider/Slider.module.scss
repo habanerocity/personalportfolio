@@ -36,7 +36,7 @@
     &__active {
         opacity: 1;
         transition-duration: 1s;
-        transform:scale(1.05);
+        transform:scale(1.02);
     }
 }
 
@@ -80,6 +80,32 @@
 .wrapper {
     background-color: #fff;
 }
+
+.pagination {
+    position: relative;
+    bottom: 2rem;
+    z-index: 2;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background-color: #999;
+    }
+  
+    &_active {
+      background-color: $secondary-color;
+      transform: scale(1.2);
+    }
+  }
 
 @media only screen and (max-width: 1000px){
     .testemonial {

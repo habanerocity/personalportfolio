@@ -1,0 +1,15 @@
+const sectionTwoData = {
+    heading: "Why Should You Hire A Professional Web Developer To Build Your Landing Page?",
+    paragraphs: [
+      "Hiring a professional web developer to build your landing page offers significant advantages over DIY solutions such as Wix, Squarespace, or Elementor. Unlike DIY tools that often rely on pre-made templates and page builders, a web developer can build custom-coded landing pages perfectly tailored to your brand and audience. Landing pages built with custom code allow for limitless customization and  features, such as unique animations, payment gateways, crm-integrations, and more.",
+      "Web developers prioritize on-page SEO, helping your landing page rank higher on search engines, driving more organic traffic. They also ensure that your landing page is 100% responsive, providing an optimal viewing experience across all devices. With a focus on speed optimization, developers enhance  page load times, resulting in improved user engagement and lower bounce rates.",
+      "Custom-coded landing pages most often do not require hosting fees and can scale easily as your business grows. Bespoke landing pages are crafted with efficiency in mind, which means they do not suffer from bloated code that can slow down performance and lead to longer load times. This streamlined coding not only enhances the overall speed and responsiveness of the landing page but also improves its search engine optimization potential.",
+      "Additionally, bespoke landing pages are less prone to breaking with updates, as they are built on a solid foundation tailored specifically for your site’s needs. In contrast, page builders often rely on third-party plugins and templates that can conflict with each other or become outdated, resulting in a frustrating user experience. By converting designs from Figma or PSD to code, developers maintain UI/UX best practices to create visually appealing and user-friendly experiences. This attention to detail ensures that your landing page not only looks great but also functions seamlessly, providing your visitors with a smooth and engaging interaction that drives conversions. ",
+      "Moreover, web developers can set up Google Analytics to track performance, giving you valuable insights into visitor behavior. By entrusting the process to a professional, you save valuable time and avoid the headaches of troubleshooting and technical limitations. With an expert on your side, you can focus on your core business while knowing that your landing page is in capable hands, ready to drive conversions and achieve your marketing objectives."
+    ],
+    image: '/static/desk.jpg',
+    imageAlt: 'One Of My Previous Landing Page Projects',
+    imageHeight: 250,
+  };
+  
+  export default sectionTwoData;

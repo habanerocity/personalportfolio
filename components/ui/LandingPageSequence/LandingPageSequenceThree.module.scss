@@ -1,0 +1,211 @@
+@import '../../../styles/sass/mixins';
+@import '../../../styles/sass/variables';
+
+.services__section_container{
+    width: 85%;
+    padding: 6rem 0;
+}
+
+.flex__container {
+    @include flex-container-row;
+    width: 100%;
+  
+    &__col {
+      width: 100%;
+      padding: 10rem 0 6rem 0;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin-top: 0;
+        width: 85%!important;
+    }
+}
+
+.section__heading_header{
+    font-size: 2.8rem;
+    display: inline-block;
+}
+
+.img_collage{
+    position: relative;
+    width:100%;
+
+    &_photo{
+        position: absolute; 
+        transition: .2s all ease-in;
+        outline-offset: 2rem;
+        border-radius: $border-radius-lg;
+
+        &:hover{
+            outline: 1.5rem solid $secondary-color;
+            transform: scale(1.05) translateY(-5px);
+            cursor: pointer;
+            z-index: 20;
+
+            @media (max-width: 1199px){
+              outline: unset;
+              transform: unset;
+            }
+
+            @media (max-width: 991px){
+              outline: 1rem solid $secondary-color;
+              transform: scale(1.02) translateY(-3px);
+            }
+
+            @media (max-width: 395px){
+              outline: unset;
+              transform: unset;
+          }
+        }
+    }
+
+    &:hover &_photo:not(:hover){
+        transform: scale(.95);
+    }
+
+    &_first_floating{
+        right: 0%;
+        bottom: 12rem;
+        z-index: 10;
+
+        @media (max-width: 1199px){
+          display: none;
+      }
+
+        @media (max-width: 991px){
+          display: inline-block;
+          right: 6%;
+          top: -6%;
+          width: 28%;
+      }
+
+      @media (max-width: 475px){
+        right: 0%;
+    }
+
+      @media (max-width: 450px){
+        display: none;
+    }
+    }
+
+    &_second_floating{
+        right: 7%;
+        top: 10rem;
+        z-index: 10;
+
+        @media (max-width: 1199px){
+          display: none;
+      }
+
+        @media (max-width: 991px){
+          display: inline-block;
+          right: 14%;
+          top: 56%;
+          width: 23%;
+      }
+
+        @media (max-width: 767px){
+          width: 28%;
+          right: 12%;
+      }
+
+      @media (max-width: 767px){
+          width: 28%;
+          right: 6%;
+      }
+
+      @media (max-width: 516px){
+        right: 7%;
+    }
+
+    @media (max-width: 415px){
+      right: 3%;
+  }
+
+      @media (max-width: 450px){
+        display: none;
+    }
+    }
+
+    &_third_floating{
+        left: 7%;
+        z-index: 10;
+
+        @media (max-width: 1199px){
+          display: none;
+      }
+
+        @media (max-width: 991px){
+          display: inline-block;
+          left: 6%;
+          top: 36%;
+          width: 32%;
+      }
+
+        @media (max-width: 767px){
+          width: 38%;
+          left: 2%;
+      }
+
+      @media (max-width: 600px){
+          width: 44%;
+          left: 0%;
+      }
+
+      @media (max-width: 450px){
+        display: none;
+    }
+    }
+
+    &_main{
+        right: 10rem;
+
+        @media (max-width: 1399px){
+            width: 62%;
+            right: 8rem;
+        }
+
+        @media (max-width: 1199px){
+          width: 72%;
+      }
+
+        @media (max-width: 991px){
+          width: 55%;
+          right: 0;
+          position: relative;
+      }
+
+        @media (max-width: 767px){
+          width: 63%;
+      }
+
+      @media (max-width: 600px){
+          width: 77%;
+      }
+
+      @media (max-width: 450px){
+        width: 100%;
+    }
+    }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  background-color: white;
+}
+
+/* If the slider container needs to be full width */
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  z-index: -1;
+  background-color: white;
+}

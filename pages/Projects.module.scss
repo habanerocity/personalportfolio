@@ -41,7 +41,7 @@
 
     &__col{
         padding: 10rem 0;
-        width: 85%;
+        // width: 85%;
     }
 
     @media(max-width: 992px){
@@ -54,6 +54,8 @@
         justify-content: flex-start;
     }
 }
+
+
 
 .headings__container{
     @include flex-container-col; 
@@ -70,6 +72,12 @@
         padding: 7rem 0;
     }
 }
+
+@media screen and (max-width: 575px) {
+    .flex__container__col {
+      width: 85%;
+    }
+  }
 
 @media screen and (max-width: 450px) {
     .pg_projects{

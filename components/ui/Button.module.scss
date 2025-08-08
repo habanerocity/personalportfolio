@@ -35,6 +35,12 @@
     opacity: 1;
     right: 0;
    }
+
+   @media screen and (max-width: 600px){
+    .btn{
+      width: 100%!important;
+    }
+   }
    
   @media screen and (max-width: 485px) {
       .btn {

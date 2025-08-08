@@ -3,13 +3,15 @@
 
 .footer__class{
     @include flex-container-row;
-    width: 100vw;
+    width: 100%;
     justify-content: center;
     background-color: $color-gray;
     border-color: $color-gray;
-    height: 12vh;
+    min-height: 12vh;
+    position: relative;
+    z-index: 1;
 
     @media(max-width: 450px) {
-        height: 18vh;
+        min-height: 18vh;
       }
 }

@@ -13,7 +13,7 @@ const LogoBar = () => {
                         <div className={`${classes.logo} position-relative p-0 `}>
                             <Image
                                 layout="fill"
-                                src={"/static/lor-long_logo.webp"}
+                                src={"/static/lr-svg-long.svg"}
                                 alt="Logo"
                                 className={classes.hab}
                                 priority

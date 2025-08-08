@@ -1,5 +1,5 @@
 $primary-color: #2ee59d;
-$primary-color-2: #07c77a;
+$primary-color-2: #059e63;
 $secondary-color: #ff6600;
 $secondary-color-2: #d25501;
 $tertiary-color: #6ec4ff;
@@ -12,6 +12,7 @@ $font-body: "Ubuntu", sans-serif;
 $font-header: "Lato", sans-serif;
 
 $box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+$box-shadow-top: 0 -12px 15px rgba(0, 0, 0, 0.35);
 
 $margin-lg: 5rem;
 $margin-md: 3rem;
@@ -23,3 +24,7 @@ $padding-section-sm: 7rem 0;
 $padding-section-xs: 5rem 0;
 
 $card-border-radius: 2rem;
+
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;

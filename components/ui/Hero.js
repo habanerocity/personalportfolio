@@ -45,10 +45,10 @@ const Hero = () => {
               }}
             />
           </div>
-          <h4 className={`fw-light text-black ${classes.subsubheading}`}>I craft user-friendly websites that boost conversions <br />and get results.  Passionate about tech, sports, travel,<br /> and spicy food.  Let&apos;s connect!</h4>
+          <h4 className={`fw-light text-black ${classes.subsubheading}`}>I craft user-friendly websites that boost conversions <br />and get results. Outside of tech, I'm passionate about sports, travel,<br /> and spicy food.  Let&apos;s connect!</h4>
           <div className={classes.btn__container}>
-            <Link className={classes.link} passHref href="/Projects">
-              <button className={`${classes.hero__btn_solid} text-white ${classes.hero__btn} fs-3 mt-4 me-4`}>My Portfolio</button>
+            <Link className={classes.link} passHref href="/services">
+              <button className={`${classes.hero__btn_solid} text-white ${classes.hero__btn} fs-3 mt-4 me-4`}>My Services</button>
             </Link>
             <Link className={classes.link} passHref href="/About">
               <button className={`${classes.hero__btn_transparent} ${classes.hero__btn} fs-3 mt-4`}>About Me</button>
@@ -81,14 +81,14 @@ const Hero = () => {
             height={640}
             width={440}
             objectFit="cover"
-            layout="intrinsic"
+            layout="responsive"
             priority
           />
         </div>
         <div className={` ${classes.tidbits} d-flex align-items-center justify-content-center position-absolute`}>
           <div className={`${classes.tidbits__section} me-5`}>
-            <div className={classes.tidbits__heading}>Based in</div>
-            <h5 className={classes.tidbits__detail}>🏝️ Siargao, Philippines</h5>
+            <div className={classes.tidbits__heading}>Specializing in</div>
+            <h5 className={classes.tidbits__detail}>🌐 Custom WordPress Development</h5>
           </div>
           <div className={`${classes.tidbits__section} me-5`}>
             <div className={classes.tidbits__heading}>From</div>
@@ -96,7 +96,7 @@ const Hero = () => {
           </div>
           <div className={`${classes.tidbits__section} me-5`}>
             <div className={classes.tidbits__heading}>Experience</div>
-            <h5 className={classes.tidbits__detail}>🧑🏻‍💻 2+ Years</h5>
+            <h5 className={classes.tidbits__detail}>🧑🏻‍💻 3+ Years</h5>
           </div>
         </div>
       </div>

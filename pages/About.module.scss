@@ -7,7 +7,7 @@
   margin-top: 1rem;
   min-height: 40rem;
   padding: 3.5rem;
-  border-radius: 2rem;
+  border-radius: $border-radius-md;
   box-shadow: $box-shadow;
 }
 
@@ -27,13 +27,23 @@
   width: 85%;
 
   &__col {
-    width: 85%;
+    // width: 85%;
     padding: $padding-section-md;
   }
 }
 
+@media screen and (max-width: 575px) {
+    .flex__container__col {
+      width: 85%;
+    }
+  }
+
 .headings__container {
   @include flex-container-col;
+}
+
+.about__btn_padding{
+  padding: 2.5rem 5rem!important;
 }
 
 //MEDIA QUERIES

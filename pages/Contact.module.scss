@@ -17,17 +17,17 @@
 .pic__wrapper {
     @include flex-container-col;
     width: 46rem;
-    height: 46rem;
+    // height: 46rem;
 }
 
 .contact__wrapper {
-    border-radius: 5px;
+    border-radius: $border-radius-md;
     margin-top: 1rem;
     box-shadow: $box-shadow;
 }
 
 .shapes {
-    border-radius: 5px 0 0 5px;
+    border-radius: $border-radius-md 0 0 $border-radius-md;
 }
 
 //MEDIA QUERIES

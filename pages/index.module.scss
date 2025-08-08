@@ -2,10 +2,6 @@
 
 .motion {
     background-color: $color-gray;
-
-    @media screen and (max-height: 500px){
-        height: auto!important;
-    }
 }
 
 @media screen and (max-width: 450px){

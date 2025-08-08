@@ -67,6 +67,35 @@
   font-size: 1.9rem;
 }
 
+.service_selection {
+  width: 100%;
+  padding: 0.5rem 0;
+  
+  .checkbox_wrapper {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+    
+    input[type="checkbox"] {
+      margin-right: 0.5rem;
+      cursor: pointer;
+      
+      &:checked + label {
+        font-weight: 600;
+      }
+    }
+    
+    label {
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+  }
+}
+
 @media screen and (max-width: 1176px) {
   .hire {
     padding: 0 1rem;

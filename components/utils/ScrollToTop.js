@@ -1,16 +1,15 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+"use client";
+import { useEffect } from "react";
+import React from "react";
 
 export default function ScrollToTop() {
-  const { pathname } = useRouter();
-
   useEffect(() => {
-    console.log('scrolling to top...');
-    setTimeout(() => {
+    // Only run on client side
+    if (typeof window !== 'undefined') {
+      // Force scroll to top on mount
+      console.log('scrolling to top...');
       window.scrollTo(0, 0);
-      console.log('Scroll to top executed')
-    }, 100); // Adjust the delay as needed
-  }, [pathname]);
-
+    }
+  }, []);
   return null;
 }

@@ -3,6 +3,9 @@
 
 .hab {
     cursor: pointer;
+    // width: 100%;
+    height: 100%;
+    object-fit: contain; // Ensures SVG maintains aspect ratio
 }
 
 .logo {
@@ -53,6 +56,10 @@
     list-style: none;
     transition: all 600ms;
 
+    @media screen and (min-width: 926px) and (max-width: 1399px){
+        padding-left: 1rem;
+    }
+
     @media screen and (max-width: 925px){
         display: none;
     }
@@ -67,6 +74,50 @@
         display: none;
     }
 }
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 0.5rem 0;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (min-width: 451px) {
+      top: 100%;
+    }
+
+    @media screen and (max-width: 450px) {
+      bottom: 100%;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      width: 100%;
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+
+  .submenu_open {
+    display: block;
+  }
+  
+  .nav_text {
+    &:hover {
+      .submenu {
+        @media screen and (min-width: 451px) {
+            display: block;
+        }
+      }
+    }
+  }
+  
+  .submenu li {
+    list-style-type: none;
+    padding: 8px 0;
+    text-align: center;
+  }
 
 .nav_text {
     display: flex;
@@ -88,17 +139,28 @@
         align-items: center;
         padding: 0 1.6rem;
         border-radius: 4px;
+        transition: all 600ms;
         cursor: pointer;
     
-        & > span:hover  {
-            text-shadow: 0 0 1px #000;
-            color: black;
-        } 
+        & > span {
+            // Add initial state for text-shadow
+            text-shadow: 0 0 0 transparent;
+            transition: text-shadow 0.3s ease, color 0.3s ease;
+            
+            &:hover {
+                text-shadow: 0 0 1px #000;
+                color: black;
+            }
+        }
 
         @media screen and (max-width: 1399px){
             & > span:hover {
                 letter-spacing: 0;
             }
+        }
+
+        @media screen and (min-width: 926px) and (max-width: 1399px){
+            padding: 0 1rem;
         }
 
         @media screen and (max-width: 450px){
@@ -121,12 +183,12 @@
     box-shadow: $box-shadow;
 
     @media screen and (max-width: 450px){
-        position: fixed;
-        top: 95%;
+        position: fixed!important;
+        bottom: 0;
         left: 0;
         width: 100%;
         z-index: 1000000;
-
+        box-shadow: $box-shadow-top;
     }
 }
 

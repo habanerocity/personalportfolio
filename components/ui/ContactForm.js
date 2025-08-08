@@ -12,6 +12,31 @@ import DisplaySuccess from "./SuccessWindow/DisplaySuccess";
 const ContactForm = () => {
   const [formSent, setFormSent] = useState(false);
 
+  // Add new state for service selection
+  const [selectedServices, setSelectedServices] = useState({
+    wordpress: false,
+    shopify: false,
+    landingPage: false,
+    digitalMarketing: false,
+    other: false
+  });
+
+  // State for "other" service text input
+  const [otherServiceText, setOtherServiceText] = useState("");
+  
+  // Handle checkbox changes
+  const serviceChangeHandler = (event) => {
+    setSelectedServices({
+      ...selectedServices,
+      [event.target.name]: event.target.checked
+    });
+  };
+  
+  // Handle "other" text input changes
+  const otherServiceTextHandler = (event) => {
+    setOtherServiceText(event.target.value);
+  };
+
   const successHandler = () => {
     setFormSent(true);
   };
@@ -72,16 +97,42 @@ const ContactForm = () => {
 
     if (!formIsValid) return;
 
+    // Prepare services string for email
+    const servicesSelected = Object.keys(selectedServices)
+      .filter(key => selectedServices[key])
+      .map(key => {
+        if (key === 'other' && otherServiceText) {
+          return `Other: ${otherServiceText}`;
+        }
+        return key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+      })
+      .join(', ');
+    
+    // Find and update the hidden input instead of setting property on form element
+    const servicesInput = form.current.querySelector('input[name="services"]');
+    if (servicesInput) {
+      servicesInput.value = servicesSelected;
+    }
+
     emailjs
       .sendForm(
         "service_7ygro38",
-        "template_9hxesra",
+        "template_u49xesf",
         form.current,
         "mL8qYhSyVWCZnrgMV"
       )
       .then(
         result => {
           successHandler();
+          // Reset services as well
+          setSelectedServices({
+            wordpress: false,
+            shopify: false,
+            landingPage: false,
+            digitalMarketing: false,
+            other: false
+          });
+          setOtherServiceText("");
         },
         error => {
           console.log(error.text);
@@ -124,7 +175,7 @@ const ContactForm = () => {
         <h2 className={`fw-bold text-black text-center ${classes.hire}`}>
           Let&apos;s Take Your Brand To The Next Level&nbsp;&nbsp;🚀
         </h2>
-        <p className={`${classes.subheading} fs-4 text-center`}>Connect With Me Today to Bring Your Vision to Life</p>
+        <p className={`${classes.subheading} fs-4 text-center`}>Get a free strategy consultation to discuss your project. I’ll reply within 24-48 hours.</p>
         <div className={classes.input__box}>
           <input
             className={nameInputClasses}
@@ -162,6 +213,96 @@ const ContactForm = () => {
             onBlur={subjectBlurHandler}
             value={enteredSubject}
           />
+
+          <div className={`${classes.service_selection} mb-4`}>
+            <p className="fs-4 mb-2 fw-bold">What services are you interested in? (optional)</p>
+            
+            <div className="d-flex flex-wrap gap-3">
+              <div className={`${classes.checkbox_wrapper} form-check`}>
+                <input 
+                  type="checkbox" 
+                  id="wordpress" 
+                  name="wordpress" 
+                  className="form-check-input" 
+                  checked={selectedServices.wordpress}
+                  onChange={serviceChangeHandler}
+                />
+                <label htmlFor="wordpress" className="form-check-label fs-5">WordPress Development</label>
+              </div>
+              
+              <div className={`${classes.checkbox_wrapper} form-check`}>
+                <input 
+                  type="checkbox" 
+                  id="shopify" 
+                  name="shopify" 
+                  className="form-check-input" 
+                  checked={selectedServices.shopify}
+                  onChange={serviceChangeHandler}
+                />
+                <label htmlFor="shopify" className="form-check-label fs-5">Shopify Development</label>
+              </div>
+              
+              <div className={`${classes.checkbox_wrapper} form-check`}>
+                <input 
+                  type="checkbox" 
+                  id="landingPage" 
+                  name="landingPage" 
+                  className="form-check-input" 
+                  checked={selectedServices.landingPage}
+                  onChange={serviceChangeHandler}
+                />
+                <label htmlFor="landingPage" className="form-check-label fs-5">Landing Page Development</label>
+              </div>
+              
+              <div className={`${classes.checkbox_wrapper} form-check`}>
+                <input 
+                  type="checkbox" 
+                  id="digitalMarketing" 
+                  name="digitalMarketing" 
+                  className="form-check-input" 
+                  checked={selectedServices.digitalMarketing}
+                  onChange={serviceChangeHandler}
+                />
+                <label htmlFor="digitalMarketing" className="form-check-label fs-5">Digital Marketing</label>
+              </div>
+              
+              <div className={`${classes.checkbox_wrapper} form-check`}>
+                <input 
+                  type="checkbox" 
+                  id="other" 
+                  name="other" 
+                  className="form-check-input" 
+                  checked={selectedServices.other}
+                  onChange={serviceChangeHandler}
+                />
+                <label htmlFor="other" className="form-check-label fs-5">Other</label>
+              </div>
+            </div>
+
+            {/* Show text input when "Other" is selected */}
+            {selectedServices.other && (
+              <input
+                type="text"
+                className={`${classes.info} mt-2`}
+                placeholder="Please specify other services"
+                value={otherServiceText}
+                onChange={otherServiceTextHandler}
+                name="other_service_text"
+              />
+            )}
+            
+            {/* Hidden input to store services for emailjs */}
+            <input 
+              type="hidden" 
+              name="services" 
+              value={Object.keys(selectedServices)
+                .filter(key => selectedServices[key])
+                .map(key => key === 'other' ? `Other: ${otherServiceText}` : key)
+                .join(', ')} 
+            />
+          </div>
+
+
           <textarea
             className={`${messageInputClasses} ${classes.msg}  ${classes.info}`}
             rows="5"

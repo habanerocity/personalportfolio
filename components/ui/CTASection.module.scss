@@ -1,0 +1,62 @@
+@import '../../styles/sass/mixins';
+@import '../../styles/sass/variables';
+
+.services__section_pricing_card_btn{
+    // width: 100%;
+    background-color: $secondary-color;
+    padding: 8px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+    &:hover{
+      background-color: $secondary-color-2;
+    }
+  
+    @media(max-width: 425px){
+      font-size: 14px!important;
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    
+  }
+
+  .services__section_container{
+    width: 85%;
+    padding: 6rem 0;
+}
+
+.flex__container {
+    @include flex-container-row;
+    width: 100%;
+
+    &__col {
+        width: 100%;
+        padding: 10rem 0 6rem 0;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 85%!important;
+    }
+}
+  
+  /* If the slider container needs to be full width */
+  .wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    z-index: -1;
+    background-color: white;
+  }

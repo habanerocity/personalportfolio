@@ -9,7 +9,7 @@ const heroData = {
         value: "+649 Million"
       }
     ],
-    heroImage: '/static/shoes.jpg',
+    heroImage: '/static/shoes.webp',
     title: "Create The Next Memorable Ecommerce Success Story With Shopify",
     description: "Grow, Sell To Customers Worldwide, and Reach Your Online Store’s Potential",
     iconSrc: '/static/shopify_logo.svg',

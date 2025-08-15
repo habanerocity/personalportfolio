@@ -23,7 +23,7 @@ const sequenceOneData = {
         description: "Shopify takes care of the technical complexities, offering 24/7 customer support, regular updates, and top-tier security to keep your store safe and running smoothly."
       }
     ],
-    image: '/static/laptop_cc.jpg',
+    image: '/static/laptop_cc.webp',
     imageAlt: 'Online Shopper Making An Ecommerce Purchase'
   };
 

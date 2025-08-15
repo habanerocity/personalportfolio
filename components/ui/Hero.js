@@ -70,7 +70,7 @@ const Hero = () => {
             </div>
             <div className={`rounded-circle d-flex justify-content-center align-items-center ${classes.inner_circle}`}>
               <Link className={classes.link} passHref href="/Contact">
-                <Image alt="Let's connect" src={"/static/bubble-chat.webp"} height={30} width={30} objectFit="cover" layout="intrinsic" priority />
+                <Image alt="Let's connect" src={"/static/bubble-chat.webp"} height={30} width={30} style={{ objectFit: 'cover' }} priority />
               </Link>
             </div>
           </div>
@@ -80,8 +80,7 @@ const Hero = () => {
             src={"/static/lindy-bluex640.webp"}
             height={640}
             width={440}
-            objectFit="cover"
-            layout="responsive"
+            style={{ objectFit: 'cover' }}
             priority
           />
         </div>

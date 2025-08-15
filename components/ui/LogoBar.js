@@ -12,11 +12,12 @@ const LogoBar = () => {
                     <Link href="/">
                         <div className={`${classes.logo} position-relative p-0 `}>
                             <Image
-                                layout="fill"
                                 src={"/static/lr-svg-long.svg"}
                                 alt="Logo"
+                                fill
                                 className={classes.hab}
                                 priority
+                                style={{ objectFit: 'contain' }}
                             />
                         </div>
                     </Link>

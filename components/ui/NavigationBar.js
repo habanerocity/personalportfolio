@@ -5,7 +5,7 @@ import classes from "./NavigationBar.module.scss";
 import { linkInfo } from "../../data/navigationBarLinkInfoData";
 
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const NavigationBar = () => {
   const router = useRouter();
@@ -34,18 +34,16 @@ const NavigationBar = () => {
           <Image
             height={28}
             width={25}
-            layout="fixed"
             className={
               router.pathname.startsWith(link.routerPath) && link.routerPath !== '/'
                   ? `${classes.active}`
                   : router.pathname === link.routerPath
                   ? `${classes.active}`
-                  : null
-          }
+                  : ''
+            }
             src={link.image}
             alt={link.altText}
-            priority={true}
-            /> 
+          />
           <span className={`${classes.link_content}`}>{link.linkName}</span>
         </Link>
         {link.subLinks && (
@@ -72,8 +70,8 @@ const NavigationBar = () => {
               <Image
                 src="/static/Lr-svg-cropped.svg"
                 alt="Logo"
-                layout="fill"
-                objectFit="contain"
+                fill
+                style={{ objectFit: 'contain' }}
               />
             </div>
           </Link>

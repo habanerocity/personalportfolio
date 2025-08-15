@@ -41,11 +41,11 @@ const ServicesSection = ({ heading, services, sideImageSrc='' }) => {
             <div className={`d-lg-flex d-none justify-content-end align-items-center ${classes.imageContainer}`} >
               <Image
                 src={sideImageSrc}
-                layout='cover'
-                height='700'
-                width='700'
+                height={700}
+                width={700}
                 alt='Lindy Ramirez, Web Developer'
                 className={`position-relative h-100 ${classes.services_img}`}
+                style={{ objectFit: 'cover' }}
               />
             </div>
           </div>

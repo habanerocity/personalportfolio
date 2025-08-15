@@ -27,7 +27,7 @@ const SuccessWindow = (props) => {
             src={"/static/times-solid1.svg"}
             className={classes.close}
             alt="close"
-            layout="fill"
+            fill
           />
         </div>
         <div className={`justify-content-center text-center fw-bold w-100 ${classes.flex__container}`}>

@@ -1,7 +1,7 @@
 import classes from "./Contact.module.scss";
 
-import LogoBar from "../components/ui/LogoBar";
 import NavigationBar from "../components/ui/NavigationBar";
+import LogoBar from '../components/ui/LogoBar';
 import SectionContainer from "../components/ui/SectionContainer";
 import Headings from "../components/ui/Headings";
 import Container from "react-bootstrap/Container";

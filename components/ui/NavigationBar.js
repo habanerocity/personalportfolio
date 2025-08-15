@@ -3,7 +3,6 @@ import { useState } from "react";
 import classes from "./NavigationBar.module.scss";
 
 import { linkInfo } from "../../data/navigationBarLinkInfoData";
-import LogoSVG from "../../public/static/Lr-svg-cropped.svg";
 
 import Link from "next/link";
 import Image from "next/legacy/image";
@@ -70,7 +69,12 @@ const NavigationBar = () => {
         <nav className={`${classes.nav_menu} w-100 bg-white position-relative d-flex align-items-center`}>
           <Link href="/">
             <div className={`${classes.logo} list-unstyled position-relative p-0 fw-bold`}>
-              <LogoSVG className={classes.hab} alt="Logo" />
+              <Image
+                src="/static/Lr-svg-cropped.svg"
+                alt="Logo"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
           </Link>
           <div className={`position-absolute ${classes.nav_menu_items_wrapper}`}>

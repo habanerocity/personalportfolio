@@ -9,7 +9,7 @@ const heroData = {
         value: "74%"
       }
     ],
-    heroImage: '/static/happy_person.png',
+    heroImage: '/static/happy_personx562w.webp',
     title: "Grow Your Brand with Expert Digital Marketing Support",
     description: "Drive Engagement, Boost Conversions, and Build a Powerful Online Presence with Tailored Strategies",
     iconSrc: '/static/filter.svg',

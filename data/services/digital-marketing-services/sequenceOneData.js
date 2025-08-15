@@ -23,7 +23,7 @@ const sequenceOneData = {
         description: "I take the burden of managing your digital presence, allowing you to focus on running your business while ensuring results."
       }
     ],
-    image: '/static/web_analytics.jpg',
+    image: '/static/web_analyticsx750w.webp',
     imageAlt: 'Modern Office With Montitor Displaying Web Analytics'
   };
 

@@ -18,7 +18,7 @@ import Head from 'next/head';
 const HomePage = () => {
 	return (
 		<React.Fragment>
-			<main className={`h-100 ${classes.main}`}>
+			<main className={`${classes.main}`}>
 				<Head>
 					<meta
 						name="description"

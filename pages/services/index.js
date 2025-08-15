@@ -80,7 +80,7 @@ const Services = () => {
                                             <div key={serviceCard.id} className={`p-5 fs-4 ${classes.service__card}`}>
                                                 <div className={classes.service__card_content_wrapper}>
                                                     <div className={classes.service__card_content}>
-                                                        <img className={classes.service__card_icon} src={serviceCard.icon} alt={serviceCard.altText} />
+                                                        <Image className={classes.service__card_icon} src={serviceCard.icon} alt={serviceCard.altText} width={40} height={40} />
                                                         <h2 className="mt-3">{serviceCard.title}</h2>
                                                         <p className="mt-3">{serviceCard.description}</p>
                                                     </div>
@@ -95,7 +95,7 @@ const Services = () => {
                         <Container className={`d-flex flex-column position-relative`}>
                             <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
                                 <h2 className={classes.section__heading_header}>
-                                    Some Brands I've Worked With
+                                    Some Brands I&apos;ve Worked With
                                 </h2>
                                 <div className={`d-flex flex-row flex-wrap justify-content-between align-items-center w-100 mt-5 ${classes.logo__holder}`}>
                                     <Image
@@ -283,7 +283,7 @@ const Services = () => {
                                             <OverlayTrigger
                                             placement="bottom"
                                             delay={{ show: 250, hide: 400 }}
-                                            overlay={renderTooltip("I'll efficiently manage and update your website's content to keep it fresh, relevant, and engaging for your audience.")}
+                                            overlay={renderTooltip("I&apos;ll efficiently manage and update your website&apos;s content to keep it fresh, relevant, and engaging for your audience.")}
                                             >
                                                 <span className='d-flex flex-row align-items-center justify-content-center'>
                                                     <Image

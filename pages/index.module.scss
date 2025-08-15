@@ -4,6 +4,10 @@
     background-color: $color-gray;
 }
 
+.main{
+    height: 100%;
+}
+
 @media screen and (max-width: 450px){
     .main{
         display: flex;

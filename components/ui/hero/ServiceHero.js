@@ -69,7 +69,7 @@ const ServiceHero = ({
                 {additionalContent}
               </div>
             )}
-            <Link className={`fw-bolder mt-2 fs-3 ${classes.hero__cta}`} href='/Contact'>
+            <Link className={`fw-bolder mt-2 fs-3 ${classes.hero__cta}`} href='/contact'>
               {ctaText} <span><Image className={classes.hero__cta_arrow} src='/static/circle-arrow-right.svg' width='20' height='20' alt='Right arrow' /></span>
             </Link>
           </div>

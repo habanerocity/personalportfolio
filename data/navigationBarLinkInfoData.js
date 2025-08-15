@@ -59,7 +59,7 @@ export const linkInfo = [
   {
     routerPath: "/contact",
     image: "/static/envelope-solid.svg",
-    linkName: "Contact Me",
+    linkName: "Contact",
     altText: "Contact page icon"
   }
 ];

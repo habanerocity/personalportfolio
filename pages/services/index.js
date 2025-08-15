@@ -158,7 +158,7 @@ const Services = () => {
                                         <div className='d-flex flex-row justify-content-start align-items-end mt-3' >
                                             <span className='display-4 fw-bold me-1' >$199</span><span>USD per month</span>
                                         </div>
-                                        <Link className={classes.link} passHref href="/Contact">
+                                        <Link className={classes.link} passHref href="/contact">
                                             <button className={`${classes.services__section_pricing_card_btn} w-100 fs-3 mt-5`}>Get Started</button>
                                         </Link>
                                     </div>
@@ -183,7 +183,7 @@ const Services = () => {
                                         <div className='d-flex flex-row justify-content-start align-items-end mt-3' >
                                             <span className='display-4 fw-bold me-1' >$650</span><span>USD per month</span>
                                         </div>
-                                        <Link className={classes.link} passHref href="/Contact">
+                                        <Link className={classes.link} passHref href="/contact">
                                             <button className={`${classes.services__section_pricing_card_btn} w-100 fs-3 mt-5`}>Get Started</button>
                                         </Link>
                                     </div>
@@ -207,7 +207,7 @@ const Services = () => {
                                         <div className='d-flex flex-row justify-content-start align-items-end mt-3' >
                                             <span className='display-4 fw-bold me-1' >$1099</span><span>USD per month</span>
                                         </div>
-                                        <Link className={classes.link} passHref href="/Contact">
+                                        <Link className={classes.link} passHref href="contact">
                                             <button className={`${classes.services__section_pricing_card_btn} w-100 fs-3 mt-5`}>Get Started</button>
                                         </Link>
                                     </div>
@@ -650,17 +650,17 @@ const Services = () => {
                                     <tr>
                                         <td className='align-middle'></td>
                                         <td className='align-middle'>
-                                            <Link className={classes.link} passHref href="/Contact">
+                                            <Link className={classes.link} passHref href="/contact">
                                                 <button className={`${classes.services__section_pricing_card_btn} fs-4 mt-5`}>Get Started</button>
                                             </Link>
                                         </td>
                                         <td className='align-middle'>
-                                            <Link className={classes.link} passHref href="/Contact">
+                                            <Link className={classes.link} passHref href="/contact">
                                                 <button className={`${classes.services__section_pricing_card_btn} fs-4 mt-5`}>Get Started</button>
                                             </Link>
                                         </td>
                                         <td className='align-middle'>
-                                            <Link className={classes.link} passHref href="/Contact">
+                                            <Link className={classes.link} passHref href="/contact">
                                                 <button className={`${classes.services__section_pricing_card_btn} fs-4 mt-5`}>Get Started</button>
                                             </Link>
                                         </td>

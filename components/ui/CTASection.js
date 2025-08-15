@@ -5,7 +5,7 @@ import classes from './CTASection.module.scss';
 
 import Footer from './Footer';
 
-const CTASection = ({ buttonText = "Get Started Now", contactHref = "/Contact", paragraphText }) => {
+const CTASection = ({ buttonText = "Get Started Now", contactHref = "/contact", paragraphText }) => {
   return (
     <div className={`h-auto ${classes.wrapper}`}>
       <Container className='d-flex flex-column position-relative align-items-center'>

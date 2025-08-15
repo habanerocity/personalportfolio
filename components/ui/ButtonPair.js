@@ -4,9 +4,9 @@ import classes from './ButtonPair.module.scss';
 
 const ButtonPair = ({ 
   primaryCtaButtonText = "Get In Touch", 
-  primaryCtaButtonLink = "/Contact", 
+  primaryCtaButtonLink = "/contact", 
   secondaryCtaButtonText = "View Work Samples", 
-  secondaryCtaButtonLink = "/Projects", 
+  secondaryCtaButtonLink = "/projects", 
   flexCol = false, 
   centeredOnMobile = true,
   fullWidth = false, 

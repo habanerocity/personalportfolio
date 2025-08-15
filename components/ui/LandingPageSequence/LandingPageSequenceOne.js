@@ -29,7 +29,7 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
                     <div className='d-flex' key={index}>
                       <div >
                         <Image
-                          src='/static/check.png'
+                          src='/static/check.webp'
                           width='20'
                           height='20'
                           alt='checkmark'

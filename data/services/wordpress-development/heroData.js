@@ -9,7 +9,7 @@ const heroData = {
         value: "+59,000"
       }
     ],
-    heroImage: '/static/happy_biz_owner.png',
+    heroImage: '/static/happy_biz_owner.webp',
     title: "Unlock Your Brand's True Potential With a WordPress Website",
     description: "Stand out with unlimited customization, easily manage content, and make your online presence soar to new heights",
     iconSrc: '/static/wordpress-brands-solid.svg',

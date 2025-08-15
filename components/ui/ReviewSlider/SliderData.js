@@ -1,17 +1,10 @@
-import vp_logo from '../../../public/static/vp_logo-3.png';
-import zoe_ph from '../../../public/static/zoe_ph-logo.png';
-import bang_logo from '../../../public/static/bang_logo.png';
-
-import jan_headshot from '../../../public/static/janette.jpeg';
-import jeff_headshot from '../../../public/static/jeff.jpeg';
-import zoe_headshot from '../../../public/static/zoe-thumb-2.png';
-
 const ReviewData = [
 	{
 		id: 'a1',
 		name: 'Janette Vidal',
+		alt: 'Happy American client',
 		company: 'Broker Alliance Networking Group',
-		companyLogo: jan_headshot,
+		companyLogo: '/static/janette.webp',
 		city: 'Asheville',
 		state: 'North Carolina',
 		feedback:
@@ -20,8 +13,9 @@ const ReviewData = [
 	{
 		id: 'a2',
 		name: 'Jeff Candler',
+		alt: 'Happy web development client',
 		company: 'Keller Williams Mountain Oak Properties',
-		companyLogo: jeff_headshot,
+		companyLogo: '/static/jeff.webp',
 		city: 'Asheville',
 		state: 'North Carolina',
 		feedback:
@@ -30,8 +24,9 @@ const ReviewData = [
 	{
 		id: 'a3',
 		name: 'Syndia Wang',
+		alt: 'Happy web design client',
 		company: 'Victorie Packaging',
-		companyLogo: vp_logo,
+		companyLogo: '/static/vp_logo-3.webp',
 		city: 'West Covina',
 		state: 'California',
 		feedback:
@@ -40,8 +35,9 @@ const ReviewData = [
 	{
 		id: 'a4',
 		name: 'Zoe Serna',
+		alt: 'Happy web development client',
 		company: 'The Zoe PH',
-		companyLogo: zoe_headshot,
+		companyLogo: '/static/zoe-thumb-2.webp',
 		city: 'Manila',
 		state: 'Philippines',
 		feedback:

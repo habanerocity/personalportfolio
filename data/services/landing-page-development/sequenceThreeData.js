@@ -9,7 +9,7 @@ const sequenceThreeData = {
       { title: "🧩 Problem Solver", description: "I love tackling challenges and finding creative solutions that make a difference for my clients. Your challenges are opportunities I’m excited to solve." },
       { title: "🤝 A Reliable Partner For Your Brand", description: "When you work with me, you get more than a developer—you gain a partner invested in the growth and success of your brand." }
     ],
-    imageSrc: '/static/lindy-thailand.png',
+    imageSrc: '/static/lindy-thailand.webp',
     imageAlt: 'Lindy in Thailand'
   };
 

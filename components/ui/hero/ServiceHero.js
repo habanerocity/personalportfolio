@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 import { Container } from 'react-bootstrap';
@@ -29,11 +28,12 @@ const ServiceHero = ({
         <div className={`${classes.hero__col_1} d-lg-flex d-none position-relative flex-column justify-content-between`} >
           <div className={classes.hero__img_container} >
             <Image
+            priority
             src={heroImage}
-            fill={true}  // Modern replacement for layout='fill'
-            style={{ objectFit: 'cover' }}  // Control how the image fills the space
+            fill={true} 
+            style={{ objectFit: 'cover' }}  
             className={`position-relative ${classes.hero__img}`}
-            alt='Business Stakeholder Winning'
+            alt='Small Business Owner Winning'
             />
           </div>
             <div className={`d-flex justify-content-between align-items-center ${classes.hero__stats_container}`} >

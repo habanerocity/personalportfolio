@@ -9,7 +9,7 @@ const sequenceThreeData = {
       { title: "📊 Results-Driven Approach", description: "I focus on measurable outcomes, using data and analytics to continuously refine and improve your campaigns, ensuring that your marketing efforts deliver tangible ROI." },
       { title: "🤝 A Reliable Partner For Your Brand", description: "When you work with me you gain a partner invested in the growth and success of your business, and determined to help you reach your brand’s goals." }
     ],
-    imageSrc: '/static/lindy-thailand.png',
+    imageSrc: '/static/lindy-thailand.webp',
     imageAlt: 'Lindy in Thailand'
   };
 

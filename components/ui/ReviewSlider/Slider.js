@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import Image from 'next/image';
 import styles from './Slider.module.scss';
 import ReviewData from './SliderData';
-
-import QuoteLeftIcon from '../../../public/static/quote-left-solid.svg';
-import ArrowLeftIcon from '../../../public/static/chevron-left.svg';
-import ArrowRightIcon from '../../../public/static/chevron-right.svg';
 
 const Slider = () => {
 	const [currentSlide, setCurrentSlide] = useState(0);
@@ -28,7 +24,9 @@ const Slider = () => {
 			<div className={`container d-flex justify-content-center align-items-center ${styles.slider}`}>
 					<div className='w-100 d-flex justify-content-end mt-5' >
 						<div className='w-25 d-flex justify-content-end align-items-center' >
-						<ArrowLeftIcon
+						<Image
+                                src='/static/chevron-left.svg'
+								alt='arrow left'
                                 className={`${styles.arrow__left} ${styles.arrow}`}
                                 onClick={prevSlide}
                                 aria-label="Previous slide"
@@ -36,7 +34,9 @@ const Slider = () => {
                                 width={24}
                                 height={24}
                             />
-                            <ArrowRightIcon
+                            <Image
+                                src='/static/chevron-right.svg'
+								alt='arrow right'
                                 className={`${styles.arrow__right} ${styles.arrow}`}
                                 onClick={nextSlide}
                                 aria-label="Next slide"
@@ -54,7 +54,9 @@ const Slider = () => {
 										<div className={styles.review__slides}>
 											<div className={`${styles.review__content} container`}>
 												<div className={styles.quote}>
-													<QuoteLeftIcon 
+													<Image
+                                                        src='/static/quote-left-solid.svg'
+														alt='client testimonials'
                                                         className={styles.quote__symbol}
                                                         aria-hidden="true" 
                                                         width={60}
@@ -64,7 +66,7 @@ const Slider = () => {
 												<p className={`fs-3 ${styles.testimonial}`}>{review.feedback}</p>
 												<Image 
 												src={review.companyLogo}
-												alt='company logo'
+												alt={review.alt}
 												className='rounded-circle'
 												height={65}
 												width={65}

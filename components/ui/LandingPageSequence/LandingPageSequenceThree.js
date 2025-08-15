@@ -43,7 +43,7 @@ const LandingPageSequenceThree = ({ heading, aboutMeText, attributes, imageSrc, 
               <div className={`d-flex justify-content-center align-items-center ${classes.img_collage}`} >
                 <Image
                   className={`${classes.img_collage_first_floating} ${classes.img_collage_photo}`}
-                  src='/static/aguachile-edited.png'
+                  src='/static/aguachile-edited.webp'
                   width='180'
                   height='200'
                   alt='One of my favorite foods, aguachile'
@@ -57,14 +57,14 @@ const LandingPageSequenceThree = ({ heading, aboutMeText, attributes, imageSrc, 
                 />
                 <Image
                   className={`${classes.img_collage_second_floating} ${classes.img_collage_photo}`}
-                  src='/static/pacifico-beach.png'
+                  src='/static/pacifico-beach.webp'
                   width='180'
                   height='200'
                   alt='Pacifico Beach, Siargao'
                 />
                 <Image
                   className={`${classes.img_collage_third_floating} ${classes.img_collage_photo}`}
-                  src='/static/audi.jpg'
+                  src='/static/audi.webp'
                   width='225'
                   height='169'
                   alt='My First Audi'

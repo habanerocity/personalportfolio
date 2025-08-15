@@ -58,7 +58,7 @@ const Services = () => {
                             <div className='row mt-5 gx-0'>
                                 <div className='col-12 px-0 col-lg-6 d-flex position-relative' >
                                     <Image
-                                    src='/static/st_thomas_up_close.png'
+                                    src='/static/st_thomas_up_close.webp'
                                     layout='fill'
                                     className={`${classes.office_img} position-relative`}
                                     alt='Office Desk'
@@ -106,14 +106,14 @@ const Services = () => {
                                     alt="Taste Tripping"
                                     />
                                     <Image
-                                    src="/static/VICTORIE-tm-5.png"
+                                    src="/static/VICTORIE-TM-5.webp"
                                     className={classes.brands__section_logo}
                                     height={150}
                                     width={180}
                                     alt="Victorie Packaging"
                                     />
                                     <Image
-                                    src="/static/The-Zoe-PH-edited.png"
+                                    src="/static/The-Zoe-PH-edited.webp"
                                     className={classes.brands__section_logo}
                                     height={150}
                                     width={180}
@@ -138,10 +138,6 @@ const Services = () => {
                                 </h2>
                                 <p className="fs-3">Packages That I Offer</p>
                             </div>
-                            {/* <ul className="d-flex flex-row justify-content-center align-items-center w-100 mt-5 list-unstyled">
-                                <li className="fs-1 fw-bold me-5">Monthly Subscription</li> 
-                                <li className="fs-1 fw-bold" >Per Project</li>
-                            </ul> */}
                             <div className={`d-flex flex-row justify-content-between align-items-center w-100 mt-5 ${classes.pricing_card_wrapper}`} >
                                 <div className={`p-5 fs-4 ${classes.services__section_pricing_card}`} >
                                     <div className={`${classes.services__section_pricing_card_wrapper}`}>

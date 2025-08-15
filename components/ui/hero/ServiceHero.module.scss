@@ -53,12 +53,10 @@
 }
 
 .hero__col_2{
-    // height: 83vh;
     width: 59%;
 
     @media(max-width: 991px){
       width: 100%;
-      // background-image: url('/static/devcode.webp');
     }
 }
 

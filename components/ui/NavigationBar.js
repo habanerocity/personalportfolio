@@ -71,6 +71,7 @@ const NavigationBar = () => {
                 src="/static/Lr-svg-cropped.svg"
                 alt="Logo"
                 fill
+                priority
                 style={{ objectFit: 'contain' }}
               />
             </div>

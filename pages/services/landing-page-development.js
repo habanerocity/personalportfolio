@@ -55,7 +55,7 @@ const WordPressDevelopmentServices = () => {
                 <LandingPageSequenceOne {...sequenceOneData} />
                 <LandingPageSequenceTwo {...sequenceTwoData} />
                 <LandingPageSequenceThree {...sequenceThreeData} />
-                <ServicesSection {...landingPageServicesData} sideImageSrc='/static/pexels_handshake.png' />
+                <ServicesSection {...landingPageServicesData} sideImageSrc='/static/pexels_handshakex620.webp' />
                 <TestimonialsSection heading={sectionHeadingsData.sectionFive} />
                 <FAQSection heading={sectionHeadingsData.sectionSix} faqs={landingPageFAQsData} />
                 <CTASection {...ctaData} buttonText='Get Started Now' />

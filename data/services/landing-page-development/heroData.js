@@ -9,7 +9,7 @@ const heroData = {
         value: "60%"
       }
     ],
-    heroImage: '/static/zoe_ph_collage.png',
+    heroImage: '/static/zoe_ph_collagex550.webp',
     title: "Generate Leads and Sales with Custom Landing Pages",
     description: "Get a custom-coded landing page tailored to your brand, optimized for speed, SEO, and lead generation",
     iconSrc: '/static/filter.svg',

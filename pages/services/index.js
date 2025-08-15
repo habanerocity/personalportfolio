@@ -58,7 +58,7 @@ const Services = () => {
                             <div className='row mt-5 gx-0'>
                                 <div className='col-12 px-0 col-lg-6 d-flex position-relative' >
                                     <Image
-                                    src='/static/.webp'
+                                    src='/static/st_thomas_up_close.webp'
                                     layout='fill'
                                     className={`${classes.office_img} position-relative`}
                                     alt='Office Desk'

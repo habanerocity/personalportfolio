@@ -23,7 +23,7 @@ const sequenceOneData = {
         description: "Ensure that your audience receives clear and concise messaging tailored to their specific needs or interests. By eliminating distractions and emphasizing a single call-to-action, effectively communicate your value proposition and drive higher engagement from potential customers."
       }
     ],
-    image: '/static/landing_page_tablet.png',
+    image: '/static/landing_page_tabletx750.webp',
     imageAlt: 'Online Shopper Making An Ecommerce Purchase'
   };
 

@@ -14,10 +14,10 @@ const LogoBar = () => {
                             <Image
                                 src={"/static/lr-svg-long.svg"}
                                 alt="Logo"
-                                fill
+                                layout="fill"
+                                objectFit="contain"
                                 className={classes.hab}
                                 priority
-                                style={{ objectFit: 'contain' }}
                             />
                         </div>
                     </Link>

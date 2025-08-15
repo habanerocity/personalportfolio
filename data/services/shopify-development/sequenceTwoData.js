@@ -7,7 +7,7 @@ const sectionTwoData = {
       "One of the key benefits of hiring a developer is the ongoing support and guidance. As your business scales, you’ll need your Shopify store to evolve. A professional developer doesn’t just launch your site and disappear—they provide continuous support, maintenance, and updates to ensure your store stays secure and functions at its best. ",
       "By working with a professional, you’re not just setting up a store - you’re building a future-proof, scalable online business that meets the highest standards in design, functionality, and customer experience."
     ],
-    image: '/static/nm-laptop-iphone.png',
+    image: '/static/nm-laptop-iphonex750.webp',
     imageAlt: 'Custom Shopify Theme',
     imageHeight: 250,
   };

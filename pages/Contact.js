@@ -1,4 +1,4 @@
-import classes from "./Contact.module.scss";
+import classes from "./contact.module.scss";
 
 import NavigationBar from "../components/ui/NavigationBar";
 import LogoBar from '../components/ui/LogoBar';
@@ -17,7 +17,17 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/legacy/image";
 
+import useResponsiveImage from "../hooks/useResponsiveImage";
+
 const Contact = () => {
+  const imageSrc = useResponsiveImage(
+    null, // No image for screen widths below 851px
+    "/static/coding_in_paradise.webp", // Image for screen widths between 851px and 991px
+    "/static/lindy-hanoix460.webp", // Image for screen widths above 991px
+    851,
+    991
+  );
+
   return (
     <React.Fragment>
       <main className={classes.pg_contact}>
@@ -49,13 +59,15 @@ const Contact = () => {
                     <div className={`bg-white ${classes.contact__wrapper}`}>
                       <Container className='d-flex flex-row justify-content-center p-0'>
                         <div className={`justify-content-center align-items-center position-relative ${classes.pic__wrapper}`}>
-                          <Image
-                            src={"/static/lindy-hanoix460.webp"}
-                            className={classes.shapes}
-                            layout="fill"
-                            alt="Abstract Shapes"
-                            priority
-                          />
+                          {imageSrc && (
+                            <Image
+                              src={imageSrc}
+                              className={classes.shapes}
+                              layout="fill"
+                              alt="Contact me today to get started"
+                              priority
+                            />
+                          )}
                         </div>
                         <ContactForm />
                       </Container>

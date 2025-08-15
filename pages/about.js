@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 
-import classes from "./About.module.scss";
+import classes from "./about.module.scss";
 
 import Link from "next/link";
 import Head from "next/head";

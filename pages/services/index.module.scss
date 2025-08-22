@@ -5,22 +5,22 @@
     @include flex-container-row;
     width: 100%;
   
-    &__col {
-      // width: 85%;
+    &__top_section {
       padding: 10rem 0 6rem 0;
-    }
-  }
 
-  @media screen and (max-width: 1399px) {
-    .flex__container__col {
-      padding: 8rem 0;
+      @media screen and (max-width: 575px) {
+        width: 85%;
+      }
     }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .flex__container__col {
-      padding: 7rem 0;
+
+    &__col {
+      padding: 6rem 0;
+
+      @media screen and (max-width: 575px) {
+        width: 85%;
+      }
     }
+
   }
 
   @media screen and (max-width: 575px) {
@@ -39,10 +39,6 @@
     .pg{
       display: flex;
       flex-direction: column-reverse;
-    }
-  
-    .flex__container__col {
-      padding: 10rem 0;
     }
 }
 
@@ -302,6 +298,10 @@
 
     & img{
       margin-bottom: 3rem;
+    }
+
+    & img:last-child {
+      margin-bottom: 0;
     }
   }
 }

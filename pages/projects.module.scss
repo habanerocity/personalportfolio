@@ -1,0 +1,91 @@
+@import '../styles/sass/mixins';
+
+.border__grey{
+    border: 1px solid #212529;
+}
+
+.project__filtering{
+    font-size: 2.5rem;
+    width: 75%;
+
+    @media(max-width: 1399px){
+        width: 85%;
+    }
+
+    @media(max-width: 1199px){
+        width: 95%;
+    }
+
+    @media(max-width: 1099px){
+        width: 100%;
+    }
+
+    @media(max-width: 629px){
+        font-size: 2rem;
+    }
+
+    @media(max-width: 500px){
+        font-size: 1.6rem;
+    }
+}
+  
+.card__group__wrapper {
+    @include flex-container-row;
+    margin-top: 1rem;
+}
+
+.flex__container {
+    @include flex-container-row;
+    width: 85%;
+    justify-content: space-between;
+
+    &__col{
+        padding: 10rem 0;
+        // width: 85%;
+    }
+
+    @media(max-width: 992px){
+        width: 100%;
+        flex-wrap: wrap
+    }
+
+    @media(max-width: 513px){
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+
+
+.headings__container{
+    @include flex-container-col; 
+}
+
+@media screen and (max-width: 1399px){
+    .flex__container__col {
+        padding: 8rem 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .flex__container__col {
+        padding: 7rem 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .flex__container__col {
+      width: 85%;
+    }
+  }
+
+@media screen and (max-width: 450px) {
+    .pg_projects{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .flex__container__col {
+        padding: 10rem 0;
+    }
+}

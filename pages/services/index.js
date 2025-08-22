@@ -49,7 +49,7 @@ const Services = () => {
                 onAnimationStart={pageFadeInAnimation.onAnimationStart}
                 >
                     <SectionContainer className="min-h-auto">
-                        <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
+                        <Container className={`d-flex flex-column position-relative ${classes.flex__container__top_section}`}>
                             <div className={classes.flex__container}>
                                 <div className={`w-100 align-items-start text-start justify-content-start ${classes.headings__container}`}>
                                     <Headings heading="How I Can Help You">Services</Headings>      
@@ -92,8 +92,8 @@ const Services = () => {
                             </div>
                         </Container>
                     <div className={`h-auto ${classes.brands_section}`}>
-                        <Container className={`d-flex flex-column position-relative`}>
-                            <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
+                        <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
+                            <div className={` flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
                                 <h2 className={classes.section__heading_header}>
                                     Some Brands I&apos;ve Worked With
                                 </h2>
@@ -130,8 +130,8 @@ const Services = () => {
                             </div>
                         </Container>
                     </div>
-                    <Container className={`d-flex flex-column position-relative`}>
-                        <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
+                    <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
+                        <div className={`flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
                             <div className='d-flex flex-column justify-content-start align-items-start'>
                                 <h2 className={classes.section__heading_header}>
                                     Pricing
@@ -675,9 +675,9 @@ const Services = () => {
                     </Container>
                 </SectionContainer>
                 <div className={`h-auto ${classes.brands_section}`}>
-                    <Container className={`d-flex flex-column position-relative`}>
-                        <div className="d-flex flex-column justify-content-center align-items-center my-5">
-                            <h1 className="text-center my-4">
+                    <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
+                        <div className="d-flex flex-column justify-content-center align-items-center">
+                            <h1 className="text-center mb-4">
                                 Custom Packages and Per Project Pricing Available Upon Request!
                             </h1>
                             <Link className={classes.link} passHref href="/Contact">

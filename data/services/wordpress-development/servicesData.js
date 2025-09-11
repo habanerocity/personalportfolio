@@ -5,7 +5,7 @@ const servicesData = {
         iconSrc: '/static/laptop-code-white.svg',
         altText: 'Theme Development',
         title: 'Theme Development',
-        description: 'I can hand-code unique themes from custom code. Custom WordPress themes make your website more unique, secure, and avoid the bloat that comes with pre-made templates.'
+        description: 'I can hand-code unique themes from custom code. Custom WordPress themes make your website more unique, secure, and avoid the bloat that comes with pre-made WordPress templates.'
       },
       {
         iconSrc: '/static/sliders.svg',
@@ -35,7 +35,7 @@ const servicesData = {
         iconSrc: '/static/wrench.svg',
         altText: 'Maintenance & Support',
         title: 'Maintenance & Support',
-        description: 'I’ll keep your website running smoothly and address any issues that arise. I’ll also assist you with hosting, domain management and setup to ensure everything is properly configured from the start.'
+        description: 'I’ll keep your website running smoothly and address any issues that arise. I’ll also assist you with web hosting services, domain management and setup to ensure everything is properly configured from the start.'
       }
     ]
   };

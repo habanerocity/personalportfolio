@@ -32,11 +32,35 @@ const WordPressDevelopmentServices = () => {
     return (
     <React.Fragment>
         <Head>
-            <title>Services - Lindy Ramirez | Freelance Web Developer</title>
+            <title>WordPress Development Services - Lindy Ramirez | Freelance Web Developer</title>
             <meta
                 name="description"
-                content="Services page for Lindy Ramirez, Freelance Web Developer. View my services here."
+                content="Professional WordPress web design and development services by Lindy Ramirez. Custom themes, plugin development, and website optimization that get you results."
             />
+            <meta
+                name="keywords"
+                content="WordPress development, custom WordPress themes, WordPress plugin development, website optimization, freelance web developer, Los Angeles"
+            />
+            <meta name="author" content="Lindy Ramirez" />
+            
+            {/* Open Graph Metadata */}
+            <meta property="og:title" content="WordPress Development Services - Lindy Ramirez" />
+            <meta
+                property="og:description"
+                content="Professional WordPress development services by Lindy Ramirez. Custom themes, plugin development, and website optimization tailored to your needs."
+            />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.lindyramirez.com/services/wordpress-development" />
+            <meta property="og:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+
+            {/* Twitter Card Metadata */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="WordPress Development Services - Lindy Ramirez" />
+            <meta
+                name="twitter:description"
+                content="Professional WordPress development services by Lindy Ramirez. Custom themes, plugin development, and website optimization tailored to your needs."
+            />
+            <meta name="twitter:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
         </Head>
         <div className={classes.pg}>
             <NavigationBar />

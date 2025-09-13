@@ -31,12 +31,36 @@ const WordPressDevelopmentServices = () => {
 
     return (
     <React.Fragment>
-        <Head>
-            <title>Services - Lindy Ramirez | Freelance Web Developer</title>
+       <Head>
+            <title>Landing Page Development Services - Lindy Ramirez | Digital Marketing & SEO</title>
             <meta
                 name="description"
-                content="Services page for Lindy Ramirez, Freelance Web Developer. View my services here."
+                content="Professional landing page development services by Lindy Ramirez. Custom lead generation landing pages, product landing pages, and sales funnel websites that drive results."
             />
+            <meta
+                name="keywords"
+                content="digital marketing services, online marketing, digital marketing company, internet marketing, digital marketing near me, seo digital marketing, seo and digital marketing, marketing and seo, digital marketing consultant near me, internet marketing service, online digital marketing"
+            />
+            <meta name="author" content="Lindy Ramirez" />
+            
+            {/* Open Graph Metadata */}
+            <meta property="og:title" content="Landing Page Development Services - Lindy Ramirez | Digital Marketing Expert" />
+            <meta
+                property="og:description"
+                content="Custom landing pages and sales funnel websites by Lindy Ramirez. Boost conversions with lead generation landing pages and marketing funnels tailored to your needs."
+            />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.lindyramirez.com/services/landing-page-development" />
+            <meta property="og:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+
+            {/* Twitter Card Metadata */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Landing Page Development Services - Lindy Ramirez | Digital Marketing Expert" />
+            <meta
+                name="twitter:description"
+                content="Custom landing pages and sales funnel websites by Lindy Ramirez. Boost conversions with lead generation landing pages and marketing funnels tailored to your needs."
+            />
+            <meta name="twitter:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
         </Head>
         <div className={classes.pg}>
             <NavigationBar />

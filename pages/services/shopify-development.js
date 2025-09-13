@@ -32,11 +32,35 @@ const WordPressDevelopmentServices = () => {
     return (
     <React.Fragment>
         <Head>
-            <title>Services - Lindy Ramirez | Freelance Web Developer</title>
+            <title>Shopify Development Services - Lindy Ramirez | Shopify Expert & Partner | Los Angeles, California</title>
             <meta
                 name="description"
-                content="Services page for Lindy Ramirez, Freelance Web Developer. View my services here."
+                content="Professional Shopify development services by Lindy Ramirez. Custom Shopify stores, dropshipping setup, theme development, and Shopify apps that drive sales and growth."
             />
+            <meta
+                name="keywords"
+                content="shopify stores, shopify dropshipping, shopify website builder, shopify themes, shopify pricing, shopify expert, shopify online shopping, shopify partner, shopify apps, shopify store themes, shopify development, custom shopify themes, shopify ecommerce"
+            />
+            <meta name="author" content="Lindy Ramirez" />
+            
+            {/* Open Graph Metadata */}
+            <meta property="og:title" content="Shopify Development Services - Lindy Ramirez | Shopify Expert" />
+            <meta
+                property="og:description"
+                content="Professional Shopify development services by Shopify partner Lindy Ramirez. Custom Shopify stores, themes, apps, and dropshipping solutions that convert."
+            />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.lindyramirez.com/services/shopify-development" />
+            <meta property="og:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+
+            {/* Twitter Card Metadata */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Shopify Development Services - Lindy Ramirez | Shopify Expert" />
+            <meta
+                name="twitter:description"
+                content="Professional Shopify development services by certified Shopify partner Lindy Ramirez. Custom Shopify stores, themes, apps, and dropshipping solutions that convert."
+            />
+            <meta name="twitter:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
         </Head>
         <div className={classes.pg}>
             <NavigationBar />

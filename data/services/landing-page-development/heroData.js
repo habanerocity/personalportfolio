@@ -13,8 +13,10 @@ const heroData = {
     title: "Generate Leads and Sales with Custom Landing Pages",
     description: "Get a custom-coded landing page tailored to your brand, optimized for speed, SEO, and lead generation",
     iconSrc: '/static/filter.svg',
+    iconAlt: 'Expert custom landing page development services',
     ctaText: "Get My Free Consultation",
-    additionalContent: "Start Your Dream Ecommerce Store Today With Shopify."
+    additionalContent: "Start Your Dream Ecommerce Store Today With Shopify.",
+    alt: "Creative client's high-converting landing page"
   };
 
 export default heroData;

@@ -79,7 +79,7 @@ const WordPressDevelopmentServices = () => {
                 <LandingPageSequenceOne {...sequenceOneData} />
                 <LandingPageSequenceTwo {...sequenceTwoData} />
                 <LandingPageSequenceThree {...sequenceThreeData} />
-                <ServicesSection {...shopifyServicesData} sideImageSrc='/static/online_shopping.webp' />
+                <ServicesSection {...shopifyServicesData} sideImageSrc='/static/online_shopping.webp' sideImageAlt='Shopify store owner increasing sales' />
                 <TestimonialsSection heading={sectionHeadingsData.sectionFive} />
                 <FAQSection heading={sectionHeadingsData.sectionSix} faqs={shopifyFAQsData} />
                 <CTASection {...ctaData} buttonText='Get Started Now' />

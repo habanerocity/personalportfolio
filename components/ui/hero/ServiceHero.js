@@ -6,9 +6,11 @@ import classes from './ServiceHero.module.scss';
 const ServiceHero = ({
   stats,
   heroImage,
+  alt,
   title,
   description,
   iconSrc,
+  iconAlt,
   ctaText,
   additionalContent,
   iconBoxBgClass = "",
@@ -33,7 +35,7 @@ const ServiceHero = ({
             fill={true} 
             style={{ objectFit: 'cover' }}  
             className={`position-relative ${classes.hero__img}`}
-            alt='Small Business Owner Winning'
+            alt={alt}
             />
           </div>
             <div className={`d-flex justify-content-between align-items-center ${classes.hero__stats_container}`} >
@@ -59,7 +61,7 @@ const ServiceHero = ({
             <Image
               src={iconSrc}
               fill={true}
-              alt='Service Icon'
+              alt={iconAlt}
               className='p-4'
             />
           </div>

@@ -1,10 +1,9 @@
-import React from 'react';
 import Image from 'next/image';
 import { Row, Col, Container } from 'react-bootstrap';
 import AnimatedHeading from '../animations/AnimatedHeading';
 import classes from './ServicesSection.module.scss';
 
-const ServicesSection = ({ heading, services, sideImageSrc='' }) => {
+const ServicesSection = ({ heading, services, sideImageSrc='', sideImageAlt='Lindy Ramirez, web developer' }) => {
   return (
     <div className={`h-auto ${classes.bg_gray}`}>
       <Container className='d-flex flex-column position-relative align-items-center'>
@@ -43,7 +42,7 @@ const ServicesSection = ({ heading, services, sideImageSrc='' }) => {
                 src={sideImageSrc}
                 height={700}
                 width={700}
-                alt='Lindy Ramirez, Web Developer'
+                alt={sideImageAlt}
                 className={`position-relative h-100 ${classes.services_img}`}
                 style={{ objectFit: 'cover' }}
               />

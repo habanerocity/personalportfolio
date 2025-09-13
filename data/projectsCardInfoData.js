@@ -31,6 +31,7 @@ export const cardInfo = [
     tools: ["HTML", "SCSS", "JQuery", "PHP"]
   },
   {
+    id: 4,
     image: "/static/portfolio-victorie.webp",
     title: "Victorie Packaging Wordpress Website Refresh",
     categories: ['Design', 'WordPress'],
@@ -39,7 +40,17 @@ export const cardInfo = [
     tools: ["Wordpress", "WP Bakery", "HTML", "CSS", "Photoshop"]
   },
   {
-    id: 4,
+    id: 7,
+    image: "/static/phils_autospa.webp",
+    title: "Phil's Auto Spa",
+    categories: ['React JS', 'Landing Pages'],
+    description: `Landing page built for a mobile auto detailing specialist, designed for improved conversion rates and lead generation. It features responsive design, functional components, a contact modal window, Email JS API integration, custom hooks, implementation of GSAP animation library, and a customer review slider.`,
+    liveDemo: "https://www.philsautospa.com/",
+    github: "https://github.com/habanerocity/mobilemechanic",
+    tools: ["React JS", "API", "Bootstrap", "SCSS", "GSAP"]
+  },
+  {
+    id: 5,
     image: "/static/portfolio-shopify-2.webp",
     title: "Natural Mystic Custom Shopify Theme",
     categories: ['Shopify'],
@@ -51,7 +62,7 @@ export const cardInfo = [
 
   },
   {
-    id: 5,
+    id: 6,
     image: "/static/mactodo.webp",
     title: "Daily Agenda To Do App",
     categories: ['React JS'],
@@ -60,15 +71,4 @@ export const cardInfo = [
     github: "https://github.com/habanerocity/dailyagenda",
     tools: ["React JS", "API", "PHP", "MySQL", "JSON Web Tokens"]
   },
-  {
-    id: 6,
-    image: "/static/macmechanic.webp",
-    title: "Mobile Mechanic Landing Page",
-    categories: ['React JS', 'Landing Pages'],
-    description: `Small business landing page, designed for improved conversion rates and lead generation for automotive technicians and trade professionals. It features responsive design, functional components, a contact modal window, Email JS API integration, custom hooks, implementation of GSAP animation library, and a customer review slider.`,
-    liveDemo: "https://mobile-mechanic-bc92f.web.app/",
-    github: "https://github.com/habanerocity/mobilemechanic",
-    tools: ["React JS", "API", "Bootstrap", "SCSS", "GSAP"]
-  },
-
 ];

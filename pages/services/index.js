@@ -81,7 +81,7 @@ const Services = () => {
                                                 <div className={classes.service__card_content_wrapper}>
                                                     <div className={classes.service__card_content}>
                                                         <Image className={classes.service__card_icon} src={serviceCard.icon} alt={serviceCard.altText} width={40} height={40} />
-                                                        <h2 className="mt-3">{serviceCard.title}</h2>
+                                                        <h3 className="mt-3">{serviceCard.title}</h3>
                                                         <p className="mt-3">{serviceCard.description}</p>
                                                     </div>
                                                     <ButtonPair primaryCtaButtonText="Get Started" secondaryCtaButtonText="Learn More" secondaryCtaButtonLink={`/services/${serviceCard.link}`} flexCol={true} fullWidth={true} />

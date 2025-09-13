@@ -79,7 +79,7 @@ const WordPressDevelopmentServices = () => {
                 <LandingPageSequenceOne {...sequenceOneData} />
                 <LandingPageSequenceTwo {...sequenceTwoData} />
                 <LandingPageSequenceThree {...sequenceThreeData} />
-                <ServicesSection {...digitalMarketingServicesData} sideImageSrc='/static/plantsx467w.webp' />
+                <ServicesSection {...digitalMarketingServicesData} sideImageSrc='/static/plantsx467w.webp' sideImageAlt='Small business owner building online presence with digital marketing' />
                 <TestimonialsSection heading={sectionHeadingsData.sectionFive} />
                 <FAQSection heading={sectionHeadingsData.sectionSix} faqs={digitalMarketingFAQsData} />
                 <CTASection {...ctaData} buttonText='Get Started Now' />

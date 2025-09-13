@@ -62,7 +62,7 @@ const LandingPageSequenceThree = ({ heading, aboutMeText, attributes, imageSrc, 
                   src='/static/pacifico-beach.webp'
                   width={'180'}
                   height={'200'}
-                  alt='Pacifico Beach, Philippines'
+                  alt='American Web developer working on the beach'
                   
                 />
                 <Image
@@ -70,7 +70,7 @@ const LandingPageSequenceThree = ({ heading, aboutMeText, attributes, imageSrc, 
                   src='/static/audi.webp'
                   width={'225'}
                   height={'169'}
-                  alt='My First Audi'
+                  alt='Web developer located in the San Fernando Valley, Los Angeles, CA'
                   
                 />
               </div>

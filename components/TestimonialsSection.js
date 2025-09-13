@@ -1,4 +1,3 @@
-import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import AnimatedHeading from '../components/animations/AnimatedHeading';
 import Slider from '../components/ui/ReviewSlider/Slider';

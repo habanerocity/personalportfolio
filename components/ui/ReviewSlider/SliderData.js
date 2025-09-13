@@ -41,7 +41,7 @@ const ReviewData = [
 		city: 'Manila',
 		state: 'Philippines',
 		feedback:
-			'Lindy redesigned our WooCommerce website, boosting its look and performance.   His social media marketing and Google Ads expertise increased our traffic, kept them engaged and generated leads.  Lindy’s clear communication made technical details easy to understand, and he consistently exceeded our expectations.'
+			'I couldn’t be happier with my website! Lindy took my ideas and brought them to life in a way that feels professional, creative, and true to me. He was patient, responsive, and always made sure I felt comfortable with each step of the process. I’d definitely recommend him to anyone who wants a beautiful website and a stress-free experience.'
 	},
 ];
 

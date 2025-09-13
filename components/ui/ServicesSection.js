@@ -30,7 +30,7 @@ const ServicesSection = ({ heading, services, sideImageSrc='' }) => {
                         alt={service.altText}
                       />
                     </div>
-                    <p className={`text-white mt-2 ${classes.fs_custom} fw-bold`} >{service.title}</p>
+                    <h3 className={`text-white mt-2 ${classes.fs_custom} fw-normal`} >{service.title}</h3>
                     <p className={`text-white ${classes.fs_custom_sm} mb-0`} >
                       {service.description}
                     </p>

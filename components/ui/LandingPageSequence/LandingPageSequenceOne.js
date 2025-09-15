@@ -7,7 +7,7 @@ import classes from './LandingPageSequenceOne.module.scss'; // Create this file
 
 const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt }) => {
   return (
-    <div className={`h-auto ${classes.wrapper}`}>
+    <section className={`h-auto ${classes.wrapper}`}>
       <Container className='d-flex flex-column position-relative align-items-center'>
         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
           <Row>
@@ -64,7 +64,7 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
           </Row>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

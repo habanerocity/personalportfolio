@@ -10,7 +10,7 @@ import classes from './LandingPageSequenceThree.module.scss';
 
 const LandingPageSequenceThree = ({ heading, aboutMeText, attributes, imageSrc, imageAlt, contactButtonText = "Get In Touch", workSamplesButtonText = "View Work Samples" }) => {
   return (
-    <div className={`h-auto ${classes.wrapper}`}>
+    <section className={`h-auto ${classes.wrapper}`}>
       <Container className='d-flex flex-column position-relative align-items-center'>
         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
           <Row>
@@ -78,7 +78,7 @@ const LandingPageSequenceThree = ({ heading, aboutMeText, attributes, imageSrc, 
           </Row>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

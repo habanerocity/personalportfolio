@@ -8,7 +8,7 @@ import classes from './LandingPageSequenceTwo.module.scss';
 const LandingPageSequenceTwo = ({ heading, paragraphs, image, imageAlt, imageHeight = 350 }) => {
 
   return (
-    <div className={`h-auto ${classes.bg_gray}`}>
+    <section className={`h-auto ${classes.bg_gray}`}>
       <Container className='d-flex flex-column position-relative align-items-center'>
         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
           <Row>
@@ -40,7 +40,7 @@ const LandingPageSequenceTwo = ({ heading, paragraphs, image, imageAlt, imageHei
           </Row>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

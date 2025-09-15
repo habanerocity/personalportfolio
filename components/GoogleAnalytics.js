@@ -3,6 +3,10 @@ import Script from 'next/script';
 import { GA_MEASUREMENT_ID } from '../utils/gtag';
 
 const GoogleAnalytics = () => {
+  if (process.env.NODE_ENV !== 'production') {
+    return null;
+  }
+
   return (
     <>
       <Script

@@ -52,7 +52,10 @@ const ServiceHero = ({
                 className={`position-relative ${classes.hero__img}`}
                 alt={alt}
                 loading="lazy"
-                sizes="(max-width: 991px) 0px, 50vw"
+                sizes="(max-width: 768px) 0px, (max-width: 1024px) 50vw, (max-width: 1200px) 40vw, 33vw"
+                quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
             )}
           </div>
@@ -81,6 +84,8 @@ const ServiceHero = ({
               fill={true}
               alt={iconAlt}
               className='p-4'
+              sizes="(max-width: 768px) 60px, (max-width: 1024px) 80px, 100px"
+              quality={90}
             />
           </div>
           <div className={`${classes.cta__wrapper} d-flex flex-column ms-sm-4 ${classes.hero__heading}`}>
@@ -90,7 +95,7 @@ const ServiceHero = ({
               </div>
             )}
             <Link className={`fw-bolder mt-2 fs-3 ${classes.hero__cta}`} href='/contact'>
-              {ctaText} <span><Image className={classes.hero__cta_arrow} src='/static/circle-arrow-right.svg' width='20' height='20' alt='Right arrow' /></span>
+              {ctaText} <span><Image className={classes.hero__cta_arrow} src='/static/circle-arrow-right.svg' width='20' height='20' alt='Right arrow' sizes="20px" quality={95} /></span>
             </Link>
           </div>
         </div>

@@ -23,7 +23,7 @@ const sequenceOneData = {
         description: "With a large community of developers and frequent updates, WordPress ensures security, innovation, and access to resources whenever needed."
       }
     ],
-    image: '/static/wp-laptopx750.webp',
+    image: '/static/optimized/wp-laptopx750-optimized.webp',
     imageAlt: 'WordPress Interface on Laptop'
   };
 

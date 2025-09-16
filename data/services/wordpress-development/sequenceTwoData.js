@@ -6,7 +6,7 @@ const sectionTwoData = {
     "As a business owner, your time is best spent on what you do best—running your business. Hiring a web developer allows you to leave the technical aspects of website development to a professional, so you can focus on driving sales and growing your brand. You get the peace of mind that your website is being expertly handled while you concentrate on your strengths.",
     "An experienced developer doesn’t just launch your website and walk away. I provide ongoing technical support, maintenance, and updates, ensuring your WordPress website remains secure, up-to-date, and functions smoothly as technology evolves. Security is a top priority—I implement WordPress security best practices and other key measures to protect your site from potential threats."
   ],
-  image: '/static/foodventure-figma.webp',
+  image: '/static/optimized/foodventure-figma-optimized.webp',
   imageAlt: 'Custom WordPress Theme'
 };
 

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/legacy/image";
 import Typewriter from "typewriter-effect";
+import { getOptimizedImageSrc, getResponsiveSizes } from './ResponsiveImage';
 
 import classes from "./Hero.module.scss";
 
@@ -70,14 +71,14 @@ const Hero = () => {
             </div>
             <div className={`rounded-circle d-flex justify-content-center align-items-center ${classes.inner_circle}`}>
               <Link className={classes.link} passHref href="/contact">
-                <Image alt="Let's connect" src={"/static/bubble-chat.webp"} height={30} width={30} style={{ objectFit: 'cover' }} priority />
+                <Image alt="Let's connect" src={getOptimizedImageSrc("/static/bubble-chat.webp")} height={30} width={30} style={{ objectFit: 'cover' }} priority />
               </Link>
             </div>
           </div>
           <Image
             alt="Lindy"
             className={classes.lindy}
-            src={"/static/lindy-bluex640.webp"}
+            src={getOptimizedImageSrc("/static/lindy-bluex640.webp")}
             height={640}
             width={440}
             style={{ objectFit: 'cover' }}

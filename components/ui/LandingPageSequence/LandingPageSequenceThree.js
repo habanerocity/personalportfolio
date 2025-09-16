@@ -4,6 +4,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 
 import ButtonPair from '../ButtonPair';
 import AnimatedHeading from '../../animations/AnimatedHeading';
+import { getOptimizedImageSrc, getResponsiveSizes } from '../ResponsiveImage';
 
 import Link from 'next/link';
 import classes from './LandingPageSequenceThree.module.scss';
@@ -43,35 +44,41 @@ const LandingPageSequenceThree = ({ heading, aboutMeText, attributes, imageSrc, 
               <div className={`d-flex justify-content-center align-items-center ${classes.img_collage}`} >
                 <Image
                   className={`${classes.img_collage_first_floating} ${classes.img_collage_photo}`}
-                  src={'/static/aguachile-edited.webp'}
+                  src={getOptimizedImageSrc('/static/aguachile-edited.webp')}
                   width={'180'}
                   height={'200'}
                   alt={'One of my favorite foods, aguachile'}
-                  
+                  sizes={getResponsiveSizes('thumbnail')}
+                  quality={85}
                 />
                 <Image
                   className={`${classes.img_collage_main} ${classes.img_collage_photo}`}
-                  src={imageSrc}
+                  src={getOptimizedImageSrc(imageSrc)}
                   width={'376'}
                   height={'500'}
                   alt={imageAlt}
-                  
+                  sizes={getResponsiveSizes('card')}
+                  quality={85}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
                 <Image
                   className={`${classes.img_collage_second_floating} ${classes.img_collage_photo}`}
-                  src='/static/pacifico-beach.webp'
+                  src={getOptimizedImageSrc('/static/pacifico-beach.webp')}
                   width={'180'}
                   height={'200'}
                   alt='American Web developer working on the beach'
-                  
+                  sizes={getResponsiveSizes('thumbnail')}
+                  quality={85}
                 />
                 <Image
                   className={`${classes.img_collage_third_floating} ${classes.img_collage_photo}`}
-                  src='/static/audi.webp'
+                  src={getOptimizedImageSrc('/static/audi.webp')}
                   width={'225'}
                   height={'169'}
                   alt='Web developer located in the San Fernando Valley, Los Angeles, CA'
-                  
+                  sizes={getResponsiveSizes('thumbnail')}
+                  quality={85}
                 />
               </div>
             </Col>

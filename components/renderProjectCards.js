@@ -4,13 +4,27 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 import Button from 'react-bootstrap/Button';
+import Image from 'next/image';
+import { getOptimizedImageSrc, getResponsiveSizes } from './ui/ResponsiveImage';
 
 import classes from './renderProjectCards.module.scss';
 
 const renderProjectCards = (cardProjectData, index) => {
     return (
         <Card className={`${classes.card} bg-white col-12 col-sm-12 col-md-12 col-lg-5`} key={index}>
-            <Card.Img className={classes.card__top__br} variant="top" src={cardProjectData.image} alt={cardProjectData.title} />
+            <div className={classes.card__image__container}>
+                <Image 
+                    className={classes.card__top__br} 
+                    src={getOptimizedImageSrc(cardProjectData.image)} 
+                    alt={cardProjectData.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes={getResponsiveSizes('card')}
+                    quality={85}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                />
+            </div>
             <Card.Body className={`${classes.card__body} p-4 d-flex flex-column align-items-center justify-content-between`}>
                 <div className={classes.flex__card__body} >
                     <h2 className={`text-center fw-bolder`}>{cardProjectData.title}</h2>

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Row, Col, Container } from 'react-bootstrap';
 import AnimatedHeading from '../../animations/AnimatedHeading';
 import ButtonPair from '../ButtonPair';
+import { getOptimizedImageSrc, getResponsiveSizes } from '../ResponsiveImage';
 import classes from './LandingPageSequenceOne.module.scss'; // Create this file
 
 const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt }) => {
@@ -28,10 +29,12 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
                     <div className='d-flex' key={index}>
                       <div >
                         <Image
-                          src='/static/check.webp'
+                          src={getOptimizedImageSrc('/static/check.webp')}
                           width='20'
                           height='20'
                           alt='checkmark'
+                          sizes="20px"
+                          quality={95}
                         />
                       </div>
                       <div className='ms-3 d-flex flex-column' >
@@ -54,10 +57,14 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
             <Col className='d-flex justify-content-sm-center w-100 justify-content-end align-items-center'>
               <Image
                 className={`mt-5 ${classes.section__image}`}
-                src={image}
+                src={getOptimizedImageSrc(image)}
                 width='500'
                 height='350'
                 alt={imageAlt}
+                sizes={getResponsiveSizes('card')}
+                quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
             </Col>
           </Row>

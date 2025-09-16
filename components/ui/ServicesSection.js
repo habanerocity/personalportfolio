@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Row, Col, Container } from 'react-bootstrap';
 import AnimatedHeading from '../animations/AnimatedHeading';
+import { getOptimizedImageSrc, getResponsiveSizes } from './ResponsiveImage';
 import classes from './ServicesSection.module.scss';
 
 const ServicesSection = ({ heading, services, sideImageSrc='', sideImageAlt='Lindy Ramirez, web developer' }) => {
@@ -23,10 +24,12 @@ const ServicesSection = ({ heading, services, sideImageSrc='', sideImageAlt='Lin
                   <Col xs={12} sm={4} className='p-4' key={index}>
                     <div className={`${classes.service_icon_container}`}>
                       <Image
-                        src={service.iconSrc}
+                        src={getOptimizedImageSrc(service.iconSrc)}
                         height='30'
                         width='30'
                         alt={service.altText}
+                        sizes="30px"
+                        quality={95}
                       />
                     </div>
                     <h3 className={`text-white mt-2 ${classes.fs_custom} fw-normal`} >{service.title}</h3>
@@ -37,14 +40,17 @@ const ServicesSection = ({ heading, services, sideImageSrc='', sideImageAlt='Lin
                 ))}
               </Row>
             </div>
-            <div className={`d-lg-flex d-none justify-content-end align-items-center ${classes.imageContainer}`} >
+                        <div className={`d-lg-flex d-none justify-content-end align-items-center ${classes.imageContainer}`} >
               <Image
-                src={sideImageSrc}
+                src={getOptimizedImageSrc(sideImageSrc)}
                 height={700}
                 width={700}
                 alt={sideImageAlt}
                 className={`position-relative h-100 ${classes.services_img}`}
-                style={{ objectFit: 'cover' }}
+                sizes={getResponsiveSizes('card')}
+                quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
             </div>
           </div>

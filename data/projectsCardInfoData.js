@@ -12,7 +12,7 @@ export const cardInfo = [
   },
   {
     id: 2,
-    image: "/static/foodventure-figma.webp",
+    image: "/static/optimized/foodventure-figma-optimized.webp",
     title: "Foodventure Custom WordPress Theme Design",
     categories: ['Design', 'WordPress'],
     description: `Custom WordPress theme designed with figma for my food and travel blog. The theme features custom post types and fields, comments, and pagination. The design file features desktop, tablet, and mobile wirefames as well as high fidelity designs.  I used Adobe Photoshop to edit the assets and Adobe Lightroom to enhance the images.`,

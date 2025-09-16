@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from 'next/link';
 import { Container } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
 import classes from './ServiceHero.module.scss';
 
 const ServiceHero = ({
@@ -16,12 +17,25 @@ const ServiceHero = ({
   iconBoxBgClass = "",
   statValueFontSize = null,
 }) => {
+  const [shouldLoadImage, setShouldLoadImage] = useState(false);
+
+  useEffect(() => {
+    // Only load image if screen is large enough to show it
+    const mediaQuery = window.matchMedia('(min-width: 992px)');
+    setShouldLoadImage(mediaQuery.matches);
+
+    const handleScreenChange = (e) => {
+      setShouldLoadImage(e.matches);
+    };
+
+    mediaQuery.addListener(handleScreenChange);
+    return () => mediaQuery.removeListener(handleScreenChange);
+  }, []);
 
   // Create a style object from the statValueFontSize prop
   const getStatValueStyle = () => {
     if (!statValueFontSize) return {};
     if (typeof statValueFontSize === 'object') return statValueFontSize;
-    // If it's a string, assume it's a fontSize value
     return { fontSize: statValueFontSize };
   };
 
@@ -29,21 +43,25 @@ const ServiceHero = ({
     <Container className={`d-flex flex-column-reverse flex-lg-row position-relative ${classes.flex__container} justify-content-between align-items-center ${classes.flex__container__col}`}>
         <div className={`${classes.hero__col_1} d-lg-flex d-none position-relative flex-column justify-content-between`} >
           <div className={classes.hero__img_container} >
-            <Image
-            priority
-            src={heroImage}
-            fill={true} 
-            style={{ objectFit: 'cover' }}  
-            className={`position-relative ${classes.hero__img}`}
-            alt={alt}
-            />
+            {shouldLoadImage && (
+              <Image
+                priority={false}
+                src={heroImage}
+                fill={true} 
+                style={{ objectFit: 'cover' }}  
+                className={`position-relative ${classes.hero__img}`}
+                alt={alt}
+                loading="lazy"
+                sizes="(max-width: 991px) 0px, 50vw"
+              />
+            )}
           </div>
             <div className={`d-flex justify-content-between align-items-center ${classes.hero__stats_container}`} >
                 {stats.map((stat, index) => (
                 <div key={index} className={`justify-content-center ${classes[`hero__stats_${index + 1}`]}`}>
                     <div className='justify-content-center h-100 d-flex flex-column p-4 fw-bold align-items-start'>
                     {stat.label} <br />
-                    <span className='fw-bold' style={statValueFontSize}>{stat.value}</span>
+                    <span className='fw-bold' style={getStatValueStyle()}>{stat.value}</span>
                     </div>
                 </div>
                 ))}

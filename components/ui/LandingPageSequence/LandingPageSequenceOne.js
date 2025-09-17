@@ -57,6 +57,7 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
             <Col className='d-flex justify-content-sm-center w-100 justify-content-end align-items-center'>
               <Image
                 className={`mt-5 ${classes.section__image}`}
+                priority={true}
                 src={getOptimizedImageSrc(image)}
                 width='500'
                 height='350'

@@ -58,11 +58,17 @@ const Services = () => {
                             <div className='row mt-5 gx-0'>
                                 <div className='col-12 px-0 col-lg-6 d-flex position-relative' >
                                     <Image
-                                    src='/static/st_thomas_up_close.webp'
-                                    layout='fill'
-                                    className={`${classes.office_img} position-relative`}
-                                    alt='Office Desk'
-                                    />  
+                                        src='/static/optimized/st_thomas_up_close-optimized.webp' // Use optimized version
+                                        fill={true} // Use fill instead of layout='fill'
+                                        className={`${classes.office_img} position-relative`}
+                                        alt='Office Desk with modern workspace setup'
+                                        priority={true} // Set priority to true for LCP image
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                                        quality={85}
+                                        style={{ objectFit: 'cover' }}
+                                        placeholder="blur"
+                                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                                                                />  
                                 </div>
                                 <div className={`col-12 col-lg-6 d-flex position-relative flex-column justify-content-center align-items-start p-5 ${classes.services__banner_text_content}`} >
                                     <h2 className={`${classes.services__banner_subheading}`}>Growth On Autopilot</h2>

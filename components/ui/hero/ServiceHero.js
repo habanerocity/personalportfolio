@@ -45,13 +45,12 @@ const ServiceHero = ({
           <div className={classes.hero__img_container} >
             {shouldLoadImage && (
               <Image
-                priority={false}
                 src={heroImage}
                 fill={true} 
                 style={{ objectFit: 'cover' }}  
                 className={`position-relative ${classes.hero__img}`}
                 alt={alt}
-                loading="lazy"
+                priority={true}
                 sizes="(max-width: 768px) 0px, (max-width: 1024px) 50vw, (max-width: 1200px) 40vw, 33vw"
                 quality={85}
                 placeholder="blur"

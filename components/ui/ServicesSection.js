@@ -24,7 +24,7 @@ const ServicesSection = ({ heading, services, sideImageSrc='', sideImageAlt='Lin
                   <Col xs={12} sm={4} className='p-4' key={index}>
                     <div className={`${classes.service_icon_container}`}>
                       <Image
-                        src={getOptimizedImageSrc(service.iconSrc)}
+                        src={service.iconSrc}
                         height='30'
                         width='30'
                         alt={service.altText}
@@ -40,7 +40,7 @@ const ServicesSection = ({ heading, services, sideImageSrc='', sideImageAlt='Lin
                 ))}
               </Row>
             </div>
-                        <div className={`d-lg-flex d-none justify-content-end align-items-center ${classes.imageContainer}`} >
+            <div className={`d-lg-flex d-none justify-content-end align-items-center ${classes.imageContainer}`} >
               <Image
                 src={getOptimizedImageSrc(sideImageSrc)}
                 height={700}

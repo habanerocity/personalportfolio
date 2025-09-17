@@ -45,12 +45,13 @@ const ServiceHero = ({
           <div className={classes.hero__img_container} >
             {shouldLoadImage && (
               <Image
+                priority={false}
                 src={heroImage}
                 fill={true} 
                 style={{ objectFit: 'cover' }}  
                 className={`position-relative ${classes.hero__img}`}
                 alt={alt}
-                priority={true}
+                loading="lazy"
                 sizes="(max-width: 768px) 0px, (max-width: 1024px) 50vw, (max-width: 1200px) 40vw, 33vw"
                 quality={85}
                 placeholder="blur"
@@ -94,7 +95,7 @@ const ServiceHero = ({
               </div>
             )}
             <Link className={`fw-bolder mt-2 fs-3 ${classes.hero__cta}`} href='/contact'>
-              {ctaText} <span><Image className={classes.hero__cta_arrow} src='/static/circle-arrow-right.svg' width='20' height='20' alt='Right arrow' sizes="20px" quality={95} /></span>
+              {ctaText} <span><Image className={classes.hero__cta_arrow} src='/static/circle-arrow-right.svg' width='20' height='20' alt='Right arrow' /></span>
             </Link>
           </div>
         </div>

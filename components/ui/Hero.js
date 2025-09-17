@@ -76,13 +76,13 @@ const Hero = () => {
             </div>
           </div>
           <Image
-            alt="Lindy"
+            alt="Freelance Web Developer in Los Angeles, CA | Lindy Ramirez"
             className={classes.lindy}
             src={getOptimizedImageSrc("/static/lindy-bluex640.webp")}
             height={640}
             width={440}
             style={{ objectFit: 'cover' }}
-            priority
+            priority={true}
           />
         </div>
         <div className={` ${classes.tidbits} d-flex align-items-center justify-content-center position-absolute`}>

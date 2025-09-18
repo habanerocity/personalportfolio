@@ -7,7 +7,10 @@ import classes from './LandingPageSequenceOne.module.scss';
 
 const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt }) => {
   return (
-    <section className={`h-auto ${classes.wrapper}`} aria-labelledby="main-heading">
+    <section
+      className={`h-auto ${classes.wrapper}`} 
+      aria-labelledby="main-heading"
+    >
       <Container className='d-flex flex-column position-relative align-items-center'>
         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
           <Row>
@@ -29,9 +32,9 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
                 {paragraph}
               </p>
               <section className='d-flex flex-column align-items-start mt-3' >
-                <h2 id="benefits-heading" className={classes.visually_hidden}>
+                <h3 id="benefits-heading" className={classes.visually_hidden}>
                   Key Benefits
-                </h2>
+                </h3>
                 <ul className='d-flex flex-column align-items-start px-0 mt-2'>
                   {benefits.map((benefit, index) => (
                     <li className='d-flex' key={index} role="listitem">
@@ -88,7 +91,7 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
                   blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
                 <figcaption id="hero-image-caption" className={classes.visually_hidden}>
-                  {imageAlt}
+                  WordPress development environment showcasing custom theme and plugin work
                 </figcaption>
               </figure>
             </Col>

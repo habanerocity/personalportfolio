@@ -14,8 +14,18 @@ const LandingPageSequenceTwo = ({ heading, paragraphs, image, imageAlt, imageHei
       className={`h-auto ${classes.bg_gray}`}
       aria-labelledby={`heading-${contentId}`}
       itemScope 
-      itemType="https://schema.org/AboutSection"
+      itemType="https://schema.org/Article"
     >
+      <span itemProp="headline" className={classes.visually_hidden}>
+        Why Choose Professional Web Development Services
+      </span>
+      <span itemProp="author" itemScope itemType="https://schema.org/Person" className={classes.visually_hidden}>
+        <span itemProp="name">Lindy Ramirez</span>
+        <span itemProp="jobTitle">Web Developer</span>
+      </span>
+      <span itemProp="about" className={classes.visually_hidden}>
+        Web Development Expertise
+      </span>
       <Container className='d-flex flex-column position-relative align-items-center'>
         <div className={`${classes.services__section_container} flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
           {/* Header Section */}
@@ -26,7 +36,6 @@ const LandingPageSequenceTwo = ({ heading, paragraphs, image, imageAlt, imageHei
                   text={heading}
                   className={`d-flex flex-wrap fw-bold ${classes.section__heading_header}`}
                   id={`heading-${contentId}`}
-                  itemProp="name"
                 />
               </Col>
             </Row>
@@ -52,6 +61,7 @@ const LandingPageSequenceTwo = ({ heading, paragraphs, image, imageAlt, imageHei
                   <figcaption 
                     id={`image-caption-${contentId}`} 
                     className={classes.visually_hidden}
+                    itemProp="caption"
                   >
                     {imageAlt}
                   </figcaption>
@@ -62,9 +72,9 @@ const LandingPageSequenceTwo = ({ heading, paragraphs, image, imageAlt, imageHei
                 role="main"
                 aria-describedby={`heading-${contentId}`}
               >
-                <article itemProp="description">
+                <article itemProp="articleBody">
                   {paragraphs.map((paragraph, index) => (
-                      <p key={index} className='fs-3 fw-normal' itemProp={index === 0 ? "description" : undefined}>
+                      <p key={index} className='fs-3 fw-normal'>
                         {paragraph}
                       </p>
                     ))}

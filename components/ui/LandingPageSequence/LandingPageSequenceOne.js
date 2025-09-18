@@ -3,7 +3,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 import AnimatedHeading from '../../animations/AnimatedHeading';
 import ButtonPair from '../ButtonPair';
 import { getOptimizedImageSrc, getResponsiveSizes } from '../ResponsiveImage';
-import classes from './LandingPageSequenceOne.module.scss'; // Create this file
+import classes from './LandingPageSequenceOne.module.scss';
 
 const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt }) => {
   return (

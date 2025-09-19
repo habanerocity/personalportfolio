@@ -60,3 +60,29 @@
     z-index: -1;
     background-color: white;
   }
+
+  /* Accessibility and SEO enhancements */
+  .visually_hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  /* Enhanced button focus for accessibility */
+  .services__section_pricing_card_btn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+  }
+
+  /* Improved hover state for better UX */
+  .services__section_pricing_card_btn:focus:hover {
+    outline-color: $secondary-color-2;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.35);
+  }

@@ -20,40 +20,77 @@ const Slider = () => {
 	}
 
 	return (
-		<div className={styles.wrapper}>
+		<aside 
+			className={styles.wrapper}
+			aria-label="Client testimonials"
+			role="complementary"
+			itemScope
+			itemType="https://schema.org/ItemList"
+			itemProp="review"
+		>
+			<span itemProp="name" className={styles.visually_hidden}>
+				Web Development Client Testimonials
+			</span>
+			<span itemProp="description" className={styles.visually_hidden}>
+				Reviews from satisfied web development clients
+			</span>
 			<div className={`container d-flex justify-content-center align-items-center ${styles.slider}`}>
-					<div className='w-100 d-flex justify-content-end mt-5' >
-						<div className='w-25 d-flex justify-content-end align-items-center' >
-						<Image
-                                src='/static/chevron-left.svg'
-								alt='arrow left'
-                                className={`${styles.arrow__left} ${styles.arrow}`}
-                                onClick={prevSlide}
-                                aria-label="Previous slide"
-                                role="button"
-                                width={24}
-                                height={24}
-                            />
-                            <Image
-                                src='/static/chevron-right.svg'
-								alt='arrow right'
-                                className={`${styles.arrow__right} ${styles.arrow}`}
-                                onClick={nextSlide}
-                                aria-label="Next slide"
-                                role="button"
-                                width={24}
-                                height={24}
-                            />
-						</div>
+					<div className='w-100 d-flex justify-content-end mt-5' 	>
+						<nav 
+							className='w-25 d-flex justify-content-end align-items-center gap-2'
+							aria-label="Testimonial navigation controls"
+						>
+							<button
+								className={`${styles.arrow__left} ${styles.arrow}`}
+								onClick={prevSlide}
+								aria-label="Previous testimonial"
+								type="button"
+							>
+								<Image
+									src='/static/chevron-left.svg'
+									alt=''
+									width={32}
+									height={32}
+									aria-hidden="true"
+								/>
+								<span className={styles.visually_hidden}>Previous testimonial</span>
+							</button>
+							<button
+								className={`${styles.arrow__right} ${styles.arrow}`}
+								onClick={nextSlide}
+								aria-label="Next testimonial"
+								type="button"
+							>
+								<Image
+									src='/static/chevron-right.svg'
+									alt=''
+									width={32}
+									height={32}
+									aria-hidden="true"
+								/>
+								<span className={styles.visually_hidden}>Next testimonial</span>
+							</button>
+						</nav>
 					</div>
-					<div >
+					<div 
+						className="testimonials-carousel"
+						role="region"
+						aria-live="polite"
+						aria-atomic="true"
+						aria-label="Customer testimonials carousel"
+					>
 						{ReviewData.map((review, index) => {
 							return (
-								<div className={index === currentSlide ? styles.slide__active : styles.slide} key={review.id}>
+								<div 
+									className={index === currentSlide ? styles.slide__active : styles.slide} key={review.id}
+									itemScope
+									itemType="https://schema.org/Review"
+									itemProp="itemListElement"
+								>
 									{index === currentSlide && (
 										<div className={styles.review__slides}>
-											<div className={`${styles.review__content} container`}>
-												<div className={styles.quote}>
+											<article className={`${styles.review__content} container`}>
+												<div className={styles.quote} aria-hidden="true">
 													<Image
                                                         src='/static/quote-left-solid.svg'
 														alt='client testimonials'
@@ -61,37 +98,91 @@ const Slider = () => {
                                                         aria-hidden="true" 
                                                         width={60}
                                                         height={60}
+														role="presentation"
                                                     />
 												</div>
-												<p className={`fs-3 ${styles.testimonial}`}>{review.feedback}</p>
-												<Image 
-												src={review.companyLogo}
-												alt={review.alt}
-												className='rounded-circle'
-												height={65}
-												width={65}
-												/>
-												<p className={`fs-2 ${styles.person}`}>{review.name}</p>
-												<p className={`fs-3 ${styles.person}`}>{`${review.company} | ${review.city}, ${review.state}`}</p>
-											</div>
+												<blockquote 
+													className={`fs-3 ${styles.testimonial}`}
+													itemProp="reviewBody"
+												>
+													{review.feedback}
+												</blockquote>
+												<div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating" className={styles.visually_hidden}>
+													<span itemProp="ratingValue">5</span>
+													<span itemProp="bestRating">5</span>
+												</div>
+												<div itemProp="itemReviewed" itemScope itemType="https://schema.org/Service" className={styles.visually_hidden}>
+													<span itemProp="name">Web Development Services</span>
+													<span itemProp="provider">Lindy Ramirez</span>
+												</div>
+												<footer className="reviewer-info mt-3">
+													<div 
+													className="reviewer-avatar mb-2 d-flex justify-content-center align-items-center"
+													itemProp="author"
+													itemScope
+													itemType="https://schema.org/Person"
+													>
+														<Image 
+															src={review.companyLogo}
+															alt={`${review.company} company logo`}
+															className='rounded-circle'
+															height={65}
+															width={65}
+														/>
+													</div>
+													
+													<cite className="reviewer-details">
+														<div 
+															className={`fs-2 ${styles.person}`}
+															itemProp="name"
+														>
+															{review.name}
+														</div>
+														<div 
+															className={`fs-3 ${styles.person}`}
+															itemProp="worksFor"
+															itemScope
+															itemType="https://schema.org/Organization"
+														>
+															<span itemProp="name">{review.company}</span>
+															{' | '}
+															<span 
+															itemProp="address"
+															itemScope
+															itemType="https://schema.org/PostalAddress"
+															>
+															<span itemProp="addressLocality">{review.city}</span>
+															{', '}
+															<span itemProp="addressRegion">{review.state}</span>
+															</span>
+														</div>
+													</cite>
+												</footer>
+											</article>
 										</div>
 									)}
 								</div>
 							);
 						})}
 					</div>
-					<div className={`d-flex justify-content-center gap-2 mt-5 ${styles.pagination}`}>
-					{ReviewData.map((_, index) => (
+					<nav 
+						className={`d-flex justify-content-center gap-2 mt-5 ${styles.pagination}`}
+						aria-label="Testimonial slide indicators"
+						role="group"
+					>
+					{ReviewData.map((review, index) => (
 						<button
-						key={index}
-						className={`${styles.dot} ${currentSlide === index ? styles.dot_active : ''}`}
-						onClick={() => setCurrentSlide(index)}
-						aria-label={`Go to slide ${index + 1}`}
+							key={index}
+							className={`${styles.dot} ${currentSlide === index ? styles.dot_active : ''}`}
+							onClick={() => setCurrentSlide(index)}
+							aria-label={`Go to testimonial ${index + 1} from ${review.name}`}
+							aria-current={currentSlide === index ? 'true' : 'false'}
+							type="button"
 						/>
 					))}
-					</div>
+					</nav>
 			</div>
-		</div>
+		</aside>
 	);
 };
 

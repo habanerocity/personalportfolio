@@ -82,11 +82,22 @@
     height: 80%;
     width:45%;
     position: relative;
-    font-size: calc(1.525rem + 3.3vw);
     font-size: 14px;
     line-height: 1.2;
 
-    & span{
+    // Keep label at base font size
+    .stat_label {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.2;
+      
+      @media screen and (max-width: 1199px){
+        font-size: 1.5rem;
+      }
+    }
+
+    // Large responsive font for the value
+    & data {
       font-size: calc(-0.475rem + 3.3vw);
       font-weight: 300;
       line-height: 1.2;
@@ -111,18 +122,29 @@
     height: 80%;
     width:45%;
     position: relative;
-    // font-size: calc(1.525rem + 3.3vw);
     font-size: 14px;
     line-height: 1.2;
 
-    & span{
+    // Keep label at base font size
+    .stat_label {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.2;
+      
+      @media screen and (max-width: 1199px){
+        font-size: 1.5rem;
+      }
+    }
+
+    // Large responsive font for the value
+    & data {
       font-size: calc(-0.475rem + 3.3vw);
       font-weight: 300;
       line-height: 1.2;
 
       @media screen and (min-width: 1750px){
-      font-size: calc(1.525rem + 1.3vw);
-    }
+        font-size: calc(1.525rem + 1.3vw);
+      }
 
       @media screen and (max-width: 1199px){
         font-size: 3.5rem;
@@ -202,6 +224,10 @@
     @media(max-width: 575px){
       width: 100%;
     }
+}
+
+.visually_hidden{
+  display: none;
 }
 
 @keyframes bounce {

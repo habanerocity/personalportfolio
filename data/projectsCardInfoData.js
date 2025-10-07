@@ -42,7 +42,7 @@ export const cardInfo = [
   {
     id: 7,
     image: "/static/phils_autospa.webp",
-    title: "Phil's Auto Spa",
+    title: "Phil's Auto Spa Landing Page",
     categories: ['React JS', 'Landing Pages'],
     description: `Landing page built for a mobile auto detailing specialist, designed for improved conversion rates and lead generation. It features responsive design, functional components, a contact modal window, Email JS API integration, custom hooks, implementation of GSAP animation library, and a customer review slider.`,
     liveDemo: "https://www.philsautospa.com/",

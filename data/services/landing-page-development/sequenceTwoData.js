@@ -7,9 +7,9 @@ const sectionTwoData = {
       "Additionally, bespoke landing pages are less prone to breaking with updates, as they are built on a solid foundation tailored specifically for your site’s needs. In contrast, page builders often rely on third-party plugins and templates that can conflict with each other or become outdated, resulting in a frustrating user experience. By converting designs from Figma or PSD to code, developers maintain UI/UX best practices to create visually appealing and user-friendly experiences. This attention to detail ensures that your landing page not only looks great but also functions seamlessly, providing your visitors with a smooth and engaging interaction that drives conversions. ",
       "Moreover, web developers can set up Google Analytics to track performance, giving you valuable insights into visitor behavior. By entrusting the process to a professional, you save valuable time and avoid the headaches of troubleshooting and technical limitations. With an expert on your side, you can focus on your core business while knowing that your landing page is in capable hands, ready to drive conversions and achieve your marketing objectives."
     ],
-    image: '/static/me_working-2.png',
+    image: '/static/me_working-gl-3.png',
     imageAlt: 'Lindy Ramirez working on a landing page design in Figma at a cafe',
-    imageHeight: 550,
+    imageHeight: 400,
   };
   
   export default sectionTwoData;

@@ -33,6 +33,7 @@ const WordPressDevelopmentServices = () => {
     <React.Fragment>
         <Head>
             <title>WordPress Development Services - Lindy Ramirez | Freelance Web Developer</title>
+            <link rel="canonical" href="https://www.lindyramirez.com/services/wordpress-development" />
             <meta
                 name="description"
                 content="Professional WordPress web design and development services by Lindy Ramirez. Custom themes, plugin development, and website optimization that get you results."

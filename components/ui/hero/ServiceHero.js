@@ -56,6 +56,8 @@ const ServiceHero = ({
       aria-describedby={descriptionId}
       itemScope
       itemType="https://schema.org/Service"
+      itemProp="serviceType"
+      content="Web Development"
       role="banner"
       id={sectionId}
     >
@@ -64,7 +66,6 @@ const ServiceHero = ({
         className={`${classes.hero__col_1} d-lg-flex d-none position-relative flex-column justify-content-between`} 
         role="complementary"
         aria-label="Service statistics and visual showcase"
-        itemProp="image"
         >
           <figure 
           className={classes.hero__img_container} 
@@ -233,7 +234,6 @@ const ServiceHero = ({
         </main>
       </Container>
     </section>
-    
   );
 };
 

@@ -49,10 +49,10 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
                         />
                       </div>
                       <div className='ms-3 d-flex flex-column' >
-                        <div className={`${classes.benefit__heading} fs-2 fw-bold`} >
+                        <h3 className={`${classes.benefit__heading} fs-3 mb-1 fw-normal`} >
                           {benefit.title}
-                        </div>
-                        <p className={`${classes.benefit__text_content} mb-0 fs-3 fw-normal`}>
+                        </h3>
+                        <p className={`${classes.benefit__text_content} mb-3 fs-3 fw-normal`}>
                           {benefit.description}
                         </p>
                       </div>

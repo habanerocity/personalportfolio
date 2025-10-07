@@ -17,7 +17,7 @@ const heroData = {
     iconSrc: '/static/wordpress-brands-solid.svg',
     iconAlt: 'WordPress',
     ctaText: "Get My Free Consultation",
-    additionalContent: "Ready to build a website that drives real results? From custom WordPress themes to plugin development and ongoing support, I'll help you create a powerful online presence that grows your business.",
+    additionalContent: "Ready to build a website that helps your Los Angeles business drive real results? From custom themes that capture your brand's unique style to plugin development and ongoing support, I’ll help you create a powerful online presence that grows your business.",
     alt: "Happy small business owner celebrating online success with laptop",
   };
 

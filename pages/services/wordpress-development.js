@@ -32,32 +32,166 @@ const WordPressDevelopmentServices = () => {
     return (
     <React.Fragment>
         <Head>
-            <title>Custom WordPress Development Services - Lindy Ramirez | Freelance Web Developer</title>
+            <title>Custom WordPress Development in Los Angeles | Lindy Ramirez</title>
             <link rel="canonical" href="https://www.lindyramirez.com/services/wordpress-development" />
             <meta
                 name="description"
-                content="Professional WordPress web design and development services by Lindy Ramirez. Custom themes, plugin development, and website optimization that get you results."
+                content="Professional WordPress development services in Los Angeles. Custom themes, plugin development, and website optimization for LA businesses by Lindy Ramirez."
             />
             <meta name="author" content="Lindy Ramirez" />
             
             {/* Open Graph Metadata */}
-            <meta property="og:title" content="WordPress Development Services - Lindy Ramirez" />
+            <meta property="og:title" content="Custom WordPress Development in Los Angeles - Lindy Ramirez" />
+            <meta property="og:site_name" content="Lindy Ramirez | Web Developer" />
             <meta
                 property="og:description"
-                content="Professional WordPress development services by Lindy Ramirez. Custom themes, plugin development, and website optimization tailored to your needs."
+                content="Professional WordPress development services in Los Angeles. Custom themes, plugin development, and website optimization for LA businesses."
             />
+
+            {/* Geo-targeting */}
+            <meta name="geo.region" content="US-CA" />
+            <meta name="geo.placename" content="Los Angeles" />
+            <meta name="geo.position" content="34.0522;-118.2437" />
+            <meta name="ICBM" content="34.0522, -118.2437" />
+
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://www.lindyramirez.com/services/wordpress-development" />
             <meta property="og:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:alt" content="Lindy Ramirez - WordPress Developer in Los Angeles" />
 
             {/* Twitter Card Metadata */}
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="WordPress Development Services - Lindy Ramirez" />
+            <meta name="twitter:title" content="Custom WordPress Development in Los Angeles - Lindy Ramirez" />
             <meta
                 name="twitter:description"
-                content="Professional WordPress development services by Lindy Ramirez. Custom themes, plugin development, and website optimization tailored to your needs."
+                content="Professional WordPress development services in Los Angeles. Custom themes, plugin development, and website optimization for LA businesses."
             />
             <meta name="twitter:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "WordPress Development",
+                    "name": "Custom WordPress Development Services",  
+                    "description": "Professional WordPress development services in Los Angeles including custom themes, plugin development, and website optimization.", 
+                    "provider": {
+                        "@type": "Person",
+                        "name": "Lindy Ramirez",
+                        "url": "https://www.lindyramirez.com",
+                        "jobTitle": "WordPress Developer",
+                        "email": "hello@lindyramirez.com", 
+                        "address": {    
+                            "@type": "PostalAddress",
+                            "addressLocality": "Los Angeles",
+                            "addressRegion": "CA",
+                            "addressCountry": "US"
+                        }
+                    },
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Los Angeles",
+                            "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Granada Hills"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Pasadena"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Tarzana"
+                        }
+                    ],
+                    "offers": {
+                        "@type": "Offer",
+                        "availability": "https://schema.org/InStock",
+                        "priceRange": "$$",
+                        "url": "https://www.lindyramirez.com/contact"
+                    },
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "WordPress Development Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Custom WordPress Theme Development",
+                                    "description": "Custom WordPress themes designed to drive business growth"  
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "WordPress Plugin Development",
+                                    "description": "Custom functionality and integrations for your WordPress site"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "WordPress Website Optimization",
+                                    "description": "Performance tuning and speed optimization for WordPress"
+                                }
+                            }
+                        ]
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5.0",
+                        "reviewCount": "5"
+                    }
+                })}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": wordpressFAQsData.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                })}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://www.lindyramirez.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://www.lindyramirez.com/services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "WordPress Development",
+                            "item": "https://www.lindyramirez.com/services/wordpress-development"
+                        }
+                    ]
+                })}
+            </script>
         </Head>
         <div className={classes.pg}>
             <NavigationBar />

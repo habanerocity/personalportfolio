@@ -1,6 +1,6 @@
 const sequenceOneData = {
     heading: "What Is WordPress And Why Should You Use It?",
-    paragraph: "WordPress is an open-source, powerful and flexible platform that powers over 43% of websites on the internet. Its versatility allows businesses to create highly customizable, scalable websites that align with their goals. With robust features for SEO, content management, and e-commerce, WordPress empowers you to elevate your online presence, attract more visitors, and convert them into loyal customers.",
+    paragraph: "WordPress is the powerful, flexible content management platform trusted by businesses worldwide and throughout Los Angeles. It powers over 43% of the internet, giving LA entrepreneurs and businesses the tools to create highly customizable, scalable websites that meet their brand's goals. Whether you're in Pasadena, Downtown LA, or the San Fernando Valley, WordPress empowers your business to dominate local search results, attract more customers, and convert them into sales.",
     benefits: [
       {
         title: "Flexibility & Customization",

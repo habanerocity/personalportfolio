@@ -8,7 +8,7 @@ const heroData = {
       {
         label: "Number Of Free Plugins Available",
         value: "+59,000",
-        uunitText: "plugins"
+        unitText: "plugins"
       }
     ],
     heroImage: '/static/happy_biz_owner.webp',

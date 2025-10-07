@@ -32,15 +32,11 @@ const WordPressDevelopmentServices = () => {
     return (
     <React.Fragment>
         <Head>
-            <title>WordPress Development Services - Lindy Ramirez | Freelance Web Developer</title>
+            <title>Custom WordPress Development Services - Lindy Ramirez | Freelance Web Developer</title>
             <link rel="canonical" href="https://www.lindyramirez.com/services/wordpress-development" />
             <meta
                 name="description"
                 content="Professional WordPress web design and development services by Lindy Ramirez. Custom themes, plugin development, and website optimization that get you results."
-            />
-            <meta
-                name="keywords"
-                content="WordPress development, custom WordPress themes, WordPress plugin development, website optimization, freelance web developer, Los Angeles"
             />
             <meta name="author" content="Lindy Ramirez" />
             

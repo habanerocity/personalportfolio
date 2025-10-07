@@ -2,21 +2,23 @@ const heroData = {
     stats: [
       {
         label: "Percentage Of The Web Powered By WordPress",
-        value: "+43%"
+        value: "+43%",
+        unitText: "percent"
       },
       {
         label: "Number Of Free Plugins Available",
-        value: "+59,000"
+        value: "+59,000",
+        uunitText: "plugins"
       }
     ],
     heroImage: '/static/happy_biz_owner.webp',
-    title: "Unlock Your Brand's True Potential With a WordPress Website",
-    description: "Stand out with unlimited customization, easily manage content, and make your online presence soar to new heights",
+    title: "Custom WordPress Development Services in Los Angeles",
+    description: "Build a powerful WordPress website with unlimited customization, easy content management, and professional support",
     iconSrc: '/static/wordpress-brands-solid.svg',
-    iconAlt: 'Expert WordPress services located in the San Fernando Valley, Los Angeles, California',
+    iconAlt: 'WordPress',
     ctaText: "Get My Free Consultation",
-    additionalContent: "Start building a website that truly represents your brand and drives results. Whether you need a custom WordPress theme, plugin customization, or ongoing support, I'm here to help you achieve your goals.",
-    alt: "Small business owner celebrating success with a laptop",
+    additionalContent: "Ready to build a website that drives real results? From custom WordPress themes to plugin development and ongoing support, I'll help you create a powerful online presence that grows your business.",
+    alt: "Happy small business owner celebrating online success with laptop",
   };
 
 export default heroData;

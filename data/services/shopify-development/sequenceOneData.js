@@ -1,6 +1,6 @@
 const sequenceOneData = {
-    heading: "What is Shopify and is it So Popular Amongst Ecommerce Brands?",
-    paragraph: "Looking to launch or scale your online store with ease? Shopify is the eCommerce platform trusted by over 4 million merchants globally, providing the perfect solution to build and grow your business online. With Shopify’s powerful, all-in-one platform, you can streamline every step of the selling process—from managing inventory to processing payments—allowing you to focus on what matters most: growing your brand and increasing sales. Here’s a closer look at the key features that make it the top choice for ecommerce brands:",
+    heading: "What is Shopify and Why is it So Popular Amongst Ecommerce Brands?",
+    paragraph: "Looking to launch or scale your online store with ease? Shopify is the ecommerce platform trusted by over 4 million merchants globally, providing the perfect solution to build and grow your business online. With Shopify’s powerful all-in-one platform you can streamline every step of the selling process, from managing inventory to processing payments, allowing you to focus on what matters most: growing your brand and increasing sales. Here’s a closer look at the key features that make it the top choice for ecommerce brands:",
     benefits: [
       {
         title: "User-Friendly Interface",
@@ -15,7 +15,7 @@ const sequenceOneData = {
         description: "Shopify integrates with over 100 payment gateways, making it easy to accept payments from customers anywhere in the world with their built-in payment system, Shopify Payments."
       },
       {
-        title: "Robust eCommerce Tools",
+        title: "Robust Ecommerce Tools",
         description: "Shopify helps you drive traffic, increase sales, and optimize your store forgrowth with built-in tools such as abandoned cart recovery, inventory management, SEO optimization, and marketing automation."
       },
       {
@@ -24,7 +24,7 @@ const sequenceOneData = {
       }
     ],
     image: '/static/laptop_cc.webp',
-    imageAlt: 'Online Shopper Making An Ecommerce Purchase'
+    imageAlt: 'Los Angeles ecommerce entrepreneur managing successful Shopify store on laptop'
   };
 
 export default sequenceOneData;

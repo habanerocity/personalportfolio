@@ -27,40 +27,179 @@ import ctaData from '../../data/services/shopify-development/ctadata';
 import sectionHeadingsData from "../../data/services/wordpress-development/sectionHeadingsData";
 import shopifyFAQsData from "../../data/services/shopify-development/faqsData";
 
-const WordPressDevelopmentServices = () => {
+const ShopifyDevelopmentServices = () => {
 
     return (
     <React.Fragment>
         <Head>
-            <title>Shopify Development Services - Lindy Ramirez | Shopify Expert & Partner | Los Angeles, California</title>
+            <title>Custom Shopify Development in Los Angeles | Lindy Ramirez</title>
+            <link rel="canonical" href="https://www.lindyramirez.com/services/shopify-development" />
             <meta
                 name="description"
-                content="Professional Shopify development services by Lindy Ramirez. Custom Shopify stores, dropshipping setup, theme development, and Shopify apps that drive sales and growth."
-            />
-            <meta
-                name="keywords"
-                content="shopify stores, shopify dropshipping, shopify website builder, shopify themes, shopify pricing, shopify expert, shopify online shopping, shopify partner, shopify apps, shopify store themes, shopify development, custom shopify themes, shopify ecommerce"
+                content="Professional Shopify development services in Los Angeles. Custom store setup, theme development, and app integrations for LA ecommerce businesses by Lindy Ramirez."
             />
             <meta name="author" content="Lindy Ramirez" />
             
+            {/* Geo-targeting */}
+            <meta name="geo.region" content="US-CA" />
+            <meta name="geo.placename" content="Los Angeles" />
+            <meta name="geo.position" content="34.0522;-118.2437" />
+            <meta name="ICBM" content="34.0522, -118.2437" />
+            
             {/* Open Graph Metadata */}
-            <meta property="og:title" content="Shopify Development Services - Lindy Ramirez | Shopify Expert" />
+            <meta property="og:title" content="Custom Shopify Development in Los Angeles | Lindy Ramirez" />
             <meta
                 property="og:description"
-                content="Professional Shopify development services by Shopify partner Lindy Ramirez. Custom Shopify stores, themes, apps, and dropshipping solutions that convert."
+                content="Professional Shopify development services in Los Angeles. Custom store setup, theme development, and app integrations for LA ecommerce businesses."
             />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://www.lindyramirez.com/services/shopify-development" />
             <meta property="og:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:alt" content="Lindy Ramirez - Shopify Developer in Los Angeles" />
 
             {/* Twitter Card Metadata */}
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Shopify Development Services - Lindy Ramirez | Shopify Expert" />
+            <meta name="twitter:title" content="Custom Shopify Development in Los Angeles - Lindy Ramirez" />
             <meta
                 name="twitter:description"
-                content="Professional Shopify development services by certified Shopify partner Lindy Ramirez. Custom Shopify stores, themes, apps, and dropshipping solutions that convert."
+                content="Professional Shopify development services in Los Angeles. Custom store setup, theme development, and app integrations for LA ecommerce businesses."
             />
             <meta name="twitter:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "Shopify Development",
+                    "name": "Custom Shopify Development Services",
+                    "description": "Professional Shopify development services in Los Angeles including custom store setup, theme development, app integrations, and ecommerce optimization.",
+                    "provider": {
+                        "@type": "Person",
+                        "name": "Lindy Ramirez",
+                        "url": "https://www.lindyramirez.com",
+                        "jobTitle": "Shopify Developer",
+                        "email": "hello@lindyramirez.com",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Los Angeles",
+                            "addressRegion": "CA",
+                            "addressCountry": "US"
+                        }
+                    },
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Los Angeles",
+                            "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Tarzana"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Granada Hills"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Pasadena"
+                        }
+                    ],
+                    "offers": {
+                        "@type": "Offer",
+                        "availability": "https://schema.org/InStock",
+                        "priceRange": "$$",
+                        "url": "https://www.lindyramirez.com/contact"
+                    },
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Shopify Development Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Custom Shopify Store Setup",
+                                    "description": "Complete Shopify store setup with custom design and functionality"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Shopify Theme Development",
+                                    "description": "Custom Shopify themes tailored to your brand and business goals"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Shopify App Integration",
+                                    "description": "Smooth integration of apps and third-party services"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Shopify Store Optimization",
+                                    "description": "Performance optimization and conversion rate improvements"
+                                }
+                            }
+                        ]
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5.0",
+                        "reviewCount": "5"
+                    }
+                })}
+            </script>
+
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": shopifyFAQsData.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                })}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://www.lindyramirez.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://www.lindyramirez.com/services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Shopify Development",
+                            "item": "https://www.lindyramirez.com/services/shopify-development"
+                        }
+                    ]
+                })}
+            </script>
+
         </Head>
         <div className={classes.pg}>
             <NavigationBar />
@@ -89,4 +228,4 @@ const WordPressDevelopmentServices = () => {
     );
 }
 
-export default WordPressDevelopmentServices;
+export default ShopifyDevelopmentServices;

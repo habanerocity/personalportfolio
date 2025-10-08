@@ -10,7 +10,7 @@ const sequenceThreeData = {
       { title: "🤝 A Reliable Partner For Your Brand", description: "When you work with me, you get more than a developer—you gain a partner invested in the growth and success of your business." }
     ],
     imageSrc: '/static/optimized/lindy-thailand-optimized.webp',
-    imageAlt: 'Lindy in Thailand'
+    imageAlt: 'Lindy Ramirez, Professional Shopify Developer in Los Angeles',
   };
 
   export default sequenceThreeData;

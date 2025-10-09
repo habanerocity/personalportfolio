@@ -32,35 +32,133 @@ const WordPressDevelopmentServices = () => {
     return (
     <React.Fragment>
           <Head>
-            <title>Landing Page Development Services - Lindy Ramirez | Lead Generation & Sales Funnel Expert</title>
+            <title>Custom Landing Page Development in Los Angeles | Lindy Ramirez</title>
+            <link rel="canonical" href="https://www.lindyramirez.com/services/landing-page-development" />
             <meta
                 name="description"
-                content="Professional landing page development services by Lindy Ramirez. Custom lead generation landing pages, product landing pages, and sales funnel websites that convert."
-            />
-            <meta
-                name="keywords"
-                content="landing page, landing page what is, landing page designer, lead generation landing page, product landing page, landing page html, sales funnel, marketing funnel, lead funnel, sales funnel website, lead generation funnel"
+                content="Professional landing page development services in Los Angeles. Custom-coded, high-converting pages for lead generation and sales optimization by Lindy Ramirez."
             />
             <meta name="author" content="Lindy Ramirez" />
             
+            {/* Geo-targeting */}
+            <meta name="geo.region" content="US-CA" />
+            <meta name="geo.placename" content="Los Angeles" />
+            <meta name="geo.position" content="34.0522;-118.2437" />
+            <meta name="ICBM" content="34.0522, -118.2437" />
+            
             {/* Open Graph Metadata */}
-            <meta property="og:title" content="Landing Page Development Services - Lindy Ramirez | Lead Generation Expert" />
+            <meta property="og:title" content="Custom Landing Page Development in Los Angeles | Lindy Ramirez" />
+            <meta property="og:site_name" content="Lindy Ramirez | Web Developer" />
             <meta
                 property="og:description"
-                content="Custom landing pages and sales funnel websites by Lindy Ramirez. Boost conversions with lead generation landing pages and marketing funnels built to you get you results."
+                content="Professional landing page development services in Los Angeles. Custom-coded, high-converting pages for lead generation and sales optimization."
             />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://www.lindyramirez.com/services/landing-page-development" />
             <meta property="og:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:alt" content="Lindy Ramirez | Landing Page Developer in Los Angeles" />
 
             {/* Twitter Card Metadata */}
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Landing Page Development Services - Lindy Ramirez | Lead Generation Expert" />
+            <meta name="twitter:title" content="Custom Landing Page Development in Los Angeles | Lindy Ramirez" />
             <meta
                 name="twitter:description"
-                content="Custom landing pages and sales funnel websites by Lindy Ramirez. Boost conversions with lead generation landing pages and marketing funnels tailored to your needs."
+                content="Professional landing page development services in Los Angeles. Custom-coded, high-converting pages for lead generation and sales optimization."
             />
             <meta name="twitter:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+             <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "Landing Page Development",
+                    "name": "Custom Landing Page Development Services",
+                    "description": "Professional landing page development services in Los Angeles including custom-coded pages, conversion optimization, and lead generation solutions.",
+                    "provider": {
+                        "@type": "Person",
+                        "name": "Lindy Ramirez",
+                        "url": "https://www.lindyramirez.com",
+                        "jobTitle": "Web Developer",
+                        "email": "hello@lindyramirez.com",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Los Angeles",
+                            "addressRegion": "CA",
+                            "addressCountry": "US"
+                        }
+                    },
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Los Angeles",
+                            "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Granada Hills"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Tarzana"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Pasadena"
+                        }
+                    ],
+                    "offers": {
+                        "@type": "Offer",
+                        "availability": "https://schema.org/InStock",
+                        "priceRange": "$$",
+                        "url": "https://www.lindyramirez.com/contact"
+                    },
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Landing Page Development Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Custom Landing Page Development",
+                                    "description": "Custom-coded landing pages built for maximum conversions"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Lead Generation Landing Pages",
+                                    "description": "Conversion-optimized pages designed to capture qualified leads"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Sales Funnel Development",
+                                    "description": "Multi-step funnels that guide visitors to purchase"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Landing Page Optimization",
+                                    "description": "A/B testing and conversion rate optimization services"
+                                }
+                            }
+                        ]
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5.0",
+                        "reviewCount": "5"
+                    }
+                })}
+            </script>
         </Head>
         <div className={classes.pg}>
             <NavigationBar />

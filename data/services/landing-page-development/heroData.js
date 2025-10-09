@@ -1,21 +1,23 @@
 const heroData = {
     stats: [
       {
-        label: "Boost in sales with an optimized landing page",
-        value: "55%"
+        label: "Higher Lead Conversion Rates",
+        value: "3-5x",
+        unitText: "times"
       },
       {
-        label: "Reduction of bounce rate",
-        value: "60%"
+        label: "Faster Page Load Time",
+        value: "< 2s",
+        unitText: "seconds"
       }
     ],
     heroImage: '/static/zoe_ph_collagex550.webp',
-    title: "Generate Leads and Sales with Custom Landing Pages",
-    description: "Get a custom-coded landing page tailored to your brand, optimized for speed, SEO, and lead generation",
+    title: "Custom Landing Page Development Services in Los Angeles",
+    description: "Get high-converting landing pages custom-coded for your LA business: optimized for speed, mobile, SEO, and lead generation",
     iconSrc: '/static/filter.svg',
-    iconAlt: 'Expert custom landing page development services',
+    iconAlt: 'Landing page development icon',
     ctaText: "Get My Free Consultation",
-    additionalContent: "Start Your Dream Ecommerce Store Today With Shopify.",
+    additionalContent: "Every second counts in digital marketing. I build lightning-fast landing pages for Los Angeles businesses that grab attention, hold interest, and convert visitors into paying customers. No templates, no bloat—just clean code optimized for maximum ROI.",
     alt: "Creative client's high-converting landing page"
   };
 

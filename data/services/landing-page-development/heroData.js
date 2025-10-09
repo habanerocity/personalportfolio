@@ -17,7 +17,7 @@ const heroData = {
     iconSrc: '/static/filter.svg',
     iconAlt: 'Landing page development icon',
     ctaText: "Get My Free Consultation",
-    additionalContent: "Every second counts in digital marketing. I build lightning-fast landing pages for Los Angeles businesses that grab attention, hold interest, and convert visitors into paying customers. No templates, no bloat—just clean code optimized for maximum ROI.",
+    additionalContent: "Every second counts in digital marketing. I build lightning-fast landing pages for Los Angeles businesses that grab attention, hold interest, and convert visitors into paying customers. No templates, no bloat, just clean code optimized for maximum ROI.",
     alt: "Creative client's high-converting landing page"
   };
 

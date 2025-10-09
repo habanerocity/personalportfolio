@@ -1,5 +1,5 @@
 const sequenceOneData = {
-    heading: "What are Landing Pages and Why Should I Get One?",
+    heading: "What are Landing Pages and Why Should Los Angeles Brands Use Them?",
     paragraph: "Landing pages are dedicated, high-converting web pages designed to drive a specific action, like signing up for a service, making a purchase, or signing up for a newsletter. Unlike regular web pages, they eliminate distractions, delivering a clear message with a strong call to action. If you're running ads or marketing campaigns, a well-designed landing page can significantly improve your conversion rates by turning traffic into leads or customers. It's an essential tool for boosting ROI, optimizing campaigns, and achieving business goals.",
     benefits: [
       {
@@ -11,20 +11,20 @@ const sequenceOneData = {
         description: "A well-designed landing page enhances your brand's credibility by providing a professional and polished presentation of your offerings. This attention to detail fosters trust among potential customers, making them more likely to engage with your brand and take action."
       },
       {
-        title: "Improved ROI",
-        description: "Improved marketing campaign ROI is achieved through landing pages by focusing your marketing efforts on specific goals, such as capturing leads or driving sales."
+        title: "Maximize Your Marketing ROI",
+        description: "Landing pages dramatically improve campaign ROI by aligning your ad spend with conversion-focused pages. Track exactly how your Google Ads and social campaigns perform, then optimize for maximum return on every dollar spent."
       },
       {
-        title: "Better Data Insights",
+        title: "Gain Actionable Data Insights",
         description: "Collect valuable data insights by tracking user interactions, such as click-through rates and conversion metrics. Find out what resonates with your audience and make better informed marketing decisions."
       },
       {
-        title: "Focused Messaging",
+        title: "Deliver Focused, Distraction-Free Messaging",
         description: "Ensure that your audience receives clear and concise messaging tailored to their specific needs or interests. By eliminating distractions and emphasizing a single call-to-action, effectively communicate your value proposition and drive higher engagement from potential customers."
       }
     ],
     image: '/static/landing_page_tabletx750.webp',
-    imageAlt: 'Online Shopper Making An Ecommerce Purchase'
+    imageAlt: 'High-converting landing page displayed on tablet showing lead capture form for Los Angeles business'
   };
 
 export default sequenceOneData;

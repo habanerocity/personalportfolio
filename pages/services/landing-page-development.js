@@ -159,6 +159,46 @@ const WordPressDevelopmentServices = () => {
                     }
                 })}
             </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": landingPageFAQsData.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                })}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://www.lindyramirez.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://www.lindyramirez.com/services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Landing Page Development",
+                            "item": "https://www.lindyramirez.com/services/landing-page-development"
+                        }
+                    ]
+                })}
+            </script>
         </Head>
         <div className={classes.pg}>
             <NavigationBar />

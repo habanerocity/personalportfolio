@@ -67,7 +67,7 @@ const ShopifyDevelopmentServices = () => {
                 name="twitter:description"
                 content="Professional Shopify development services in Los Angeles. Custom store setup, theme development, and app integrations for LA ecommerce businesses."
             />
-            <meta name="twitter:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+            <meta name="twitter:image" content="https://www.lindyramirez.com/static/public/static/st_thomas_up_close.webp" />
             <script type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",

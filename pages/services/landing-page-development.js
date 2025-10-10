@@ -68,7 +68,7 @@ const WordPressDevelopmentServices = () => {
                 name="twitter:description"
                 content="Professional landing page development services in Los Angeles. Custom-coded, high-converting pages for lead generation and sales optimization."
             />
-            <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_up_close.webp" />
+            <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
              <script type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",

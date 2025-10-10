@@ -69,7 +69,7 @@ const WordPressDevelopmentServices = () => {
                 name="twitter:description"
                 content="Professional WordPress development services in Los Angeles. Custom themes, plugin development, and website optimization for LA businesses."
             />
-            <meta name="twitter:image" content="https://www.lindyramirez.com/static/public/static/st_thomas_up_close.webp" />
+            <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_up_close.webp" />
             <script type="application/ld+json">
                 {JSON.stringify({
                     "@context": "https://schema.org",

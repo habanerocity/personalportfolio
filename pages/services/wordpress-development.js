@@ -25,6 +25,7 @@ import sequenceThreeData from '../../data/services/wordpress-development/sequenc
 import wordpressServicesData from "../../data/services/wordpress-development/servicesData";
 import ctaData from '../../data/services/wordpress-development/ctadata';
 import sectionHeadingsData from "../../data/services/wordpress-development/sectionHeadingsData";
+import wordpressFAQsData from "../../data/services/wordpress-development/faqsData";
 import ReviewData from '../../components/ui/ReviewSlider/SliderData';
 
 const WordPressDevelopmentServices = () => {

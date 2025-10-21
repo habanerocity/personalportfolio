@@ -24,43 +24,232 @@ import sequenceTwoData from '../../data/services/digital-marketing-services/sequ
 import sequenceThreeData from '../../data/services/digital-marketing-services/sequenceThreeData';
 import digitalMarketingServicesData from "../../data/services/digital-marketing-services/servicesData";
 import ctaData from '../../data/services/digital-marketing-services/ctadata';
-import sectionHeadingsData from "../../data/services/wordpress-development/sectionHeadingsData";
+import sectionHeadingsData from "../../data/services/digital-marketing-services/sectionHeadingsData";
 import digitalMarketingFAQsData from "../../data/services/digital-marketing-services/faqsData";
+import ReviewData from '../../components/ui/ReviewSlider/SliderData';
 
-const WordPressDevelopmentServices = () => {
+const DigitalMarketingServices = () => {
 
     return (
     <React.Fragment>
        <Head>
-            <title>Landing Page Development Services - Lindy Ramirez | Digital Marketing & SEO</title>
+            <title>Digital Marketing Services in Los Angeles | Lindy Ramirez</title>
+            <link rel="canonical" href="https://www.lindyramirez.com/services/digital-marketing-services" />
             <meta
                 name="description"
-                content="Professional landing page development services by Lindy Ramirez. Custom lead generation landing pages, product landing pages, and sales funnel websites that drive results."
-            />
-            <meta
-                name="keywords"
-                content="digital marketing services, online marketing, digital marketing company, internet marketing, digital marketing near me, seo digital marketing, seo and digital marketing, marketing and seo, digital marketing consultant near me, internet marketing service, online digital marketing"
+                content="Professional digital marketing services in Los Angeles. SEO, PPC, social media marketing, and content marketing strategies by Lindy Ramirez."
             />
             <meta name="author" content="Lindy Ramirez" />
             
+            {/* Geo-targeting */}
+            <meta name="geo.region" content="US-CA" />
+            <meta name="geo.placename" content="Los Angeles" />
+            <meta name="geo.position" content="34.0522;-118.2437" />
+            <meta name="ICBM" content="34.0522, -118.2437" />
+            
             {/* Open Graph Metadata */}
-            <meta property="og:title" content="Landing Page Development Services - Lindy Ramirez | Digital Marketing Expert" />
+            <meta property="og:title" content="Digital Marketing Services in Los Angeles | Lindy Ramirez" />
+            <meta property="og:site_name" content="Lindy Ramirez | Web Developer" />
             <meta
                 property="og:description"
-                content="Custom landing pages and sales funnel websites by Lindy Ramirez. Boost conversions with lead generation landing pages and marketing funnels tailored to your needs."
+                content="Professional digital marketing services in Los Angeles. SEO, PPC, social media marketing, and content marketing strategies."
             />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://www.lindyramirez.com/services/landing-page-development" />
+            <meta property="og:url" content="https://www.lindyramirez.com/services/digital-marketing-services" />
             <meta property="og:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
+            <meta property="og:image:alt" content="Lindy Ramirez | Digital Marketing Expert in Los Angeles" />
 
             {/* Twitter Card Metadata */}
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Landing Page Development Services - Lindy Ramirez | Digital Marketing Expert" />
+            <meta name="twitter:title" content="Digital Marketing Services in Los Angeles | Lindy Ramirez" />
             <meta
                 name="twitter:description"
-                content="Custom landing pages and sales funnel websites by Lindy Ramirez. Boost conversions with lead generation landing pages and marketing funnels tailored to your needs."
+                content="Professional digital marketing services in Los Angeles. SEO, PPC, social media marketing, and content marketing strategies."
             />
-            <meta name="twitter:image" content="https://www.lindyramirez.com/static/me_working-2.png" />
+            <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
+            
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "serviceType": "Digital Marketing",
+                    "name": "Digital Marketing Services",
+                    "description": "Professional digital marketing services in Los Angeles including SEO, PPC advertising, social media marketing, and content marketing strategies.",
+                    "provider": {
+                        "@type": "Person",
+                        "name": "Lindy Ramirez",
+                        "url": "https://www.lindyramirez.com",
+                        "jobTitle": "Digital Marketing Expert",
+                        "email": "hello@lindyramirez.com",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Los Angeles",
+                            "addressRegion": "CA",
+                            "addressCountry": "US"
+                        }
+                    },
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Los Angeles",
+                            "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Granada Hills"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Tarzana"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Pasadena"
+                        }
+                    ],
+                    "offers": {
+                        "@type": "Offer",
+                        "availability": "https://schema.org/InStock",
+                        "priceRange": "$$",
+                        "url": "https://www.lindyramirez.com/contact"
+                    },
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": "Digital Marketing Services",
+                        "itemListElement": [
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Search Engine Optimization (SEO)",
+                                    "description": "Comprehensive SEO strategies to improve search rankings"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Pay-Per-Click (PPC) Advertising",
+                                    "description": "Targeted advertising campaigns for maximum ROI"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Social Media Marketing",
+                                    "description": "Strategic social media campaigns to boost brand awareness"
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Content Marketing",
+                                    "description": "Engaging content strategies that drive traffic and conversions"
+                                }
+                            }
+                        ]
+                    }
+                })}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "Lindy Ramirez Web Development",
+                    "url": "https://www.lindyramirez.com",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Lindy Ramirez"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Los Angeles",
+                        "addressRegion": "CA",
+                        "addressCountry": "US"
+                    },
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5.0",
+                        "reviewCount": ReviewData.length.toString(),
+                        "bestRating": "5",
+                        "worstRating": "1"
+                    },
+                    "review": ReviewData.map(review => ({
+                        "@type": "Review",
+                        "author": {
+                            "@type": "Person",
+                            "name": review.name,
+                            "worksFor": {
+                                "@type": "Organization",
+                                "name": review.company,
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": review.city,
+                                    "addressRegion": review.state,
+                                    "addressCountry": review.state === "Philippines" ? "PH" : "US"
+                                }
+                            }
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5",
+                            "worstRating": "1"
+                        },
+                        "reviewBody": review.feedback,
+                        "itemReviewed": {
+                            "@type": "Organization",
+                            "name": "Lindy Ramirez Web Development",
+                            "url": "https://www.lindyramirez.com"
+                        }
+                    }))
+                })}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": digitalMarketingFAQsData.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                })}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://www.lindyramirez.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://www.lindyramirez.com/services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Digital Marketing Services",
+                            "item": "https://www.lindyramirez.com/services/digital-marketing-services"
+                        }
+                    ]
+                })}
+            </script>
         </Head>
         <div className={classes.pg}>
             <NavigationBar />
@@ -89,4 +278,4 @@ const WordPressDevelopmentServices = () => {
     );
 }
 
-export default WordPressDevelopmentServices;
+export default DigitalMarketingServices;

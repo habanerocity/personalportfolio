@@ -116,29 +116,30 @@ const Slider = () => {
 													<span itemProp="provider">Lindy Ramirez</span>
 												</div>
 												<footer className="reviewer-info mt-3">
-													<div 
-													className="reviewer-avatar mb-2 d-flex justify-content-center align-items-center"
-													itemProp="author"
-													itemScope
-													itemType="https://schema.org/Person"
-													>
-														<Image 
-															src={review.companyLogo}
-															alt={`${review.company} company logo`}
-															className='rounded-circle'
-															height={65}
-															width={65}
-														/>
-													</div>
-													
-													<cite className="reviewer-details">
-														<div 
-															className={`fs-2 ${styles.person}`}
-															itemProp="name"
-														>
-															{review.name}
-														</div>
-														<div 
+																										<div 
+																											className="reviewer-avatar mb-2 d-flex justify-content-center align-items-center"
+																										>
+																											<Image 
+																												src={review.companyLogo}
+																												alt={`${review.company} company logo`}
+																												className='rounded-circle'
+																												height={65}
+																												width={65}
+																											/>
+																										</div>
+																										
+																										<cite 
+																											className="reviewer-details"
+																											itemProp="author"
+																											itemScope
+																											itemType="https://schema.org/Person"
+																										>
+																											<div 
+																												className={`fs-2 ${styles.person}`}
+																												itemProp="name"
+																											>
+																												{review.name}
+																											</div>														<div 
 															className={`fs-3 ${styles.person}`}
 															itemProp="worksFor"
 															itemScope

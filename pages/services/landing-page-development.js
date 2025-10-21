@@ -24,10 +24,11 @@ import sequenceTwoData from '../../data/services/landing-page-development/sequen
 import sequenceThreeData from '../../data/services/landing-page-development/sequenceThreeData';
 import landingPageServicesData from "../../data/services/landing-page-development/servicesData";
 import ctaData from '../../data/services/landing-page-development/ctadata';
-import sectionHeadingsData from "../../data/services/wordpress-development/sectionHeadingsData";
+import sectionHeadingsData from "../../data/services/landing-page-development/sectionHeadingsData";
 import landingPageFAQsData from "../../data/services/landing-page-development/faqsData";
+import ReviewData from '../../components/ui/ReviewSlider/SliderData';
 
-const WordPressDevelopmentServices = () => {
+const LandingPageDevelopmentServices = () => {
 
     return (
     <React.Fragment>
@@ -152,11 +153,41 @@ const WordPressDevelopmentServices = () => {
                             }
                         ]
                     },
+                     // ✅ ADD REAL REVIEW DATA
                     "aggregateRating": {
                         "@type": "AggregateRating",
                         "ratingValue": "5.0",
-                        "reviewCount": "5"
-                    }
+                        "reviewCount": ReviewData.length.toString(),
+                        "bestRating": "5",
+                        "worstRating": "1"
+                    },
+                    "review": ReviewData.map(review => ({
+                        "@type": "Review",
+                        "author": {
+                            "@type": "Person",
+                            "name": review.name,
+                            "worksFor": {
+                                "@type": "Organization",
+                                "name": review.company,
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": review.city,
+                                    "addressRegion": review.state,
+                                    "addressCountry": "US"
+                                }
+                            }
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5"
+                        },
+                        "reviewBody": review.feedback,
+                        "itemReviewed": {
+                            "@type": "Service",
+                            "name": "Custom Landing Page Development Services"
+                        }
+                    }))
                 })}
             </script>
             <script type="application/ld+json">
@@ -227,4 +258,4 @@ const WordPressDevelopmentServices = () => {
     );
 }
 
-export default WordPressDevelopmentServices;
+export default LandingPageDevelopmentServices;

@@ -152,8 +152,25 @@ const LandingPageDevelopmentServices = () => {
                                 }
                             }
                         ]
+                    }
+                })}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "Lindy Ramirez Web Development",
+                    "url": "https://www.lindyramirez.com",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Lindy Ramirez"
                     },
-                     // ✅ ADD REAL REVIEW DATA
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Los Angeles",
+                        "addressRegion": "CA",
+                        "addressCountry": "US"
+                    },
                     "aggregateRating": {
                         "@type": "AggregateRating",
                         "ratingValue": "5.0",
@@ -185,12 +202,9 @@ const LandingPageDevelopmentServices = () => {
                         },
                         "reviewBody": review.feedback,
                         "itemReviewed": {
-                            "@type": "Service",
-                            "name": "Custom Landing Page Development Services",
-                            "provider": {
-                                "@type": "Person",
-                                "name": "Lindy Ramirez"
-                            }
+                            "@type": "Organization",
+                            "name": "Lindy Ramirez Web Development",
+                            "url": "https://www.lindyramirez.com"
                         }
                     }))
                 })}

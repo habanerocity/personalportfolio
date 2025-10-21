@@ -173,19 +173,24 @@ const LandingPageDevelopmentServices = () => {
                                     "@type": "PostalAddress",
                                     "addressLocality": review.city,
                                     "addressRegion": review.state,
-                                    "addressCountry": "US"
+                                    "addressCountry": review.state === "Philippines" ? "PH" : "US"
                                 }
                             }
                         },
                         "reviewRating": {
                             "@type": "Rating",
                             "ratingValue": "5",
-                            "bestRating": "5"
+                            "bestRating": "5",
+                            "worstRating": "1"
                         },
                         "reviewBody": review.feedback,
                         "itemReviewed": {
                             "@type": "Service",
-                            "name": "Custom Landing Page Development Services"
+                            "name": "Custom Landing Page Development Services",
+                            "provider": {
+                                "@type": "Person",
+                                "name": "Lindy Ramirez"
+                            }
                         }
                     }))
                 })}

@@ -24,16 +24,11 @@ const Slider = () => {
 			className={styles.wrapper}
 			aria-label="Client testimonials"
 			role="complementary"
-			itemScope
-			itemType="https://schema.org/ItemList"
-			itemProp="review"
 		>
-			<span itemProp="name" className={styles.visually_hidden}>
-				Web Development Client Testimonials
-			</span>
-			<span itemProp="description" className={styles.visually_hidden}>
-				Reviews from satisfied web development clients
-			</span>
+			<div className={styles.visually_hidden}>
+				<h2>Web Development Client Testimonials</h2>
+				<p>Reviews from satisfied web development clients</p>
+			</div>
 			<div className={`container d-flex justify-content-center align-items-center ${styles.slider}`}>
 					<div className='w-100 d-flex justify-content-end mt-5' 	>
 						<nav 
@@ -82,10 +77,8 @@ const Slider = () => {
 						{ReviewData.map((review, index) => {
 							return (
 								<div 
-									className={index === currentSlide ? styles.slide__active : styles.slide} key={review.id}
-									itemScope
-									itemType="https://schema.org/Review"
-									itemProp="itemListElement"
+									className={index === currentSlide ? styles.slide__active : styles.slide} 
+									key={review.id}
 								>
 									{index === currentSlide && (
 										<div className={styles.review__slides}>
@@ -103,18 +96,9 @@ const Slider = () => {
 												</div>
 												<blockquote 
 													className={`fs-3 ${styles.testimonial}`}
-													itemProp="reviewBody"
 												>
 													{review.feedback}
 												</blockquote>
-												<div itemProp="reviewRating" itemScope itemType="https://schema.org/Rating" className={styles.visually_hidden}>
-													<span itemProp="ratingValue">5</span>
-													<span itemProp="bestRating">5</span>
-												</div>
-												<div itemProp="itemReviewed" itemScope itemType="https://schema.org/Service" className={styles.visually_hidden}>
-													<span itemProp="name">Web Development Services</span>
-													<span itemProp="provider">Lindy Ramirez</span>
-												</div>
 												<footer className="reviewer-info mt-3">
 																										<div 
 																											className="reviewer-avatar mb-2 d-flex justify-content-center align-items-center"
@@ -130,31 +114,20 @@ const Slider = () => {
 																										
 																										<cite 
 																											className="reviewer-details"
-																											itemProp="author"
-																											itemScope
-																											itemType="https://schema.org/Person"
 																										>
 																											<div 
 																												className={`fs-2 ${styles.person}`}
-																												itemProp="name"
 																											>
 																												{review.name}
 																											</div>														<div 
 															className={`fs-3 ${styles.person}`}
-															itemProp="worksFor"
-															itemScope
-															itemType="https://schema.org/Organization"
 														>
-															<span itemProp="name">{review.company}</span>
+															<span>{review.company}</span>
 															{' | '}
-															<span 
-															itemProp="address"
-															itemScope
-															itemType="https://schema.org/PostalAddress"
-															>
-															<span itemProp="addressLocality">{review.city}</span>
+															<span>
+															<span>{review.city}</span>
 															{', '}
-															<span itemProp="addressRegion">{review.state}</span>
+															<span>{review.state}</span>
 															</span>
 														</div>
 													</cite>

@@ -26,6 +26,7 @@ import shopifyServicesData from "../../data/services/shopify-development/service
 import ctaData from '../../data/services/shopify-development/ctadata';
 import sectionHeadingsData from "../../data/services/wordpress-development/sectionHeadingsData";
 import shopifyFAQsData from "../../data/services/shopify-development/faqsData";
+import ReviewData from '../../components/ui/ReviewSlider/SliderData';
 
 const ShopifyDevelopmentServices = () => {
 
@@ -150,12 +151,61 @@ const ShopifyDevelopmentServices = () => {
                                 }
                             }
                         ]
+                    }
+                })}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "Lindy Ramirez Web Development",
+                    "url": "https://www.lindyramirez.com",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Lindy Ramirez"
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Los Angeles",
+                        "addressRegion": "CA",
+                        "addressCountry": "US"
                     },
                     "aggregateRating": {
                         "@type": "AggregateRating",
                         "ratingValue": "5.0",
-                        "reviewCount": "5"
-                    }
+                        "reviewCount": ReviewData.length.toString(),
+                        "bestRating": "5",
+                        "worstRating": "1"
+                    },
+                    "review": ReviewData.map(review => ({
+                        "@type": "Review",
+                        "author": {
+                            "@type": "Person",
+                            "name": review.name,
+                            "worksFor": {
+                                "@type": "Organization",
+                                "name": review.company,
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": review.city,
+                                    "addressRegion": review.state,
+                                    "addressCountry": review.state === "Philippines" ? "PH" : "US"
+                                }
+                            }
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5",
+                            "bestRating": "5",
+                            "worstRating": "1"
+                        },
+                        "reviewBody": review.feedback,
+                        "itemReviewed": {
+                            "@type": "Organization",
+                            "name": "Lindy Ramirez Web Development",
+                            "url": "https://www.lindyramirez.com"
+                        }
+                    }))
                 })}
             </script>
 

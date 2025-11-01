@@ -522,7 +522,7 @@ const Services = () => {
                             </header>
                             <nav aria-label="Custom pricing inquiry">
                                 <Link className={classes.link} passHref href="/contact">
-                                    <button id={classes.services__section_inquire_btn} className={`${classes.services__section_pricing_card_btn} fs-3`}>Let's Connect</button>
+                                    <button id={classes.services__section_inquire_btn} className={`${classes.services__section_pricing_card_btn} fs-3`}>Let&apos;s Connect</button>
                                 </Link>
                             </nav>
                         </section>

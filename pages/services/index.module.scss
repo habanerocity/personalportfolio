@@ -80,7 +80,6 @@
   }
 
   @media(max-width: 1199px){
-    // min-height: 73rem;
     width: 29rem;
   }
 
@@ -116,7 +115,6 @@
 .service__card_content{
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
   align-items: flex-start;
   height: 100%;
 }
@@ -126,27 +124,6 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  // min-height: 42rem;
-
-  // @media(max-width: 1399px){
-  //   min-height: 47rem;
-  // }
-
-  // @media(max-width: 1199px){
-  //   min-height: 68rem;
-  // }
-
-  // @media(max-width: 1099px){
-  //   min-height: 33rem;
-  // }
-
-  // @media(max-width: 992px){
-  //   min-height: 37rem;
-  // }
-
-  // @media(max-width: 804px){
-  //   min-height: 25rem;
-  // }
 }
 
 .service__card_link{
@@ -266,7 +243,7 @@
     .table-custom-padding thead th {
       padding-top: 1rem !important;  /* Adjust the value as needed */
       padding-bottom: 1rem !important;  /* Adjust the value as needed */
-    }
+}
 
 .brands__section_logo{
   @media(max-width: 992px){
@@ -328,18 +305,10 @@
   }
 }
 
-// .table{
-//   margin-bottom: 7rem!important;
-// }
-
 .table_cell{
   cursor: pointer;
   transition: all 0.3s ease-in;
 
-
-  // &:hover{
-  //   color: $tertiary-color-2;
-  // }
     @media(max-width: 425px){
     font-size: 10px!important;
   }

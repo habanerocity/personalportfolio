@@ -1,0 +1,45 @@
+@import '../../../styles/sass/variables';
+
+.link {
+  text-decoration: none !important;
+}
+
+.table-custom-padding tbody td, 
+    .table-custom-padding tbody th, 
+    .table-custom-padding thead th {
+      padding-top: 1rem !important;  /* Adjust the value as needed */
+      padding-bottom: 1rem !important;  /* Adjust the value as needed */
+}
+
+.table_cell{
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+    @media(max-width: 425px){
+    font-size: 10px!important;
+  }
+}
+
+.table_cell_check{
+  @media(max-width: 425px){
+    width: 2rem;
+  }
+}
+
+.services__section_pricing_card_btn{
+  // width: 100%;
+  background-color: $secondary-color;
+  padding: 8px;
+  border: none;
+  color: white;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+
+  &:hover{
+    background-color: $secondary-color-2;
+  }
+
+  @media(max-width: 425px){
+    font-size: 12px!important;
+  }
+}

@@ -212,19 +212,27 @@ const Services = () => {
                         </section>
                     </Container>
                 </SectionContainer>
-                <div className={`h-auto ${classes.brands_section}`}>
+                <aside 
+                    className={`h-auto ${classes.brands_section}`}
+                    aria-labelledby="custom-packages-heading"
+                    role="complementary"
+                >
                     <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
-                        <div className="d-flex flex-column justify-content-center align-items-center">
-                            <h1 className="text-center mb-4">
-                                Custom Packages and Per Project Pricing Available Upon Request!
-                            </h1>
-                            <Link className={classes.link} passHref href="/Contact">
-                                <button id={classes.services__section_inquire_btn} className={`${classes.services__section_pricing_card_btn} fs-3`}>Inquire Now</button>
-                            </Link>
-                        </div>
+                        <section className="d-flex flex-column justify-content-center align-items-center">
+                            <header className="text-center">
+                                <h2 className="text-center mb-4" id="custom-packages-heading">
+                                    Custom Packages and Per Project Pricing Available Upon Request!
+                                </h2>
+                            </header>
+                            <nav aria-label="Custom pricing inquiry">
+                                <Link className={classes.link} passHref href="/contact">
+                                    <button id={classes.services__section_inquire_btn} className={`${classes.services__section_pricing_card_btn} fs-3`}>Let's Connect</button>
+                                </Link>
+                            </nav>
+                        </section>
                     </Container>
-                    <Footer className='bg-white' />
-                </div>
+                    <Footer className='bg-white' role="contentinfo" aria-label="Site footer"/>
+                </aside>
                 </motion.div>
                 <LogoBar />
             </div>

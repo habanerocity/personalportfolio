@@ -14,6 +14,8 @@ import ButtonPair from "../../components/ui/ButtonPair";
 
 import PricingTable from '../../components/ui/PricingTable/PricingTable';
 
+import PricingCardsGrid from '../../components/ui/PricingCardsGrid/PricingCardsGrid';
+
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
@@ -23,8 +25,9 @@ import Image from "next/image";
 import pageFadeInAnimation from "../../animations/pageFadeInAnimation";
 
 import serviceCardInfoData from "../../data/serviceCardInfoData";
-
 import pricingFeaturesData from "../../data/services/pricingFeaturesData";
+import pricingCardsData from "../../data/services/pricingCardsData";
+
 
 const Services = () => {
 
@@ -196,179 +199,11 @@ const Services = () => {
                                 </h2>
                                 <p className="fs-3" itemProp="description">Packages That I Offer</p>
                             </header>
-                            <div 
-                                className={`d-flex flex-row justify-content-between align-items-center w-100 mt-5 ${classes.pricing_card_wrapper}`} 
-                                aria-label="Service Pricing Packages"
-                                role="list"
-                            >
-                                <article 
-                                    className={`p-5 fs-4 ${classes.services__section_pricing_card}`} 
-                                    itemScope
-                                    itemType="https://schema.org/Offer"
-                                    itemProp="itemListElement"
-                                    role="listitem"
-                                >
-                                    <div className={`${classes.services__section_pricing_card_wrapper}`}>
-                                        <header className='d-flex flex-row justify-content-between' >
-                                            <div className='text-wrap d-flex flex-column justify-content-start align-items-start' >
-                                                <h3 className="fs-2 fw-medium" itemProp="name" >Basic</h3>
-                                                <p className="fs-5" itemProp="description">Ideal for brands whom need consistent web maintenance, content management, and site optimization.</p>
-                                            </div>
-                                            <div className={classes.services__section_pricing_card_icon} aria-hidden="true">
-                                                <Image
-                                                src="/static/gem-solid.svg"
-                                                height={30}
-                                                width={30}
-                                                alt="Basic Package Icon"
-                                                role="presentation"
-                                                />
-                                            </div>
-                                        </header>
-                                        <div 
-                                            className='d-flex flex-row justify-content-start align-items-end mt-3' 
-                                            itemProp="priceSpecification"
-                                            itemScope
-                                            itemType="https://schema.org/PriceSpecification"
-                                        >
-                                            <data 
-                                                className='display-4 fw-bold me-1' 
-                                                value="199"
-                                                itemProp="price"
-                                            >
-                                                $199
-                                            </data>
-                                            <span itemProp="priceCurrency" content="USD">USD per month</span>
-                                        </div>
-                                        <nav className="mt-5" aria-label="Get started with Basic package">
-                                            <Link className={classes.link} passHref href="/contact">
-                                                <button 
-                                                    className={`${classes.services__section_pricing_card_btn} w-100 fs-3`}
-                                                    itemProp="url"
-                                                >
-                                                    Get Started
-                                                </button>
-                                            </Link>
-                                        </nav>
-                                    </div>
-                                </article>
-                                <article 
-                                    className={`p-5 fs-4 ${classes.services__section_pricing_card} ${classes.standard_card}`}
-                                    itemScope
-                                    itemType="https://schema.org/Offer"
-                                    itemProp="itemListElement"
-                                    role="listitem"
-                                >
-                                    <div className={classes.popular_badge} aria-label="Most popular package">
-                                        Most Popular
-                                    </div>
-                                    <div className={`${classes.services__section_pricing_card_wrapper}`}>
-                                        <header className='d-flex flex-row justify-content-between'>
-                                            <div className='text-wrap d-flex flex-column justify-content-start align-items-start'>
-                                                <h3 className="fs-2 fw-medium" itemProp="name">
-                                                    Standard
-                                                </h3>
-                                                <p className='fs-5' itemProp="description">
-                                                    Best suited for brands requiring custom development, web design, and SEO services to enhance their online presence.
-                                                </p>
-                                            </div>
-                                            <div className={classes.services__section_pricing_card_icon} aria-hidden="true">
-                                                <Image
-                                                    src="/static/star-solid.svg"
-                                                    height={30}
-                                                    width={30}
-                                                    alt=""
-                                                    role="presentation"
-                                                />
-                                            </div>
-                                        </header>
-                                        
-                                        <div 
-                                            className='d-flex flex-row justify-content-start align-items-end mt-3'
-                                            itemProp="priceSpecification"
-                                            itemScope
-                                            itemType="https://schema.org/PriceSpecification"
-                                        >
-                                            <data 
-                                                className='display-4 fw-bold me-1' 
-                                                value="650"
-                                                itemProp="price"
-                                            >
-                                                $650
-                                            </data>
-                                            <span itemProp="priceCurrency" content="USD">USD per month</span>
-                                        </div>
-                                        
-                                        <nav className="mt-5" aria-label="Get started with Standard package">
-                                            <Link className={classes.link} passHref href="/contact">
-                                                <button 
-                                                    className={`${classes.services__section_pricing_card_btn} w-100 fs-3`}
-                                                    itemProp="url"
-                                                >
-                                                    Get Started
-                                                </button>
-                                            </Link>
-                                        </nav>
-                                    </div>
-                                    <meta itemProp="availability" content="https://schema.org/InStock" />
-                                </article>
-                                <article 
-                                    className={`p-5 fs-4 ${classes.services__section_pricing_card}`}
-                                    itemScope
-                                    itemType="https://schema.org/Offer"
-                                    itemProp="itemListElement"
-                                    role="listitem"
-                                >
-                                    <div className={`${classes.services__section_pricing_card_wrapper}`}>
-                                        <header className='d-flex flex-row justify-content-between'>
-                                            <div className='text-wrap d-flex flex-column justify-content-start align-items-start'>
-                                                <h3 className="fs-2 fw-medium" itemProp="name">
-                                                    Premium
-                                                </h3>
-                                                <p className='fs-5' itemProp="description">
-                                                    Perfect for brands looking for complete web development services and robust digital marketing strategies.
-                                                </p>
-                                            </div>
-                                            <div className={classes.services__section_pricing_card_icon} aria-hidden="true">
-                                                <Image
-                                                    src="/static/crown-solid.svg"
-                                                    height={30}
-                                                    width={30}
-                                                    alt=""
-                                                    role="presentation"
-                                                />
-                                            </div>
-                                        </header>
-                                        
-                                        <div 
-                                            className='d-flex flex-row justify-content-start align-items-end mt-3'
-                                            itemProp="priceSpecification"
-                                            itemScope
-                                            itemType="https://schema.org/PriceSpecification"
-                                        >
-                                            <data 
-                                                className='display-4 fw-bold me-1' 
-                                                value="1099"
-                                                itemProp="price"
-                                            >
-                                                $1099
-                                            </data>
-                                            <span itemProp="priceCurrency" content="USD">USD per month</span>
-                                        </div>
-                                        
-                                        <nav className="mt-5" aria-label="Get started with Premium package">
-                                            <Link className={classes.link} passHref href="contact">
-                                                <button 
-                                                    className={`${classes.services__section_pricing_card_btn} w-100 fs-3`}
-                                                    itemProp="url"
-                                                >
-                                                    Get Started
-                                                </button>
-                                            </Link>
-                                        </nav>
-                                    </div>
-                                    <meta itemProp="availability" content="https://schema.org/InStock" />
-                                </article>
-                            </div>
+                            <PricingCardsGrid 
+                              cards={pricingCardsData}
+                              gridClassName={classes.pricing_card_wrapper}
+                              cardClassName={classes.services__section_pricing_card}
+                            />
                             <PricingTable 
                               features={pricingFeaturesData}
                               contactLink="/contact"

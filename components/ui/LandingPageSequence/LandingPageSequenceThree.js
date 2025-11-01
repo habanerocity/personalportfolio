@@ -93,7 +93,11 @@ const LandingPageSequenceThree = ({
                   aria-label="Contact and portfolio navigation"
                   role="navigation"
                 >
-                  <ButtonPair primaryCtaButtonText="Let's Connect" secondaryCtaButtonText="View Work Samples" />
+                  <ButtonPair 
+                    primaryCtaButtonText="Let's Connect" 
+                    secondaryCtaButtonText="View Services" 
+                    secondaryCtaButtonLink="/services"
+                  />
                 </nav>
               </Col>
               <Col 

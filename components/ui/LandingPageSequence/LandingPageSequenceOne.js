@@ -66,7 +66,8 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
                   >
                     <ButtonPair
                       primaryCtaButtonText="Contact"
-                      secondaryCtaButtonText="View Portfolio"
+                      secondaryCtaButtonText="View Services"
+                      secondaryCtaButtonLink="/services"
                       aria-label="Contact me or view my portfolio"
                     />
                   </nav>

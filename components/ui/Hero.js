@@ -51,7 +51,7 @@ const Hero = () => {
             <Link className={classes.link} passHref href="/services">
               <button className={`${classes.hero__btn_solid} text-white ${classes.hero__btn} fs-3 mt-4 me-4`}>My Services</button>
             </Link>
-            <Link className={classes.link} passHref href="/About">
+            <Link className={classes.link} passHref href="/about">
               <button className={`${classes.hero__btn_transparent} ${classes.hero__btn} fs-3 mt-4`}>About Me</button>
             </Link>
           </div>

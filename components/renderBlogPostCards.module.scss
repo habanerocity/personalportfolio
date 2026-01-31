@@ -1,0 +1,42 @@
+@import '/styles/sass/variables';
+
+.card {
+    margin-bottom: 10rem;
+    border-radius: $border-radius-md;
+    box-shadow: $box-shadow;
+
+    &__body{
+        height: 35rem;
+
+        @media screen and (max-width: 1399px){
+            height: 39rem;
+        }
+
+        @media screen and (max-width: 1200px){
+            height: 49rem;
+        }
+
+        @media screen and (max-width: 991px){
+            height: auto;
+        }
+
+        @media screen and (max-width: 454px){
+            .card__body{
+                height: auto;
+            }
+        }
+    }
+
+    &__top__br{
+        border-top-left-radius: $border-radius-md;
+        border-top-right-radius: $border-radius-md;
+    }
+}
+
+.secondary_color {
+    background-color: $secondary-color!important;
+}
+
+.pill {
+    padding: 4px;
+}

@@ -3,30 +3,23 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 
 import Container from "react-bootstrap/Container";
-import classes from "./index.module.scss";
+import classes from "./blog.module.scss";
 
-import NavigationBar from '../../components/ui/NavigationBar';
-import LogoBar from '../../components/ui/LogoBar';
-import Footer from '../../components/ui/Footer';
-import SectionContainer from '../../components/ui/SectionContainer';
-import Headings from '../../components/ui/Headings';
-import ButtonPair from "../../components/ui/ButtonPair";
-import SplitHero from "../../components/ui/hero/SplitHero";
-
-import PricingTable from '../../components/ui/PricingTable/PricingTable';
-import PricingCardsGrid from '../../components/ui/PricingCardsGrid/PricingCardsGrid';
+import NavigationBar from '../components/ui/NavigationBar';
+import LogoBar from '../components/ui/LogoBar';
+import Footer from '../components/ui/Footer';
+import SectionContainer from '../components/ui/SectionContainer';
+import Headings from '../components/ui/Headings';
+import SplitHero from "../components/ui/hero/SplitHero";
 
 import Tooltip from 'react-bootstrap/Tooltip';
 
-import Link from "next/link";
-import Image from "next/image";
+import renderBlogPostCards from "../components/renderBlogPostCards";
+import { blogPostsInfoData } from "../data/blogPostsCardInfoData";
 
-import pageFadeInAnimation from "../../animations/pageFadeInAnimation";
+import pageFadeInAnimation from "../animations/pageFadeInAnimation";
 
-import serviceCardInfoData from "../../data/serviceCardInfoData";
-import pricingFeaturesData from "../../data/services/pricingFeaturesData";
-import pricingCardsData from "../../data/services/pricingCardsData";
-import { servicesHeroData } from "../../data/services/servicesHeroData";
+import { servicesHeroData } from "../data/services/servicesHeroData";
 
 const Services = () => {
 
@@ -355,7 +348,7 @@ const Services = () => {
                         <Container className={`d-flex flex-column position-relative ${classes.flex__container__top_section}`}>
                             <section className={classes.flex__container} aria-labelledby="services-heading" role="banner">
                                 <header className={`w-100 align-items-start text-start justify-content-start ${classes.headings__container}`}>
-                                    <Headings id="services-heading" itemProp="name" heading="How I Can Help You">Services</Headings>      
+                                    <Headings id="services-heading" itemProp="name" heading="My Latest Posts">Blog</Headings>      
                                 </header>
                             </section>
                             <SplitHero
@@ -365,147 +358,13 @@ const Services = () => {
                                 <h2 id="service-offerings-heading" className={classes.visually_hidden}>
                                     Available Services
                                 </h2>
-                                <h2 className={`mt-5 ${classes.section__heading_header}`}>My Services</h2>
-                                <div className={`mt-4 ${classes.service__card_wrapper}`} itemScope itemType="https://schema.org/ItemList">
-                                    {serviceCardInfoData.map((serviceCard, index) => (
-                                        <article 
-                                            key={serviceCard.id} 
-                                            className={`p-5 fs-4 ${classes.service__card}`}
-                                            itemScope
-                                            itemType="https://schema.org/Service"
-                                            itemProp="itemListElement"
-                                        >
-                                            <div className={classes.service__card_content_wrapper}>
-                                                <header className={classes.service__card_content}>
-                                                    <div role="img" aria-label={serviceCard.altText}>
-                                                        <Image 
-                                                            className={classes.service__card_icon} 
-                                                            src={serviceCard.icon} 
-                                                            alt={serviceCard.altText} 
-                                                            width={40} 
-                                                            height={40} 
-                                                            aria-hidden="true"
-                                                        />
-                                                    </div>
-                                                    <h3 className="mt-3" itemProp="name">{serviceCard.title}</h3>
-                                                    <p className="mt-3" itemProp="description">{serviceCard.description}</p>
-                                                </header>
-                                                <nav aria-label={`${serviceCard.title} actions`}>
-                                                    <ButtonPair 
-                                                        primaryCtaButtonText="Get Started" 
-                                                        secondaryCtaButtonText="Learn More" 
-                                                        secondaryCtaButtonLink={`/services/${serviceCard.link}`} 
-                                                        flexCol={true} 
-                                                        fullWidth={true} 
-                                                    />
-                                                </nav>
-                                            </div>
-                                            <meta itemProp="position" content={index + 1} />
-                                        </article>
-                                    ))}
+                                <div className='mt-5 w-100' >
+                                    {blogPostsInfoData.map((post, index) => renderBlogPostCards(post, index))}
                                 </div>
                             </section>
                         </Container>
-                    <aside  className={`h-auto ${classes.brands_section}`} aria-labelledby="brands-heading" role="complementary">
-                        <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
-                            <section className={` flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}>
-                                <header>
-                                    <h2 id="brands-heading" className={classes.section__heading_header}>
-                                        Some Brands I&apos;ve Worked With
-                                    </h2>
-                                </header>
-                                <div role="list" aria-label="Client brand logos" className={`d-flex flex-row flex-wrap justify-content-between align-items-center w-100 mt-5 ${classes.logo__holder}`}>
-                                    <figure role="listitem">
-                                        <Image
-                                        src="/static/tt.svg"
-                                        className={classes.brands__section_logo_tt}
-                                        height={150}
-                                        width={150}
-                                        alt="Taste Tripping"
-                                        />
-                                    </figure>
-                                    <figure role="listitem">
-                                        <Image
-                                        src="/static/VICTORIE-TM-5.webp"
-                                        className={classes.brands__section_logo}
-                                        height={150}
-                                        width={180}
-                                        alt="Victorie Packaging"
-                                        />
-                                    </figure>
-                                    <figure role="listitem">
-                                        <Image
-                                        src="/static/The-Zoe-PH-edited.webp"
-                                        className={classes.brands__section_logo}
-                                        height={150}
-                                        width={180}
-                                        alt="The Zoe PH Logo"
-                                        />
-                                    </figure>
-                                    <figure role="listitem">
-                                        <Image
-                                        src="/static/bang-logo.webp"
-                                        className={classes.brands__section_logo}
-                                        height={150}
-                                        width={180}
-                                        alt="Bang Logo"
-                                        />
-                                    </figure>
-                                </div>
-                            </section>
-                        </Container>
-                    </aside >
-                    <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
-                        <section 
-                            className={`flex-column w-100 justify-content-start align-items-start ${classes.flex__container}`}
-                            aria-labelledby="pricing-heading"
-                            itemScope
-                            itemType="https://schema.org/OfferCatalog"
-                        >
-                            <header className='d-flex flex-column justify-content-start align-items-start'>
-                                <h2 
-                                    className={classes.section__heading_header}
-                                    id="pricing-heading"
-                                    itemProp="name"
-                                >
-                                    Pricing
-                                </h2>
-                                <p className="fs-3" itemProp="description">Packages That I Offer</p>
-                            </header>
-                            <PricingCardsGrid 
-                              cards={pricingCardsData}
-                              gridClassName={classes.pricing_card_wrapper}
-                              cardClassName={classes.services__section_pricing_card}
-                            />
-                            <PricingTable 
-                              features={pricingFeaturesData}
-                              contactLink="/contact"
-                              buttonText="Get Started"
-                            />
-                        </section>
-                    </Container>
+                    <Footer role="contentinfo" aria-label="Site footer"/>
                 </SectionContainer>
-                <aside 
-                    className={`h-auto ${classes.brands_section}`}
-                    aria-labelledby="custom-packages-heading"
-                    role="complementary"
-                >
-                    <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
-                        <section className="d-flex flex-column justify-content-center align-items-center">
-                            <header className="text-center">
-                                <h2 className="text-center mb-4" id="custom-packages-heading">
-                                    Custom Packages and Per Project Pricing Available Upon Request!
-                                </h2>
-                            </header>
-                            <nav aria-label="Custom pricing inquiry">
-                                <Link className={classes.link} passHref href="/contact">
-                                    <button id={classes.services__section_inquire_btn} className={`${classes.services__section_pricing_card_btn} fs-3`}>Let&apos;s Connect</button>
-                                </Link>
-                            </nav>
-                        </section>
-                    </Container>
-                    <Footer className='bg-white' role="contentinfo" aria-label="Site footer"/>
-                </aside>
                 </motion.div>
                 <LogoBar />
             </div>

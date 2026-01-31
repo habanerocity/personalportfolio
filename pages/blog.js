@@ -26,6 +26,12 @@ const POSTS_PER_PAGE = 6;
 const Blog = () => {
     const [currentPage, setCurrentPage] = useState(1);
 
+    const sortedPosts = [...blogPostsInfoData].sort(
+        (a, b) => new Date(b.datePublished) - new Date(a.datePublished)
+    );
+
+    const latestPost = sortedPosts[0];
+
     // Calculate pagination
     const totalPages = Math.ceil(blogPostsInfoData.length / POSTS_PER_PAGE);
     const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
@@ -349,10 +355,10 @@ const Blog = () => {
             <div className={classes.pg} itemScope itemType="https://schema.org/WebPage">
                 <NavigationBar />
                 <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={pageFadeInAnimation}
-                onAnimationStart={pageFadeInAnimation.onAnimationStart}
+                    initial="hidden"
+                    animate="visible"
+                    variants={pageFadeInAnimation}
+                    onAnimationStart={pageFadeInAnimation.onAnimationStart}
                 >
                     <SectionContainer className="min-h-auto">
                         <Container className={`d-flex flex-column position-relative ${classes.flex__container__top_section}`}>
@@ -362,7 +368,20 @@ const Blog = () => {
                                 </header>
                             </section>
                             <SplitHero
-                                {...servicesHeroData}
+                                id="latest-post"
+                                variant="blog"
+                                subtitle="Latest Post"
+                                title={latestPost.title}
+                                description={latestPost.excerpt}
+                                slug={latestPost.slug}
+                                datePublished={latestPost.datePublished}
+                                readingTime={latestPost.readingTime}
+                                tags={latestPost.tools}
+                                image={{
+                                    src: latestPost.image,
+                                    alt: latestPost.imageAlt,
+                                    priority: true
+                                }}
                             />
                             <section className={`${classes.flex__container} align-items-start flex-column`}  aria-labelledby="service-offerings-heading">
                                 <h2 id="service-offerings-heading" className={classes.visually_hidden}>

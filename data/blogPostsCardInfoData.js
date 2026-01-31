@@ -4,7 +4,7 @@ export const blogPostsInfoData = [
             slug: "why-custom-gutenberg-blocks-are-game-changer", // URL-friendly identifier
             image: "/static/taste_trippingx540.webp",
             imageAlt: "Custom Gutenberg blocks example", // Accessibility
-            datePublished: "2025-12-10", // ISO format for easier parsing
+            datePublished: "2025-12-19", // ISO format for easier parsing
             dateUpdated: "2025-12-10", // Track content updates
             title: "Why Custom Gutenberg Blocks Are a Game-Changer for WordPress Development",
             author: {

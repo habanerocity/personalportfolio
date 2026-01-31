@@ -17,12 +17,16 @@
   }
 }
 
-.hero_subtitle {
-  color: #ff9966;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
+// .hero_subtitle {
+//   color: #ff9966;
+//   font-weight: 600;
+//   letter-spacing: 0.05em;
+//   text-transform: uppercase;
+//   margin-bottom: 1rem;
+// }
+
+.color_orange {
+  background-color: $secondary-color!important;
 }
 
 .hero_title {
@@ -66,4 +70,22 @@
 
 .services__banner_description{
   font-size: 16px;
+}
+
+.hero__meta {
+  opacity: 0.9;
+}
+
+.hero__tags {
+  gap: 0.5rem;
+}
+
+.hero__cta {
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 }

@@ -1,6 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
+import Badge from "react-bootstrap/Badge";
 import PropTypes from "prop-types";
 import classes from "./SplitHero.module.scss";
+
+import HeroButton from "../HeroButton";
+import Hero from "../Hero";
 
 const SplitHero = ({
   id,
@@ -12,7 +17,13 @@ const SplitHero = ({
   className = "",
   contentClassName = "",
   imageClassName = "",
-  schemaType = "https://schema.org/Service"
+  schemaType = "https://schema.org/Service",
+  // Blog-specific props
+  variant = "service",
+  slug,
+  datePublished,
+  readingTime,
+  tags
 }) => {
   const {
     src,
@@ -23,12 +34,22 @@ const SplitHero = ({
     quality = 85
   } = image || {};
 
+  const isBlog = variant === "blog";
+
+  const formattedDate = datePublished
+    ? new Date(datePublished).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      })
+    : null;
+
   return (
     <section
       className={`row mt-5 gx-0 ${reverse ? 'flex-row-reverse' : ''} ${className}`}
       aria-labelledby={`${id}-heading`}
       itemScope
-      itemType={schemaType}
+      itemType={isBlog ? "https://schema.org/BlogPosting" : schemaType}
     >
       {/* Image Column */}
       <aside
@@ -46,6 +67,7 @@ const SplitHero = ({
             quality={quality}
             placeholder={blurDataURL ? "blur" : undefined}
             blurDataURL={blurDataURL}
+            itemProp={isBlog ? "image" : undefined}
           />
         )}
       </aside>
@@ -64,22 +86,61 @@ const SplitHero = ({
               {subtitle}
             </p>
           )}
+
           {title && (
             <h1
               className={`fw-bold text-white ${classes.services__banner_heading}`}
-              itemProp="name"
+              itemProp={isBlog ? "headline" : "name"}
             >
-              {title}
+              {isBlog && slug ? (
+                <Link href={`/blog/${slug}`} className="text-white text-decoration-none">
+                  {title}
+                </Link>
+              ) : (
+                title
+              )}
             </h1>
           )}
         </header>
+
+        {/* Tags */}
+        {isBlog && tags && tags.length > 0 && (
+          <div className={`${classes.hero__tags} mt-3 d-flex flex-wrap align-items-center`}>
+            <span className="text-white fw-bold me-2 fs-5">Tags:</span>
+            {tags.map((tag, index) => (
+              <Badge key={index} pill text="light" className={`${classes.color_orange} me-2 fs-5`}>
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+
+        {/* Blog Meta */}
+          {isBlog && (formattedDate || readingTime) && (
+            <div className={`${classes.hero__meta} d-flex align-items-center gap-3 my-3`}>
+              {formattedDate && (
+                <time dateTime={datePublished} itemProp="datePublished" className="text-white fs-5">
+                  📅 {formattedDate}
+                </time>
+              )}
+              {readingTime && (
+                <span className="text-white fs-5">⏱️ {readingTime} min read</span>
+              )}
+            </div>
+          )}
+
         {description && (
           <p
-            itemProp="description"
+            itemProp={isBlog ? "abstract" : "description"}
             className={`text-white mt-4 ${classes.services__banner_description}`}
           >
             {description}
           </p>
+        )}
+
+        {/* CTA Button for Blog */}
+        {isBlog && slug && (
+          <HeroButton href={`/blog/${slug}`}>Read Post</HeroButton>
         )}
       </article>
     </section>
@@ -103,7 +164,12 @@ SplitHero.propTypes = {
   className: PropTypes.string,
   contentClassName: PropTypes.string,
   imageClassName: PropTypes.string,
-  schemaType: PropTypes.string
+  schemaType: PropTypes.string,
+  variant: PropTypes.oneOf(["service", "blog"]),
+  slug: PropTypes.string,
+  datePublished: PropTypes.string,
+  readingTime: PropTypes.number,
+  tags: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default SplitHero;

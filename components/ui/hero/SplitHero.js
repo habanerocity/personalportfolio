@@ -119,12 +119,12 @@ const SplitHero = ({
           {isBlog && (formattedDate || readingTime) && (
             <div className={`${classes.hero__meta} d-flex align-items-center gap-3 my-3`}>
               {formattedDate && (
-                <time dateTime={datePublished} itemProp="datePublished" className="text-white fs-5">
-                  📅 {formattedDate}
+                <time dateTime={datePublished} itemProp="datePublished" className="text-white fs-5 d-flex align-items-center">
+                  <span ><Image className='me-1' src='/static/calendar-solid-full-green.svg' alt="Calendar icon" width={20} height={20} /></span> {formattedDate}
                 </time>
               )}
               {readingTime && (
-                <span className="text-white fs-5">⏱️ {readingTime} min read</span>
+                <span className="text-white fs-5 d-flex align-items-center"><span ><Image className='me-1 ' src= '/static/clock-solid-full-green.svg' alt="Clock icon" width={20} height={20} /></span> {readingTime} min read</span>
               )}
             </div>
           )}

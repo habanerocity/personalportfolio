@@ -32,11 +32,14 @@ const Blog = () => {
 
     const latestPost = sortedPosts[0];
 
+    // start pagination from second newest post
+    const remainingPosts = sortedPosts.slice(1);
+
     // Calculate pagination
-    const totalPages = Math.ceil(blogPostsInfoData.length / POSTS_PER_PAGE);
+    const totalPages = Math.ceil(remainingPosts.length / POSTS_PER_PAGE);
     const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
     const endIndex = startIndex + POSTS_PER_PAGE;
-    const currentPosts = blogPostsInfoData.slice(startIndex, endIndex);
+    const currentPosts = remainingPosts.slice(startIndex, endIndex);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);

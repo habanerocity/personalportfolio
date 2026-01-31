@@ -358,7 +358,7 @@ const Services = () => {
                                 <h2 id="service-offerings-heading" className={classes.visually_hidden}>
                                     Available Services
                                 </h2>
-                                <div className='mt-5 w-100' >
+                                <div className='mt-5 w-100 d-flex justify-content-between align-items-start flex-wrap gap-1' >
                                     {blogPostsInfoData.map((post, index) => renderBlogPostCards(post, index))}
                                 </div>
                             </section>

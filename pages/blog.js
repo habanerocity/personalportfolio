@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
 import Container from "react-bootstrap/Container";
 import classes from "./blog.module.scss";
+
+import BlogPagination from "../components/Pagination";
 
 import NavigationBar from '../components/ui/NavigationBar';
 import LogoBar from '../components/ui/LogoBar';
@@ -12,8 +14,6 @@ import SectionContainer from '../components/ui/SectionContainer';
 import Headings from '../components/ui/Headings';
 import SplitHero from "../components/ui/hero/SplitHero";
 
-import Tooltip from 'react-bootstrap/Tooltip';
-
 import renderBlogPostCards from "../components/renderBlogPostCards";
 import { blogPostsInfoData } from "../data/blogPostsCardInfoData";
 
@@ -21,19 +21,29 @@ import pageFadeInAnimation from "../animations/pageFadeInAnimation";
 
 import { servicesHeroData } from "../data/services/servicesHeroData";
 
-const Services = () => {
+const POSTS_PER_PAGE = 6;
 
-    const renderTooltip = (message) => (
-        <Tooltip id="button-tooltip" className='fs-5'>
-          {message}
-        </Tooltip>
-      );
+const Blog = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+
+    // Calculate pagination
+    const totalPages = Math.ceil(blogPostsInfoData.length / POSTS_PER_PAGE);
+    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+    const endIndex = startIndex + POSTS_PER_PAGE;
+    const currentPosts = blogPostsInfoData.slice(startIndex, endIndex);
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+        // Scroll to top of blog section
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
 
     return(
 
         <React.Fragment>
             <Head>
-                <title>Services - Lindy Ramirez | Freelance Web Developer in Los Angeles</title>
+                <title>Blog - Lindy Ramirez | Freelance Web Developer in Los Angeles</title>
                 <meta
                     name="description"
                     content="Professional web development services in Los Angeles: WordPress & Shopify development, custom landing pages, SEO optimization, and digital marketing. Monthly packages from $199. Get a free consultation today!"
@@ -356,10 +366,17 @@ const Services = () => {
                             />
                             <section className={`${classes.flex__container} align-items-start flex-column`}  aria-labelledby="service-offerings-heading">
                                 <h2 id="service-offerings-heading" className={classes.visually_hidden}>
-                                    Available Services
+                                    Web Development Blog Posts
                                 </h2>
                                 <div className='mt-5 w-100 d-flex justify-content-between align-items-start flex-wrap gap-1' >
-                                    {blogPostsInfoData.map((post, index) => renderBlogPostCards(post, index))}
+                                    {currentPosts.map((post, index) => renderBlogPostCards(post, index))}
+                                </div>
+                                <div className='d-flex justify-content-center align-items-center w-100' >
+                                    <BlogPagination 
+                                        currentPage={currentPage}
+                                        totalPages={totalPages}
+                                        onPageChange={handlePageChange}
+                                    />
                                 </div>
                             </section>
                         </Container>
@@ -373,4 +390,4 @@ const Services = () => {
     )
 };
 
-export default Services;
+export default Blog;

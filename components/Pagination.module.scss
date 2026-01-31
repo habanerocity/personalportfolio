@@ -1,0 +1,46 @@
+@import '../styles/sass/variables';
+
+
+.pagination {
+
+    &__item {
+        cursor: pointer;
+    }
+}
+
+.pagination {
+    gap: 0.5rem;
+
+    
+    :global(.page-link) {
+        padding: 0.75rem 1rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        border-radius: 8px;
+        color: black;
+        background-color: white;
+        border-color: #ddd;
+    }
+
+    :global(.page-link:hover) {
+        color: black;
+        background-color: #f0f0f0;
+        border-color: #ddd;
+    }
+
+    :global(.page-item.active .page-link) {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        color: white;
+    }
+
+    :global(.page-item.disabled .page-link) {
+        color: #999;
+        cursor: not-allowed;
+    }
+
+}
+
+.pagination__item {
+    font-size: 1.5rem;
+}

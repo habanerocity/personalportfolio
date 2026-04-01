@@ -15,7 +15,6 @@ import Headings from '../components/ui/Headings';
 import SplitHero from "../components/ui/hero/SplitHero";
 
 import renderBlogPostCards from "../components/renderBlogPostCards";
-import { blogPostsInfoData } from "../data/blogPostsCardInfoData";
 
 import pageFadeInAnimation from "../animations/pageFadeInAnimation";
 
@@ -28,6 +27,24 @@ export async function getStaticProps() {
         content_type: 'pageBlogPost',
         order: '-sys.createdAt', // Order by creation date, newest first
     });
+
+        // Log the full response structure
+    console.log('===== CONTENTFUL FULL RESPONSE =====');
+    console.log(JSON.stringify(response, null, 2));
+    
+    // Log just the first item's structure for easier inspection
+    console.log('\n===== FIRST POST ITEM =====');
+    if (response.items.length > 0) {
+        console.log(JSON.stringify(response.items[0], null, 2));
+        
+        // Log just the fields to see what's available
+        console.log('\n===== FIRST POST FIELDS =====');
+        console.log(JSON.stringify(response.items[0].fields, null, 2));
+        
+        // Log metadata
+        console.log('\n===== FIRST POST METADATA =====');
+        console.log(JSON.stringify(response.items[0].metadata, null, 2));
+    }
 
     return {
         props: {
@@ -66,6 +83,7 @@ const Blog = ({posts}) => {
             title: fields.title,
             excerpt: fields.shortDescription,
             datePublished: fields.publishedDate || sys.createdAt,
+            dateModified: sys.updatedAt,
             image: fields.featuredImage?.fields?.file?.url ? `https:${fields.featuredImage.fields.file.url}` : null,
             imageAlt: fields.featuredImage?.fields?.title || fields.title,
             readingTime: fields.readingTime || 5, // Note: consider adding to Contentful
@@ -105,22 +123,23 @@ const Blog = ({posts}) => {
                 <title>Blog - Lindy Ramirez | Freelance Web Developer in Los Angeles</title>
                 <meta
                     name="description"
-                    content="Professional web development services in Los Angeles: WordPress & Shopify development, custom landing pages, SEO optimization, and digital marketing. Monthly packages from $199. Get a free consultation today!"
+                    content="Web development content, insights, and tips from a Los Angeles-based freelance developer."
                 />
-                <meta property="og:title" content="Web Development Services in Los Angeles | Lindy Ramirez" />
-                <meta property="og:description" content="Professional web development services..." />
+                <meta name="keywords" content="wordpress blog, shopify, on page seo, los angeles wordpress developer" />
+                <meta property="og:title" content="Blog | Lindy Ramirez - Freelance Web Developer" />
+                <meta property="og:description" content="Web development content, insights, and tips from a Los Angeles-based freelance developer." />
                 <meta property="og:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
-                <meta property="og:url" content="https://www.lindyramirez.com/services" />
+                <meta property="og:url" content="https://www.lindyramirez.com/blog" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Web Development Services | Lindy Ramirez" />
-                <meta name="twitter:description" content="Professional web development services in Los Angeles: WordPress & Shopify development, custom landing pages, SEO optimization, and digital marketing." />
+                <meta name="twitter:title" content="Blog | Lindy Ramirez - Freelance Web Developer" />
+                <meta name="twitter:description" content="Web development content, insights, and tips from a Los Angeles-based freelance developer." />
                 <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
 
                 {/* Canonical URL */}
-                <link rel="canonical" href="https://www.lindyramirez.com/services" />
+                <link rel="canonical" href="https://www.lindyramirez.com/blog" />
 
                 {/* Mobile optimization */}
                 <meta name="theme-color" content="#ff6600" />
@@ -136,62 +155,57 @@ const Blog = ({posts}) => {
                         "@context": "https://schema.org",
                         "@graph": [
                                 {
-                                    "@type": "ProfessionalService",
-                                    "@id": "https://www.lindyramirez.com/services#business",
-                                    "name": "Lindy Ramirez Freelance Web Development",
-                                    "image": "https://www.lindyramirez.com/static/optimized/st_thomas_up_close-optimized.webp",
-                                    "email": "hello@lindyramirez.com",
-                                    "url": "https://www.lindyramirez.com/services",
-                                    "priceRange": "$199 - $1099",
-                                    "address": {
-                                        "@type": "PostalAddress",
-                                        "addressLocality": "Los Angeles",
-                                        "addressRegion": "CA",
-                                        "addressCountry": "US"
-                                    },
-                                    "geo": {
-                                        "@type": "GeoCoordinates",
-                                        "latitude": "34.0522",
-                                        "longitude": "-118.2437"
-                                    },
-                                    "openingHoursSpecification": {
-                                        "@type": "OpeningHoursSpecification",
-                                        "dayOfWeek": [
-                                            "Monday",
-                                            "Tuesday",
-                                            "Wednesday",
-                                            "Thursday",
-                                            "Friday"
-                                        ],
-                                        "opens": "09:00",
-                                        "closes": "18:00"
-                                    },
-                                     "areaServed": [
-                                    {
-                                        "@type": "City",
-                                        "name": "Los Angeles",
-                                        "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
-                                    },
-                                    {
-                                        "@type": "City",
-                                        "name": "Granada Hills"
-                                    },
-                                    {
-                                        "@type": "City",
-                                        "name": "Tarzana"
-                                    },
-                                    {
-                                        "@type": "City",
-                                        "name": "Pasadena"
+                                    "@type": "WebSite",
+                                    "@id": "https://www.lindyramirez.com/#website",
+                                    "url": "https://www.lindyramirez.com",
+                                    "name": "Lindy Ramirez",
+                                    "inLanguage": "en-US",
+                                    "publisher": {
+                                        "@id": "https://www.lindyramirez.com/#organization"
                                     }
-                                ],
+                                },
+                                {
+                                    "@type": "Blog",
+                                    "@id": "https://www.lindyramirez.com/blog#blog",
+                                    "url": "https://www.lindyramirez.com/blog",
+                                    "name": "Lindy Ramirez Web Development Blog",
+                                    "description": "Insights, tutorials, and updates on web development, SEO, and digital marketing from Lindy Ramirez.",
+                                    "inLanguage": "en-US",
+                                    "publisher": {
+                                        "@id": "https://www.lindyramirez.com/#organization"
+                                    },
+                                    "blogPost": mappedPosts.map(post => ({
+                                        "@type": "BlogPosting",
+                                        "headline": post.title,
+                                        "description": post.excerpt,
+                                        "datePublished": post.datePublished,
+                                        "dateModified": post.dateModified,
+                                        "mainEntityOfPage": {
+                                            "@type": "WebPage",
+                                            "@id": `https://www.lindyramirez.com/blog/${post.slug}`
+                                        },
+                                        "url": `https://www.lindyramirez.com/blog/${post.slug}`,
+                                        "image": post.image,
+                                        "author": {
+                                            "@type": "Person",
+                                            "name": post.author.name
+                                        },
+                                        "publisher": {
+                                            "@id": "https://www.lindyramirez.com/#organization"
+                                        }
+                                    }))
                                 },
                                 {
                                     "@type": "WebPage",
-                                    "@id": "https://www.lindyramirez.com/services#webpage",
-                                    "url": "https://www.lindyramirez.com/services",
-                                    "name": "Services - Lindy Ramirez | Freelance Web Developer",
-                                    "description": "Professional web development services including website maintenance, website migrations, custom development, SEO optimization, and digital marketing strategies. Monthly packages starting at $199.",
+                                    "@id": "https://www.lindyramirez.com/blog#webpage",
+                                    "url": "https://www.lindyramirez.com/blog",
+                                    "name": "Blog - Lindy Ramirez | Freelance Web Developer",
+                                    "description": "My Latest Posts - Professional web development insights, WordPress & Shopify tips, and digital marketing strategies.",
+                                    "inLanguage": "en-US",
+                                    "isPartOf": {
+                                        "@id": "https://www.lindyramirez.com/#website"
+                                    },
+                                    "keywords": "wordpress blog, shopify, on page seo, los angeles wordpress developer",
                                     "breadcrumb": {
                                         "@type": "BreadcrumbList",
                                         "itemListElement": [
@@ -204,177 +218,14 @@ const Blog = ({posts}) => {
                                             {
                                                 "@type": "ListItem",
                                                 "position": 2,
-                                                "name": "Services",
-                                                "item": "https://www.lindyramirez.com/services"
+                                                "name": "Blog",
+                                                "item": "https://www.lindyramirez.com/blog"
                                             }
                                         ]
                                     },
                                     "mainEntity": {
-                                        "@type": "OfferCatalog",
-                                        "name": "Web Development Service Packages",
-                                        "itemListElement": [
-                                            {
-                                                "@type": "Offer",
-                                                "itemOffered": {
-                                                    "@type": "Service",
-                                                    "name": "Basic Package",
-                                                    "description": "Ideal for brands whom need consistent web maintenance, content management, and website optimization.",
-                                                    "provider": {
-                                                        "@id": "https://www.lindyramirez.com/services#business"
-                                                    },
-                                                    "serviceType": "Website Maintenance",
-                                                    "areaServed": {
-                                                        "@type": "Country",
-                                                        "name": "United States"
-                                                    }
-                                                },
-                                                "price": "199.00",
-                                                "priceCurrency": "USD",
-                                                "priceSpecification": {
-                                                    "@type": "UnitPriceSpecification",
-                                                    "price": "199.00",
-                                                    "priceCurrency": "USD",
-                                                    "unitText": "MONTH"
-                                                },
-                                                "availability": "https://schema.org/InStock",
-                                                "url": "https://www.lindyramirez.com/contact",
-                                                "category": "Web Maintenance"
-                                            },
-                                            {
-                                                "@type": "Offer",
-                                                "itemOffered": {
-                                                    "@type": "Service",
-                                                    "name": "Standard Package",
-                                                    "description": "Best suited for brands requiring custom development, web design, and SEO services to enhance their online presence.",
-                                                    "provider": {
-                                                        "@id": "https://www.lindyramirez.com/services#business"
-                                                    },
-                                                    "serviceType": "Web Development & SEO",
-                                                    "areaServed": {
-                                                        "@type": "Country",
-                                                        "name": "United States"
-                                                    }
-                                                },
-                                                "price": "649.00",
-                                                "priceCurrency": "USD",
-                                                "priceSpecification": {
-                                                    "@type": "UnitPriceSpecification",
-                                                    "price": "649.00",
-                                                    "priceCurrency": "USD",
-                                                    "unitText": "MONTH"
-                                                },
-                                                "availability": "https://schema.org/InStock",
-                                                "url": "https://www.lindyramirez.com/contact",
-                                                "category": "Web Development",
-                                                "eligibleRegion": {
-                                                    "@type": "Country",
-                                                    "name": "US"
-                                                }
-                                            },
-                                            {
-                                                "@type": "Offer",
-                                                "itemOffered": {
-                                                    "@type": "Service",
-                                                    "name": "Premium Package",
-                                                    "description": "Perfect for brands looking for complete web development services and robust digital marketing strategies.",
-                                                    "provider": {
-                                                        "@id": "https://www.lindyramirez.com/services#business"
-                                                    },
-                                                    "serviceType": "Full-Service Web Development & Marketing",
-                                                    "areaServed": {
-                                                        "@type": "Country",
-                                                        "name": "United States"
-                                                    }
-                                                },
-                                                "price": "1099.00",
-                                                "priceCurrency": "USD",
-                                                "priceSpecification": {
-                                                    "@type": "UnitPriceSpecification",
-                                                    "price": "1099.00",
-                                                    "priceCurrency": "USD",
-                                                    "unitText": "MONTH"
-                                                },
-                                                "availability": "https://schema.org/InStock",
-                                                "url": "https://www.lindyramirez.com/contact",
-                                                "category": "Full-Service Web Development"
-                                            }
-                                        ]
+                                        "@id": "https://www.lindyramirez.com/blog#blog"
                                     }
-                                },
-                                {
-                                    "@type": "Service",
-                                    "@id": "https://www.lindyramirez.com/services#landing-page-development",
-                                    "name": "Landing Page Development",
-                                    "description": "I build custom-coded, high-converting landing pages that blend strategic UX with crisp visuals. Every element, from the headline to the call-to-action, is optimized to turn visitors into leads or customers. No cookie-cutter templates, just custom-built pages designed to grow your business.",
-                                    "provider": {
-                                        "@id": "https://www.lindyramirez.com/services#business"
-                                    },
-                                    "serviceType": "Landing Page Development",
-                                    "category": "Web Development",
-                                    "url": "https://www.lindyramirez.com/services/landing-page-development"
-                                },
-                                {
-                                    "@type": "Service",
-                                    "@id": "https://www.lindyramirez.com/services#wordpress-development",
-                                    "name": "WordPress Development",
-                                    "description": "Generic WordPress sites underperform. Custom-built solutions with optimized code, tailored plugins, and brand-aligned design fix that. Whether you need a custom theme, existing site overhaul, or tailored plugins for advanced functionality, I create solutions that get results.",
-                                    "provider": {
-                                        "@id": "https://www.lindyramirez.com/services#business"
-                                    },
-                                    "serviceType": "WordPress Development",
-                                    "category": "Web Development",
-                                    "url": "https://www.lindyramirez.com/services/wordpress-development"
-                                },
-                                {
-                                    "@type": "Service",
-                                    "@id": "https://www.lindyramirez.com/services#shopify-development",
-                                    "name": "Shopify Theme Development",
-                                    "description": "Your Shopify store should sell for you—even when you’re offline. I build custom Shopify solutions that convert browsers into buyers, with custom themes, conversion-focused design, and seamless functionality. I design storefronts that reflect your brand and drive revenue.",
-                                    "provider": {
-                                        "@id": "https://www.lindyramirez.com/services#business"
-                                    },
-                                    "serviceType": "Shopify Development",
-                                    "category": "E-commerce Development",
-                                    "url": "https://www.lindyramirez.com/services/shopify-development"
-                                },
-                                {
-                                    "@type": "Service",
-                                    "@id": "https://www.lindyramirez.com/services#digital-marketing",
-                                    "name": "Digital Marketing Services",
-                                    "description": "Need a partner to level up your digital presence? From social media marketing that engages and converts, to on-page SEO that boosts your site's visibility, and ensuring your site is properly indexed by Google and Bing, I offer comprehensive services that establish your brand as a leader in your industry.",
-                                    "provider": {
-                                        "@id": "https://www.lindyramirez.com/services#business"
-                                    },
-                                    "serviceType": "Digital Marketing",
-                                    "category": "Digital Marketing",
-                                    "url": "https://www.lindyramirez.com/services/digital-marketing"
-                                },
-                                {
-                                    "@type": "ItemList",
-                                    "@id": "https://www.lindyramirez.com/services#client-logos",
-                                    "name": "Brands We've Worked With",
-                                    "itemListElement": [
-                                        {
-                                            "@type": "Organization",
-                                            "name": "Taste Tripping",
-                                            "logo": "https://www.lindyramirez.com/static/tt.svg"
-                                        },
-                                        {
-                                            "@type": "Organization",
-                                            "name": "Victorie Packaging",
-                                            "logo": "https://www.lindyramirez.com/static/VICTORIE-TM-5.webp"
-                                        },
-                                        {
-                                            "@type": "Organization",
-                                            "name": "The Zoe PH",
-                                            "logo": "https://www.lindyramirez.com/static/The-Zoe-PH-edited.webp"
-                                        },
-                                        {
-                                            "@type": "Organization",
-                                            "name": "Bang",
-                                            "logo": "https://www.lindyramirez.com/static/bang-logo.webp"
-                                        }
-                                    ]
                                 },
                                 {
                                     "@type": "Organization",

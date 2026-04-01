@@ -3,13 +3,11 @@ import { motion } from "framer-motion";
 
 import classes from "./about.module.scss";
 
-import Link from "next/link";
 import Head from "next/head";
 
 import Container from "react-bootstrap/Container";
 
 import RenderToolList from '../components/RenderToolList.js';
-import Button from "../components/ui/Button";
 import FlexContainer from "../components/ui/FlexContainer";
 import LogoBar from '../components/ui/LogoBar';
 import NavigationBar from "../components/ui/NavigationBar";

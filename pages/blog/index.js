@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 
 import Container from "react-bootstrap/Container";
-import classes from "./blog.module.scss";
+import classes from "./index.module.scss";
 
-import BlogPagination from "../components/Pagination";
+import BlogPagination from "../../components/Pagination";
 
-import NavigationBar from '../components/ui/NavigationBar';
-import LogoBar from '../components/ui/LogoBar';
-import Footer from '../components/ui/Footer';
-import SectionContainer from '../components/ui/SectionContainer';
-import Headings from '../components/ui/Headings';
-import SplitHero from "../components/ui/hero/SplitHero";
+import NavigationBar from '../../components/ui/NavigationBar';
+import LogoBar from '../../components/ui/LogoBar';
+import Footer from '../../components/ui/Footer';
+import SectionContainer from '../../components/ui/SectionContainer';
+import Headings from '../../components/ui/Headings';
+import SplitHero from "../../components/ui/hero/SplitHero";
 
-import renderBlogPostCards from "../components/renderBlogPostCards";
+import renderBlogPostCards from "../../components/renderBlogPostCards";
 
-import pageFadeInAnimation from "../animations/pageFadeInAnimation";
+import pageFadeInAnimation from "../../animations/pageFadeInAnimation";
 
-import { client } from "../components/utils/contentfulClient";
+import { client } from "../../components/utils/contentfulClient";
 
 const POSTS_PER_PAGE = 6;
 

@@ -19,21 +19,70 @@ import { blogPostsInfoData } from "../data/blogPostsCardInfoData";
 
 import pageFadeInAnimation from "../animations/pageFadeInAnimation";
 
-import { servicesHeroData } from "../data/services/servicesHeroData";
+import { client } from "../components/utils/contentfulClient";
 
 const POSTS_PER_PAGE = 6;
 
-const Blog = () => {
+export async function getStaticProps() {
+    const response = await client.getEntries({
+        content_type: 'pageBlogPost',
+        order: '-sys.createdAt', // Order by creation date, newest first
+    });
+
+    return {
+        props: {
+            posts: response.items,
+        },
+        revalidate: 60, // Revalidate every 60 seconds to keep content fresh
+    }
+}
+
+const Blog = ({posts}) => {
     const [currentPage, setCurrentPage] = useState(1);
 
-    const sortedPosts = [...blogPostsInfoData].sort(
-        (a, b) => new Date(b.datePublished) - new Date(a.datePublished)
-    );
+    const mappedPosts = posts.map((item) => {
+        const { fields, sys, metadata } = item;
 
-    const latestPost = sortedPosts[0];
+        // 1. Get Sidebar Tags (Taxonomy) as fallback
+        const platformTags = metadata?.tags?.map(tag => {
+            const id = tag.sys.id;
+            return id.charAt(0).toUpperCase() + id.slice(1);
+        }) || [];
+
+        // 2. Process the "Tags" or "Tools" field
+        let customTags = [];
+        const rawTags = fields.tags || fields.tools;
+        if (rawTags) {
+            if (Array.isArray(rawTags)) {
+                customTags = rawTags;
+            } else if (typeof rawTags === 'string') {
+                customTags = rawTags.split(',').map(t => t.trim());
+            }
+        }
+
+        return {
+            id: sys.id,
+            slug: fields.slug,
+            title: fields.title,
+            excerpt: fields.shortDescription,
+            datePublished: fields.publishedDate || sys.createdAt,
+            image: fields.featuredImage?.fields?.file?.url ? `https:${fields.featuredImage.fields.file.url}` : null,
+            imageAlt: fields.featuredImage?.fields?.title || fields.title,
+            readingTime: fields.readingTime || 5, // Note: consider adding to Contentful
+            tools: customTags.length > 0 ? customTags : (platformTags.length > 0 ? platformTags : []),
+            author: {
+                name: fields.author?.fields?.name || "Lindy Ramirez",
+                avatar: fields.author?.fields?.avatar?.fields?.file?.url 
+                    ? `https:${fields.author.fields.avatar.fields.file.url}` 
+                    : "/static/lindy-avatar.webp",
+            }
+        }
+    })
+
+    const latestPost = mappedPosts[0];
 
     // start pagination from second newest post
-    const remainingPosts = sortedPosts.slice(1);
+    const remainingPosts = mappedPosts.slice(1);
 
     // Calculate pagination
     const totalPages = Math.ceil(remainingPosts.length / POSTS_PER_PAGE);
@@ -47,6 +96,7 @@ const Blog = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    if(!latestPost) return <div>Loading...</div>; // handle empty state
 
     return(
 

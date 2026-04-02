@@ -57,18 +57,20 @@ const SplitHero = ({
         role="complementary"
       >
         {src && (
-          <Image
-            src={src}
-            fill={true}
-            className={`${classes.office_img} position-relative`}
-            alt={alt}
-            priority={priority}
-            sizes={sizes}
-            quality={quality}
-            placeholder={blurDataURL ? "blur" : undefined}
-            blurDataURL={blurDataURL}
-            itemProp={isBlog ? "image" : undefined}
-          />
+          <Link href={isBlog ? `/blog/${slug}` : "#"} className="d-flex w-100 position-relative">
+            <Image
+              src={src}
+              fill={true}
+              className={`${classes.office_img} position-relative`}
+              alt={alt}
+              priority={priority}
+              sizes={sizes}
+              quality={quality}
+              placeholder={blurDataURL ? "blur" : undefined}
+              blurDataURL={blurDataURL}
+              itemProp={isBlog ? "image" : undefined}
+            />
+          </Link>
         )}
       </aside>
 

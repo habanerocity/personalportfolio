@@ -22,6 +22,7 @@ import FlexContainer from "../../components/ui/FlexContainer";
 import AuthorCard from "../../components/ui/AuthorCard";
 
 import Headings from "../../components/ui/Headings";
+import { getReadingTime } from "../../utils/getReadingTime";
 
 const richTextOptions = {
     renderNode: {
@@ -110,7 +111,7 @@ const BlogPost = ({ post }) => {
     const datePublished = fields.publishedDate || sys.createdAt;
     const dateModified = sys.updatedAt;
     const slug = fields.slug;
-    const readingTime = fields.readingTime || 5;
+    const readingTime = getReadingTime(fields.wordCount);
     const body = fields.content;
 
     const image = fields.featuredImage?.fields?.file?.url

@@ -33,11 +33,11 @@ const Contact = () => {
       <main className={classes.pg_contact}>
         <Head>
           <title>
-            Contact Me - Lindy Ramirez, Shopify Theme Developer
+            Contact Me - Lindy Ramirez, Freelance WordPress and Shopify Developer
           </title>
           <meta
             name="description"
-            content="Contact page for Lindy Ramirez, Wordpress and Shopify theme developer. Contact me here."
+            content="Contact page for Lindy Ramirez, Wordpress and Freelance WordPress and Shopify developer. Contact me here."
           />
         </Head>
         <NavigationBar />

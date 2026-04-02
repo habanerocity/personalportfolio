@@ -51,7 +51,11 @@ const NavigationBar = () => {
           <ul className={`${classes.submenu} ${isServicesMenuOpen && isServicesLink ? classes.submenu_open : ''}`}>
             {link.subLinks.map((subLink, subIndex) => (
               <li key={subIndex}>
-                <Link href={subLink.routerPath} className={classes.nav_text}>
+                <Link href={subLink.routerPath} className={
+                  router.pathname === subLink.routerPath
+                    ? `${classes.active} ${classes.nav_text}`
+                    : classes.nav_text
+                }>
                   <span>{subLink.linkName}</span>
                 </Link>
               </li>

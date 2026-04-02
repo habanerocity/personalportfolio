@@ -19,6 +19,7 @@ import renderBlogPostCards from "../../components/renderBlogPostCards";
 import pageFadeInAnimation from "../../animations/pageFadeInAnimation";
 
 import { client } from "../../components/utils/contentfulClient";
+import { getReadingTime } from "../../utils/getReadingTime";
 
 const POSTS_PER_PAGE = 6;
 
@@ -68,7 +69,7 @@ const Blog = ({posts}) => {
             dateModified: sys.updatedAt,
             image: fields.featuredImage?.fields?.file?.url ? `https:${fields.featuredImage.fields.file.url}` : null,
             imageAlt: fields.featuredImage?.fields?.title || fields.title,
-            readingTime: fields.readingTime || 5, // Note: consider adding to Contentful
+            readingTime: getReadingTime(fields.wordCount),
             tools: customTags.length > 0 ? customTags : (platformTags.length > 0 ? platformTags : []),
             author: {
                 name: fields.author?.fields?.name || "Lindy Ramirez",

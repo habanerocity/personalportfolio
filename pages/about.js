@@ -27,11 +27,11 @@ const About = () => {
     <div className={classes.pg}>
         <Head>
           <title>
-            About Me - Lindy Ramirez, Web Developer
+            About Me - Lindy Ramirez, Los Angeles Freelance WordPress and Shopify Developer
           </title>
           <meta
             name="description"
-            content="About me page for Lindy Ramirez, Freelance Web Developer. Learn more about me here."
+            content="About me page for Lindy Ramirez, Los Angeles Freelance WordPress and Shopify Developer. Learn more about me here."
           />
         </Head>
         <NavigationBar />

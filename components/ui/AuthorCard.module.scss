@@ -1,0 +1,56 @@
+@import "../../styles/sass/variables";
+
+.author_card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  margin: 4rem 0 0;
+  background-color: #fff;
+  border-radius: 1.2rem;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.author_card__avatar {
+  flex-shrink: 0;
+}
+
+.author_card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.author_card__name {
+  font-family: $font-header;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.author_card__title {
+  font-family: $font-body;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.author_card__bio {
+  font-family: $font-body;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin: 0.8rem 0 0;
+}
+
+.author_card__socials {
+  display: flex;
+  gap: 1rem;
+
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
+}

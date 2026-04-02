@@ -19,12 +19,25 @@ import pageFadeInAnimation from "../../animations/pageFadeInAnimation";
 
 import { client } from "../../components/utils/contentfulClient";
 import FlexContainer from "../../components/ui/FlexContainer";
-import ButtonPair from "../../components/ui/ButtonPair";
+import AuthorCard from "../../components/ui/AuthorCard";
 
 import Headings from "../../components/ui/Headings";
 
 const richTextOptions = {
     renderNode: {
+        [BLOCKS.EMBEDDED_ENTRY]: (node) => {
+            const contentType = node.data.target.sys.contentType.sys.id;
+            if (contentType === "calloutCard") {
+                const { title, body } = node.data.target.fields;
+                return (
+                    <div className={classes.callout_card}>
+                        {title && <h3 className={classes.callout_card__title}>{title}</h3>}
+                        {body && documentToReactComponents(body, richTextOptions)}
+                    </div>
+                );
+            }
+            return null;
+        },
         [BLOCKS.EMBEDDED_ASSET]: (node) => {
             const { file, title } = node.data.target.fields;
             const imageUrl = file.url.startsWith("//")
@@ -72,6 +85,7 @@ export async function getStaticProps({ params }) {
         content_type: "pageBlogPost",
         "fields.slug": params.slug,
         limit: 1,
+        include: 2,
     });
 
     if (!response.items.length) {
@@ -321,14 +335,7 @@ const BlogPost = ({ post }) => {
                                                 )
                                                 : null}
                                         </div>
-                                        <nav aria-label="Post navigation">
-                                            <ButtonPair
-                                                primaryCtaButtonText="Get In Touch"
-                                                primaryCtaButtonLink="/contact"
-                                                secondaryCtaButtonText="Back to Blog"
-                                                secondaryCtaButtonLink="/blog"
-                                            />
-                                        </nav>
+                                        <AuthorCard />
                                     </article>
                                 </FlexContainer>
                             </Container>

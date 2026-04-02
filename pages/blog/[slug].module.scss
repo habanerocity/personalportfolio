@@ -9,6 +9,14 @@
   @include flex-container-row;
   width: 85%;
 
+  &__top_section {
+      padding: 10rem 0 6rem 0;
+
+      @media screen and (max-width: 575px) {
+        width: 85%;
+      }
+    }
+
   &__col {
     // width: 85%;
     padding: $padding-section-md;

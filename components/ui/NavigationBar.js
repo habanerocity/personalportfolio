@@ -20,8 +20,9 @@ const NavigationBar = () => {
 
   const renderLinks = (link, index) => {
     const isServicesLink = link.linkName === "Services";
+    const isContactLink = link.linkName === "Contact";
     return (
-      <li className={classes.nav_text} key={index}>
+      <li className={`${classes.nav_text} ${isContactLink ? classes.contact_mobile_only : ''}`} key={index}>
         <Link href={link.routerPath} className={
           router.pathname.startsWith(link.routerPath) && link.routerPath !== '/'
           ? `${classes.active} ${classes.nav_text}`
@@ -81,6 +82,9 @@ const NavigationBar = () => {
               {linkInfo.map(renderLinks)}
             </ul>
           </div>
+          <Link href="/contact" className={classes.nav_cta_button}>
+            Get In Touch
+          </Link>
         </nav>
 
       </div>

@@ -1,11 +1,5 @@
 export const linkInfo = [
   {
-    routerPath: "/",
-    image: "/static/house-solid.svg",
-    linkName: "Home",
-    altText: "Home page icon"
-  },
-  {
     routerPath: "/about",
     image: "/static/circle-user-solid.svg",
     linkName: "About",
@@ -55,6 +49,12 @@ export const linkInfo = [
     image: "/static/briefcase-solid.svg",
     linkName: "Projects",
     altText: "Projects page icon"
+  },
+  {
+    routerPath: "/blog",
+    image: "/static/pen-to-square.svg",
+    linkName: "Blog",
+    altText: "Blog page icon"
   },
   {
     routerPath: "/contact",

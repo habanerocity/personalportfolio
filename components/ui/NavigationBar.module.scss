@@ -218,3 +218,35 @@
         filter: invert(40%) sepia(38%) saturate(2965%) hue-rotate(2deg) brightness(105%) contrast(102%);
     }
 }
+
+.contact_mobile_only {
+  @media screen and (min-width: 576px) {
+    display: none !important;
+  }
+}
+
+.nav_cta_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $secondary-color;
+  color: white;
+  text-decoration: none;
+  font-family: $font-body, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: $border-radius-md;
+  white-space: nowrap;
+  transition: background-color 300ms ease;
+  margin-left: auto;
+
+  &:hover {
+    background-color: $secondary-color-2;
+    color: white;
+  }
+
+  @media screen and (max-width: 575px) {
+    display: none;
+  }
+}

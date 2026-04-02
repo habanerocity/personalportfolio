@@ -267,7 +267,7 @@ const BlogPost = ({ post }) => {
                 >
                     <main>
                         <SectionContainer>
-                            <Container className={classes.flex__container__col}>
+                            <Container className={`${classes.flex__container__top_section} ${classes.flex__container__col}`}>
                                 <FlexContainer>
                                     <article>
                                         <div className={`justify-content-start mb-5 ${classes.flex__container}`}>
@@ -300,7 +300,7 @@ const BlogPost = ({ post }) => {
                                             </ul>
                                         )}
                                         <div className={`d-flex align-items-center gap-3 my-3`}>
-                                            <span itemProp="author" itemScope itemType="https://schema.org/Person" className="fs-3 d-flex align-items-center">
+                                            <span itemProp="author" itemScope itemType="https://schema.org/Person" className="d-none fs-3 d-flex align-items-center">
                                                 <span itemProp="name">{author.name}</span>
                                             </span>
                                             <time dateTime={datePublished} itemProp="datePublished" className="fs-3 d-flex align-items-center">

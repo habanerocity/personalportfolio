@@ -28,24 +28,6 @@ export async function getStaticProps() {
         order: '-sys.createdAt', // Order by creation date, newest first
     });
 
-        // Log the full response structure
-    console.log('===== CONTENTFUL FULL RESPONSE =====');
-    console.log(JSON.stringify(response, null, 2));
-    
-    // Log just the first item's structure for easier inspection
-    console.log('\n===== FIRST POST ITEM =====');
-    if (response.items.length > 0) {
-        console.log(JSON.stringify(response.items[0], null, 2));
-        
-        // Log just the fields to see what's available
-        console.log('\n===== FIRST POST FIELDS =====');
-        console.log(JSON.stringify(response.items[0].fields, null, 2));
-        
-        // Log metadata
-        console.log('\n===== FIRST POST METADATA =====');
-        console.log(JSON.stringify(response.items[0].metadata, null, 2));
-    }
-
     return {
         props: {
             posts: response.items,

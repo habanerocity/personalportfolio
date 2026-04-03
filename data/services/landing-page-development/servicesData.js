@@ -14,7 +14,7 @@ const servicesData = {
         description: 'I can work with your existing landing page and customize them to ensure everything fits your vision. I can also edit and optimize your photos, videos, and other asset files to keep your landing page performant and looking sharp.'
       },
       {
-        iconSrc: '/static/pen-to-square.svg',
+        iconSrc: '/static/pen-to-square-white.svg',
         altText: 'Landing Page Design',
         title: 'Web Design',
         description: "Utilizing UI/UX best practices and design tools, such as Figma and Adobe Photoshop, I design personalized, mobile-responsive landing pages that are customized for your marketing campaign."

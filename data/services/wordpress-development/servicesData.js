@@ -14,7 +14,7 @@ const servicesData = {
         description: 'I can work with your existing WordPress website or theme and make updates using a page builder plugin, such as Elementor or Divi, or custom code to ensure everything fits your vision.'
       },
       {
-        iconSrc: '/static/pen-to-square.svg',
+        iconSrc: '/static/pen-to-square-white.svg',
         altText: 'WordPress Web Design',
         title: 'Theme Design',
         description: 'Utilizing UI/UX best practices and design tools, such as Figma and Adobe Photoshop, I design personalized, mobile-responsive WordPress themes that reflect your business\'s unique identity.'

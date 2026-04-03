@@ -14,7 +14,7 @@ const servicesData = {
         description: 'I can work with your existing Shopify theme and make updates using the native page builder or custom liquid code to ensure everything fits your vision.'
       },
       {
-        iconSrc: '/static/pen-to-square.svg',
+        iconSrc: '/static/pen-to-square-white.svg',
         altText: 'Shopify Store Design',
         title: 'Theme Design',
         description: "Utilizing UI/UX best practices and design tools, such as Figma and Adobe Photoshop, I design personalized, mobile-responsive Shopify themes that reflect your brand's unique identity."

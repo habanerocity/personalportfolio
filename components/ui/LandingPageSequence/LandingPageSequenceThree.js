@@ -7,17 +7,40 @@ import { getOptimizedImageSrc, getResponsiveSizes } from '../ResponsiveImage';
 
 import classes from './LandingPageSequenceThree.module.scss';
 
+const FALLBACK_COLLAGE = [
+  { src: '/static/lindy-thailand-optimized.webp', alt: 'Lindy Ramirez - Web Developer' },
+  { src: '/static/aguachile-edited.webp', alt: 'Aguachile - one of my favorite foods' },
+  { src: '/static/pacifico-beach.webp', alt: 'Web developer working on the beach in Pacifico Beach, Siargao, Philippines' },
+  { src: '/static/audi.webp', alt: 'Web developer located in the San Fernando Valley, Los Angeles, CA' },
+];
+
+const COLLAGE_CLASSES = [
+  'img_collage_main',
+  'img_collage_first_floating',
+  'img_collage_third_floating',
+  'img_collage_second_floating',
+];
+
+const COLLAGE_DIMENSIONS = [
+  { width: 376, height: 500, sizes: 'card', loading: 'lazy' },
+  { width: 180, height: 200, sizes: 'thumbnail', loading: 'lazy' },
+  { width: 225, height: 169, sizes: 'thumbnail', loading: 'lazy' },
+  { width: 180, height: 200, sizes: 'thumbnail', loading: 'lazy' },
+];
+
 const LandingPageSequenceThree = ({ 
   heading, 
-  aboutMeText, 
-  attributes, 
+  content, 
   imageSrc, 
-  imageAlt
+  imageAlt,
+  collageImages,
 }) => {
+  const images = collageImages ?? (imageSrc
+    ? [FALLBACK_COLLAGE[0], { src: imageSrc, alt: imageAlt ?? '' }, FALLBACK_COLLAGE[2], FALLBACK_COLLAGE[3]]
+    : FALLBACK_COLLAGE);
 
   // Generate unique IDs for accessibility
   const sectionId = `about-section-${heading?.replace(/\s+/g, '-').toLowerCase()}`;
-  const attributesId = `attributes-${sectionId}`;
 
   return (
     <section 
@@ -49,45 +72,10 @@ const LandingPageSequenceThree = ({
                 aria-describedby={`heading-${sectionId}`}
               >
                 <article>
-                  <p className='fs-3 fw-normal' itemProp="description">
-                    {aboutMeText}
+                  <p className='fs-3 fw-normal' style={{ whiteSpace: 'pre-line' }} itemProp="description">
+                    {content}
                   </p>
                 </article>
-                <aside 
-                  className="mt-4" 
-                  aria-labelledby={`attributes-heading-${sectionId}`}
-                  itemScope 
-                  itemType="https://schema.org/Service"
-                >
-                  <header>
-                    <p className='fs-1 mt-4 fw-semibold' id={`attributes-heading-${sectionId}`}>
-                      What You Get When You Hire Me
-                    </p>
-                  </header>
-                  <dl className="attributes-list" role="list" itemProp="offers">
-                    {attributes.map((attribute, index) => (
-                      <div 
-                        key={index} 
-                        className="attribute-item"
-                        itemScope 
-                        itemType="https://schema.org/ServiceFeature"
-                      >
-                        <dt 
-                          className='fs-2 fw-semibold mb-0'
-                          itemProp="name"
-                        >
-                          {attribute.title}
-                        </dt>
-                        <dd 
-                          className='fs-3 mb-3'
-                          itemProp="description"
-                        >
-                          {attribute.description}
-                        </dd>
-                      </div>
-                    ))}
-                  </dl>
-                </aside>
                 <nav 
                   className="cta-navigation" 
                   aria-label="Contact and portfolio navigation"
@@ -111,51 +99,22 @@ const LandingPageSequenceThree = ({
                   role="img"
                   aria-label="Photo collage showcasing personal interests and lifestyle"
                 >
-                  <Image
-                    className={`${classes.img_collage_first_floating} ${classes.img_collage_photo}`}
-                    src={getOptimizedImageSrc('/static/aguachile-edited.webp')}
-                    width={'180'}
-                    height={'200'}
-                    alt={'Aguachile - one of my favorite foods'}
-                    sizes={getResponsiveSizes('thumbnail')}
-                    quality={85}
-                    loading="lazy"
-                    itemProp="image"
-                  />
-                  <Image
-                    className={`${classes.img_collage_main} ${classes.img_collage_photo}`}
-                    src={getOptimizedImageSrc(imageSrc)}
-                    width={'376'}
-                    height={'500'}
-                    alt={imageAlt}
-                    sizes={getResponsiveSizes('card')}
-                    quality={85}
-                    placeholder="blur"
-                    itemProp="image"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                  />
-                  <Image
-                    className={`${classes.img_collage_second_floating} ${classes.img_collage_photo}`}
-                    src={getOptimizedImageSrc('/static/pacifico-beach.webp')}
-                    width={'180'}
-                    height={'200'}
-                    alt='Web developer working on the beach in Pacifico Beach, Siargao, Philippines'
-                    sizes={getResponsiveSizes('thumbnail')}
-                    quality={85}
-                    loading="lazy"
-                    itemProp="image"
-                  />
-                  <Image
-                    className={`${classes.img_collage_third_floating} ${classes.img_collage_photo}`}
-                    src={getOptimizedImageSrc('/static/audi.webp')}
-                    width={'225'}
-                    height={'169'}
-                    alt='Web developer located in the San Fernando Valley, Los Angeles, CA'
-                    sizes={getResponsiveSizes('thumbnail')}
-                    quality={85}
-                    loading="lazy"
-                    itemProp="image"
-                  />
+                  {images.map((img, i) =>
+                    img.src ? (
+                      <Image
+                        key={i}
+                        className={`${classes[COLLAGE_CLASSES[i]]} ${classes.img_collage_photo}`}
+                        src={getOptimizedImageSrc(img.src)}
+                        width={COLLAGE_DIMENSIONS[i].width}
+                        height={COLLAGE_DIMENSIONS[i].height}
+                        alt={img.alt}
+                        sizes={getResponsiveSizes(COLLAGE_DIMENSIONS[i].sizes)}
+                        quality={85}
+                        loading={COLLAGE_DIMENSIONS[i].loading}
+                        itemProp="image"
+                      />
+                    ) : null
+                  )}
                   <figcaption className={classes.visually_hidden}>
                     A photo collage showing personal interests including favorite food (aguachile), 
                     work lifestyle (beach working), main portrait, and lifestyle in Los Angeles

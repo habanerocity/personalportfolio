@@ -5,7 +5,7 @@ import ButtonPair from '../ButtonPair';
 import { getOptimizedImageSrc, getResponsiveSizes } from '../ResponsiveImage';
 import classes from './LandingPageSequenceOne.module.scss';
 
-const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt }) => {
+const LandingPageSequenceOne = ({ heading, content, image, imageAlt }) => {
   return (
     <section
       className={`h-auto ${classes.wrapper}`} 
@@ -28,50 +28,21 @@ const LandingPageSequenceOne = ({ heading, paragraph, benefits, image, imageAlt 
             role="main"
             aria-describedby="main-description"
             >
-              <p className='fs-3 fw-normal' role="doc-subtitle" id="main-description">
-                {paragraph}
+              <p className='fs-3 fw-normal' role="doc-subtitle" id="main-description" style={{ whiteSpace: 'pre-line' }}>
+                {content}
               </p>
-              <section className='d-flex flex-column align-items-start mt-3' >
-                <h3 id="benefits-heading" className={classes.visually_hidden}>
-                  Key Benefits
-                </h3>
-                <ul className='d-flex flex-column align-items-start px-0 mt-2'>
-                  {benefits.map((benefit, index) => (
-                    <li className='d-flex' key={index} role="listitem">
-                      <div role="img" aria-label="Checkmark icon">
-                        <Image
-                          src={getOptimizedImageSrc('/static/check.webp')}
-                          width='20'
-                          height='20'
-                          alt=''
-                          sizes="20px"
-                          quality={95}
-                        />
-                      </div>
-                      <div className='ms-3 d-flex flex-column' >
-                        <h3 className={`${classes.benefit__heading} fs-3 mb-1 fw-normal`} >
-                          {benefit.title}
-                        </h3>
-                        <p className={`${classes.benefit__text_content} mb-3 fs-3 fw-normal`}>
-                          {benefit.description}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                  </ul>
-                  <nav 
-                    aria-label="Primary actions"
-                    role="navigation"
-                    className='w-100'
-                  >
-                    <ButtonPair
-                      primaryCtaButtonText="Contact"
-                      secondaryCtaButtonText="View Services"
-                      secondaryCtaButtonLink="/services"
-                      aria-label="Contact me or view my portfolio"
-                    />
-                  </nav>
-              </section>
+              <nav 
+                aria-label="Primary actions"
+                role="navigation"
+                className='w-100 mt-3'
+              >
+                <ButtonPair
+                  primaryCtaButtonText="Contact"
+                  secondaryCtaButtonText="View Services"
+                  secondaryCtaButtonLink="/services"
+                  aria-label="Contact me or view my portfolio"
+                />
+              </nav>
             </Col>
             <Col 
               className='d-flex justify-content-sm-center w-100 justify-content-end align-items-center'

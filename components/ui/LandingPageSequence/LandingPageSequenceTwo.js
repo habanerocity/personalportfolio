@@ -4,7 +4,7 @@ import AnimatedHeading from '../../animations/AnimatedHeading';
 import ButtonPair from '../ButtonPair';
 import classes from './LandingPageSequenceTwo.module.scss';
 
-const LandingPageSequenceTwo = ({ heading, paragraphs, image, imageAlt, imageHeight = 350 }) => {
+const LandingPageSequenceTwo = ({ heading, content, image, imageAlt, imageHeight = 350 }) => {
 
   // Generate a unique ID for aria-describedby relationship
   const contentId = `content-${heading?.replace(/\s+/g, '-').toLowerCase()}`;
@@ -73,11 +73,7 @@ const LandingPageSequenceTwo = ({ heading, paragraphs, image, imageAlt, imageHei
                 aria-describedby={`heading-${contentId}`}
               >
                 <article itemProp="articleBody">
-                  {paragraphs.map((paragraph, index) => (
-                      <p key={index} className='fs-3 fw-normal'>
-                        {paragraph}
-                      </p>
-                    ))}
+                  <p className='fs-3 fw-normal' style={{ whiteSpace: 'pre-line' }}>{content}</p>
                 </article>
                 <nav 
                   aria-label="Primary call-to-action buttons"

@@ -32,3 +32,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# markdown files
+CONTENTFUL_WORDPRESS_PLAN.md 
+IMAGE_OPTIMIZATION_SUMMARY.md 

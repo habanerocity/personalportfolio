@@ -2,6 +2,14 @@ import OptimizedImage from './OptimizedImage';
 
 // Helper function to generate responsive image sources
 export const getOptimizedImageSrc = (originalSrc, useOptimized = true) => {
+  // Guard against empty/null src
+  if (!originalSrc) return originalSrc;
+
+  // Pass external URLs (Contentful CDN, http/https, protocol-relative) through unchanged
+  if (originalSrc.startsWith('http') || originalSrc.startsWith('//')) {
+    return originalSrc;
+  }
+
   if (!useOptimized || originalSrc.includes('optimized/')) {
     return originalSrc;
   }

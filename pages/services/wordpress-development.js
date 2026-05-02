@@ -28,16 +28,19 @@ import sectionHeadingsData from "../../data/services/wordpress-development/secti
 import wordpressFAQsData from "../../data/services/wordpress-development/faqsData";
 import ReviewData from '../../components/ui/ReviewSlider/SliderData';
 
-const WordPressDevelopmentServices = () => {
+import { getServiceLandingPageBySlug } from '../../utils/contentfulServices';
+import { transformServiceLandingPage } from '../../utils/transformers/serviceLandingPageTransformer';
+
+const WordPressDevelopmentServices = ({ pageData }) => {
 
     return (
     <React.Fragment>
         <Head>
-            <title>Custom WordPress Development in Los Angeles | Lindy Ramirez</title>
+            <title>{pageData.seoTitle}</title>
             <link rel="canonical" href="https://www.lindyramirez.com/services/wordpress-development" />
             <meta
                 name="description"
-                content="Professional WordPress development services in Los Angeles. Custom themes, plugin development, and website optimization for LA businesses by Lindy Ramirez."
+                content={pageData.seoDescription}
             />
             <meta name="author" content="Lindy Ramirez" />
             
@@ -206,7 +209,7 @@ const WordPressDevelopmentServices = () => {
                 {JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
-                    "mainEntity": wordpressFAQsData.map(faq => ({
+                    "mainEntity": pageData.faqsData.faqs.map(faq => ({
                         "@type": "Question",
                         "name": faq.question,
                         "acceptedAnswer": {
@@ -255,15 +258,21 @@ const WordPressDevelopmentServices = () => {
                 }}
             >
                 <SectionContainer className={classes.hero__section_container}>
-                    <ServiceHero {...wordpressDevHeroData} />
+                    <ServiceHero {...pageData.hero} />
                 </SectionContainer>
-                <LandingPageSequenceOne {...sequenceOneData} />
-                <LandingPageSequenceTwo {...sequenceTwoData} />
-                <LandingPageSequenceThree {...sequenceThreeData} />
-                <ServicesSection {...wordpressServicesData} sideImageSrc='/static/st_thomas_upstairs-2.webp' sideImageAlt='Web developer working on custom WordPress solutions' />
-                <TestimonialsSection heading={sectionHeadingsData.sectionFive} />
-                <FAQSection faqs={wordpressFAQsData} heading={sectionHeadingsData.sectionSix} />
-                <CTASection {...ctaData} buttonText='Get Started Now' />
+                <LandingPageSequenceOne {...pageData.sequenceOne} />
+                <LandingPageSequenceTwo {...pageData.sequenceTwo} />
+                <LandingPageSequenceThree
+                    heading={pageData.sequenceThree.heading}
+                    content={pageData.sequenceThree.content}
+                    imageSrc={pageData.sequenceThree.image}
+                    imageAlt={pageData.sequenceThree.imageAlt}
+                    collageImages={pageData.sequenceThree.collageImages}
+                />
+                <ServicesSection {...pageData.services} />
+                <TestimonialsSection heading={pageData.testimonialsHeading} />
+                <FAQSection faqs={pageData.faqsData.faqs} heading={pageData.faqsData.heading} />
+                <CTASection {...pageData.cta} />
             </motion.div>
         </div>
     </React.Fragment>
@@ -271,3 +280,64 @@ const WordPressDevelopmentServices = () => {
 }
 
 export default WordPressDevelopmentServices;
+
+export async function getStaticProps() {
+  const entry = await getServiceLandingPageBySlug('wordpress-development');
+
+  if (process.env.NODE_ENV === 'development' && entry) {
+    const { sequences = [], servicesGrid = [], heroSection, ctaSection } = entry.fields ?? {};
+    console.log('\n=== CONTENTFUL FIELD DEBUG ===');
+    console.log('Top-level fields:', Object.keys(entry.fields ?? {}));
+    console.log('heroSection fields:', Object.keys(heroSection?.fields ?? {}));
+    console.log('sequences[0] fields:', Object.keys(sequences[0]?.fields ?? {}));
+    console.log('sequences[1] fields:', Object.keys(sequences[1]?.fields ?? {}));
+    console.log('sequences[2] fields:', Object.keys(sequences[2]?.fields ?? {}));
+    console.log('servicesGrid[0] fields:', Object.keys(servicesGrid[0]?.fields ?? {}));
+    console.log('ctaSection fields:', Object.keys(ctaSection?.fields ?? {}));
+    console.log('==============================\n');
+  }
+
+  if (entry) {
+    const pageData = transformServiceLandingPage(entry);
+    console.log('\n=== TRANSFORMED PAGEDATA ===');
+    console.log(JSON.stringify(pageData, null, 2));
+    console.log('===========================\n');
+    return { props: { pageData }, revalidate: 3600 };
+  }
+
+  // Fallback: build pageData from static data files
+  const pageData = {
+    seoTitle: 'Custom WordPress Development in Los Angeles | Lindy Ramirez',
+    seoDescription:
+      'Professional WordPress development services in Los Angeles. Custom themes, plugin development, and website optimization for LA businesses by Lindy Ramirez.',
+    hero: wordpressDevHeroData,
+    sequenceOne: sequenceOneData,
+    sequenceTwo: sequenceTwoData,
+    sequenceThree: {
+      heading: sequenceThreeData.heading,
+      content: sequenceThreeData.content,
+      image: sequenceThreeData.imageSrc,
+      imageAlt: sequenceThreeData.imageAlt,
+      collageImages: [
+        { src: sequenceThreeData.imageSrc, alt: sequenceThreeData.imageAlt },
+        { src: '/static/aguachile-edited.webp', alt: 'Aguachile - one of my favorite foods' },
+        { src: '/static/audi.webp', alt: 'Web developer located in the San Fernando Valley, Los Angeles, CA' },
+        { src: '/static/pacifico-beach.webp', alt: 'Web developer working on the beach in Pacifico Beach, Siargao, Philippines' },
+      ],
+    },
+    services: {
+      heading: wordpressServicesData.heading,
+      services: wordpressServicesData.services,
+      sideImageSrc: '/static/st_thomas_upstairs-2.webp',
+      sideImageAlt: 'Web developer working on custom WordPress solutions',
+    },
+    testimonialsHeading: sectionHeadingsData.sectionFive,
+    faqsData: {
+      heading: sectionHeadingsData.sectionSix,
+      faqs: wordpressFAQsData,
+    },
+    cta: { ...ctaData, buttonText: 'Get Started Now' },
+  };
+
+  return { props: { pageData }, revalidate: 3600 };
+}

@@ -1,28 +1,16 @@
 const sequenceOneData = {
     heading: "What are Landing Pages and Why Should Los Angeles Brands Use Them?",
-    paragraph: "Landing pages are dedicated, high-converting web pages designed to drive a specific action, like signing up for a service, making a purchase, or signing up for a newsletter. Unlike regular web pages, they eliminate distractions, delivering a clear message with a strong call to action. If you're running ads or marketing campaigns, a well-designed landing page can significantly improve your conversion rates by turning traffic into leads or customers. It's an essential tool for boosting ROI, optimizing campaigns, and achieving business goals.",
-    benefits: [
-      {
-        title: "Convert Visitors Into Customers or Leads",
-        description: "By providing clear calls-to-action and relevant information, landing pages effectively can convert casual browsers into sales or warm leads."
-      },
-      {
-        title: "Increased Credibility and Trust",
-        description: "A well-designed landing page enhances your brand's credibility by providing a professional and polished presentation of your offerings. This attention to detail fosters trust among potential customers, making them more likely to engage with your brand and take action."
-      },
-      {
-        title: "Maximize Your Marketing ROI",
-        description: "Landing pages dramatically improve campaign ROI by aligning your ad spend with conversion-focused pages. Track exactly how your Google Ads and social campaigns perform, then optimize for maximum return on every dollar spent."
-      },
-      {
-        title: "Gain Actionable Data Insights",
-        description: "Collect valuable data insights by tracking user interactions, such as click-through rates and conversion metrics. Find out what resonates with your audience and make better informed marketing decisions."
-      },
-      {
-        title: "Deliver Focused, Distraction-Free Messaging",
-        description: "Ensure that your audience receives clear and concise messaging tailored to their specific needs or interests. By eliminating distractions and emphasizing a single call-to-action, effectively communicate your value proposition and drive higher engagement from potential customers."
-      }
-    ],
+    content: `Landing pages are dedicated, high-converting web pages designed to drive a specific action, like signing up for a service, making a purchase, or signing up for a newsletter. Unlike regular web pages, they eliminate distractions, delivering a clear message with a strong call to action. If you’re running ads or marketing campaigns, a well-designed landing page can significantly improve your conversion rates by turning traffic into leads or customers. It’s an essential tool for boosting ROI, optimizing campaigns, and achieving business goals.
+
+Convert Visitors Into Customers or Leads: By providing clear calls-to-action and relevant information, landing pages effectively can convert casual browsers into sales or warm leads.
+
+Increased Credibility and Trust: A well-designed landing page enhances your brand’s credibility by providing a professional and polished presentation of your offerings. This attention to detail fosters trust among potential customers, making them more likely to engage with your brand and take action.
+
+Maximize Your Marketing ROI: Landing pages dramatically improve campaign ROI by aligning your ad spend with conversion-focused pages. Track exactly how your Google Ads and social campaigns perform, then optimize for maximum return on every dollar spent.
+
+Gain Actionable Data Insights: Collect valuable data insights by tracking user interactions, such as click-through rates and conversion metrics. Find out what resonates with your audience and make better informed marketing decisions.
+
+Deliver Focused, Distraction-Free Messaging: Ensure that your audience receives clear and concise messaging tailored to their specific needs or interests. By eliminating distractions and emphasizing a single call-to-action, effectively communicate your value proposition and drive higher engagement from potential customers.`,
     image: '/static/landing_page_tabletx750.webp',
     imageAlt: 'High-converting landing page displayed on tablet showing lead capture form for Los Angeles business'
   };

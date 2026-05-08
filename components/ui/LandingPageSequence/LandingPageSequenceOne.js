@@ -3,6 +3,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 import AnimatedHeading from '../../animations/AnimatedHeading';
 import ButtonPair from '../ButtonPair';
 import { getOptimizedImageSrc, getResponsiveSizes } from '../ResponsiveImage';
+import MarkdownContent from '../../utils/markdownParser';
 import classes from './LandingPageSequenceOne.module.scss';
 
 const LandingPageSequenceOne = ({ heading, content, image, imageAlt }) => {
@@ -28,9 +29,10 @@ const LandingPageSequenceOne = ({ heading, content, image, imageAlt }) => {
             role="main"
             aria-describedby="main-description"
             >
-              <p className='fs-3 fw-normal' role="doc-subtitle" id="main-description" style={{ whiteSpace: 'pre-line' }}>
-                {content}
-              </p>
+              <MarkdownContent 
+                text={content} 
+                className='fs-3 fw-normal' 
+              />
               <nav 
                 aria-label="Primary actions"
                 role="navigation"

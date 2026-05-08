@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Row, Col, Container } from 'react-bootstrap';
 import AnimatedHeading from '../../animations/AnimatedHeading';
 import ButtonPair from '../ButtonPair';
+import MarkdownContent from '../../utils/markdownParser';
 import classes from './LandingPageSequenceTwo.module.scss';
 
 const LandingPageSequenceTwo = ({ heading, content, image, imageAlt, imageHeight = 350 }) => {
@@ -73,7 +74,7 @@ const LandingPageSequenceTwo = ({ heading, content, image, imageAlt, imageHeight
                 aria-describedby={`heading-${contentId}`}
               >
                 <article itemProp="articleBody">
-                  <p className='fs-3 fw-normal' style={{ whiteSpace: 'pre-line' }}>{content}</p>
+                  <MarkdownContent text={content} className='fs-3 fw-normal' />
                 </article>
                 <nav 
                   aria-label="Primary call-to-action buttons"

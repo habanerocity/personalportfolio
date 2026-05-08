@@ -286,22 +286,11 @@ export async function getStaticProps() {
 
   if (process.env.NODE_ENV === 'development' && entry) {
     const { sequences = [], servicesGrid = [], heroSection, ctaSection } = entry.fields ?? {};
-    console.log('\n=== CONTENTFUL FIELD DEBUG ===');
-    console.log('Top-level fields:', Object.keys(entry.fields ?? {}));
-    console.log('heroSection fields:', Object.keys(heroSection?.fields ?? {}));
-    console.log('sequences[0] fields:', Object.keys(sequences[0]?.fields ?? {}));
-    console.log('sequences[1] fields:', Object.keys(sequences[1]?.fields ?? {}));
-    console.log('sequences[2] fields:', Object.keys(sequences[2]?.fields ?? {}));
-    console.log('servicesGrid[0] fields:', Object.keys(servicesGrid[0]?.fields ?? {}));
-    console.log('ctaSection fields:', Object.keys(ctaSection?.fields ?? {}));
-    console.log('==============================\n');
   }
 
   if (entry) {
     const pageData = transformServiceLandingPage(entry);
-    console.log('\n=== TRANSFORMED PAGEDATA ===');
-    console.log(JSON.stringify(pageData, null, 2));
-    console.log('===========================\n');
+
     return { props: { pageData }, revalidate: 3600 };
   }
 

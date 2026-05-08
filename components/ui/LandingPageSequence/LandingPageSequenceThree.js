@@ -4,6 +4,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 import ButtonPair from '../ButtonPair';
 import AnimatedHeading from '../../animations/AnimatedHeading';
 import { getOptimizedImageSrc, getResponsiveSizes } from '../ResponsiveImage';
+import MarkdownContent from '../../utils/markdownParser';
 
 import classes from './LandingPageSequenceThree.module.scss';
 
@@ -72,9 +73,7 @@ const LandingPageSequenceThree = ({
                 aria-describedby={`heading-${sectionId}`}
               >
                 <article>
-                  <p className='fs-3 fw-normal' style={{ whiteSpace: 'pre-line' }} itemProp="description">
-                    {content}
-                  </p>
+                  <MarkdownContent text={content} className='fs-3 fw-normal' />
                 </article>
                 <nav 
                   className="cta-navigation" 

@@ -18,26 +18,21 @@ import pageFadeInAnimation from "../../animations/pageFadeInAnimation";
 
 import { motion } from 'framer-motion';
 
-import shopifyDevHeroData from '../../data/services/shopify-development/heroData';
-import sequenceOneData from '../../data/services/shopify-development/sequenceOneData';
-import sequenceTwoData from '../../data/services/shopify-development/sequenceTwoData';
-import sequenceThreeData from '../../data/services/shopify-development/sequenceThreeData';
-import shopifyServicesData from "../../data/services/shopify-development/servicesData";
-import ctaData from '../../data/services/shopify-development/ctadata';
-import sectionHeadingsData from "../../data/services/wordpress-development/sectionHeadingsData";
-import shopifyFAQsData from "../../data/services/shopify-development/faqsData";
 import ReviewData from '../../components/ui/ReviewSlider/SliderData';
 
-const ShopifyDevelopmentServices = () => {
+import { getServiceLandingPageBySlug } from '../../utils/contentfulServices';
+import { transformServiceLandingPage } from '../../utils/transformers/serviceLandingPageTransformer';
+
+const ShopifyDevelopmentServices = ( {pageData} ) => {
 
     return (
     <React.Fragment>
         <Head>
-            <title>Custom Shopify Development in Los Angeles | Lindy Ramirez</title>
+            <title>{pageData.seoTitle}</title>
             <link rel="canonical" href="https://www.lindyramirez.com/services/shopify-development" />
             <meta
                 name="description"
-                content="Professional Shopify development services in Los Angeles. Custom store setup, theme development, and app integrations for LA ecommerce businesses by Lindy Ramirez."
+                content={pageData.seoDescription}
             />
             <meta name="author" content="Lindy Ramirez" />
             
@@ -213,7 +208,7 @@ const ShopifyDevelopmentServices = () => {
                 {JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
-                    "mainEntity": shopifyFAQsData.map(faq => ({
+                    "mainEntity": pageData.faqsData.faqs.map(faq => ({
                         "@type": "Question",
                         "name": faq.question,
                         "acceptedAnswer": {
@@ -258,20 +253,25 @@ const ShopifyDevelopmentServices = () => {
             animate="visible"
             variants={pageFadeInAnimation}
             onAnimationComplete={() => {
-                console.log('Animation complete, scrolling to top');
                 window.scrollTo(0, 0);
                 }}
             >
                 <SectionContainer className={classes.hero__section_container}>
-                    <ServiceHero statValueFontSize={{ fontSize: "3rem", marginTop: "8px" }} iconBoxBgClass='bg-dark' {...shopifyDevHeroData} />
+                    <ServiceHero {...pageData.hero} />
                 </SectionContainer>
-                <LandingPageSequenceOne {...sequenceOneData} />
-                <LandingPageSequenceTwo {...sequenceTwoData} />
-                <LandingPageSequenceThree {...sequenceThreeData} />
-                <ServicesSection {...shopifyServicesData} sideImageSrc='/static/online_shopping.webp' sideImageAlt='Shopify store owner increasing sales' />
-                <TestimonialsSection heading={sectionHeadingsData.sectionFive} />
-                <FAQSection heading={sectionHeadingsData.sectionSix} faqs={shopifyFAQsData} />
-                <CTASection {...ctaData} buttonText='Get Started Now' />
+                <LandingPageSequenceOne {...pageData.sequenceOne} />
+                <LandingPageSequenceTwo {...pageData.sequenceTwo} />
+                <LandingPageSequenceThree
+                    heading={pageData.sequenceThree.heading}
+                    content={pageData.sequenceThree.content}
+                    imageSrc={pageData.sequenceThree.image}
+                    imageAlt={pageData.sequenceThree.imageAlt}
+                    collageImages={pageData.sequenceThree.collageImages}
+                />
+                <ServicesSection {...pageData.services} />
+                <TestimonialsSection heading={pageData.testimonialsHeading} />
+                <FAQSection faqs={pageData.faqsData.faqs} heading={pageData.faqsData.heading} />
+                <CTASection {...pageData.cta} />
             </motion.div>
         </div>
     </React.Fragment>
@@ -279,3 +279,13 @@ const ShopifyDevelopmentServices = () => {
 }
 
 export default ShopifyDevelopmentServices;
+
+export async function getStaticProps() {
+  const entry = await getServiceLandingPageBySlug('shopify-development');
+
+  if (entry) {
+    const pageData = transformServiceLandingPage(entry);
+
+    return { props: { pageData }, revalidate: 3600 };
+  }
+}

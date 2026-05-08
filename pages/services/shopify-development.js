@@ -281,11 +281,28 @@ const ShopifyDevelopmentServices = ( {pageData} ) => {
 export default ShopifyDevelopmentServices;
 
 export async function getStaticProps() {
-  const entry = await getServiceLandingPageBySlug('shopify-development');
+    try{
+        const entry = await getServiceLandingPageBySlug('shopify-development');
 
-  if (entry) {
-    const pageData = transformServiceLandingPage(entry);
+        if(!entry){
+            return {
+                notFound: true,
+                revalidate: 60
+            }
+        }
 
-    return { props: { pageData }, revalidate: 3600 };
-  }
+        const pageData = transformServiceLandingPage(entry);
+
+        return {
+            props: { pageData },
+            revalidate: 3600
+        }
+    } catch(error){
+        console.error("Error fetching data for Shopify Development Services page:", error);
+        
+        return {
+            notFound: true,
+            revalidate: 60
+        }
+    }
 }

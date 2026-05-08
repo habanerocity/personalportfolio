@@ -18,14 +18,6 @@ import pageFadeInAnimation from "../../animations/pageFadeInAnimation";
 
 import { motion } from 'framer-motion';
 
-import wordpressDevHeroData from '../../data/services/wordpress-development/heroData';
-import sequenceOneData from '../../data/services/wordpress-development/sequenceOneData';
-import sequenceTwoData from '../../data/services/wordpress-development/sequenceTwoData';
-import sequenceThreeData from '../../data/services/wordpress-development/sequenceThreeData';
-import wordpressServicesData from "../../data/services/wordpress-development/servicesData";
-import ctaData from '../../data/services/wordpress-development/ctadata';
-import sectionHeadingsData from "../../data/services/wordpress-development/sectionHeadingsData";
-import wordpressFAQsData from "../../data/services/wordpress-development/faqsData";
 import ReviewData from '../../components/ui/ReviewSlider/SliderData';
 
 import { getServiceLandingPageBySlug } from '../../utils/contentfulServices';
@@ -253,7 +245,6 @@ const WordPressDevelopmentServices = ({ pageData }) => {
             animate="visible"
             variants={pageFadeInAnimation}
             onAnimationComplete={() => {
-                console.log('Animation complete, scrolling to top');
                 window.scrollTo(0, 0);
                 }}
             >
@@ -282,51 +273,28 @@ const WordPressDevelopmentServices = ({ pageData }) => {
 export default WordPressDevelopmentServices;
 
 export async function getStaticProps() {
-  const entry = await getServiceLandingPageBySlug('wordpress-development');
+    try{
+        const entry = await getServiceLandingPageBySlug('wordpress-development');
 
-  if (process.env.NODE_ENV === 'development' && entry) {
-    const { sequences = [], servicesGrid = [], heroSection, ctaSection } = entry.fields ?? {};
-  }
+        if(!entry){
+            return {
+                notFound: true,
+                revalidate: 60
+            }
+        }
 
-  if (entry) {
-    const pageData = transformServiceLandingPage(entry);
+        const pageData = transformServiceLandingPage(entry);
 
-    return { props: { pageData }, revalidate: 3600 };
-  }
-
-  // Fallback: build pageData from static data files
-  const pageData = {
-    seoTitle: 'Custom WordPress Development in Los Angeles | Lindy Ramirez',
-    seoDescription:
-      'Professional WordPress development services in Los Angeles. Custom themes, plugin development, and website optimization for LA businesses by Lindy Ramirez.',
-    hero: wordpressDevHeroData,
-    sequenceOne: sequenceOneData,
-    sequenceTwo: sequenceTwoData,
-    sequenceThree: {
-      heading: sequenceThreeData.heading,
-      content: sequenceThreeData.content,
-      image: sequenceThreeData.imageSrc,
-      imageAlt: sequenceThreeData.imageAlt,
-      collageImages: [
-        { src: sequenceThreeData.imageSrc, alt: sequenceThreeData.imageAlt },
-        { src: '/static/aguachile-edited.webp', alt: 'Aguachile - one of my favorite foods' },
-        { src: '/static/audi.webp', alt: 'Web developer located in the San Fernando Valley, Los Angeles, CA' },
-        { src: '/static/pacifico-beach.webp', alt: 'Web developer working on the beach in Pacifico Beach, Siargao, Philippines' },
-      ],
-    },
-    services: {
-      heading: wordpressServicesData.heading,
-      services: wordpressServicesData.services,
-      sideImageSrc: '/static/st_thomas_upstairs-2.webp',
-      sideImageAlt: 'Web developer working on custom WordPress solutions',
-    },
-    testimonialsHeading: sectionHeadingsData.sectionFive,
-    faqsData: {
-      heading: sectionHeadingsData.sectionSix,
-      faqs: wordpressFAQsData,
-    },
-    cta: { ...ctaData, buttonText: 'Get Started Now' },
-  };
-
-  return { props: { pageData }, revalidate: 3600 };
+        return {
+            props: { pageData },
+            revalidate: 3600
+        }
+    } catch(error){
+        console.error("Error fetching data for WordPress Development Services page:", error);
+        
+        return {
+            notFound: true,
+            revalidate: 60
+        }
+    }
 }

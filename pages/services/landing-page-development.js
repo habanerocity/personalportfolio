@@ -28,16 +28,19 @@ import sectionHeadingsData from "../../data/services/landing-page-development/se
 import landingPageFAQsData from "../../data/services/landing-page-development/faqsData";
 import ReviewData from '../../components/ui/ReviewSlider/SliderData';
 
-const LandingPageDevelopmentServices = () => {
+import { getServiceLandingPageBySlug } from '../../utils/contentfulServices';
+import { transformServiceLandingPage } from '../../utils/transformers/serviceLandingPageTransformer';
+
+const LandingPageDevelopmentServices = ( {pageData} ) => {
 
     return (
     <React.Fragment>
           <Head>
-            <title>Custom Landing Page Development in Los Angeles | Lindy Ramirez</title>
+            <title>Custom Landing Page Development in Los Angeles | Lindy Ramirez Freelance Web Developer</title>
             <link rel="canonical" href="https://www.lindyramirez.com/services/landing-page-development" />
             <meta
                 name="description"
-                content="Professional landing page development services in Los Angeles. Custom-coded, high-converting pages for lead generation and sales optimization by Lindy Ramirez."
+                content="Professional landing page development services in Los Angeles. Custom-coded, high-converting pages for lead generation and sales optimization."
             />
             <meta name="author" content="Lindy Ramirez" />
             
@@ -48,7 +51,7 @@ const LandingPageDevelopmentServices = () => {
             <meta name="ICBM" content="34.0522, -118.2437" />
             
             {/* Open Graph Metadata */}
-            <meta property="og:title" content="Custom Landing Page Development in Los Angeles | Lindy Ramirez" />
+            <meta property="og:title" content="Custom Landing Page Development in Los Angeles | Lindy Ramirez Freelance Web Developer" />
             <meta property="og:site_name" content="Lindy Ramirez | Web Developer" />
             <meta
                 property="og:description"
@@ -213,7 +216,7 @@ const LandingPageDevelopmentServices = () => {
                 {JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
-                    "mainEntity": landingPageFAQsData.map(faq => ({
+                    "mainEntity": pageData.faqsData.faqs.map(faq => ({
                         "@type": "Question",
                         "name": faq.question,
                         "acceptedAnswer": {
@@ -262,15 +265,21 @@ const LandingPageDevelopmentServices = () => {
                 }}
             >
                 <SectionContainer className={classes.hero__section_container}>
-                    <ServiceHero statValueFontSize={{ fontSize: "3rem", marginTop: "8px" }} iconBoxBgClass='bg-dark' {...landingPageDevHeroData} />
+                    <ServiceHero statValueFontSize={{ fontSize: "3rem", marginTop: "8px" }} iconBoxBgClass='bg-dark' {...pageData.hero} />
                 </SectionContainer>
-                <LandingPageSequenceOne {...sequenceOneData} />
-                <LandingPageSequenceTwo {...sequenceTwoData} />
-                <LandingPageSequenceThree {...sequenceThreeData} />
-                <ServicesSection {...landingPageServicesData} sideImageSrc='/static/pexels_handshakex620.webp' sideImageAlt='Custom landing pages driving sales' />
-                <TestimonialsSection heading={sectionHeadingsData.sectionFive} />
-                <FAQSection heading={sectionHeadingsData.sectionSix} faqs={landingPageFAQsData} />
-                <CTASection {...ctaData} buttonText='Get Started Now' />
+                <LandingPageSequenceOne {...pageData.sequenceOne} />
+                <LandingPageSequenceTwo {...pageData.sequenceTwo} />
+                <LandingPageSequenceThree 
+                    heading={pageData.sequenceThree.heading}
+                    content={pageData.sequenceThree.content}
+                    imageSrc={pageData.sequenceThree.image}
+                    imageAlt={pageData.sequenceThree.imageAlt}
+                    collageImages={pageData.sequenceThree.collageImages}
+                />
+                <ServicesSection {...pageData.services} />
+                <TestimonialsSection heading={pageData.testimonialsHeading} />
+                <FAQSection faqs={pageData.faqsData.faqs} heading={pageData.faqsData.heading} />
+                <CTASection {...pageData.cta} />
             </motion.div>
         </div>
     </React.Fragment>
@@ -278,3 +287,30 @@ const LandingPageDevelopmentServices = () => {
 }
 
 export default LandingPageDevelopmentServices;
+
+export async function getStaticProps() {
+    try{
+        const entry = await getServiceLandingPageBySlug('landing-page-development');
+
+        if(!entry){
+            return {
+                notFound: true,
+                revalidate: 60
+            }
+        }
+
+        const pageData = transformServiceLandingPage(entry);
+
+        return {
+            props: { pageData },
+            revalidate: 3600
+        }
+    } catch(error){
+        console.error("Error fetching data for Shopify Development Services page:", error);
+        
+        return {
+            notFound: true,
+            revalidate: 60
+        }
+    }
+}

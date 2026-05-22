@@ -46,7 +46,7 @@ const Hero = () => {
               }}
             />
           </div>
-          <h4 className={`fw-light text-black ${classes.subsubheading}`}>Websites that work as hard as you do. Clean code, smart design, measurable results.</h4>
+          <h4 className={`fw-light text-black ${classes.subsubheading}`}>I build websites that work as hard as you do. Clean code, smart design, measurable results.</h4>
           <div className={classes.btn__container}>
             <Link className={classes.link} passHref href="/services">
               <button className={`${classes.hero__btn_solid} text-white ${classes.hero__btn} fs-3 mt-4 me-4`}>My Services</button>

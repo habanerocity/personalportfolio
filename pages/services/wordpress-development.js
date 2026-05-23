@@ -71,14 +71,18 @@ const WordPressDevelopmentServices = ({ pageData }) => {
                     "@context": "https://schema.org",
                     "@type": "Service",
                     "serviceType": "WordPress Development",
-                    "name": "Custom WordPress Development Services",  
-                    "description": "Professional WordPress development services in Los Angeles including custom themes, plugin development, and website optimization.", 
+                    "name": "WordPress Development Services in Los Angeles",  
+                    "description": "WordPress development services in Los Angeles including custom theme builds, plugin development, performance optimization, maintenance retainers, and Divi and Elementor customization for established businesses.", 
                     "provider": {
                         "@type": "Person",
                         "name": "Lindy Ramirez",
                         "url": "https://www.lindyramirez.com",
                         "jobTitle": "WordPress Developer",
                         "email": "hello@lindyramirez.com", 
+                        "sameAs": [
+                            "https://www.linkedin.com/in/lindy-ramirez-8786102b/",
+                            "https://github.com/habanerocity"
+                        ],
                         "address": {    
                             "@type": "PostalAddress",
                             "addressLocality": "Los Angeles",
@@ -94,15 +98,18 @@ const WordPressDevelopmentServices = ({ pageData }) => {
                         },
                         {
                             "@type": "City",
-                            "name": "Granada Hills"
+                            "name": "Granada Hills",
+                            "sameAs": "https://en.wikipedia.org/wiki/Granada_Hills,_Los_Angeles"
                         },
                         {
                             "@type": "City",
-                            "name": "Pasadena"
+                            "name": "Pasadena",
+                            "sameAs": "https://en.wikipedia.org/wiki/Pasadena,_California"
                         },
                         {
                             "@type": "City",
-                            "name": "Tarzana"
+                            "name": "Tarzana",
+                            "sameAs": "https://en.wikipedia.org/wiki/Tarzana,_Los_Angeles"
                         }
                     ],
                     "offers": {
@@ -120,7 +127,7 @@ const WordPressDevelopmentServices = ({ pageData }) => {
                                 "itemOffered": {
                                     "@type": "Service",
                                     "name": "Custom WordPress Theme Development",
-                                    "description": "Custom WordPress themes designed to drive business growth"  
+                                    "description": "Hand-coded custom WordPress themes built from scratch for Los Angeles businesses: no bloated templates, no shared stylesheets, no unnecessary dependencies. Faster, more secure, and built specifically around how your business works."  
                                 }
                             },
                             {
@@ -128,15 +135,55 @@ const WordPressDevelopmentServices = ({ pageData }) => {
                                 "itemOffered": {
                                     "@type": "Service",
                                     "name": "WordPress Plugin Development",
-                                    "description": "Custom functionality and integrations for your WordPress site"
+                                    "description": "Custom WordPress plugin development for functionality that doesn't exist off the shelf. Custom post types, shortcodes, admin tools, and API integrations built from scratch."
                                 }
                             },
                             {
                                 "@type": "Offer",
                                 "itemOffered": {
                                     "@type": "Service",
-                                    "name": "WordPress Website Optimization",
-                                    "description": "Performance tuning and speed optimization for WordPress"
+                                    "name": "WordPress Performance and Technical SEO Optimization",
+                                    "description": "WordPress speed optimization and technical SEO for Los Angeles businesses: Core Web Vitals audits, render-blocking script cleanup, image optimization, and on-page SEO fixes that directly affect search rankings and mobile conversion rates."
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "WordPress Theme Customization",
+                                    "description": "WordPress theme customization for businesses in Los Angeles that already have a theme and need it modified — through custom code, a child theme setup, or targeted changes that don't compromise the existing structure."
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "WordPress Theme Design",
+                                    "description": "Custom WordPress theme design using Figma: layout, type system, and component structure approved before any code is written. Built for Los Angeles businesses that want a site that looks intentional, not assembled from a template."
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "WordPress Maintenance & Support",
+                                    "description": "Ongoing WordPress maintenance and support retainers for Los Angeles businesses: updates, backups, security monitoring, and same-day response from a developer who already knows your site. Starting at $299/month."
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Divi WordPress Development",
+                                    "description": "Divi WordPress development and customization in Los Angeles and Pasadena: cleanup, performance optimization, and custom modifications for existing Divi sites. Honest assessment of what's fixable within Divi and where custom code serves the site better."
+                                }
+                            },
+                            {
+                                "@type": "Offer",
+                                "itemOffered": {
+                                    "@type": "Service",
+                                    "name": "Elementor WordPress Development",
+                                    "description": "Elementor WordPress development and customization for Los Angeles businesses: modifications, performance improvements, and conflict resolution for existing Elementor sites. Practical advice on when Elementor serves the project and when custom code is the better long-term call."
                                 }
                             }
                         ]

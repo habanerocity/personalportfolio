@@ -110,6 +110,11 @@ const WordPressDevelopmentServices = ({ pageData }) => {
                             "@type": "City",
                             "name": "Tarzana",
                             "sameAs": "https://en.wikipedia.org/wiki/Tarzana,_Los_Angeles"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "West Hollywood",
+                            "sameAs": "https://en.wikipedia.org/wiki/West_Hollywood,_California"
                         }
                     ],
                     "offers": {

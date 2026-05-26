@@ -36,11 +36,11 @@ const LandingPageDevelopmentServices = ( {pageData} ) => {
     return (
     <React.Fragment>
           <Head>
-            <title>Custom Landing Page Development in Los Angeles | Lindy Ramirez Freelance Web Developer</title>
+            <title>{pageData.seoTitle}</title>
             <link rel="canonical" href="https://www.lindyramirez.com/services/landing-page-development" />
             <meta
                 name="description"
-                content="Professional landing page development services in Los Angeles. Custom-coded, high-converting pages for lead generation and sales optimization."
+                content={pageData.seoDescription}
             />
             <meta name="author" content="Lindy Ramirez" />
             

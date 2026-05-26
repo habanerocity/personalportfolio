@@ -28,16 +28,19 @@ import sectionHeadingsData from "../../data/services/digital-marketing-services/
 import digitalMarketingFAQsData from "../../data/services/digital-marketing-services/faqsData";
 import ReviewData from '../../components/ui/ReviewSlider/SliderData';
 
-const DigitalMarketingServices = () => {
+import { getServiceLandingPageBySlug } from '../../utils/contentfulServices';
+import { transformServiceLandingPage } from '../../utils/transformers/serviceLandingPageTransformer';
+
+const DigitalMarketingServices = ({pageData}) => {
 
     return (
     <React.Fragment>
        <Head>
-            <title>Digital Marketing Services in Los Angeles | Lindy Ramirez</title>
+            <title>{pageData.seoTitle}</title>
             <link rel="canonical" href="https://www.lindyramirez.com/services/digital-marketing-services" />
             <meta
                 name="description"
-                content="Professional digital marketing services in Los Angeles. SEO, PPC, social media marketing, and content marketing strategies by Lindy Ramirez."
+                content={pageData.seoDescription}
             />
             <meta name="author" content="Lindy Ramirez" />
             
@@ -214,7 +217,7 @@ const DigitalMarketingServices = () => {
                 {JSON.stringify({
                     "@context": "https://schema.org",
                     "@type": "FAQPage",
-                    "mainEntity": digitalMarketingFAQsData.map(faq => ({
+                    "mainEntity": pageData.faqsData.faqs.map(faq => ({
                         "@type": "Question",
                         "name": faq.question,
                         "acceptedAnswer": {
@@ -263,15 +266,15 @@ const DigitalMarketingServices = () => {
                 }}
             >
                 <SectionContainer className={classes.hero__section_container}>
-                    <ServiceHero statValueFontSize={{ fontSize: "3rem", marginTop: "8px" }} iconBoxBgClass='bg-dark' {...digitalMarketingServicesHeroData} />
+                    <ServiceHero statValueFontSize={{ fontSize: "3rem", marginTop: "8px" }} iconBoxBgClass='bg-dark' {...pageData.hero} />
                 </SectionContainer>
-                <LandingPageSequenceOne {...sequenceOneData} />
-                <LandingPageSequenceTwo {...sequenceTwoData} />
-                <LandingPageSequenceThree {...sequenceThreeData} />
-                <ServicesSection {...digitalMarketingServicesData} sideImageSrc='/static/plantsx467w.webp' sideImageAlt='Small business owner building online presence with digital marketing' />
-                <TestimonialsSection heading={sectionHeadingsData.sectionFive} />
-                <FAQSection heading={sectionHeadingsData.sectionSix} faqs={digitalMarketingFAQsData} />
-                <CTASection {...ctaData} buttonText='Get Started Now' />
+                <LandingPageSequenceOne {...pageData.sequenceOne} />
+                <LandingPageSequenceTwo {...pageData.sequenceTwo} />
+                <LandingPageSequenceThree {...pageData.sequenceThree} />
+                <ServicesSection {...pageData.services} />
+                <TestimonialsSection heading={pageData.testimonialsHeading} />
+                <FAQSection faqs={pageData.faqsData.faqs} heading={pageData.faqsData.heading} />
+                <CTASection {...pageData.cta} />
             </motion.div>
         </div>
     </React.Fragment>
@@ -279,3 +282,30 @@ const DigitalMarketingServices = () => {
 }
 
 export default DigitalMarketingServices;
+
+export async function getStaticProps() {
+    try{
+        const entry = await getServiceLandingPageBySlug('digital-marketing-services');
+
+        if(!entry){
+            return {
+                notFound: true,
+                revalidate: 60
+            }
+        }
+
+        const pageData = transformServiceLandingPage(entry);
+
+        return {
+            props: { pageData },
+            revalidate: 3600
+        }
+    } catch(error){
+        console.error("Error fetching data for Digital Marketing Services page:", error);
+        
+        return {
+            notFound: true,
+            revalidate: 60
+        }
+    }
+}

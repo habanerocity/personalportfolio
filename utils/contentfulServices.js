@@ -62,3 +62,21 @@ export function formatImageUrl(asset) {
   const url = asset.fields.file.url;
   return url.startsWith('//') ? `https:${url}` : url;
 }
+
+/**
+ * Fetch the about page data.
+ * @returns {Promise<Object|null>}
+ */
+export async function getAboutPage() {
+  try {
+    const response = await client.getEntries({
+      content_type: 'aboutPage',
+      limit: 1,
+    });
+    if (!response.items || response.items.length === 0) return null;
+    return response.items[0].fields;
+  } catch (error) {
+    console.error('Error fetching about page:', error);
+    return null;
+  }
+}

@@ -73,180 +73,192 @@ const LandingPageDevelopmentServices = ( {pageData} ) => {
                 content="Professional landing page development services in Los Angeles. Custom-coded, high-converting pages for lead generation and sales optimization."
             />
             <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
-             <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Service",
-                    "serviceType": "Landing Page Development",
-                    "name": "Custom Landing Page Development Services",
-                    "description": "Professional landing page development services in Los Angeles including custom-coded pages, conversion optimization, and lead generation solutions.",
-                    "provider": {
-                        "@type": "Person",
-                        "name": "Lindy Ramirez",
+             <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Landing Page Development",
+                        "name": "Custom Landing Page Development Services",
+                        "description": "Professional landing page development services in Los Angeles including custom-coded pages, conversion optimization, and lead generation solutions.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "Lindy Ramirez",
+                            "url": "https://www.lindyramirez.com",
+                            "jobTitle": "Web Developer",
+                            "email": "hello@lindyramirez.com",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Los Angeles",
+                                "addressRegion": "CA",
+                                "addressCountry": "US"
+                            }
+                        },
+                        "areaServed": [
+                            {
+                                "@type": "City",
+                                "name": "Los Angeles",
+                                "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Granada Hills"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Tarzana"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Pasadena"
+                            }
+                        ],
+                        "offers": {
+                            "@type": "Offer",
+                            "availability": "https://schema.org/InStock",
+                            "priceRange": "$$",
+                            "url": "https://www.lindyramirez.com/contact"
+                        },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Landing Page Development Services",
+                            "itemListElement": [
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Custom Landing Page Development",
+                                        "description": "Custom-coded landing pages built for maximum conversions"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Lead Generation Landing Pages",
+                                        "description": "Conversion-optimized pages designed to capture qualified leads"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Sales Funnel Development",
+                                        "description": "Multi-step funnels that guide visitors to purchase"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Landing Page Optimization",
+                                        "description": "A/B testing and conversion rate optimization services"
+                                    }
+                                }
+                            ]
+                        }
+                    })
+                }}
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Lindy Ramirez Web Development",
                         "url": "https://www.lindyramirez.com",
-                        "jobTitle": "Web Developer",
-                        "email": "hello@lindyramirez.com",
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Lindy Ramirez"
+                        },
                         "address": {
                             "@type": "PostalAddress",
                             "addressLocality": "Los Angeles",
                             "addressRegion": "CA",
                             "addressCountry": "US"
-                        }
-                    },
-                    "areaServed": [
-                        {
-                            "@type": "City",
-                            "name": "Los Angeles",
-                            "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
                         },
-                        {
-                            "@type": "City",
-                            "name": "Granada Hills"
-                        },
-                        {
-                            "@type": "City",
-                            "name": "Tarzana"
-                        },
-                        {
-                            "@type": "City",
-                            "name": "Pasadena"
-                        }
-                    ],
-                    "offers": {
-                        "@type": "Offer",
-                        "availability": "https://schema.org/InStock",
-                        "priceRange": "$$",
-                        "url": "https://www.lindyramirez.com/contact"
-                    },
-                    "hasOfferCatalog": {
-                        "@type": "OfferCatalog",
-                        "name": "Landing Page Development Services",
-                        "itemListElement": [
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Custom Landing Page Development",
-                                    "description": "Custom-coded landing pages built for maximum conversions"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Lead Generation Landing Pages",
-                                    "description": "Conversion-optimized pages designed to capture qualified leads"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Sales Funnel Development",
-                                    "description": "Multi-step funnels that guide visitors to purchase"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Landing Page Optimization",
-                                    "description": "A/B testing and conversion rate optimization services"
-                                }
-                            }
-                        ]
-                    }
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Organization",
-                    "name": "Lindy Ramirez Web Development",
-                    "url": "https://www.lindyramirez.com",
-                    "founder": {
-                        "@type": "Person",
-                        "name": "Lindy Ramirez"
-                    },
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Los Angeles",
-                        "addressRegion": "CA",
-                        "addressCountry": "US"
-                    },
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": "5.0",
-                        "reviewCount": ReviewData.length.toString(),
-                        "bestRating": "5",
-                        "worstRating": "1"
-                    },
-                    "review": ReviewData.map(review => ({
-                        "@type": "Review",
-                        "author": {
-                            "@type": "Person",
-                            "name": review.name,
-                            "worksFor": {
-                                "@type": "Organization",
-                                "name": review.company,
-                                "address": {
-                                    "@type": "PostalAddress",
-                                    "addressLocality": review.city,
-                                    "addressRegion": review.state,
-                                    "addressCountry": review.state === "Philippines" ? "PH" : "US"
-                                }
-                            }
-                        },
-                        "reviewRating": {
-                            "@type": "Rating",
-                            "ratingValue": "5",
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "5.0",
+                            "reviewCount": ReviewData.length.toString(),
                             "bestRating": "5",
                             "worstRating": "1"
                         },
-                        "reviewBody": review.feedback,
-                    }))
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": pageData.faqsData.faqs.map(faq => ({
-                        "@type": "Question",
-                        "name": faq.question,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": faq.answer
-                        }
-                    }))
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://www.lindyramirez.com"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "Services",
-                            "item": "https://www.lindyramirez.com/services"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 3,
-                            "name": "Landing Page Development",
-                            "item": "https://www.lindyramirez.com/services/landing-page-development"
-                        }
-                    ]
-                })}
-            </script>
+                        "review": ReviewData.map(review => ({
+                            "@type": "Review",
+                            "author": {
+                                "@type": "Person",
+                                "name": review.name,
+                                "worksFor": {
+                                    "@type": "Organization",
+                                    "name": review.company,
+                                    "address": {
+                                        "@type": "PostalAddress",
+                                        "addressLocality": review.city,
+                                        "addressRegion": review.state,
+                                        "addressCountry": review.state === "Philippines" ? "PH" : "US"
+                                    }
+                                }
+                            },
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "reviewBody": review.feedback,
+                        }))
+                    })
+                }}
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": pageData.faqsData.faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": faq.answer
+                            }
+                        }))
+                    })
+                }}
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://www.lindyramirez.com"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://www.lindyramirez.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Landing Page Development",
+                                "item": "https://www.lindyramirez.com/services/landing-page-development"
+                            }
+                        ]
+                    })
+                }}
+            />
         </Head>
         <div className={classes.pg}>
             <NavigationBar />

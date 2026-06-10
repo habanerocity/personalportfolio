@@ -66,234 +66,246 @@ const WordPressDevelopmentServices = ({ pageData }) => {
                 content="Professional WordPress development services in Los Angeles. Custom themes, plugin development, and website optimization for LA businesses."
             />
             <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Service",
-                    "serviceType": "WordPress Development",
-                    "name": "WordPress Development Services in Los Angeles",  
-                    "description": "WordPress development services in Los Angeles including custom theme builds, plugin development, performance optimization, maintenance retainers, and Divi and Elementor customization for established businesses.", 
-                    "provider": {
-                        "@type": "Person",
-                        "name": "Lindy Ramirez",
-                        "url": "https://www.lindyramirez.com",
-                        "jobTitle": "WordPress Developer",
-                        "email": "hello@lindyramirez.com", 
-                        "sameAs": [
-                            "https://www.linkedin.com/in/lindy-ramirez-8786102b/",
-                            "https://github.com/habanerocity"
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "WordPress Development",
+                        "name": "WordPress Development Services in Los Angeles",  
+                        "description": "WordPress development services in Los Angeles including custom theme builds, plugin development, performance optimization, maintenance retainers, and Divi and Elementor customization for established businesses.", 
+                        "provider": {
+                            "@type": "Person",
+                            "name": "Lindy Ramirez",
+                            "url": "https://www.lindyramirez.com",
+                            "jobTitle": "WordPress Developer",
+                            "email": "hello@lindyramirez.com", 
+                            "sameAs": [
+                                "https://www.linkedin.com/in/lindy-ramirez-8786102b/",
+                                "https://github.com/habanerocity"
+                            ],
+                            "address": {    
+                                "@type": "PostalAddress",
+                                "addressLocality": "Los Angeles",
+                                "addressRegion": "CA",
+                                "addressCountry": "US"
+                            }
+                        },
+                        "areaServed": [
+                            {
+                                "@type": "City",
+                                "name": "Los Angeles",
+                                "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Granada Hills",
+                                "sameAs": "https://en.wikipedia.org/wiki/Granada_Hills,_Los_Angeles"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Pasadena",
+                                "sameAs": "https://en.wikipedia.org/wiki/Pasadena,_California"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Tarzana",
+                                "sameAs": "https://en.wikipedia.org/wiki/Tarzana,_Los_Angeles"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "West Hollywood",
+                                "sameAs": "https://en.wikipedia.org/wiki/West_Hollywood,_California"
+                            }
                         ],
-                        "address": {    
+                        "offers": {
+                            "@type": "Offer",
+                            "availability": "https://schema.org/InStock",
+                            "priceRange": "$$",
+                            "url": "https://www.lindyramirez.com/contact"
+                        },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "WordPress Development Services",
+                            "itemListElement": [
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Custom WordPress Theme Development",
+                                        "description": "Hand-coded custom WordPress themes built from scratch for Los Angeles businesses: no bloated templates, no shared stylesheets, no unnecessary dependencies. Faster, more secure, and built specifically around how your business works."  
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "WordPress Plugin Development",
+                                        "description": "Custom WordPress plugin development for functionality that doesn't exist off the shelf. Custom post types, shortcodes, admin tools, and API integrations built from scratch."
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "WordPress Performance and Technical SEO Optimization",
+                                        "description": "WordPress speed optimization and technical SEO for Los Angeles businesses: Core Web Vitals audits, render-blocking script cleanup, image optimization, and on-page SEO fixes that directly affect search rankings and mobile conversion rates."
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "WordPress Theme Customization",
+                                        "description": "WordPress theme customization for businesses in Los Angeles that already have a theme and need it modified — through custom code, a child theme setup, or targeted changes that don't compromise the existing structure."
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "WordPress Theme Design",
+                                        "description": "Custom WordPress theme design using Figma: layout, type system, and component structure approved before any code is written. Built for Los Angeles businesses that want a site that looks intentional, not assembled from a template."
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "WordPress Maintenance & Support",
+                                        "description": "Ongoing WordPress maintenance and support retainers for Los Angeles businesses: updates, backups, security monitoring, and same-day response from a developer who already knows your site. Starting at $299/month."
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Divi WordPress Development",
+                                        "description": "Divi WordPress development and customization in Los Angeles and Pasadena: cleanup, performance optimization, and custom modifications for existing Divi sites. Honest assessment of what's fixable within Divi and where custom code serves the site better."
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Elementor WordPress Development",
+                                        "description": "Elementor WordPress development and customization for Los Angeles businesses: modifications, performance improvements, and conflict resolution for existing Elementor sites. Practical advice on when Elementor serves the project and when custom code is the better long-term call."
+                                    }
+                                }
+                            ]
+                        }
+                    })
+                }}
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Lindy Ramirez Web Development",
+                        "url": "https://www.lindyramirez.com",
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Lindy Ramirez"
+                        },
+                        "address": {
                             "@type": "PostalAddress",
                             "addressLocality": "Los Angeles",
                             "addressRegion": "CA",
                             "addressCountry": "US"
-                        }
-                    },
-                    "areaServed": [
-                        {
-                            "@type": "City",
-                            "name": "Los Angeles",
-                            "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
                         },
-                        {
-                            "@type": "City",
-                            "name": "Granada Hills",
-                            "sameAs": "https://en.wikipedia.org/wiki/Granada_Hills,_Los_Angeles"
-                        },
-                        {
-                            "@type": "City",
-                            "name": "Pasadena",
-                            "sameAs": "https://en.wikipedia.org/wiki/Pasadena,_California"
-                        },
-                        {
-                            "@type": "City",
-                            "name": "Tarzana",
-                            "sameAs": "https://en.wikipedia.org/wiki/Tarzana,_Los_Angeles"
-                        },
-                        {
-                            "@type": "City",
-                            "name": "West Hollywood",
-                            "sameAs": "https://en.wikipedia.org/wiki/West_Hollywood,_California"
-                        }
-                    ],
-                    "offers": {
-                        "@type": "Offer",
-                        "availability": "https://schema.org/InStock",
-                        "priceRange": "$$",
-                        "url": "https://www.lindyramirez.com/contact"
-                    },
-                    "hasOfferCatalog": {
-                        "@type": "OfferCatalog",
-                        "name": "WordPress Development Services",
-                        "itemListElement": [
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Custom WordPress Theme Development",
-                                    "description": "Hand-coded custom WordPress themes built from scratch for Los Angeles businesses: no bloated templates, no shared stylesheets, no unnecessary dependencies. Faster, more secure, and built specifically around how your business works."  
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "WordPress Plugin Development",
-                                    "description": "Custom WordPress plugin development for functionality that doesn't exist off the shelf. Custom post types, shortcodes, admin tools, and API integrations built from scratch."
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "WordPress Performance and Technical SEO Optimization",
-                                    "description": "WordPress speed optimization and technical SEO for Los Angeles businesses: Core Web Vitals audits, render-blocking script cleanup, image optimization, and on-page SEO fixes that directly affect search rankings and mobile conversion rates."
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "WordPress Theme Customization",
-                                    "description": "WordPress theme customization for businesses in Los Angeles that already have a theme and need it modified — through custom code, a child theme setup, or targeted changes that don't compromise the existing structure."
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "WordPress Theme Design",
-                                    "description": "Custom WordPress theme design using Figma: layout, type system, and component structure approved before any code is written. Built for Los Angeles businesses that want a site that looks intentional, not assembled from a template."
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "WordPress Maintenance & Support",
-                                    "description": "Ongoing WordPress maintenance and support retainers for Los Angeles businesses: updates, backups, security monitoring, and same-day response from a developer who already knows your site. Starting at $299/month."
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Divi WordPress Development",
-                                    "description": "Divi WordPress development and customization in Los Angeles and Pasadena: cleanup, performance optimization, and custom modifications for existing Divi sites. Honest assessment of what's fixable within Divi and where custom code serves the site better."
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Elementor WordPress Development",
-                                    "description": "Elementor WordPress development and customization for Los Angeles businesses: modifications, performance improvements, and conflict resolution for existing Elementor sites. Practical advice on when Elementor serves the project and when custom code is the better long-term call."
-                                }
-                            }
-                        ]
-                    }
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Organization",
-                    "name": "Lindy Ramirez Web Development",
-                    "url": "https://www.lindyramirez.com",
-                    "founder": {
-                        "@type": "Person",
-                        "name": "Lindy Ramirez"
-                    },
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Los Angeles",
-                        "addressRegion": "CA",
-                        "addressCountry": "US"
-                    },
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": "5.0",
-                        "reviewCount": ReviewData.length.toString(),
-                        "bestRating": "5",
-                        "worstRating": "1"
-                    },
-                    "review": ReviewData.map(review => ({
-                        "@type": "Review",
-                        "author": {
-                            "@type": "Person",
-                            "name": review.name,
-                            "worksFor": {
-                                "@type": "Organization",
-                                "name": review.company,
-                                "address": {
-                                    "@type": "PostalAddress",
-                                    "addressLocality": review.city,
-                                    "addressRegion": review.state,
-                                    "addressCountry": review.state === "Philippines" ? "PH" : "US"
-                                }
-                            }
-                        },
-                        "reviewRating": {
-                            "@type": "Rating",
-                            "ratingValue": "5",
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "5.0",
+                            "reviewCount": ReviewData.length.toString(),
                             "bestRating": "5",
                             "worstRating": "1"
                         },
-                        "reviewBody": review.feedback,
-                    }))
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": pageData.faqsData.faqs.map(faq => ({
-                        "@type": "Question",
-                        "name": faq.question,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": faq.answer
-                        }
-                    }))
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://www.lindyramirez.com"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "Services",
-                            "item": "https://www.lindyramirez.com/services"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 3,
-                            "name": "WordPress Development",
-                            "item": "https://www.lindyramirez.com/services/wordpress-development"
-                        }
-                    ]
-                })}
-            </script>
+                        "review": ReviewData.map(review => ({
+                            "@type": "Review",
+                            "author": {
+                                "@type": "Person",
+                                "name": review.name,
+                                "worksFor": {
+                                    "@type": "Organization",
+                                    "name": review.company,
+                                    "address": {
+                                        "@type": "PostalAddress",
+                                        "addressLocality": review.city,
+                                        "addressRegion": review.state,
+                                        "addressCountry": review.state === "Philippines" ? "PH" : "US"
+                                    }
+                                }
+                            },
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "reviewBody": review.feedback,
+                        }))
+                    })
+                }}
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": pageData.faqsData.faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": faq.answer
+                            }
+                        }))
+                    })
+                }}    
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://www.lindyramirez.com"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://www.lindyramirez.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "WordPress Development",
+                                "item": "https://www.lindyramirez.com/services/wordpress-development"
+                            }
+                        ]
+                    })
+                }}    
+            />
         </Head>
         <div className={classes.pg}>
             <NavigationBar />
             <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={pageFadeInAnimation}
-            onAnimationComplete={() => {
-                window.scrollTo(0, 0);
-                }}
+                initial="hidden"
+                animate="visible"
+                variants={pageFadeInAnimation}
+                onAnimationComplete={() => {
+                    window.scrollTo(0, 0);
+                    }}
             >
                 <SectionContainer className={classes.hero__section_container}>
                     <ServiceHero {...pageData.hero} />

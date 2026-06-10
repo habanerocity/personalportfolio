@@ -64,182 +64,192 @@ const ShopifyDevelopmentServices = ( {pageData} ) => {
                 content="Professional Shopify development services in Los Angeles. Custom store setup, theme development, and app integrations for LA ecommerce businesses."
             />
             <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Service",
-                    "serviceType": "Shopify Development",
-                    "name": "Custom Shopify Development Services",
-                    "description": "Professional Shopify development services in Los Angeles including custom store setup, theme development, app integrations, and ecommerce optimization.",
-                    "provider": {
-                        "@type": "Person",
-                        "name": "Lindy Ramirez",
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Shopify Development",
+                        "name": "Custom Shopify Development Services",
+                        "description": "Professional Shopify development services in Los Angeles including custom store setup, theme development, app integrations, and ecommerce optimization.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "Lindy Ramirez",
+                            "url": "https://www.lindyramirez.com",
+                            "jobTitle": "Shopify Developer",
+                            "email": "hello@lindyramirez.com",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Los Angeles",
+                                "addressRegion": "CA",
+                                "addressCountry": "US"
+                            }
+                        },
+                        "areaServed": [
+                            {
+                                "@type": "City",
+                                "name": "Los Angeles",
+                                "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Tarzana"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Granada Hills"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Pasadena"
+                            }
+                        ],
+                        "offers": {
+                            "@type": "Offer",
+                            "availability": "https://schema.org/InStock",
+                            "priceRange": "$$",
+                            "url": "https://www.lindyramirez.com/contact"
+                        },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Shopify Development Services",
+                            "itemListElement": [
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Custom Shopify Store Setup",
+                                        "description": "Complete Shopify store setup with custom design and functionality"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Shopify Theme Development",
+                                        "description": "Custom Shopify themes tailored to your brand and business goals"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Shopify App Integration",
+                                        "description": "Smooth integration of apps and third-party services"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Shopify Store Optimization",
+                                        "description": "Performance optimization and conversion rate improvements"
+                                    }
+                                }
+                            ]
+                        }
+                    })
+                }}    
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Lindy Ramirez Web Development",
                         "url": "https://www.lindyramirez.com",
-                        "jobTitle": "Shopify Developer",
-                        "email": "hello@lindyramirez.com",
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Lindy Ramirez"
+                        },
                         "address": {
                             "@type": "PostalAddress",
                             "addressLocality": "Los Angeles",
                             "addressRegion": "CA",
                             "addressCountry": "US"
-                        }
-                    },
-                    "areaServed": [
-                        {
-                            "@type": "City",
-                            "name": "Los Angeles",
-                            "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
                         },
-                        {
-                            "@type": "City",
-                            "name": "Tarzana"
-                        },
-                        {
-                            "@type": "City",
-                            "name": "Granada Hills"
-                        },
-                        {
-                            "@type": "City",
-                            "name": "Pasadena"
-                        }
-                    ],
-                    "offers": {
-                        "@type": "Offer",
-                        "availability": "https://schema.org/InStock",
-                        "priceRange": "$$",
-                        "url": "https://www.lindyramirez.com/contact"
-                    },
-                    "hasOfferCatalog": {
-                        "@type": "OfferCatalog",
-                        "name": "Shopify Development Services",
-                        "itemListElement": [
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Custom Shopify Store Setup",
-                                    "description": "Complete Shopify store setup with custom design and functionality"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Shopify Theme Development",
-                                    "description": "Custom Shopify themes tailored to your brand and business goals"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Shopify App Integration",
-                                    "description": "Smooth integration of apps and third-party services"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Shopify Store Optimization",
-                                    "description": "Performance optimization and conversion rate improvements"
-                                }
-                            }
-                        ]
-                    }
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Organization",
-                    "name": "Lindy Ramirez Web Development",
-                    "url": "https://www.lindyramirez.com",
-                    "founder": {
-                        "@type": "Person",
-                        "name": "Lindy Ramirez"
-                    },
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Los Angeles",
-                        "addressRegion": "CA",
-                        "addressCountry": "US"
-                    },
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": "5.0",
-                        "reviewCount": ReviewData.length.toString(),
-                        "bestRating": "5",
-                        "worstRating": "1"
-                    },
-                    "review": ReviewData.map(review => ({
-                        "@type": "Review",
-                        "author": {
-                            "@type": "Person",
-                            "name": review.name,
-                            "worksFor": {
-                                "@type": "Organization",
-                                "name": review.company,
-                                "address": {
-                                    "@type": "PostalAddress",
-                                    "addressLocality": review.city,
-                                    "addressRegion": review.state,
-                                    "addressCountry": review.state === "Philippines" ? "PH" : "US"
-                                }
-                            }
-                        },
-                        "reviewRating": {
-                            "@type": "Rating",
-                            "ratingValue": "5",
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "5.0",
+                            "reviewCount": ReviewData.length.toString(),
                             "bestRating": "5",
                             "worstRating": "1"
                         },
-                        "reviewBody": review.feedback,
-                    }))
-                })}
-            </script>
-
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": pageData.faqsData.faqs.map(faq => ({
-                        "@type": "Question",
-                        "name": faq.question,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": faq.answer
-                        }
-                    }))
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://www.lindyramirez.com"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "Services",
-                            "item": "https://www.lindyramirez.com/services"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 3,
-                            "name": "Shopify Development",
-                            "item": "https://www.lindyramirez.com/services/shopify-development"
-                        }
-                    ]
-                })}
-            </script>
-
+                        "review": ReviewData.map(review => ({
+                            "@type": "Review",
+                            "author": {
+                                "@type": "Person",
+                                "name": review.name,
+                                "worksFor": {
+                                    "@type": "Organization",
+                                    "name": review.company,
+                                    "address": {
+                                        "@type": "PostalAddress",
+                                        "addressLocality": review.city,
+                                        "addressRegion": review.state,
+                                        "addressCountry": review.state === "Philippines" ? "PH" : "US"
+                                    }
+                                }
+                            },
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "reviewBody": review.feedback,
+                        }))
+                    })
+                }}
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": pageData.faqsData.faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": faq.answer
+                            }
+                        }))
+                    })
+                }}    
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://www.lindyramirez.com"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://www.lindyramirez.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Shopify Development",
+                                "item": "https://www.lindyramirez.com/services/shopify-development"
+                            }
+                        ]
+                    })
+                }}
+            />
         </Head>
         <div className={classes.pg}>
             <NavigationBar />

@@ -74,180 +74,192 @@ const DigitalMarketingServices = ({pageData}) => {
             />
             <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
             
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Service",
-                    "serviceType": "Digital Marketing",
-                    "name": "Digital Marketing Services",
-                    "description": "Professional digital marketing services in Los Angeles including SEO, PPC advertising, social media marketing, and content marketing strategies.",
-                    "provider": {
-                        "@type": "Person",
-                        "name": "Lindy Ramirez",
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "serviceType": "Digital Marketing",
+                        "name": "Digital Marketing Services",
+                        "description": "Professional digital marketing services in Los Angeles including SEO, PPC advertising, social media marketing, and content marketing strategies.",
+                        "provider": {
+                            "@type": "Person",
+                            "name": "Lindy Ramirez",
+                            "url": "https://www.lindyramirez.com",
+                            "jobTitle": "Digital Marketing Expert",
+                            "email": "hello@lindyramirez.com",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Los Angeles",
+                                "addressRegion": "CA",
+                                "addressCountry": "US"
+                            }
+                        },
+                        "areaServed": [
+                            {
+                                "@type": "City",
+                                "name": "Los Angeles",
+                                "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Granada Hills"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Tarzana"
+                            },
+                            {
+                                "@type": "City",
+                                "name": "Pasadena"
+                            }
+                        ],
+                        "offers": {
+                            "@type": "Offer",
+                            "availability": "https://schema.org/InStock",
+                            "priceRange": "$$",
+                            "url": "https://www.lindyramirez.com/contact"
+                        },
+                        "hasOfferCatalog": {
+                            "@type": "OfferCatalog",
+                            "name": "Digital Marketing Services",
+                            "itemListElement": [
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Search Engine Optimization (SEO)",
+                                        "description": "Comprehensive SEO strategies to improve search rankings"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Pay-Per-Click (PPC) Advertising",
+                                        "description": "Targeted advertising campaigns for maximum ROI"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Social Media Marketing",
+                                        "description": "Strategic social media campaigns to boost brand awareness"
+                                    }
+                                },
+                                {
+                                    "@type": "Offer",
+                                    "itemOffered": {
+                                        "@type": "Service",
+                                        "name": "Content Marketing",
+                                        "description": "Engaging content strategies that drive traffic and conversions"
+                                    }
+                                }
+                            ]
+                        }
+                    })
+                }}    
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "Lindy Ramirez Web Development",
                         "url": "https://www.lindyramirez.com",
-                        "jobTitle": "Digital Marketing Expert",
-                        "email": "hello@lindyramirez.com",
+                        "founder": {
+                            "@type": "Person",
+                            "name": "Lindy Ramirez"
+                        },
                         "address": {
                             "@type": "PostalAddress",
                             "addressLocality": "Los Angeles",
                             "addressRegion": "CA",
                             "addressCountry": "US"
-                        }
-                    },
-                    "areaServed": [
-                        {
-                            "@type": "City",
-                            "name": "Los Angeles",
-                            "sameAs": "https://en.wikipedia.org/wiki/Los_Angeles"
                         },
-                        {
-                            "@type": "City",
-                            "name": "Granada Hills"
-                        },
-                        {
-                            "@type": "City",
-                            "name": "Tarzana"
-                        },
-                        {
-                            "@type": "City",
-                            "name": "Pasadena"
-                        }
-                    ],
-                    "offers": {
-                        "@type": "Offer",
-                        "availability": "https://schema.org/InStock",
-                        "priceRange": "$$",
-                        "url": "https://www.lindyramirez.com/contact"
-                    },
-                    "hasOfferCatalog": {
-                        "@type": "OfferCatalog",
-                        "name": "Digital Marketing Services",
-                        "itemListElement": [
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Search Engine Optimization (SEO)",
-                                    "description": "Comprehensive SEO strategies to improve search rankings"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Pay-Per-Click (PPC) Advertising",
-                                    "description": "Targeted advertising campaigns for maximum ROI"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Social Media Marketing",
-                                    "description": "Strategic social media campaigns to boost brand awareness"
-                                }
-                            },
-                            {
-                                "@type": "Offer",
-                                "itemOffered": {
-                                    "@type": "Service",
-                                    "name": "Content Marketing",
-                                    "description": "Engaging content strategies that drive traffic and conversions"
-                                }
-                            }
-                        ]
-                    }
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Organization",
-                    "name": "Lindy Ramirez Web Development",
-                    "url": "https://www.lindyramirez.com",
-                    "founder": {
-                        "@type": "Person",
-                        "name": "Lindy Ramirez"
-                    },
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "Los Angeles",
-                        "addressRegion": "CA",
-                        "addressCountry": "US"
-                    },
-                    "aggregateRating": {
-                        "@type": "AggregateRating",
-                        "ratingValue": "5.0",
-                        "reviewCount": ReviewData.length.toString(),
-                        "bestRating": "5",
-                        "worstRating": "1"
-                    },
-                    "review": ReviewData.map(review => ({
-                        "@type": "Review",
-                        "author": {
-                            "@type": "Person",
-                            "name": review.name,
-                            "worksFor": {
-                                "@type": "Organization",
-                                "name": review.company,
-                                "address": {
-                                    "@type": "PostalAddress",
-                                    "addressLocality": review.city,
-                                    "addressRegion": review.state,
-                                    "addressCountry": review.state === "Philippines" ? "PH" : "US"
-                                }
-                            }
-                        },
-                        "reviewRating": {
-                            "@type": "Rating",
-                            "ratingValue": "5",
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "5.0",
+                            "reviewCount": ReviewData.length.toString(),
                             "bestRating": "5",
                             "worstRating": "1"
                         },
-                        "reviewBody": review.feedback,
-                    }))
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": pageData.faqsData.faqs.map(faq => ({
-                        "@type": "Question",
-                        "name": faq.question,
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": faq.answer
-                        }
-                    }))
-                })}
-            </script>
-            <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    "itemListElement": [
-                        {
-                            "@type": "ListItem",
-                            "position": 1,
-                            "name": "Home",
-                            "item": "https://www.lindyramirez.com"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 2,
-                            "name": "Services",
-                            "item": "https://www.lindyramirez.com/services"
-                        },
-                        {
-                            "@type": "ListItem",
-                            "position": 3,
-                            "name": "Digital Marketing Services",
-                            "item": "https://www.lindyramirez.com/services/digital-marketing-services"
-                        }
-                    ]
-                })}
-            </script>
+                        "review": ReviewData.map(review => ({
+                            "@type": "Review",
+                            "author": {
+                                "@type": "Person",
+                                "name": review.name,
+                                "worksFor": {
+                                    "@type": "Organization",
+                                    "name": review.company,
+                                    "address": {
+                                        "@type": "PostalAddress",
+                                        "addressLocality": review.city,
+                                        "addressRegion": review.state,
+                                        "addressCountry": review.state === "Philippines" ? "PH" : "US"
+                                    }
+                                }
+                            },
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "reviewBody": review.feedback,
+                        }))
+                    })
+                }}    
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": pageData.faqsData.faqs.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": faq.answer
+                            }
+                        }))
+                    })
+                }}    
+            />
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home",
+                                "item": "https://www.lindyramirez.com"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Services",
+                                "item": "https://www.lindyramirez.com/services"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "Digital Marketing Services",
+                                "item": "https://www.lindyramirez.com/services/digital-marketing-services"
+                            }
+                        ]
+                    })
+                }}    
+            />
         </Head>
         <div className={classes.pg}>
             <NavigationBar />

@@ -205,11 +205,6 @@ const DigitalMarketingServices = ({pageData}) => {
                             "worstRating": "1"
                         },
                         "reviewBody": review.feedback,
-                        "itemReviewed": {
-                            "@type": "Organization",
-                            "name": "Lindy Ramirez Web Development",
-                            "url": "https://www.lindyramirez.com"
-                        }
                     }))
                 })}
             </script>

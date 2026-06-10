@@ -69,8 +69,10 @@ const Services = () => {
                 <meta name="geo.position" content="34.0522;-118.2437" />
                 <meta name="ICBM" content="34.0522, -118.2437" />
 
-                <script type="application/ld+json">
-                    {JSON.stringify({
+                <script 
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@graph": [
                                 {
@@ -340,7 +342,8 @@ const Services = () => {
                                 }
                             ]
                         })
-                    }
+                    }}    
+                >
                 </script>
             </Head>
             <div className={classes.pg} itemScope itemType="https://schema.org/WebPage">

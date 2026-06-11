@@ -1,8 +1,8 @@
 export const servicesHeroData = {
   id: "growth",
   subtitle: "Growth On Autopilot",
-  title: "Los Angeles Web Developer: From Hands-Off Website Maintenance To Full-Service Web Development That Scales Your Business",
-  description: "Stop juggling website maintenance, security patches, and marketing campaigns. My full-service web development packages handle everything from daily WordPress and Shopify management to advanced SEO strategies and conversion rate optimization. Your website stays lightning-fast, Google-friendly, and consistently generating leads — while you focus on what you do best.",
+  title: "Your Technical Web Development Partner in the Greater Los Angeles Area",
+  description: "Most businesses already have websites that work but are fragile, slow, or holding growth back. I step in as a technical partner to stabilize, improve, and scale what matters — specializing in WordPress and Shopify development, with support in landing pages and digital marketing. Available as ongoing retainers or scoped projects, always with clear scope and transparent pricing.",
   image: {
     src: "/static/optimized/st_thomas_up_close-optimized.webp",
     alt: "Office Desk with modern workspace setup",

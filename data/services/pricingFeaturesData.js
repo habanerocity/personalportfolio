@@ -104,9 +104,9 @@ const pricingFeaturesData = [
     name: 'Hours Per Month',
     tooltip: "The allocated time each month dedicated to delivering the services included in your chosen package.",
     availability: {
-      basic: '10',
-      standard: '35',
-      premium: '60'
+      basic: '5',
+      standard: '12',
+      premium: '25'
     },
     isHours: true
   }

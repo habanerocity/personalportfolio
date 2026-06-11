@@ -1,33 +1,33 @@
 const serviceCardInfoData = [
     {
         id: 1,
-        title: "Landing Page Development",
-        description: "I build custom-coded, high-converting landing pages that blend strategic UX with crisp visuals. Every element, from the headline to the call-to-action, is optimized to turn visitors into leads or customers. No cookie-cutter templates, just custom-built pages designed to grow your business.",
-        icon: "/static/code-solid.svg",
-        altText: "Landing Page Development Icon",
-        link: "landing-page-development"
-    },
-    {
-        id: 2,
         title: "WordPress Development",
-        description: "Generic WordPress sites underperform. Custom-built solutions with optimized code, tailored plugins, and brand-aligned design fix that. Whether you need a custom theme, existing site overhaul, or tailored plugins for advanced functionality, I create solutions that get results.",
+        description: "Custom theme development, plugin builds, WooCommerce integrations, technical debt cleanup, performance optimization, and ongoing maintenance for established WordPress sites.",
         icon: "/static/wordpress-solid.svg",
         altText: "WordPress Development Icon",
         link: "wordpress-development"
         
     },
     {
-        id: 3,
+        id: 2,
         title: "Shopify Theme Development",
-        description: "Your Shopify store should sell for you—even when you’re offline. I build custom Shopify solutions that convert browsers into buyers, with custom themes, conversion-focused design, and seamless functionality. I design storefronts that reflect your brand and drive revenue.",
+        description: "Custom Liquid theme builds, theme customizations, app integration and conflict resolution, store performance optimization, and ongoing Shopify support. ",
         icon: "/static/shopify-solid.svg",
         altText: "Shopify Development Icon",
         link: "shopify-development"
     },
     {
+        id: 3,
+        title: "Landing Page Development",
+        description: "Custom-coded landing pages built for specific campaigns — lead generation, product launches, event registrations. Built inside your existing WordPress or Shopify setup, or standalone. Analytics and tracking set up on every build.",
+        icon: "/static/code-solid.svg",
+        altText: "Landing Page Development Icon",
+        link: "landing-page-development"
+    },
+    {
         id: 4,
         title: "Digital Marketing Services",
-        description: "Need a partner to level up your digital presence? From social media marketing that engages and converts, to on-page SEO that boosts your site's visibility, and ensuring your site is properly indexed by Google and Bing, I offer comprehensive services that establish your brand as a leader in your industry.",
+        description: "Technical and on-page SEO, brand identity, and Photoshop-based visual asset production. Offered as focused support alongside web development, not as a full-service agency. Most useful for existing clients who want their website to perform better in search.",
         icon: "/static/bullhorn-solid.svg",
         altText: "Digital Marketing Services Icon",
         link: "digital-marketing-services"

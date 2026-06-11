@@ -40,21 +40,21 @@ const Services = () => {
 
         <React.Fragment>
             <Head>
-                <title>Services - Lindy Ramirez | Freelance Web Developer in Los Angeles</title>
+                <title>Web Development & Digital Marketing Services in Los Angeles | Lindy Ramirez</title>
                 <meta
                     name="description"
-                    content="Professional web development services in Los Angeles: WordPress & Shopify development, custom landing pages, SEO optimization, and digital marketing. Monthly packages from $199. Get a free consultation today!"
+                    content="WordPress development, Shopify development, landing pages, and digital marketing services in Los Angeles. Retainer packages and project-based work for established businesses."
                 />
-                <meta property="og:title" content="Web Development Services in Los Angeles | Lindy Ramirez" />
-                <meta property="og:description" content="Professional web development services..." />
+                <meta property="og:title" content="Web Development & Digital Marketing Services in Los Angeles | Lindy Ramirez" />
+                <meta property="og:description" content="WordPress development, Shopify development, landing pages, and digital marketing services in Los Angeles. Retainer packages and project-based work for established businesses." />
                 <meta property="og:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
                 <meta property="og:url" content="https://www.lindyramirez.com/services" />
                 <meta property="og:type" content="website" />
 
                 {/* Twitter Card */}
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Web Development Services | Lindy Ramirez" />
-                <meta name="twitter:description" content="Professional web development services in Los Angeles: WordPress & Shopify development, custom landing pages, SEO optimization, and digital marketing." />
+                <meta name="twitter:title" content="Web Development & Digital Marketing Services in Los Angeles | Lindy Ramirez" />
+                <meta name="twitter:description" content="WordPress development, Shopify development, landing pages, and digital marketing services in Los Angeles. Retainer packages and project-based work for established businesses." />
                 <meta name="twitter:image" content="https://www.lindyramirez.com/static/st_thomas_upstairs-twitter_card.png" />
 
                 {/* Canonical URL */}
@@ -78,11 +78,11 @@ const Services = () => {
                                 {
                                     "@type": "ProfessionalService",
                                     "@id": "https://www.lindyramirez.com/services#business",
-                                    "name": "Lindy Ramirez Freelance Web Development",
+                                    "name": "Lindy Ramirez Freelance Web Development & Digital Marketing",
                                     "image": "https://www.lindyramirez.com/static/optimized/st_thomas_up_close-optimized.webp",
                                     "email": "hello@lindyramirez.com",
                                     "url": "https://www.lindyramirez.com/services",
-                                    "priceRange": "$199 - $1099",
+                                    "priceRange": "$299 - $1199",
                                     "address": {
                                         "@type": "PostalAddress",
                                         "addressLocality": "Los Angeles",
@@ -130,8 +130,8 @@ const Services = () => {
                                     "@type": "WebPage",
                                     "@id": "https://www.lindyramirez.com/services#webpage",
                                     "url": "https://www.lindyramirez.com/services",
-                                    "name": "Services - Lindy Ramirez | Freelance Web Developer",
-                                    "description": "Professional web development services including website maintenance, website migrations, custom development, SEO optimization, and digital marketing strategies. Monthly packages starting at $199.",
+                                    "name": "Services - Lindy Ramirez | Freelance Web Developer in Los Angeles",
+                                    "description": "Professional web development and digital marketing services including website maintenance, website migrations, custom development, SEO optimization, and digital marketing strategies. Monthly packages starting at $299.",
                                     "breadcrumb": {
                                         "@type": "BreadcrumbList",
                                         "itemListElement": [
@@ -158,7 +158,7 @@ const Services = () => {
                                                 "itemOffered": {
                                                     "@type": "Service",
                                                     "name": "Basic Package",
-                                                    "description": "Ideal for brands whom need consistent web maintenance, content management, and website optimization.",
+                                                    "description": "Ideal for small to medium-sized businesses who need consistent web maintenance, content management, and website optimization.",
                                                     "provider": {
                                                         "@id": "https://www.lindyramirez.com/services#business"
                                                     },
@@ -168,11 +168,11 @@ const Services = () => {
                                                         "name": "United States"
                                                     }
                                                 },
-                                                "price": "199.00",
+                                                "price": "299.00",
                                                 "priceCurrency": "USD",
                                                 "priceSpecification": {
                                                     "@type": "UnitPriceSpecification",
-                                                    "price": "199.00",
+                                                    "price": "299.00",
                                                     "priceCurrency": "USD",
                                                     "unitText": "MONTH"
                                                 },
@@ -185,7 +185,7 @@ const Services = () => {
                                                 "itemOffered": {
                                                     "@type": "Service",
                                                     "name": "Standard Package",
-                                                    "description": "Best suited for brands requiring custom development, web design, and SEO services to enhance their online presence.",
+                                                    "description": "Best suited for small to medium-sized businesses requiring custom development, web design, and SEO services to enhance their online presence.",
                                                     "provider": {
                                                         "@id": "https://www.lindyramirez.com/services#business"
                                                     },
@@ -195,11 +195,11 @@ const Services = () => {
                                                         "name": "United States"
                                                     }
                                                 },
-                                                "price": "649.00",
+                                                "price": "699.00",
                                                 "priceCurrency": "USD",
                                                 "priceSpecification": {
                                                     "@type": "UnitPriceSpecification",
-                                                    "price": "649.00",
+                                                    "price": "699.00",
                                                     "priceCurrency": "USD",
                                                     "unitText": "MONTH"
                                                 },
@@ -216,21 +216,21 @@ const Services = () => {
                                                 "itemOffered": {
                                                     "@type": "Service",
                                                     "name": "Premium Package",
-                                                    "description": "Perfect for brands looking for complete web development services and robust digital marketing strategies.",
+                                                    "description": "Perfect for small to medium-sized businesses looking for complete web development services and robust digital marketing strategies.",
                                                     "provider": {
                                                         "@id": "https://www.lindyramirez.com/services#business"
                                                     },
-                                                    "serviceType": "Full-Service Web Development & Marketing",
+                                                    "serviceType": "Full-Service Web Development & Digital Marketing",
                                                     "areaServed": {
                                                         "@type": "Country",
                                                         "name": "United States"
                                                     }
                                                 },
-                                                "price": "1099.00",
+                                                "price": "1199.00",
                                                 "priceCurrency": "USD",
                                                 "priceSpecification": {
                                                     "@type": "UnitPriceSpecification",
-                                                    "price": "1099.00",
+                                                    "price": "1199.00",
                                                     "priceCurrency": "USD",
                                                     "unitText": "MONTH"
                                                 },
@@ -269,7 +269,7 @@ const Services = () => {
                                     "@type": "Service",
                                     "@id": "https://www.lindyramirez.com/services#shopify-development",
                                     "name": "Shopify Theme Development",
-                                    "description": "Your Shopify store should sell for you—even when you’re offline. I build custom Shopify solutions that convert browsers into buyers, with custom themes, conversion-focused design, and seamless functionality. I design storefronts that reflect your brand and drive revenue.",
+                                    "description": "Your Shopify store should sell for you even while you’re asleep. I build custom Shopify solutions that convert browsers into buyers, with custom themes, conversion-focused design, and solid functionality. I design storefronts that reflect your brand and drive revenue.",
                                     "provider": {
                                         "@id": "https://www.lindyramirez.com/services#business"
                                     },
@@ -358,7 +358,7 @@ const Services = () => {
                         <Container className={`d-flex flex-column position-relative ${classes.flex__container__top_section}`}>
                             <section className={classes.flex__container} aria-labelledby="services-heading" role="banner">
                                 <header className={`w-100 align-items-start text-start justify-content-start ${classes.headings__container}`}>
-                                    <Headings id="services-heading" itemProp="name" heading="How I Can Help You">Services</Headings>      
+                                    <Headings id="services-heading" itemProp="name" heading="Web Development Packages in Los Angeles">Services</Headings>      
                                 </header>
                             </section>
                             <SplitHero
@@ -473,7 +473,7 @@ const Services = () => {
                                 >
                                     Pricing
                                 </h2>
-                                <p className="fs-3" itemProp="description">Packages That I Offer</p>
+                                <p className="fs-3" itemProp="description">Monthly Retainer Packages</p>
                             </header>
                             <PricingCardsGrid 
                               cards={pricingCardsData}
@@ -496,9 +496,10 @@ const Services = () => {
                     <Container className={`d-flex flex-column position-relative ${classes.flex__container__col}`}>
                         <section className="d-flex flex-column justify-content-center align-items-center">
                             <header className="text-center">
-                                <h2 className="text-center mb-4" id="custom-packages-heading">
-                                    Custom Packages and Per Project Pricing Available Upon Request!
+                                <h2 className="text-center mb-4 fs-1" id="custom-packages-heading">
+                                    Not sure which tier fits or where to start?
                                 </h2>
+                                <p className="fs-2">Tell me what's going on with your website. I'll give you an honest read on what I'd prioritize and which package, if any, makes sense before you commit to anything. </p>
                             </header>
                             <nav aria-label="Custom pricing inquiry">
                                 <Link className={classes.link} passHref href="/contact">

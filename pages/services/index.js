@@ -499,7 +499,7 @@ const Services = () => {
                                 <h2 className="text-center mb-4 fs-1" id="custom-packages-heading">
                                     Not sure which tier fits or where to start?
                                 </h2>
-                                <p className="fs-2">Tell me what's going on with your website. I'll give you an honest read on what I'd prioritize and which package, if any, makes sense before you commit to anything. </p>
+                                <p className="fs-2">Tell me what&apos;s going on with your website. I&apos;ll give you an honest read on what I&apos;d prioritize and which package, if any, makes sense before you commit to anything. </p>
                             </header>
                             <nav aria-label="Custom pricing inquiry">
                                 <Link className={classes.link} passHref href="/contact">

@@ -1,0 +1,124 @@
+@import '../../../styles/sass/mixins';
+@import '../../../styles/sass/variables';
+
+// Colors specific to the case study hero
+$hero-bg: #1b2621;
+$hero-card-bg: #24332D; // same green-gray as SplitHero's text panel
+$hero-card-border: rgba(255, 255, 255, 0.1);
+$hero-text-muted: rgba(255, 255, 255, 0.65);
+
+.hero {
+  background-color: $hero-bg;
+  padding-bottom: 6rem;
+  color: #fff;
+}
+
+// ---------- Top row ----------
+
+.hero__intro {
+  padding-top: 8rem;
+
+  @media (max-width: 991px) {
+    padding-top: 6rem;
+  }
+}
+
+// Headings is a shared component, so it's restyled from here
+// (class + element selector so it wins over Headings.module.scss)
+.hero__headings h1 {
+  color: #fff;
+  font-size: clamp(4rem, 6.5vw, 8rem);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 2.4rem;
+}
+
+// Global styles set every span to Lato, so the font is set again here
+.hero__heading_accent {
+  display: block;
+  color: $primary-color;
+  font-family: $font-body;
+}
+
+.hero__summary {
+  padding-top: 4rem;
+
+  @media (max-width: 991px) {
+    padding-top: 2rem;
+  }
+}
+
+.hero__description {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+// ---------- Photo ----------
+
+.hero__img_container {
+  position: relative;
+  height: 55vh;
+  min-height: 32rem;
+  max-height: 60rem;
+  margin: 0;
+
+  // Fades the top of the photo into the background color
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to bottom, $hero-bg 0%, rgba($hero-bg, 0) 40%);
+    pointer-events: none;
+  }
+}
+
+.hero__img {
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+// ---------- Stats card ----------
+
+.hero__stats {
+  position: relative;
+  z-index: 2;
+  margin-top: -10rem; // pulls the card up over the bottom of the photo
+  padding: 3.2rem;
+  background-color: $hero-card-bg;
+  border: 1px solid $hero-card-border;
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow;
+
+  @media (max-width: 575px) {
+    margin-top: -6rem;
+    padding: 2.4rem;
+  }
+}
+
+.hero__stats_list {
+  row-gap: 2.4rem;
+}
+
+.hero__stat_value {
+  display: block;
+  color: $primary-color;
+  font-family: $font-body;
+  font-weight: 500;
+  font-size: clamp(3.2rem, 3.5vw, 4.4rem);
+  line-height: 1.1;
+}
+
+.hero__stat_label {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0.8rem 0 0;
+  max-width: 28ch;
+}
+
+.hero__stats_footnote {
+  font-size: 1.2rem;
+  color: $hero-text-muted;
+  margin: 2.4rem 0 0;
+}

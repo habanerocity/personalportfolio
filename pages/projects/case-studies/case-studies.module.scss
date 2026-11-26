@@ -1,0 +1,13 @@
+// SectionContainer adds overflow: scroll, which would show scrollbars around the hero
+// (.pg prefix so this wins over SectionContainer's own styles)
+.pg .hero__section_container {
+  overflow: visible;
+}
+
+// Same as the services pages: nav moves to the bottom on small phones
+@media screen and (max-width: 450px) {
+  .pg {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

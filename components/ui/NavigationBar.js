@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import classes from "./NavigationBar.module.scss";
 
 import { linkInfo } from "../../data/navigationBarLinkInfoData";
@@ -11,8 +11,25 @@ const NavigationBar = () => {
   const router = useRouter();
   const [isServicesMenuOpen, setServicesMenuOpen] = useState(false);
 
+  const navRef = useRef(null);
+
+  // Close the services submenu on route change or when tapping outside the nav
+  useEffect(() => {
+    const close = () => setServicesMenuOpen(false);
+    const handleOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) close();
+    };
+    router.events.on("routeChangeStart", close);
+    document.addEventListener("pointerdown", handleOutside);
+    return () => {
+      router.events.off("routeChangeStart", close);
+      document.removeEventListener("pointerdown", handleOutside);
+    };
+  }, [router.events]);
+
+  // Phones and tablets (no hover): tap toggles the submenu instead of navigating
   const handleServicesClick = (e) => {
-    if (window.innerWidth <= 450) {
+    if (window.innerWidth <= 925) {
       e.preventDefault();
       setServicesMenuOpen(prevState => !prevState);
     }
@@ -69,7 +86,7 @@ const NavigationBar = () => {
   return (
     <main className={`position-absolute bg-white w-100 ${classes.nav_container}`}>
       <div className={`container ${classes.nav_menu_wrapper} d-flex justify-content-center align-items-center p-0`}>
-        <nav className={`${classes.nav_menu} w-100 bg-white position-relative d-flex align-items-center`}>
+        <nav ref={navRef} className={`${classes.nav_menu} w-100 bg-white position-relative d-flex align-items-center`}>
           <Link href="/">
             <div className={`${classes.logo} list-unstyled position-relative p-0 fw-bold`}>
               <Image

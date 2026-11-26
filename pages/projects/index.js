@@ -1,17 +1,17 @@
-import NavigationBar from '../components/ui/NavigationBar';
-import LogoBar from '../components/ui/LogoBar';
-import Footer from '../components/ui/Footer';
-import SectionContainer from '../components/ui/SectionContainer';
-import Headings from '../components/ui/Headings';
-import ProjectCategories from '../components/ui/ProjectCategories';
+import NavigationBar from '../../components/ui/NavigationBar';
+import LogoBar from '../../components/ui/LogoBar';
+import Footer from '../../components/ui/Footer';
+import SectionContainer from '../../components/ui/SectionContainer';
+import Headings from '../../components/ui/Headings';
+import ProjectCategories from '../../components/ui/ProjectCategories';
 
-import { cardInfo as projectInfoData } from '../data/projectsCardInfoData';
-import renderProjectCards from '../components/renderProjectCards';
+import { cardInfo as projectInfoData } from '../../data/projectsCardInfoData';
+import renderProjectCards from '../../components/renderProjectCards';
 
 import Container from 'react-bootstrap/Container';
 
-import pageFadeInAnimation from '../animations/pageFadeInAnimation';
-import cardFadeInAnimation from '../animations/cardFadeInAnimation';
+import pageFadeInAnimation from '../../animations/pageFadeInAnimation';
+import cardFadeInAnimation from '../../animations/cardFadeInAnimation';
 
 import Head from 'next/head';
 

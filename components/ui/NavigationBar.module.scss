@@ -90,6 +90,21 @@
       top: 100%;
     }
 
+    // Tablet: anchor under the Services item with a readable fixed width
+    @media screen and (min-width: 451px) and (max-width: 925px) {
+      width: max-content;
+      min-width: 22rem;
+      max-width: calc(100vw - 2rem);
+      border-radius: 0 0 8px 8px;
+      padding: 0.6rem 0;
+
+      li a {
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        white-space: nowrap;
+      }
+    }
+
     @media screen and (max-width: 450px) {
       bottom: 100%;
       box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
@@ -106,7 +121,7 @@
   .nav_text {
     &:hover {
       .submenu {
-        @media screen and (min-width: 451px) {
+        @media screen and (min-width: 926px) {
             display: block;
         }
       }
@@ -115,8 +130,18 @@
   
   .submenu li {
     list-style-type: none;
-    padding: 8px 0;
-    text-align: center;
+    padding: 0;
+    text-align: left;
+
+    // Left-align all submenu links at every viewport
+    a {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+      padding: 0.8rem 2rem;
+    }
 
     .active {
       letter-spacing: 0 !important;
@@ -127,6 +152,9 @@
 
 .nav_text {
     display: flex;
+    @media screen and (min-width: 451px) and (max-width: 925px) {
+        position: relative;
+    }
     font-family: $font-body, sans-serif;
     justify-content: flex-start;
     align-items: center;
@@ -176,6 +204,11 @@
 
     @media screen and (max-width: 700px){
         display: unset;
+    }
+
+    @media screen and (min-width: 451px) and (max-width: 925px){
+        display: flex;
+        justify-content: center;
     }
 
     @media screen and (max-width: 450px){

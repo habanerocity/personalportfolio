@@ -3,24 +3,37 @@
 
 // Colors specific to the case study hero
 $hero-bg: #1b2621;
+$hero-photo-edge: #0e1911; // dark green along the bottom edge of the hero photo
 $hero-card-bg: #24332D; // same green-gray as SplitHero's text panel
 $hero-card-border: rgba(255, 255, 255, 0.1);
 $hero-text-muted: rgba(255, 255, 255, 0.65);
 
 .hero {
   background-color: $hero-bg;
-  padding-bottom: 6rem;
   color: #fff;
+}
+
+// ---------- Page spacing ----------
+// Matches the About and Projects pages (.flex__container__col):
+// 10rem top/bottom ($padding-section-md) and 85% width on small phones
+
+.hero__container {
+  @media screen and (max-width: 575px) {
+    width: 85%;
+  }
+}
+
+// FlexContainer has a 70vh min-height for full pages. The hero is split into
+// two blocks around the photo, so each block only needs to be as tall as its content.
+// (.hero prefix so this wins over FlexContainer.module.scss)
+.hero .hero__flex {
+  min-height: auto;
 }
 
 // ---------- Top row ----------
 
 .hero__intro {
-  padding-top: 8rem;
-
-  @media (max-width: 991px) {
-    padding-top: 6rem;
-  }
+  padding-top: 10rem;
 }
 
 // Headings is a shared component, so it's restyled from here
@@ -80,6 +93,12 @@ $hero-text-muted: rgba(255, 255, 255, 0.65);
 }
 
 // ---------- Stats card ----------
+
+// Area under the photo: matches the photo's bottom edge so there's no lighter band
+.hero__stats_wrapper {
+  background-color: $hero-photo-edge;
+  padding-bottom: 10rem;
+}
 
 .hero__stats {
   position: relative;

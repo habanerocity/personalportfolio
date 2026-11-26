@@ -3,7 +3,7 @@ export const caseStudyHeroData = {
   tag: "Case Study",
   title: "Built from scratch.",
   titleAccent: "Still running.",
-  description: "A member platform for a national real estate referral network: registration, a county map, a vetting pipeline and a lookup chatbot, built and maintained by one developer.",
+  description: "A membership platform for a real estate referral network: registration, a county map, an onboarding system and a county lookup chatbot, built and maintained by one developer.",
   ctaText: "Talk about your site",
   ctaHref: "/contact",
   image: {

@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-import classes from "./case-studies.module.scss";
+import classes from "./index.module.scss";
 
 import NavigationBar from '../../../components/ui/NavigationBar';
 import SectionContainer from '../../../components/ui/SectionContainer';
@@ -19,7 +19,7 @@ const CaseStudies = () => {
     <React.Fragment>
         <Head>
             <title>Case Study: Real Estate Referral Network Platform | Lindy Ramirez</title>
-            <link rel="canonical" href="https://www.lindyramirez.com/projects/case-studies/case-studies" />
+            <link rel="canonical" href="https://www.lindyramirez.com/projects/case-studies" />
             <meta
                 name="description"
                 content={caseStudyHeroData.description}

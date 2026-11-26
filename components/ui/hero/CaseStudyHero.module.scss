@@ -128,6 +128,11 @@ $hero-text-muted: rgba(255, 255, 255, 0.65);
   }
 }
 
+// Space between the stats card and the "Built with" ticker
+.hero__ticker {
+  margin-top: 2.4rem;
+}
+
 .hero__stats_list {
   row-gap: 2.4rem;
 }

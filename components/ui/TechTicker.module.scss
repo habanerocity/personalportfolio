@@ -1,0 +1,120 @@
+@import '../../styles/sass/variables';
+
+// Colors specific to the ticker (same greens as the case study hero)
+$ticker-bg: #1b2621;
+$ticker-label-bg: #24332D;
+$ticker-border: rgba(255, 255, 255, 0.1);
+
+.ticker {
+  background-color: $ticker-bg;
+  border: 1px solid $ticker-border;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+}
+
+// ---------- "BUILT WITH" label ----------
+
+.ticker__label {
+  flex-shrink: 0;
+  padding: 1.6rem 2rem;
+  background-color: $ticker-label-bg;
+  border-right: 1px solid $ticker-border;
+  color: $primary-color;
+  font-family: $font-body;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+// ---------- Scrolling strip ----------
+
+// The visible area. Items fade out at the left edge as they slide under the label.
+.ticker__window {
+  flex-grow: 1;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0, #000 6rem);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6rem);
+}
+
+.ticker__track {
+  width: max-content;
+  animation: ticker-scroll linear infinite; // duration is set from the component's prop
+
+  // Lets people stop it to read an item
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+.ticker__item {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 0;
+  color: #fff;
+  font-family: $font-body;
+  font-weight: 500;
+  font-size: 1.6rem;
+  white-space: nowrap;
+
+  // Small green diamond after every item, including the last one,
+  // so the gap where the two copies meet looks like every other gap
+  &::after {
+    content: '';
+    width: 0.7rem;
+    height: 0.7rem;
+    margin: 0 2.4rem;
+    background-color: $primary-color;
+    transform: rotate(45deg);
+  }
+}
+
+// Moves the track left by one copy of the list (half the track), then repeats
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+// ---------- Reduced motion ----------
+// Visitors who've turned off animations in their OS settings get a still strip
+// they can swipe or scroll sideways instead
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track {
+    animation: none;
+  }
+
+  .ticker__window {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  // Hide the repeated items, since they're only needed for the loop
+  .ticker__list[aria-hidden='true'],
+  .ticker__item[aria-hidden='true'] {
+    display: none !important;
+  }
+}
+
+// ---------- Phones ----------
+
+@media (max-width: 575px) {
+  .ticker__label {
+    padding: 1.2rem 1.4rem;
+    font-size: 1.1rem;
+  }
+
+  .ticker__item {
+    padding: 1.2rem 0;
+    font-size: 1.4rem;
+
+    &::after {
+      margin: 0 1.6rem;
+    }
+  }
+}

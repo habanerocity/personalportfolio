@@ -28,5 +28,14 @@ export const caseStudyHeroData = {
       label: "of applicants go on to become paying members"
     }
   ],
-  statsFootnote: "Network figures as reported by the founder. Conversion from the onboarding dashboard, Nov 23, 2026."
+  statsFootnote: "Network figures as reported by the founder. Conversion from the onboarding dashboard, Nov 23, 2026.",
+  // Shown in the scrolling "Built with" ticker under the stats
+  techStack: [
+    "WordPress",
+    "Custom plugins",
+    "Brevo automations",
+    "Calendly webhooks",
+    "GA4",
+    "Claude API"
+  ]
 };

@@ -5,6 +5,7 @@ import FlexContainer from '../FlexContainer';
 import Headings from '../Headings';
 import HeroButton from '../HeroButton';
 import OptimizedImage from '../OptimizedImage';
+import TechTicker from '../TechTicker';
 
 const CaseStudyHero = ({
   sectionId = 'case-study-hero',
@@ -17,6 +18,7 @@ const CaseStudyHero = ({
   image,
   stats = [],
   statsFootnote,
+  techStack = [],
 }) => {
   // IDs used to connect the headings to their sections for screen readers
   const statsHeadingId = `${sectionId}-stats-heading`;
@@ -94,6 +96,11 @@ const CaseStudyHero = ({
                   <p className={classes.hero__stats_footnote}>{statsFootnote}</p>
                 )}
               </section>
+
+              {/* Scrolling "Built with" strip of the tech used on the project */}
+              {techStack.length > 0 && (
+                <TechTicker items={techStack} className={classes.hero__ticker} />
+              )}
             </FlexContainer>
           </Container>
         </div>

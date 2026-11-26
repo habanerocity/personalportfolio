@@ -85,6 +85,18 @@ $hero-text-muted: rgba(255, 255, 255, 0.65);
     background: linear-gradient(to bottom, $hero-bg 0%, rgba($hero-bg, 0) 40%);
     pointer-events: none;
   }
+
+  // Phones: a short band with the photo's own 16:9 shape, so the house sits
+  // right under the CTA instead of below a tall, mostly faded-out area
+  @media (max-width: 575px) {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+
+    &::before {
+      background: linear-gradient(to bottom, $hero-bg 0%, rgba($hero-bg, 0) 20%);
+    }
+  }
 }
 
 .hero__img {
@@ -111,7 +123,7 @@ $hero-text-muted: rgba(255, 255, 255, 0.65);
   box-shadow: $box-shadow;
 
   @media (max-width: 575px) {
-    margin-top: -6rem;
+    margin-top: -3rem; // smaller overlap so the card doesn't cover the house
     padding: 2.4rem;
   }
 }
